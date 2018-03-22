@@ -6,7 +6,7 @@
     "test": "./node_modules/protractor/bin/webdriver-manager update --gecko false && karma start karma.conf.js --single-run",
     "test:dev": "./node_modules/protractor/bin/webdriver-manager update --gecko false && karma start karma.conf.js"
   },
-  "description": "The Fluid Design System module is an atomic reusable platform providing consistent set of UI/UX components for open source friendly web applications to consume.",
+  "description": "The Apache NiFi Fluid Design System module is an atomic reusable platform providing consistent set of UI/UX components for open source friendly web applications to consume.",
   "module": "./platform/core/fluid-design-system.module.js",
   "keywords": [
     "fluid design system",
