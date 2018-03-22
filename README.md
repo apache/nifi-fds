@@ -1,15 +1,13 @@
-# Fluid Design System (FDS)
+# Apache NiFi Fluid Design System
 
-The Fluid Design System module is an atomic reusable platform providing consistent set of UI/UX components for open source friendly web applications to consume. The demo web application to consumes the FDS NGModule and allows users to interact with the FDS components: [https://scottyaslan.github.io/fluid-design-system/](https://scottyaslan.github.io/fluid-design-system/)
-
-The FDS will have custom components that enforce standards and best practices through built-in design patterns.
+The Apache NiFi Fluid Design System module is an atomic reusable platform providing consistent set of UI/UX components for open source friendly web applications to consume. Checkout the demo web application on the `gh-pages` branch to see a complete example of an Angular application that leverages this NGModule. This demo application allows users to interact with and provides sample code for the available UI/UX components: [https://apache.github.io/nifi-fds/](https://apache.github.io/nifi-fds/).
 
 #### npm
 
 For developers not interested in building the FDS NgModule you can use **npm** to install the distribution files.
 
 ```bash
-npm install git://github.com/scottyaslan/fluid-design-system.git
+npm install nifi-fds
 ```
 
 ## Setup
@@ -18,11 +16,11 @@ Import the **Fluid Design System** NgModule into your angular application:
 
 ```javascript
 var fdsCore = require('fluid-design-system/core');
-NfRegistryAppModule.prototype = {
-    constructor: NfRegistryAppModule
+AppModule.prototype = {
+    constructor: AppModule
 };
 
-NfRegistryAppModule.annotations = [
+AppModule.annotations = [
     new ngCore.NgModule({
         imports: [
             fdsCore,
@@ -64,11 +62,11 @@ $fds-theme: mat-light-theme($fds-primary, $fds-accent, $fds-warn);
 @include fds-theme($fds-theme);
 ```
 
-FDS NiFi Registry UI/UX Platform comes with a base CSS file `node_modules/fluid-design-system/core/common/styles/css/fluid-design-system.min.css` (includes icons).
+NiFi Fluid Design System UI/UX Platform comes with a base CSS file `node_modules/fluid-design-system/core/common/styles/css/fluid-design-system.min.css` (includes icons).
 
-## Building FDS
+## Building
 
-Developers can easily build FDS using **npm**.
+Developers can easily build this project using **npm**.
 
 First install or update your local project's **npm** tools:
 
@@ -82,9 +80,9 @@ Next run:
 npm run build
 ```
 
-## Testing FDS
+## Testing
 
-Developers can easily test FDS using **npm**.
+Developers can easily test this project using **npm**.
 
 ```bash
 npm test
@@ -98,9 +96,9 @@ npm run test:dev
 
 ## Release Managment
 
-For developers with permissions releasing a new version of FDS is simple with [grunt bump](https://github.com/vojtajina/grunt-bump)
+For developers with permissions releasing a new version of the NiFi Fluid Design System is simple with [grunt bump](https://github.com/vojtajina/grunt-bump)
 
-## Running the FDS demo locally
+## Running the demo locally
 
 For developers that would like to contribute to the demo please checkout the `gh-pages` branch:
 
@@ -126,5 +124,5 @@ Finally, start the application:
 npm start
 ```
 
-The FDS demo application should now be availalbe at: [http://127.0.0.1:8080/](http://127.0.0.1:8080/).
+The demo application should now be availalbe at: [http://127.0.0.1:8080/](http://127.0.0.1:8080/).
 

@@ -1,6 +1,6 @@
 {
-  "name": "fluid-design-system",
-  "version": "0.0.1-RC.0",
+  "name": "nifi-fds",
+  "version": "0.0.1",
   "scripts": {
     "build": "./node_modules/grunt-cli/bin/grunt compile-fds-styles",
     "test": "./node_modules/protractor/bin/webdriver-manager update --gecko false && karma start karma.conf.js --single-run",
@@ -19,10 +19,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/scottyaslan/fluid-design-system.git"
+    "url": "https://github.com/apache/nifi-fds.git"
   },
   "bugs": {
-    "url": "https://github.com/scottyaslan/fluid-design-system/issues"
+    "url": "https://github.com/apache/nifi-fds/issues"
   },
   "license": "Apache License, Version 2.0",
   "author": "Scott Aslan",
