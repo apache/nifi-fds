@@ -3,3 +3,9 @@ coverage/
 npm-debug.log*
 webapp/
 package-lock.json
+
+# Intellij
+.idea/
+*.iml
+*.iws
+*~
