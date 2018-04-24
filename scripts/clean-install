@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -e
+
+# build
+bash ./scripts/clean-install-skipTests
+cd ./target
+
+# test
+npm test
