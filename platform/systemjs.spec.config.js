@@ -40,7 +40,27 @@
             '@angular/router': 'npm:@angular/router/bundles/router.umd.js',
             '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
             '@angular/flex-layout': 'npm:@angular/flex-layout/bundles/flex-layout.umd.js',
+            '@angular/flex-layout/core': 'npm:@angular/flex-layout/bundles/flex-layout-core.umd.js',
+            '@angular/flex-layout/extended': 'npm:@angular/flex-layout/bundles/flex-layout-extended.umd.js',
+            '@angular/flex-layout/flex': 'npm:@angular/flex-layout/bundles/flex-layout-flex.umd.js',
             '@angular/material': 'npm:@angular/material/bundles/material.umd.js',
+            '@angular/material/core': 'npm:@angular/material/bundles/material-core.umd.js',
+            '@angular/material/card': 'npm:@angular/material/bundles/material-card.umd.js',
+            '@angular/material/divider': 'npm:@angular/material/bundles/material-divider.umd.js',
+            '@angular/material/progress-bar': 'npm:@angular/material/bundles/material-progress-bar.umd.js',
+            '@angular/material/progress-spinner': 'npm:@angular/material/bundles/material-progress-spinner.umd.js',
+            '@angular/material/chips': 'npm:@angular/material/bundles/material-chips.umd.js',
+            '@angular/material/input': 'npm:@angular/material/bundles/material-input.umd.js',
+            '@angular/material/icon': 'npm:@angular/material/bundles/material-icon.umd.js',
+            '@angular/material/button': 'npm:@angular/material/bundles/material-button.umd.js',
+            '@angular/material/checkbox': 'npm:@angular/material/bundles/material-checkbox.umd.js',
+            '@angular/material/tooltip': 'npm:@angular/material/bundles/material-tooltip.umd.js',
+            '@angular/material/dialog': 'npm:@angular/material/bundles/material-dialog.umd.js',
+            '@angular/material/sidenav': 'npm:@angular/material/bundles/material-sidenav.umd.js',
+            '@angular/material/menu': 'npm:@angular/material/bundles/material-menu.umd.js',
+            '@angular/material/form-field': 'npm:@angular/material/bundles/material-form-field.umd.js',
+            '@angular/material/toolbar': 'npm:@angular/material/bundles/material-toolbar.umd.js',
+            '@angular/material/autocomplete': 'npm:@angular/material/bundles/material-autocomplete.umd.js',
             '@angular/platform-browser/animations': 'npm:@angular/platform-browser/bundles/platform-browser-animations.umd.js',
             '@angular/cdk': 'npm:@angular/cdk/bundles/cdk.umd.js',
             '@angular/cdk/a11y': 'npm:@angular/cdk/bundles/cdk-a11y.umd.js',
@@ -62,16 +82,16 @@
             '@angular/animations/browser': 'npm:@angular/animations/bundles/animations-browser.umd.js',
             '@angular/compiler': 'npm:@angular/compiler/bundles/compiler.umd.js',
 
+            // needed to support gestures for angular material
+            'hammerjs': 'npm:hammerjs/hammer.min.js',
+
             // Covalent
-            '@covalent/core': 'npm:@covalent/core/bundles/core.umd.min.js',
+            '@covalent/core': 'npm:@covalent/core/bundles/covalent-core.umd.min.js',
+            '@covalent/core/common': 'npm:@covalent/core/bundles/covalent-core-common.umd.min.js',
 
             // other libraries
             'rxjs': 'npm:rxjs',
             'zone.js': 'npm:zone.js/dist/zone.js',
-            // 'core-js': 'npm:core-js/client/shim.min.js',
-            // 'superagent': 'npm:superagent/superagent.js',
-            // 'querystring': 'npm:querystring',
-            // 'tslib': 'npm:tslib/tslib.js',
 
             // Fluid Design System
             '@fluid-design-system/core': 'platform/core/fluid-design-system.module.js',

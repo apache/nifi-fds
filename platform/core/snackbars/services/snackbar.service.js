@@ -20,23 +20,29 @@ var ngMaterial = require('@angular/material');
 var FdsCoasterComponent = require('@fluid-design-system/coaster-component');
 var $ = require('jquery');
 
-var ISnackBarConfig = new ngCore.Class({
-    extends: ngMaterial.MatSnackBarConfig,
-    constructor: function () {
-        this.title = '';
-        this.message = '';
-        this.snackBarRef = undefined;
-        this.viewContainerRef = undefined;
-    }
-});
+function ISnackBarConfig() {
+    this.title = '';
+    this.message = '';
+    this.snackBarRef = undefined;
+    this.viewContainerRef = undefined;
+}
 
-var ICoasterConfig = new ngCore.Class({
-    extends: ISnackBarConfig,
-    constructor: function () {
-        this.icon = '';
-        this.color = '';
-    }
-});
+ISnackBarConfig.prototype = {
+    contstructor: ISnackBarConfig
+}
+
+$.extend(ISnackBarConfig, ngMaterial.MatSnackBarConfig);
+
+function ICoasterConfig() {
+    this.icon = '';
+    this.color = '';
+}
+
+ICoasterConfig.prototype = {
+    contstructor: ICoasterConfig
+}
+
+$.extend(ICoasterConfig, ISnackBarConfig);
 
 /**
  * FdsSnackBarService constructor.

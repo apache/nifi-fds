@@ -17,21 +17,38 @@
 
 var ngCore = require('@angular/core');
 
-var FdsSnackBarTitleDirective = new ngCore.Class({
-    extends: ngCore.Directive({selector: 'fds-snackbar-title'}),
-    constructor: function () {
-    }
-});
-var FdsSnackBarContentDirective = new ngCore.Class({
-    extends: ngCore.Directive({selector: 'fds-snackbar-content'}),
-    constructor: function () {
-    }
-});
-var FdsSnackBarActionsDirective = new ngCore.Class({
-    extends: ngCore.Directive({selector: 'fds-snackbar-actions'}),
-    constructor: function () {
-    }
-});
+function FdsSnackBarTitleDirective() {
+}
+
+FdsSnackBarTitleDirective.prototype = {
+    contstructor: FdsSnackBarTitleDirective
+}
+
+FdsSnackBarTitleDirective.decorators = [
+    { type: ngCore.Directive, args: [{ selector: 'fds-snackbar-title' },] },
+];
+
+function FdsSnackBarContentDirective() {
+}
+
+FdsSnackBarContentDirective.prototype = {
+    contstructor: FdsSnackBarContentDirective
+}
+
+FdsSnackBarContentDirective.decorators = [
+    { type: ngCore.Directive, args: [{ selector: 'fds-snackbar-content' },] },
+];
+
+function FdsSnackBarActionsDirective() {
+}
+
+FdsSnackBarActionsDirective.prototype = {
+    contstructor: FdsSnackBarActionsDirective
+}
+
+FdsSnackBarActionsDirective.decorators = [
+    { type: ngCore.Directive, args: [{ selector: 'fds-snackbar-actions' },] },
+];
 
 /**
  * FdsSnackBarComponent constructor

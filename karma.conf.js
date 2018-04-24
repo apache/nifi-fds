@@ -92,8 +92,7 @@ module.exports = function (config) {
         proxies: {
             // required for modules fetched by SystemJS
             '/base/fds/node_modules/': '/base/node_modules/',
-            '/base/systemjs-angular-loader.js': '/base/platform/systemjs-angular-loader.js',
-            '/base/fds/': '/base/platform/'
+            '/base/systemjs-angular-loader.js': '/base/platform/systemjs-angular-loader.js'
         },
 
         exclude: [],

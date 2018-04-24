@@ -17,21 +17,38 @@
 
 var ngCore = require('@angular/core');
 
-var FdsDialogTitleDirective = new ngCore.Class({
-    extends: ngCore.Directive({selector: 'fds-dialog-title'}),
-    constructor: function () {
-    }
-});
-var FdsDialogContentDirective = new ngCore.Class({
-    extends: ngCore.Directive({selector: 'fds-dialog-content'}),
-    constructor: function () {
-    }
-});
-var FdsDialogActionsDirective = new ngCore.Class({
-    extends: ngCore.Directive({selector: 'fds-dialog-actions'}),
-    constructor: function () {
-    }
-});
+function FdsDialogTitleDirective() {
+}
+
+FdsDialogTitleDirective.prototype = {
+    contstructor: FdsDialogTitleDirective
+}
+
+FdsDialogTitleDirective.decorators = [
+    { type: ngCore.Directive, args: [{ selector: 'fds-dialog-title' },] },
+];
+
+function FdsDialogContentDirective() {
+}
+
+FdsDialogContentDirective.prototype = {
+    contstructor: FdsDialogContentDirective
+}
+
+FdsDialogContentDirective.decorators = [
+    { type: ngCore.Directive, args: [{ selector: 'fds-dialog-content' },] },
+];
+
+function FdsDialogActionsDirective() {
+}
+
+FdsDialogActionsDirective.prototype = {
+    contstructor: FdsDialogActionsDirective
+}
+
+FdsDialogActionsDirective.decorators = [
+    { type: ngCore.Directive, args: [{ selector: 'fds-dialog-actions' },] },
+];
 
 /**
  * FdsDialogComponent constructor

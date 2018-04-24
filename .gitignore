@@ -1,5 +1,6 @@
 node_modules/
 coverage/
+platform/core/common/styles/css/
 npm-debug.log*
 webapp/
 package-lock.json

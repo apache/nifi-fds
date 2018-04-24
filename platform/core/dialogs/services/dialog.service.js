@@ -19,26 +19,32 @@ var ngCore = require('@angular/core');
 var ngMaterial = require('@angular/material');
 var FdsConfirmDialogComponent = require('@fluid-design-system/confirm-dialog-component');
 
-var IDialogConfig = new ngCore.Class({
-    extends: ngMaterial.MatDialogConfig,
-    constructor: function () {
-        this.title = '';
-        this.message = '';
-        this.dialogRef = undefined;
-        this.viewContainerRef = undefined;
-        this.disableClose = true;
-    }
-});
+function IDialogConfig() {
+    this.title = '';
+    this.message = '';
+    this.dialogRef = undefined;
+    this.viewContainerRef = undefined;
+    this.disableClose = true;
+}
 
-var IConfirmConfig = new ngCore.Class({
-    extends: IDialogConfig,
-    constructor: function () {
-        this.acceptButton = 'ACCEPT';
-        this.acceptButtonColor = 'fds-primary';
-        this.cancelButton = 'CANCEL';
-        this.cancelButtonColor = 'fds-secondary';
-    }
-});
+IDialogConfig.prototype = {
+    contstructor: IDialogConfig
+}
+
+$.extend(IDialogConfig, ngMaterial.MatDialogConfig);
+
+function IConfirmConfig() {
+    this.acceptButton = 'ACCEPT';
+    this.acceptButtonColor = 'fds-primary';
+    this.cancelButton = 'CANCEL';
+    this.cancelButtonColor = 'fds-secondary';
+}
+
+IConfirmConfig.prototype = {
+    contstructor: IConfirmConfig
+}
+
+$.extend(IConfirmConfig, IDialogConfig);
 
 function createConfig(config) {
     var dialogConfig = new IConfirmConfig();
