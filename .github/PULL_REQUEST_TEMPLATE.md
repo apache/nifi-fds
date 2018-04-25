@@ -30,7 +30,7 @@ Please ensure that once the PR is submitted, you check travis-ci for build issue
 
 ### Reviewers, please perform the following in order to validate the changes:
 - [ ] Checkout the gh-pages branch.
-- [ ] Edit the package.json file in the root nifi-fds folder and update the nifi-fds package to point to the pull request at git+https://github.com/<user>/<repo>.git#<branch>.
+- [ ] Edit the package.json file in the root nifi-fds folder and update the nifi-fds package in the dependencies section to point to the pull request at git+https://github.com/user/repo.git#branch.
 - [ ] ‘npm install’ in the root nifi-fds folder.
 - [ ] ‘npm install’ in the node_modules/nifi-fds folder.
 - [ ] ‘npm run build’ in the node_modules/nifi-fds folder.
