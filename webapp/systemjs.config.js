@@ -19,12 +19,12 @@
     System.config({
         paths: {
             // paths serve as alias
-            'npm:': 'fds/node_modules/'
+            'npm:': 'node_modules/'
         },
         // map tells the System loader where to look for things
         map: {
             'text': 'npm:systemjs-plugin-text/text.js',
-            'app': './platform',
+            'app': './webapp',
 
             // jquery
             'jquery': 'npm:jquery/dist/jquery.min.js',
@@ -92,6 +92,10 @@
             // other libraries
             'rxjs': 'npm:rxjs',
             'zone.js': 'npm:zone.js/dist/zone.js',
+            'core-js': 'npm:core-js/client/shim.min.js',
+            'superagent': 'npm:superagent/superagent.js',
+            'querystring': 'npm:querystring',
+            'tslib': 'npm:tslib/tslib.js',
 
             // Fluid Design System
             '@fluid-design-system/core': 'platform/core/fluid-design-system.module.js',
@@ -107,7 +111,30 @@
         },
         // packages tells the System loader how to load when no filename and/or no extension
         packages: {
+            app: {
+                defaultExtension: 'js',
+                meta: {
+                    './*.js': {
+                        loader: 'webapp/systemjs-angular-loader.js'
+                    }
+                }
+            },
+            'webapp/systemjs-angular-loader.js': {
+                loader: false
+            },
             'rxjs': {
+                defaultExtension: 'js'
+            },
+            'querystring': {
+                main: './index.js',
+                defaultExtension: 'js'
+            },
+            'moment': {
+                main: './moment.js',
+                defaultExtension: 'js'
+            },
+            'angular2-moment': {
+                main: './index.js',
                 defaultExtension: 'js'
             }
         }

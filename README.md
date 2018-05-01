@@ -77,52 +77,40 @@ npm install
 Next run:
 
 ```bash
-npm run build
+npm run clean:install
 ```
 
-## Testing
-
-Developers can easily test this project using **npm**.
+or to run without unit tests run:
 
 ```bash
-npm test
+npm run clean:install:skipTests
 ```
 
-Or, during development:
+## Developing
+
+Developers can easily skip the re-instalation of node_modules and run unit tests in development mode using **npm**.
 
 ```bash
-npm run test:dev
+npm run dev:install
 ```
 
-## Release Managment
-
-For developers with permissions releasing a new version of the NiFi Fluid Design System is simple with [grunt bump](https://github.com/vojtajina/grunt-bump)
-
-## Running the demo locally
-
-For developers that would like to contribute to the demo please checkout the `gh-pages` branch:
+or to run without unit tests run:
 
 ```bash
-git checkout gh-pages
+npm run dev:install:skipTests
 ```
 
-Next, you will need to update the base url. To do this simply edit the index.html file on line 21:
+## Running locally
 
-```bash
-<base href='/fluid-design-system/'>
-```
-
-should be:
-
-```bash
-<base href='/'>
-```
-
-Finally, start the application:
+Once built you can start the application from the target directory via:
 
 ```bash
 npm start
 ```
 
 The demo application should now be availalbe at: [http://127.0.0.1:8080/](http://127.0.0.1:8080/).
+
+## Release Managment
+
+For developers with permissions releasing a new version of the NiFi Fluid Design System is simple with [grunt bump](https://github.com/vojtajina/grunt-bump)
 

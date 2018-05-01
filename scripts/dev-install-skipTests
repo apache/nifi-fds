@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+set -e
+
+# build
+cp -R ./webapp/ ./target/webapp
+cp -R ./platform/ ./target/platform
+cp package.json ./target/package.json
+cp index.html ./target/index.html
+cp karma.conf.js ./target/karma.conf.js
+cp karma-test-shim.js ./target/karma-test-shim.js
+cp Gruntfile.js ./target/Gruntfile.js
+cp gh-pages.* ./target/
+cd ./target
+npm install
+npm run build:webapp
+npm run build:platform

@@ -29,6 +29,11 @@ module.exports = function (grunt) {
                 files: [{
                     './platform/core/common/styles/css/fluid-design-system.min.css': ['./platform/core/common/styles/fluid-design-system.scss']
                 }]
+            },
+            minifyFdsDemo: {
+                files: [{
+                    './webapp/css/fds-demo.min.css': ['./webapp/theming/fds-demo.scss']
+                }]
             }
         },
         compress: {
@@ -39,6 +44,14 @@ module.exports = function (grunt) {
                 files: [{
                     expand: true,
                     src: ['./platform/core/common/styles/css/fluid-design-system.min.css'],
+                    dest: './',
+                    ext: '.min.css.gz'
+                }]
+            },
+            fdsDemoStyles: {
+                files: [{
+                    expand: true,
+                    src: ['./webapp/css/fds-demo.min.css'],
                     dest: './',
                     ext: '.min.css.gz'
                 }]
@@ -65,4 +78,5 @@ module.exports = function (grunt) {
         }
     });
     grunt.registerTask('compile-fds-styles', ['sass:minifyFds', 'compress:fdsStyles']);
+    grunt.registerTask('compile-fds-demo-styles', ['sass:minifyFdsDemo', 'compress:fdsDemoStyles']);
 };
