@@ -2,9 +2,7 @@
   "name": "nifi-fds-demo",
   "version": "0.0.0",
   "scripts": {
-    "start": "./node_modules/http-server/bin/http-server .",
-    "build:webapp": "./node_modules/grunt-cli/bin/grunt compile-fds-demo-styles",
-    "build:platform": "npm install && cd ./node_modules/nifi-fds && npm install && npm run build && rm -rf ./node_modules && rm -rf ./package-lock.json"
+    "start": "./node_modules/http-server/bin/http-server ."
   },
   "description": "The Apache NiFi Fluid Design System demo provides users with an example web application that consumes the NgModule and allows users to interact with the UI/UX components.",
   "keywords": [

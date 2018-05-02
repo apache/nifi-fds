@@ -4,14 +4,13 @@ echo 'Build Complete'
 git checkout gh-pages
 echo 'Created and Checked out gh-pages branch'
 
-git rm -rf ./node_modules/
-cp ./target/gh-pages.package.json ./package.json
+cp -f ./target/gh-pages.package.json ./package.json
 npm install
 mkdir ./node_modules/nifi-fds
-cp -R ./target/platform/ ./node_modules/nifi-fds/platform
-cp -R ./target/webapp/ ./webapp
-cp ./target/gh-pages.index.html ./index.html
-cp ./target/gh-pages.systemjs.config.js ./webapp/systemjs.config.js
+cp -Rf ./target/platform/ ./node_modules/nifi-fds/platform
+cp -Rf ./target/webapp/ ./webapp
+cp -f ./target/gh-pages.index.html ./index.html
+cp -f ./target/gh-pages.systemjs.config.js ./webapp/systemjs.config.js
 echo 'Tracking files'
 git add -A .
 echo 'Commiting files'

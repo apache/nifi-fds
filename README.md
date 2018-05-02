@@ -1,10 +1,10 @@
 # Apache NiFi Fluid Design System
 
-The Apache NiFi Fluid Design System module is an atomic reusable platform providing consistent set of UI/UX components for open source friendly web applications to consume. Checkout the demo web application on the `gh-pages` branch to see a complete example of an Angular application that leverages this NGModule. This demo application allows users to interact with and provides sample code for the available UI/UX components: [https://apache.github.io/nifi-fds/](https://apache.github.io/nifi-fds/).
+The Apache NiFi Fluid Design System module is an atomic reusable platform providing consistent set of UI/UX components for open source friendly web applications to consume. Checkout the demo web application on the `gh-pages` branch to see a complete example of an Angular application that leverages this NgModule. This demo application allows users to interact with and provides sample code for the available FDS UI/UX components: [https://apache.github.io/nifi-fds/](https://apache.github.io/nifi-fds/).
 
 #### npm
 
-For developers not interested in building the FDS NgModule you can use **npm** to install the distribution files.
+For developers not interested in building the FDS NgModule you can use **npm** to install the distribution files. (TBD: awaiting 0.1 release)
 
 ```bash
 npm install nifi-fds
@@ -66,9 +66,7 @@ NiFi Fluid Design System UI/UX Platform comes with a base CSS file `node_modules
 
 ## Building
 
-Developers can easily build this project using **npm**.
-
-First install or update your local project's **npm** tools:
+Developers can easily build this project using **npm**. First install or update your local project's **npm** tools from the root nifi-fds directory via:
 
 ```bash
 npm install
@@ -112,5 +110,13 @@ The demo application should now be availalbe at: [http://127.0.0.1:8080/](http:/
 
 ## Release Managment
 
-For developers with permissions releasing a new version of the NiFi Fluid Design System is simple with [grunt bump](https://github.com/vojtajina/grunt-bump)
+For developers with permissions releasing a new version of the NiFi Fluid Design System is simple with [grunt bump](https://github.com/vojtajina/grunt-bump).
+
+## Deploying github.io demo
+
+The nifi-fds github.io demo can be deployed from the root nifi-fds directory via:
+
+```bash
+npm run deploy:ghpages
+```
 
