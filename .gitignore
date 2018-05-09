@@ -1,8 +1,5 @@
-node_modules/
-coverage/
+target/
 npm-debug.log*
-webapp/
-package-lock.json
 
 # Intellij
 .idea/

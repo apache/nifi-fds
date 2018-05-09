@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -e
+
+# build
+bash ./scripts/dev-install-skipTests
+cd ./target
+
+# test
+npm run test:dev
