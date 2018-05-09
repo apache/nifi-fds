@@ -32,7 +32,7 @@ module.exports = function (grunt) {
             },
             minifyFdsDemo: {
                 files: [{
-                    './webapp/css/fds-demo.min.css': ['./webapp/theming/fds-demo.scss']
+                    './demo-app/css/fds-demo.min.css': ['./demo-app/theming/fds-demo.scss']
                 }]
             }
         },
@@ -51,7 +51,7 @@ module.exports = function (grunt) {
             fdsDemoStyles: {
                 files: [{
                     expand: true,
-                    src: ['./webapp/css/fds-demo.min.css'],
+                    src: ['./demo-app/css/fds-demo.min.css'],
                     dest: './',
                     ext: '.min.css.gz'
                 }]

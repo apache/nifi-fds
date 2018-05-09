@@ -8,9 +8,9 @@ cp -f ./target/gh-pages.package.json ./package.json
 npm install
 mkdir ./node_modules/nifi-fds
 cp -Rf ./target/platform/ ./node_modules/nifi-fds/platform
-cp -Rf ./target/webapp/ ./webapp
+cp -Rf ./target/demo-app/ ./demo-app
 cp -f ./target/gh-pages.index.html ./index.html
-cp -f ./target/gh-pages.systemjs.config.js ./webapp/systemjs.config.js
+cp -f ./target/gh-pages.systemjs.config.js ./demo-app/systemjs.config.js
 echo 'Tracking files'
 git add -A .
 echo 'Commiting files'

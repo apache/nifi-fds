@@ -4,15 +4,15 @@ set -e
 # build
 rm -rf ./target
 mkdir target
-cp -R ./webapp/ ./target/webapp
-cp -R ./platform/ ./target/platform
+cp -R ./src/demo-app/ ./target/demo-app
+cp -R ./src/platform/ ./target/platform
 cp package.json ./target/package.json
-cp index.html ./target/index.html
-cp karma.conf.js ./target/karma.conf.js
-cp karma-test-shim.js ./target/karma-test-shim.js
+cp ./src/demo-app/index.html ./target/index.html
+cp ./test/karma.conf.js ./target/karma.conf.js
+cp ./test/karma-test-shim.js ./target/karma-test-shim.js
 cp Gruntfile.js ./target/Gruntfile.js
-cp gh-pages.* ./target/
+cp ./src/demo-app/gh-pages.* ./target/
 cd ./target
 npm install
-npm run build:webapp
+npm run build:demo-app
 npm run build:platform

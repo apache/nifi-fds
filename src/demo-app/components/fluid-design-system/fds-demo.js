@@ -19,11 +19,11 @@ var ngCore = require('@angular/core');
 var covalentCore = require('@covalent/core');
 var ngRouter = require('@angular/router');
 var ngMaterial = require('@angular/material');
-var fdsAnimations = require('webapp/fds.animations.js');
+var fdsAnimations = require('demo-app/fds.animations.js');
 var fdsDialogsModule = require('@fluid-design-system/dialogs');
 var fdsSnackBarsModule = require('@fluid-design-system/snackbars');
-var FdsService = require('webapp/services/fds.service.js');
-var FdsDemoDialog = require('webapp/components/fluid-design-system/dialogs/demo/fds-demo-dialog.js');
+var FdsService = require('demo-app/services/fds.service.js');
+var FdsDemoDialog = require('demo-app/components/fluid-design-system/dialogs/demo/fds-demo-dialog.js');
 
 var NUMBER_FORMAT = function (v) {
     return v;

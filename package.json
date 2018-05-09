@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "start": "./node_modules/http-server/bin/http-server .",
-    "build:webapp": "./node_modules/grunt-cli/bin/grunt compile-fds-demo-styles",
+    "build:demo-app": "./node_modules/grunt-cli/bin/grunt compile-fds-demo-styles",
     "build:platform": "./node_modules/grunt-cli/bin/grunt compile-fds-styles",
     "clean:install": "bash ./scripts/clean-install",
     "clean:install:skipTests": "bash ./scripts/clean-install-skipTests",

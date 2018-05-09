@@ -16,7 +16,7 @@
  */
 
 var ngRouter = require('@angular/router');
-var FdsDemo = require('webapp/components/fluid-design-system/fds-demo.js');
+var FdsDemo = require('demo-app/components/fluid-design-system/fds-demo.js');
 
 var FdsRoutes = new ngRouter.RouterModule.forRoot([{
     path: '',

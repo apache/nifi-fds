@@ -16,12 +16,12 @@
  */
 
 var ngCore = require('@angular/core');
-var FdsRoutes = require('webapp/fds.routes.js');
+var FdsRoutes = require('demo-app/fds.routes.js');
 var fdsCore = require('@fluid-design-system/core');
-var Fds = require('webapp/fds.js');
-var FdsDemo = require('webapp/components/fluid-design-system/fds-demo.js');
-var FdsDemoDialog = require('webapp/components/fluid-design-system/dialogs/demo/fds-demo-dialog.js');
-var FdsService = require('webapp/services/fds.service.js');
+var Fds = require('demo-app/fds.js');
+var FdsDemo = require('demo-app/components/fluid-design-system/fds-demo.js');
+var FdsDemoDialog = require('demo-app/components/fluid-design-system/dialogs/demo/fds-demo-dialog.js');
+var FdsService = require('demo-app/services/fds.service.js');
 var ngCommonHttp = require('@angular/common/http');
 
 function FdsModule() {

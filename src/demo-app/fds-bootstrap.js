@@ -19,7 +19,7 @@ require('core-js');
 require('zone.js');
 require('hammerjs');
 var $ = require('jquery');
-var FdsModule = require('webapp/fds.module.js');
+var FdsModule = require('demo-app/fds.module.js');
 var ngPlatformBrowserDynamic = require('@angular/platform-browser-dynamic');
 var ngCore = require('@angular/core');
 
@@ -35,7 +35,7 @@ var providers = [];
 if (!locale || locale === 'en-US') {
     ngPlatformBrowserDynamic.platformBrowserDynamic().bootstrapModule(FdsModule, {providers: providers});
 } else { //load the translation providers and bootstrap the module
-    var translationFile = './webapp/messages.' + locale + '.xlf';
+    var translationFile = './demo-app/messages.' + locale + '.xlf';
 
     $.ajax({
         url: translationFile

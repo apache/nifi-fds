@@ -79,7 +79,6 @@ limitations under the License.
                     <span>Base font size is 10px for easy rem units (1.2rem = 12px). Body font size is 14px. sp = scalable pixels.</span>
                 </p>
                 <h3 class="mat-title">Header Styles</h3>
-                <mat-divider class="push-top push-bottom"></mat-divider>
                 <p class="mat-body-1">To preserve semantic structures, you can optionally style the <code>&lt;h1&gt;</code> - <code>&lt;h6&gt;</code> heading tags with the styling classes shown below:</p>
                 <p>CSS:</p>
                 <div layout-align="center end">
@@ -116,18 +115,17 @@ limitations under the License.
                 <p>HTML:</p>
                 <pre lang="html">
     <![CDATA[
-        <!-- Large Heading -->
+                    <!-- Large Heading -->
         <h1 class="mat-display-4">Roboto is the standard typeface on Android.</h1>
         <h2 class="mat-display-3">Roboto and Noto are the standard typefaces on Android and Chrome.</h2>
         <h3 class="mat-display-2">Noto is the standard typeface for all languages on Chrome and Android for all languages not covered by Roboto.</h3>
-        <!-- Medium Heading -->
+                    <!-- Medium Heading -->
         <h1 class="mat-display-1">Roboto is the standard typeface on Android.</h1>
         <h2 class="mat-headline">Roboto and Noto are the standard typefaces on Android and Chrome.</h2>
         <h3 class="md-subhead">Noto is the standard typeface for all languages on Chrome and Android for all languages not covered by Roboto.</h3>
     ]]>
     </pre>
                 <h3 class="mat-title">Body Copy</h3>
-                <mat-divider class="push-top push-bottom"></mat-divider>
                 <p>CSS:</p>
                 <div class="mat-body-1" layout-align="center end">
                     <div layout="row" layout-align="start center">
@@ -151,7 +149,7 @@ limitations under the License.
                 <p>HTML:</p>
                 <pre lang="html">
     <![CDATA[
-        <!-- body copy -->
+                    <!-- body copy -->
         <p class="mat-body-1">Roboto is the standard typeface on Android.</p>
         <p class="mat-body-2">Roboto and Noto are the standard typefaces on Android and Chrome.</p>
         <p class="mat-button">Roboto and Noto are the standard typefaces on Android and Chrome.</p>
@@ -185,7 +183,7 @@ limitations under the License.
                 <p>HTML:</p>
                 <pre lang="html">
     <![CDATA[
-        <!-- Themed Raised Buttons -->
+                    <!-- Themed Raised Buttons -->
         <button mat-raised-button color="primary">Primary</button>
         <button mat-raised-button color="accent">Secondary</button>
         <button mat-raised-button color="warn">warn</button>
@@ -194,7 +192,7 @@ limitations under the License.
         <button mat-raised-button color="fds-regular">FDS regular</button>
         <button mat-raised-button color="fds-warn">FDS warn</button>
         <button mat-raised-button color="fds-critical">FDS critical</button>
-        <!-- Disabled Raised Buttons -->
+                    <!-- Disabled Raised Buttons -->
         <button mat-raised-button disabled color="primary">Primary</button>
         <button mat-raised-button disabled color="accent">Secondary</button>
         <button mat-raised-button disabled color="warn">warn</button>
@@ -239,12 +237,12 @@ limitations under the License.
                 <p>HTML:</p>
                 <pre lang="html">
     <![CDATA[
-        <!-- Themed Flat Buttons -->
+                    <!-- Themed Flat Buttons -->
         <button mat-button>Default</button>
         <button mat-button color="primary">Primary</button>
         <button mat-button color="accent">Secondary</button>
         <button mat-button color="warn">warn</button>
-        <!-- Disabled Flat Buttons -->
+                    <!-- Disabled Flat Buttons -->
         <button mat-button disabled>disabled Default</button>
         <button mat-button disabled color="primary">disabled primary</button>
         <button mat-button disabled color="accent">disabled Secondary</button>
@@ -269,11 +267,11 @@ limitations under the License.
                 <p>HTML:</p>
                 <pre lang="html">
     <![CDATA[
-        <!-- Themed Fab Buttons -->
+                    <!-- Themed Fab Buttons -->
         <button mat-mini-fab color="primary">P</button>
         <button mat-mini-fab color="accent">A</button>
         <button mat-mini-fab color="warn">W</button>
-        <!-- Disabled Fab Buttons -->
+                    <!-- Disabled Fab Buttons -->
         <button mat-mini-fab disabled color="primary">P</button>
         <button mat-mini-fab disabled color="accent">A</button>
         <button mat-mini-fab disabled color="warn">W</button>
@@ -508,7 +506,7 @@ limitations under the License.
                 <p>HTML:</p>
                 <pre lang="html">
     <![CDATA[
-        <!-- Inputs -->
+                    <!-- Inputs -->
         <form>
             <div layout="row" layout-margin>
                 <mat-input-container floatPlaceholder="always" flex>
@@ -750,7 +748,7 @@ limitations under the License.
             <mat-divider></mat-divider>
             <mat-card-content>
                 <h3 class="mat-title">Autocomplete with chips and no custom inputs</h3>
-                <mat-divider class="push-top push-bottom"></mat-divider>
+                <mat-divider></mat-divider>
                 <mat-tab-group mat-stretch-tabs dynamicHeight>
                     <mat-tab>
                         <ng-template mat-tab-label>Demo</ng-template>
@@ -808,7 +806,7 @@ limitations under the License.
             </mat-card-content>
             <mat-card-content>
                 <h3 class="mat-title">Autocomplete with custom inputs</h3>
-                <mat-divider class="push-top push-bottom"></mat-divider>
+                <mat-divider></mat-divider>
                 <mat-tab-group mat-stretch-tabs dynamicHeight>
                     <mat-tab>
                         <ng-template mat-tab-label>Demo</ng-template>
@@ -850,7 +848,7 @@ limitations under the License.
             </mat-card-content>
             <mat-card-content>
                 <h3 class="mat-title">Demo allowing custom inputs for tags</h3>
-                <mat-divider class="push-top push-bottom"></mat-divider>
+                <mat-divider></mat-divider>
                 <mat-tab-group mat-stretch-tabs dynamicHeight>
                     <mat-tab>
                         <ng-template mat-tab-label>Demo</ng-template>
@@ -1436,7 +1434,7 @@ limitations under the License.
                     </mat-tab>
                 </mat-tab-group>
             </mat-card-content>
-            <mat-divider class="pad-bottom-sm"></mat-divider>
+            <mat-divider></mat-divider>
         </mat-card>
         <mat-card>
             <mat-card-title class="pad-bottom-sm">Table</mat-card-title>
@@ -1988,7 +1986,7 @@ limitations under the License.
                     </mat-tab>
                 </mat-tab-group>
             </mat-card-content>
-            <mat-divider class="pad-bottom-sm"></mat-divider>
+            <mat-divider></mat-divider>
             <mat-card-actions>
                 <button matTooltip="Column field name tooltips toggle." mat-button color="primary" (click)="toggleTooltips()" class="text-upper">
                     Tooltips ({{areTooltipsOn() ? 'ON' : 'OFF'}})
@@ -2000,7 +1998,7 @@ limitations under the License.
             <mat-divider></mat-divider>
             <mat-card-content>
                 <h3 class="mat-title">Basic Usage</h3>
-                <mat-divider class="push-top push-bottom"></mat-divider>
+                <mat-divider></mat-divider>
                 <mat-list>
                     <mat-list-item *ngFor="let grocery of groceries">
                         <mat-checkbox [checked]="grocery.bought">
@@ -2012,7 +2010,7 @@ limitations under the License.
                 <p>HTML:</p>
                 <pre lang="html">
                         <![CDATA[
-        <!-- Basic Usage -->
+                    <!-- Basic Usage -->
         <mat-checkbox [checked]="grocery.bought">
             { {grocery.name} }
         </mat-checkbox>
@@ -2034,7 +2032,7 @@ limitations under the License.
                         ]]>
                     </pre>
                 <h3 class="mat-title">Usage within Forms</h3>
-                <mat-divider class="push-top push-bottom"></mat-divider>
+                <mat-divider></mat-divider>
                 <form>
                     <div layout="row" layout-align="start center">
                         <mat-checkbox flex="initial" [(ngModel)]="user.agreesToTOS" name="agreesToTOS">
@@ -2042,18 +2040,18 @@ limitations under the License.
                         </mat-checkbox>
                         <button mat-raised-button color="fds-secondary" [disabled]="!user.agreesToTOS" class="pad-right-sm" class="text-upper">Sign Up</button>
                     </div>
-                    <mat-divider class="push-top-sm push-bottom-sm"></mat-divider>
+                    <mat-divider></mat-divider>
                     <mat-checkbox labelPosition="after">
                         I come after my label.
                     </mat-checkbox>
-                    <mat-divider class="push-top-sm push-bottom-sm"></mat-divider>
+                    <mat-divider></mat-divider>
                     <mat-checkbox labelPosition="before">I come before my label</mat-checkbox>
                 </form>
                 <h3 class="mat-title">Usage</h3>
                 <p>HTML:</p>
                 <pre lang="html">
         <![CDATA[
-        <!-- Usage within Forms -->
+                    <!-- Usage within Forms -->
         <form>
             <div layout="row" layout-align="start center">
                 <mat-checkbox flex="initial" [(ngModel)]="user.agreesToTOS" name="agreesToTOS">
@@ -2061,11 +2059,11 @@ limitations under the License.
                 </mat-checkbox>
                 <button mat-raised-button color="fds-secondary" [disabled]="!user.agreesToTOS" class="pad-right-sm" class="text-upper">Sign Up</button>
             </div>
-            <mat-divider class="push-top-sm push-bottom-sm"></mat-divider>
+            <mat-divider></mat-divider>
             <mat-checkbox labelPosition="after">
                 I come after my label.
             </mat-checkbox>
-            <mat-divider class="push-top-sm push-bottom-sm"></mat-divider>
+            <mat-divider></mat-divider>
             <mat-checkbox labelPosition="before">I come before my label</mat-checkbox>
         </form>
         ]]>
@@ -2087,7 +2085,6 @@ limitations under the License.
                 <div flex="48" class="pad-right">
                     <!-- Basic Radios -->
                     <h3 class="mat-title">Basic Radios</h3>
-                    <mat-divider class="push-top-sm push-bottom-sm"></mat-divider>
                     <mat-radio-group name="group1">
                         <mat-radio-button class="pad-right-sm" name="group1">Option 1 </mat-radio-button>
                         <mat-radio-button class="pad-right-sm" name="group1">Option 2 </mat-radio-button>
@@ -2097,7 +2094,7 @@ limitations under the License.
                     <p>HTML:</p>
                     <pre lang="html">
                 <![CDATA[
-        <!-- Basic Radios -->
+                        <!-- Basic Radios -->
         <mat-radio-group name="group1">
             <mat-radio-button class="pad-right-sm" name="group1">Option 1 </mat-radio-button>
             <mat-radio-button class="pad-right-sm" name="group1">Option 2 </mat-radio-button>
@@ -2109,7 +2106,6 @@ limitations under the License.
                 <div flex="48">
                     <!-- Dynamic Radios -->
                     <h3 class="mat-title">Dynamic Radios</h3>
-                    <mat-divider class="push-top-sm push-bottom-sm"></mat-divider>
                     <mat-radio-group name="more_options" [(ngModel)]="favoriteSeason">
                         <mat-radio-button class="fds-radio pad-right-sm" *ngFor="let season of seasonOptions" name="more_options" [value]="season">
                             {{season}}
@@ -2120,7 +2116,7 @@ limitations under the License.
                     <p>HTML:</p>
                     <pre lang="html">
       <![CDATA[
-        <!-- Dynamic Radios -->
+                        <!-- Dynamic Radios -->
         <mat-radio-group name="more_options" [(ngModel)]="favoriteSeason">
           <mat-radio-button class="fds-radio" *ngFor="let season of seasonOptions" name="more_options" [value]="season">
             { {season} }
@@ -2171,7 +2167,6 @@ limitations under the License.
             <mat-divider></mat-divider>
             <mat-card-content>
                 <h3 class="mat-title">Standard Card</h3>
-                <mat-divider class="push-top push-bottom"></mat-divider>
                 <mat-card>
                     <button class="fds-panel-menu-button" matTooltip="Standard Card Menu" mat-icon-button [matMenuTriggerFor]="standardCardMenu">
                         <i class="fa fa-ellipsis-v " aria-hidden="true"></i>
@@ -2198,7 +2193,7 @@ limitations under the License.
                 <p>HTML:</p>
                 <pre lang="html">
                 <![CDATA[
-        <!-- Basic Card -->
+                    <!-- Basic Card -->
         <mat-card>
             <button class="fds-panel-menu-button" matTooltip="Standard Card Menu" mat-icon-button [matMenuTriggerFor]="standardCardMenu">
                 <i class="fa fa-ellipsis-v " aria-hidden="true"></i>
@@ -2224,7 +2219,6 @@ limitations under the License.
     ]]>
             </pre>
                 <h3 class="mat-title">Tabbed Card</h3>
-                <mat-divider class="push-top push-bottom"></mat-divider>
                 <mat-card>
                     <button class="fds-panel-menu-button" matTooltip="Standard Card Menu" mat-icon-button [matMenuTriggerFor]="standardCardMenu">
                         <i class="fa fa-ellipsis-v " aria-hidden="true"></i>
@@ -2259,7 +2253,7 @@ limitations under the License.
                 <p>HTML:</p>
                 <pre lang="html">
                 <![CDATA[
-        <!-- Basic Card -->
+                    <!-- Basic Card -->
         <mat-card>
             <button class="fds-panel-menu-button" matTooltip="Standard Card Menu" mat-icon-button [matMenuTriggerFor]="standardCardMenu">
                 <i class="fa fa-ellipsis-v " aria-hidden="true"></i>
@@ -2669,7 +2663,6 @@ limitations under the License.
                                         <textarea matInput placeholder="Description" rows="4"></textarea>
                                     </mat-input-container>
                                 </form>
-                                <mat-divider></mat-divider>
                                 <div layout="row" layout-margin layout-align="end center">
                                     <button mat-button class="text-upper">Cancel</button>
                                     <button mat-button color="accent" class="text-upper">Save</button>
@@ -2752,7 +2745,6 @@ limitations under the License.
             <mat-card-content layout="row">
                 <div flex="48" class="pad-right">
                     <h3 class="mat-title">Progress Bars</h3>
-                    <mat-divider class="push-top push-bottom"></mat-divider>
                     <h4>Determinate</h4>
                     <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
                     <h4>Indeterminate</h4>
@@ -2763,27 +2755,25 @@ limitations under the License.
                     <mat-progress-bar mode="query"></mat-progress-bar>
                     <h4>Colors</h4>
                     <mat-progress-bar mode="indeterminate" color="primary"></mat-progress-bar>
-                    <mat-divider class="push-top-sm push-bottom-sm"></mat-divider>
                     <mat-progress-bar mode="indeterminate" color="accent"></mat-progress-bar>
-                    <mat-divider class="push-top-sm push-bottom-sm"></mat-divider>
                     <mat-progress-bar mode="indeterminate" color="warn"></mat-progress-bar>
                     <h3 class="mat-title">Usage</h3>
                     <p>HTML:</p>
                     <pre lang="html">
       <![CDATA[
-        <!-- Determinate-->
+                        <!-- Determinate-->
         <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
 
-        <!-- Indeterminate-->
+                        <!-- Indeterminate-->
         <mat-progress-bar mode="indeterminate"></mat-progress-bar>
 
-        <!-- Buffer-->
+                        <!-- Buffer-->
         <mat-progress-bar mode="buffer" value="15" bufferValue="15"></mat-progress-bar>
 
-        <!-- Query-->
+                        <!-- Query-->
         <mat-progress-bar mode="query"></mat-progress-bar>
 
-        <!-- Colors-->
+                        <!-- Colors-->
         <mat-progress-bar mode="indeterminate" color="primary"></mat-progress-bar>
 
         <mat-progress-bar mode="indeterminate" color="accent"></mat-progress-bar>
@@ -2795,7 +2785,6 @@ limitations under the License.
                 <div flex="48">
                     <!-- Progress circles-->
                     <h3 class="mat-title">Progress Spinner</h3>
-                    <mat-divider class="push-top push-bottom"></mat-divider>
                     <div layout="row">
                         <div>
                             <h4>Determinate</h4>
@@ -2822,13 +2811,13 @@ limitations under the License.
                     <p>HTML:</p>
                     <pre lang="html">
       <![CDATA[
-        <!-- Determinate -->
+                        <!-- Determinate -->
         <mat-progress-spinner mode="determinate" value="66"></mat-progress-spinner>
-        <!-- Indeterminate -->
+                        <!-- Indeterminate -->
         <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
-        <!-- Spinner -->
+                        <!-- Spinner -->
         <mat-spinner></mat-spinner>
-        <!-- Colors -->
+                        <!-- Colors -->
         <mat-progress-spinner mode="indeterminate" color="primary"></mat-progress-spinner>
         <mat-progress-spinner mode="indeterminate" color="accent"></mat-progress-spinner>
         <mat-progress-spinner mode="indeterminate" color="warn"></mat-progress-spinner>
@@ -2849,7 +2838,7 @@ limitations under the License.
                 <p>HTML:</p>
                 <pre lang="html">
         <![CDATA[
-        <!-- Basic Usage -->
+                    <!-- Basic Usage -->
         <mat-sidenav #sidenav mode="over" align="end" opened="false">
             ...
         </mat-sidenav>
@@ -2862,7 +2851,7 @@ limitations under the License.
             <mat-divider></mat-divider>
             <mat-card-content>
                 <h3 class="mat-title">Basic Usage</h3>
-                <mat-divider class="push-top-sm push-bottom-sm"></mat-divider>
+                <mat-divider></mat-divider>
                 <mat-list>
                     <mat-list-item *ngFor="let system of systems">
                         <mat-slide-toggle [color]="system.color" [(ngModel)]="system.on">
@@ -2874,7 +2863,7 @@ limitations under the License.
                 <p>HTML:</p>
                 <pre lang="html">
         <![CDATA[
-        <!-- Basic Usage -->
+                    <!-- Basic Usage -->
         <mat-list>
             <mat-list-item *ngFor="let system of systems">
               <mat-slide-toggle [color]="system.color" [(ngModel)]="system.on">
@@ -2903,7 +2892,6 @@ limitations under the License.
             ]]>
           </pre>
                 <h3 class="mat-title">Usage within Forms</h3>
-                <mat-divider class="push-top-sm push-bottom-sm"></mat-divider>
                 <form>
                     <mat-list>
                         <mat-list-item>
@@ -2923,7 +2911,7 @@ limitations under the License.
                 <p>HTML:</p>
                 <pre lang="html">
         <![CDATA[
-        <!-- Usage within Forms -->
+                    <!-- Usage within Forms -->
         <form>
             <mat-list>
                 <mat-list-item>
@@ -2956,7 +2944,6 @@ limitations under the License.
             <mat-divider></mat-divider>
             <mat-card-content>
                 <h3 class="mat-title">Horizontal Slider</h3>
-                <mat-divider class="push-top push-bottom"></mat-divider>
                 <mat-slider min="1" max="5" thumbLabel tickInterval="1" value="2" color="primary"></mat-slider>
                 <mat-slider step="5" thumbLabel tickInterval="5" value="20" color="accent"></mat-slider>
                 <mat-slider thumbLabel tick-interval="auto" value="2" color="warn"></mat-slider>
@@ -2970,7 +2957,6 @@ limitations under the License.
         ]]>
       </pre>
                 <h3 class="mat-title">Vertical Slider</h3>
-                <mat-divider class="push-top push-bottom"></mat-divider>
                 <mat-slider vertical min="1" max="100" thumbLabel tickInterval="10" value="2"></mat-slider>
                 <h3 class="mat-title">Usage</h3>
                 <p>HTML:</p>
@@ -2980,7 +2966,6 @@ limitations under the License.
         ]]>
       </pre>
                 <h3 class="mat-title">Inverted Slider</h3>
-                <mat-divider class="push-top push-bottom"></mat-divider>
                 <mat-slider invert min="1" max="100" thumbLabel tickInterval="10" value="2"></mat-slider>
                 <h3 class="mat-title">Usage</h3>
                 <p>HTML:</p>

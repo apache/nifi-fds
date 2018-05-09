@@ -24,7 +24,7 @@
         // map tells the System loader where to look for things
         map: {
             'text': 'npm:systemjs-plugin-text/text.js',
-            'app': './webapp',
+            'app': './demo-app',
 
             // jquery
             'jquery': 'npm:jquery/dist/jquery.min.js',
@@ -98,15 +98,16 @@
             'tslib': 'npm:tslib/tslib.js',
 
             // Fluid Design System
-            '@fluid-design-system/core': 'npm:nifi-fds/platform/core/fluid-design-system.module.js',
-            '@fluid-design-system/dialogs': 'npm:nifi-fds/platform/core/dialogs/fds-dialogs.module.js',
-            '@fluid-design-system/dialog-component': 'npm:nifi-fds/platform/core/dialogs/fds-dialog.component.js',
-            '@fluid-design-system/dialog-service': 'npm:nifi-fds/platform/core/dialogs/services/dialog.service.js',
-            '@fluid-design-system/confirm-dialog-component': 'npm:nifi-fds/platform/core/dialogs/confirm-dialog/confirm-dialog.component.js',
-            '@fluid-design-system/snackbars': 'npm:nifi-fds/platform/core/snackbars/fds-snackbars.module.js',
-            '@fluid-design-system/snackbar-component': 'npm:nifi-fds/platform/core/snackbars/fds-snackbar.component.js',
-            '@fluid-design-system/snackbar-service': 'npm:nifi-fds/platform/core/snackbars/services/snackbar.service.js',
-            '@fluid-design-system/coaster-component': 'npm:nifi-fds/platform/core/snackbars/coaster/coaster.component.js'
+            '@fluid-design-system/core': 'platform/core/fluid-design-system.module.js',
+            '@fluid-design-system/dialogs': 'platform/core/dialogs/fds-dialogs.module.js',
+            '@fluid-design-system/dialog-component': 'platform/core/dialogs/fds-dialog.component.js',
+            '@fluid-design-system/dialog-service': 'platform/core/dialogs/services/dialog.service.js',
+            '@fluid-design-system/confirm-dialog-component': 'platform/core/dialogs/confirm-dialog/confirm-dialog.component.js',
+            '@fluid-design-system/snackbars': 'platform/core/snackbars/fds-snackbars.module.js',
+            '@fluid-design-system/snackbar-component': 'platform/core/snackbars/fds-snackbar.component.js',
+            '@fluid-design-system/snackbar-service': 'platform/core/snackbars/services/snackbar.service.js',
+            '@fluid-design-system/coaster-component': 'platform/core/snackbars/coaster/coaster.component.js',
+            '@fluid-design-system/common/storage-service': 'platform/core/common/services/fds-storage.service.js'
         },
         // packages tells the System loader how to load when no filename and/or no extension
         packages: {
@@ -114,14 +115,26 @@
                 defaultExtension: 'js',
                 meta: {
                     './*.js': {
-                        loader: 'webapp/systemjs-angular-loader.js'
+                        loader: 'demo-app/systemjs-angular-loader.js'
                     }
                 }
             },
-            'webapp/systemjs-angular-loader.js': {
+            'demo-app/systemjs-angular-loader.js': {
                 loader: false
             },
             'rxjs': {
+                defaultExtension: 'js'
+            },
+            'querystring': {
+                main: './index.js',
+                defaultExtension: 'js'
+            },
+            'moment': {
+                main: './moment.js',
+                defaultExtension: 'js'
+            },
+            'angular2-moment': {
+                main: './index.js',
                 defaultExtension: 'js'
             }
         }

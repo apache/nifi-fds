@@ -1,6 +1,6 @@
 # Apache NiFi Fluid Design System
 
-The Apache NiFi Fluid Design System module is an atomic reusable platform providing consistent set of UI/UX components for open source friendly web applications to consume. Checkout the demo web application on the `gh-pages` branch to see a complete example of an Angular application that leverages this NgModule. This demo application allows users to interact with and provides sample code for the available FDS UI/UX components: [https://apache.github.io/nifi-fds/](https://apache.github.io/nifi-fds/).
+The Apache NiFi Fluid Design System module is an atomic reusable platform providing consistent set of UI/UX components for open source friendly web applications to consume. Users can interact with this design system by running the demo-app locally or by visiting: [https://apache.github.io/nifi-fds/](https://apache.github.io/nifi-fds/). This demo application also provides an example of how an Angular application would leverage the nifi-fds NgModule.
 
 #### npm
 
@@ -12,7 +12,7 @@ npm install nifi-fds
 
 ## Setup
 
-Import the **Fluid Design System** NgModule into your angular application:
+Import the **Apache NiFi Fluid Design System** NgModule into your angular application:
 
 ```javascript
 var fdsCore = require('fluid-design-system/core');
@@ -62,17 +62,11 @@ $fds-theme: mat-light-theme($fds-primary, $fds-accent, $fds-warn);
 @include fds-theme($fds-theme);
 ```
 
-NiFi Fluid Design System UI/UX Platform comes with a base CSS file `node_modules/fluid-design-system/core/common/styles/css/fluid-design-system.min.css` (includes icons).
+The Apache NiFi Fluid Design System UI/UX Platform comes with a base CSS file `node_modules/fluid-design-system/core/common/styles/css/fluid-design-system.min.css` (includes icons) that should be included in the head of your HTML document.
 
 ## Building
 
-Developers can easily build this project using **npm**. First install or update your local project's **npm** tools from the root nifi-fds directory via:
-
-```bash
-npm install
-```
-
-Next run:
+Developers can easily build this project using **npm** from the root nifi-fds directory via:
 
 ```bash
 npm run clean:install
@@ -103,10 +97,12 @@ npm run dev:install:skipTests
 Once built you can start the application from the target directory via:
 
 ```bash
+cd target
 npm start
 ```
 
-The demo application should now be availalbe at: [http://127.0.0.1:8080/](http://127.0.0.1:8080/).
+The demo application should now be availalbe at: [http://127.0.0.1:8080/](http://127.0.0.1:8080/). The port may differ if there is a conflict on 8080. See the output of the start command for the 
+available URLs.
 
 ## Release Managment
 
@@ -114,7 +110,7 @@ For developers with permissions releasing a new version of the NiFi Fluid Design
 
 ## Deploying github.io demo
 
-The nifi-fds github.io demo can be deployed from the root nifi-fds directory via:
+The nifi-fds github.io demo can be deployed from the root nifi-fds directory via: (TBD: awaiting 0.1 release)
 
 ```bash
 npm run deploy:ghpages

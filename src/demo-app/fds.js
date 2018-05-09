@@ -17,8 +17,8 @@
 
 var ngCore = require('@angular/core');
 var ngCommonHttp = require('@angular/common/http');
-var FdsService = require('webapp/services/fds.service.js');
-var fdsAnimations = require('webapp/fds.animations.js');
+var FdsService = require('demo-app/services/fds.service.js');
+var fdsAnimations = require('demo-app/fds.animations.js');
 var ngRouter = require('@angular/router');
 var MILLIS_PER_SECOND = 1000;
 
