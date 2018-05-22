@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-var FdsStorageService = require('@fluid-design-system/common/storage-service');
+var FdsStorageService = require('@flow-design-system/common/storage-service');
 
 describe('FdsStorageService isolated unit tests', function () {
     var fdsStorage;

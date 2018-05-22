@@ -75,7 +75,7 @@ module.exports = function (config) {
             {pattern: appBase + 'systemjs.spec.config.js', included: false, watched: false},
             'karma-test-shim.js', // optionally extend SystemJS mapping e.g., with barrels
 
-            // Include the Fluid Design System templates in the test suite.
+            // Include the Flow Design System templates in the test suite.
             {
                 pattern: 'platform/core/**/*.html',
                 included: true,

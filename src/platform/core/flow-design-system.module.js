@@ -23,15 +23,15 @@ var ngCommon = require('@angular/common');
 var ngPlatformBrowser = require('@angular/platform-browser');
 var ngAnimations = require('@angular/platform-browser/animations');
 var covalentCore = require('@covalent/core');
-var fdsDialogsModule = require('@fluid-design-system/dialogs');
-var fdsSnackBarsModule = require('@fluid-design-system/snackbars');
+var fdsDialogsModule = require('@flow-design-system/dialogs');
+var fdsSnackBarsModule = require('@flow-design-system/snackbars');
 
 /**
- * FluidDesignSystemModule constructor.
+ * FlowDesignSystemModule constructor.
  *
  * @constructor
  */
-function FluidDesignSystemModule() {
+function FlowDesignSystemModule() {
     $(document).ready(function () {
         //add fds attr to body tag to allow fine grain style overrides
         document.body.setAttribute('fds', '');
@@ -46,11 +46,11 @@ function FluidDesignSystemModule() {
     });
 };
 
-FluidDesignSystemModule.prototype = {
-    constructor: FluidDesignSystemModule
+FlowDesignSystemModule.prototype = {
+    constructor: FlowDesignSystemModule
 };
 
-FluidDesignSystemModule.annotations = [
+FlowDesignSystemModule.annotations = [
     new ngCore.NgModule({
         imports: [
             ngFlex.FlexLayoutModule,
@@ -152,4 +152,4 @@ FluidDesignSystemModule.annotations = [
         ]
     })
 ];
-module.exports = FluidDesignSystemModule;
+module.exports = FlowDesignSystemModule;

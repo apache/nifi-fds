@@ -16,8 +16,8 @@
  */
 
 var covalentCore = require('@covalent/core');
-var fdsDialogsModule = require('@fluid-design-system/dialogs');
-var fdsSnackBarsModule = require('@fluid-design-system/snackbars');
+var fdsDialogsModule = require('@flow-design-system/dialogs');
+var fdsSnackBarsModule = require('@flow-design-system/snackbars');
 
 /**
  * FdsService constructor.
@@ -34,7 +34,7 @@ function FdsService(tdDataTableService, fdsDialogService, fdsSnackBarService) {
     this.dataTableService = tdDataTableService;
 
     // General
-    this.title = "Apache NiFi Fluid Design System Demo";
+    this.title = "Apache NiFi Flow Design System Demo";
     this.inProgress = true;
     this.perspective = '';
 };

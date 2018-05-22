@@ -27,7 +27,7 @@ module.exports = function (grunt) {
             },
             minifyFds: {
                 files: [{
-                    './platform/core/common/styles/css/fluid-design-system.min.css': ['./platform/core/common/styles/fluid-design-system.scss']
+                    './platform/core/common/styles/css/flow-design-system.min.css': ['./platform/core/common/styles/flow-design-system.scss']
                 }]
             },
             minifyFdsDemo: {
@@ -43,7 +43,7 @@ module.exports = function (grunt) {
             fdsStyles: {
                 files: [{
                     expand: true,
-                    src: ['./platform/core/common/styles/css/fluid-design-system.min.css'],
+                    src: ['./platform/core/common/styles/css/flow-design-system.min.css'],
                     dest: './',
                     ext: '.min.css.gz'
                 }]

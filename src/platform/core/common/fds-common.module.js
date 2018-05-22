@@ -16,7 +16,7 @@
  */
 
 var ngCore = require('@angular/core');
-var fdsStorageServiceModule = require('@fluid-design-system/storage-service');
+var fdsStorageServiceModule = require('@flow-design-system/storage-service');
 
 /**
  * FdsCommonsModule constructor.

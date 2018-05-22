@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-var FdsConfirmDialogComponent = require('@fluid-design-system/confirm-dialog-component');
+var FdsConfirmDialogComponent = require('@flow-design-system/confirm-dialog-component');
 
 describe('coasterComponent isolated unit tests', function () {
     var fdsConfirmDialogComponent;
