@@ -93,17 +93,17 @@
             'rxjs': 'npm:rxjs',
             'zone.js': 'npm:zone.js/dist/zone.js',
 
-            // Fluid Design System
-            '@fluid-design-system/core': 'platform/core/fluid-design-system.module.js',
-            '@fluid-design-system/dialogs': 'platform/core/dialogs/fds-dialogs.module.js',
-            '@fluid-design-system/dialog-component': 'platform/core/dialogs/fds-dialog.component.js',
-            '@fluid-design-system/dialog-service': 'platform/core/dialogs/services/dialog.service.js',
-            '@fluid-design-system/confirm-dialog-component': 'platform/core/dialogs/confirm-dialog/confirm-dialog.component.js',
-            '@fluid-design-system/snackbars': 'platform/core/snackbars/fds-snackbars.module.js',
-            '@fluid-design-system/snackbar-component': 'platform/core/snackbars/fds-snackbar.component.js',
-            '@fluid-design-system/snackbar-service': 'platform/core/snackbars/services/snackbar.service.js',
-            '@fluid-design-system/coaster-component': 'platform/core/snackbars/coaster/coaster.component.js',
-            '@fluid-design-system/common/storage-service': 'platform/core/common/services/fds-storage.service.js'
+            // Flow Design System
+            '@flow-design-system/core': 'platform/core/flow-design-system.module.js',
+            '@flow-design-system/dialogs': 'platform/core/dialogs/fds-dialogs.module.js',
+            '@flow-design-system/dialog-component': 'platform/core/dialogs/fds-dialog.component.js',
+            '@flow-design-system/dialog-service': 'platform/core/dialogs/services/dialog.service.js',
+            '@flow-design-system/confirm-dialog-component': 'platform/core/dialogs/confirm-dialog/confirm-dialog.component.js',
+            '@flow-design-system/snackbars': 'platform/core/snackbars/fds-snackbars.module.js',
+            '@flow-design-system/snackbar-component': 'platform/core/snackbars/fds-snackbar.component.js',
+            '@flow-design-system/snackbar-service': 'platform/core/snackbars/services/snackbar.service.js',
+            '@flow-design-system/coaster-component': 'platform/core/snackbars/coaster/coaster.component.js',
+            '@flow-design-system/common/storage-service': 'platform/core/common/services/fds-storage.service.js'
         },
         // packages tells the System loader how to load when no filename and/or no extension
         packages: {

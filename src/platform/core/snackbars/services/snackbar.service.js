@@ -17,7 +17,7 @@
 
 var ngCore = require('@angular/core');
 var ngMaterial = require('@angular/material');
-var FdsCoasterComponent = require('@fluid-design-system/coaster-component');
+var FdsCoasterComponent = require('@flow-design-system/coaster-component');
 var $ = require('jquery');
 
 function ISnackBarConfig() {

@@ -17,10 +17,10 @@
 
 var ngCore = require('@angular/core');
 var FdsRoutes = require('demo-app/fds.routes.js');
-var fdsCore = require('@fluid-design-system/core');
+var fdsCore = require('@flow-design-system/core');
 var Fds = require('demo-app/fds.js');
-var FdsDemo = require('demo-app/components/fluid-design-system/fds-demo.js');
-var FdsDemoDialog = require('demo-app/components/fluid-design-system/dialogs/demo/fds-demo-dialog.js');
+var FdsDemo = require('demo-app/components/flow-design-system/fds-demo.js');
+var FdsDemoDialog = require('demo-app/components/flow-design-system/dialogs/demo/fds-demo-dialog.js');
 var FdsService = require('demo-app/services/fds.service.js');
 var ngCommonHttp = require('@angular/common/http');
 

@@ -20,9 +20,9 @@ var ngMaterial = require('@angular/material');
 var ngFlex = require('@angular/flex-layout');
 var ngCommon = require('@angular/common');
 var ngForms = require('@angular/forms');
-var fdsSnackBarComponentModule = require('@fluid-design-system/snackbar-component');
-var fdsSnackBarServiceModule = require('@fluid-design-system/snackbar-service');
-var FdsCoasterComponent = require('@fluid-design-system/coaster-component');
+var fdsSnackBarComponentModule = require('@flow-design-system/snackbar-component');
+var fdsSnackBarServiceModule = require('@flow-design-system/snackbar-service');
+var FdsCoasterComponent = require('@flow-design-system/coaster-component');
 
 var FDS_SNACKBARS = [
     fdsSnackBarComponentModule.FdsSnackBarComponent,

@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-var fdsDialogsComponent = require('@fluid-design-system/dialog-component');
+var fdsDialogsComponent = require('@flow-design-system/dialog-component');
 
 describe('FdsDialogComponent isolated unit tests', function () {
     var fdsDialogs;
