@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-var fdsSnackBarComponent = require('@fluid-design-system/snackbar-component');
+var fdsSnackBarComponent = require('@flow-design-system/snackbar-component');
 
 describe('FdsSnackBarComponent isolated unit tests', function () {
     var fdsSnackBar;

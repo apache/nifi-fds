@@ -4,9 +4,9 @@
   "scripts": {
     "start": "./node_modules/http-server/bin/http-server ."
   },
-  "description": "The Apache NiFi Fluid Design System demo provides users with an example web application that consumes the NgModule and allows users to interact with the UI/UX components.",
+  "description": "The Apache NiFi Flow Design System demo provides users with an example web application that consumes the NgModule and allows users to interact with the UI/UX components.",
   "keywords": [
-    "fluid design system",
+    "flow design system",
     "angular",
     "material",
     "material design",

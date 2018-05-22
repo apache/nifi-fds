@@ -20,9 +20,9 @@ var ngMaterial = require('@angular/material');
 var ngFlex = require('@angular/flex-layout');
 var ngCommon = require('@angular/common');
 var ngForms = require('@angular/forms');
-var fdsDialogComponentModule = require('@fluid-design-system/dialog-component');
-var fdsDialogServiceModule = require('@fluid-design-system/dialog-service');
-var FdsConfirmDialogComponent = require('@fluid-design-system/confirm-dialog-component');
+var fdsDialogComponentModule = require('@flow-design-system/dialog-component');
+var fdsDialogServiceModule = require('@flow-design-system/dialog-service');
+var FdsConfirmDialogComponent = require('@flow-design-system/confirm-dialog-component');
 
 var FDS_DIALOGS = [
     fdsDialogComponentModule.FdsDialogComponent,

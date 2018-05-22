@@ -17,7 +17,7 @@
 
 var ngCore = require('@angular/core');
 var ngMaterial = require('@angular/material');
-var FdsConfirmDialogComponent = require('@fluid-design-system/confirm-dialog-component');
+var FdsConfirmDialogComponent = require('@flow-design-system/confirm-dialog-component');
 
 function IDialogConfig() {
     this.title = '';

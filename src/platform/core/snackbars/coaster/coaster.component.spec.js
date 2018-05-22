@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-var CoasterComponent = require('@fluid-design-system/coaster-component');
+var CoasterComponent = require('@flow-design-system/coaster-component');
 
 describe('coasterComponent isolated unit tests', function () {
     var coaster;

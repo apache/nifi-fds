@@ -1,4 +1,4 @@
-Thank you for submitting a contribution to Apache NiFi Fluid Design System.
+Thank you for submitting a contribution to Apache NiFi Flow Design System.
 
 In order to streamline the review of the contribution we ask you
 to ensure the following steps have been taken:
@@ -16,7 +16,7 @@ to ensure the following steps have been taken:
 ### For code changes:
 - [ ] Have you written or updated unit tests to verify your changes?
 - [ ] Have you ensured that a full build and that the full suite of unit tests is executed via npm run clean:install at the root nifi-fds folder?
-- [ ] Have you written or updated the Apache NiFi Fluid Design System demo application to demonstrate any new functionality, provide examples of usage, and to verify your changes via npm start at the nifi-fds/target folder?
+- [ ] Have you written or updated the Apache NiFi Flow Design System demo application to demonstrate any new functionality, provide examples of usage, and to verify your changes via npm start at the nifi-fds/target folder?
 - [ ] If adding new dependencies to the code, are these dependencies licensed in a way that is compatible for inclusion under [ASF 2.0](http://www.apache.org/legal/resolved.html#category-a)?
 - [ ] If applicable, have you updated the LICENSE file, including the main LICENSE file under nifi-fds?
 - [ ] If applicable, have you updated the NOTICE file, including the main NOTICE file found under nifi-fds?

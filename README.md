@@ -1,6 +1,6 @@
-# Apache NiFi Fluid Design System
+# Apache NiFi Flow Design System
 
-The Apache NiFi Fluid Design System module is an atomic reusable platform providing consistent set of UI/UX components for open source friendly web applications to consume. Users can interact with this design system by running the demo-app locally or by visiting: [https://apache.github.io/nifi-fds/](https://apache.github.io/nifi-fds/). This demo application also provides an example of how an Angular application would leverage the nifi-fds NgModule.
+The Apache NiFi Flow Design System module is an atomic reusable platform providing consistent set of UI/UX components for open source friendly web applications to consume. Users can interact with this design system by running the demo-app locally or by visiting: [https://apache.github.io/nifi-fds/](https://apache.github.io/nifi-fds/). This demo application also provides an example of how an Angular application would leverage the nifi-fds NgModule.
 
 #### npm
 
@@ -12,10 +12,10 @@ npm install nifi-fds
 
 ## Setup
 
-Import the **Apache NiFi Fluid Design System** NgModule into your angular application:
+Import the **Apache NiFi Flow Design System** NgModule into your angular application:
 
 ```javascript
-var fdsCore = require('fluid-design-system/core');
+var fdsCore = require('flow-design-system/core');
 AppModule.prototype = {
     constructor: AppModule
 };
@@ -62,7 +62,7 @@ $fds-theme: mat-light-theme($fds-primary, $fds-accent, $fds-warn);
 @include fds-theme($fds-theme);
 ```
 
-The Apache NiFi Fluid Design System UI/UX Platform comes with a base CSS file `node_modules/fluid-design-system/core/common/styles/css/fluid-design-system.min.css` (includes icons) that should be included in the head of your HTML document.
+The Apache NiFi Flow Design System UI/UX Platform comes with a base CSS file `node_modules/flow-design-system/core/common/styles/css/flow-design-system.min.css` (includes icons) that should be included in the head of your HTML document.
 
 ## Building
 
@@ -106,7 +106,7 @@ available URLs.
 
 ## Release Managment
 
-For developers with permissions releasing a new version of the NiFi Fluid Design System is simple with [grunt bump](https://github.com/vojtajina/grunt-bump).
+For developers with permissions releasing a new version of the NiFi Flow Design System is simple with [grunt bump](https://github.com/vojtajina/grunt-bump).
 
 ## Deploying github.io demo
 
