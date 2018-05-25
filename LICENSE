@@ -217,7 +217,7 @@ This product bundles 'Apache NiFi Registry' source code which is available under
    See the License for the specific language governing permissions and
    limitations under the License.
 
-This product bundles 'Angular Quickstart' which is available under an MIT license.
+This product bundles karma-test-shim.js from 'Angular Quickstart' which is available under an MIT license.
 
     Copyright (c) 2010-2016 Google, Inc. http://angularjs.org
 
