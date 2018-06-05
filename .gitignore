@@ -1,5 +1,7 @@
-demo-app/
-node_modules/
+node_modules/karma*
+node_modules/protractor*
+node_modules/grunt*
+node_modules/jasmine*
 target/
 npm-debug.log*
 

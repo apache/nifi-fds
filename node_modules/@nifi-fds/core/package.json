@@ -1,0 +1,40 @@
+{
+  "name": "@nifi-fds/core",
+  "version": "0.0.0",
+  "description": "Flow Design System —a subproject of Apache NiFi— is an atomic reusable platform for providing a common set of UI/UX components for Apache NiFi, Apache NiFi Registry, Apache NiFi MiNiFi, and any other open source web applications to consume.",
+  "keywords": [
+    "angular",
+    "material",
+    "material design",
+    "components",
+    "covalent",
+    "reusable",
+    "nifi-fds",
+    "flow design system"
+  ],
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/apache/nifi-fds.git"
+  },
+  "bugs": {
+    "url": "https://github.com/apache/nifi-fds/issues"
+  },
+  "license": "Apache-2.0",
+  "peerDependencies": {
+    "@covalent/core": "1.0.0",
+    "@angular/animations": "5.2.0",
+    "@angular/cdk": "5.2.0",
+    "@angular/common": "5.2.0",
+    "@angular/compiler": "5.2.0",
+    "@angular/core": "5.2.0",
+    "@angular/flex-layout": "5.0.0-beta.14",
+    "@angular/forms": "5.2.0",
+    "@angular/http": "5.2.0",
+    "@angular/material": "5.2.0",
+    "@angular/platform-browser": "5.2.0",
+    "@angular/platform-browser-dynamic": "5.2.0",
+    "@angular/router": "5.2.0"
+  }
+}
