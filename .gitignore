@@ -2,6 +2,7 @@ node_modules/karma*
 node_modules/protractor*
 node_modules/grunt*
 node_modules/jasmine*
+node_modules/webdriver*
 target/
 npm-debug.log*
 
