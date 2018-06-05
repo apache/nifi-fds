@@ -3,6 +3,7 @@ node_modules/protractor*
 node_modules/grunt*
 node_modules/jasmine*
 node_modules/webdriver*
+node_modules/.bin/
 .github/
 demo-app/gh-pages*
 demo-app/index.html
