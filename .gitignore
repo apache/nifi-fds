@@ -1,3 +1,5 @@
+demo-app/
+node_modules/
 target/
 npm-debug.log*
 

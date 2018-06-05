@@ -29,5 +29,9 @@ cp Gruntfile.js ./target/Gruntfile.js
 cp ./src/demo-app/gh-pages.* ./target/
 cd ./target
 npm install
+# simulate npm install of @nifi-fds/core
+mkdir ./node_modules/@nifi-fds
+mv ./platform/core/ ./node_modules/@nifi-fds
+cp ../README.md ./node_modules/@nifi-fds/core/
+rm -rf ./platform
 npm run build:demo-app
-npm run build:platform

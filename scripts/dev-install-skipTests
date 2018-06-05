@@ -16,8 +16,8 @@
 set -e
 
 # build
-cp -R ./src/demo-app/ ./target/demo-app
-cp -R ./src/platform/ ./target/platform
+cp -Rf ./src/demo-app/ ./target/demo-app
+cp -Rf ./src/platform/ ./target/platform
 cp package.json ./target/package.json
 cp package-lock.json ./target/package-lock.json
 cp ./src/demo-app/index.html ./target/index.html
@@ -27,5 +27,12 @@ cp Gruntfile.js ./target/Gruntfile.js
 cp ./src/demo-app/gh-pages.* ./target/
 cd ./target
 npm install
+# simulate npm install of @nifi-fds/core
+rm -rf ./node_modules/@nifi-fds
+mkdir ./node_modules/@nifi-fds
+mv ./platform/core/ ./node_modules/@nifi-fds
+cp ../README.md ./node_modules/@nifi-fds/core/
+# clean up
+rm -rf ./platform
+# build theme
 npm run build:demo-app
-npm run build:platform

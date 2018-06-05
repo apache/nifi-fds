@@ -12,22 +12,34 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#!/bin/bash
+#!/usr/bin/env bash
+set -e
+
+# build
 npm run clean:install
 echo 'Build Complete'
+
+# switch to gh-pages branch
+git branch -f gh-pages
 git checkout gh-pages
 echo 'Created and Checked out gh-pages branch'
 
-cp -f ./target/gh-pages.package.json ./package.json
-npm install
-mkdir ./node_modules/nifi-fds
-cp -Rf ./target/platform/ ./node_modules/nifi-fds/platform
-cp -Rf ./target/demo-app/ ./demo-app
+# simulate npm install of @nifi-fds/core
+rm -rf ./node_modules/
+mv ./target/node_modules/ ./
+rm -rf ./demo-app/
+mv ./target/demo-app/ ./
+
+# update base href for github.io page
 cp -f ./target/gh-pages.index.html ./index.html
-cp -f ./target/gh-pages.systemjs.config.js ./demo-app/systemjs.config.js
 echo 'Tracking files'
 git add -A .
-echo 'Commiting files'
+echo 'Committing files'
 git commit -m 'gh-pages update'
-echo 'Pushing files into gh-pages branch'
-git push apache gh-pages:gh-pages
+echo 'Ready to push'
+git push https://github.com/scottyaslan/nifi-fds.git gh-pages:gh-pages
+
+# cleanup
+mv ./node_modules/ ./target/
+mv ./demo-app/ ./target/
+echo 'Clean up complete.'

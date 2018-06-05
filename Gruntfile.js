@@ -25,11 +25,6 @@ module.exports = function (grunt) {
                 outputStyle: 'compressed',
                 sourceMap: true
             },
-            minifyFds: {
-                files: [{
-                    './platform/core/common/styles/css/flow-design-system.min.css': ['./platform/core/common/styles/flow-design-system.scss']
-                }]
-            },
             minifyFdsDemo: {
                 files: [{
                     './demo-app/css/fds-demo.min.css': ['./demo-app/theming/fds-demo.scss']
@@ -39,14 +34,6 @@ module.exports = function (grunt) {
         compress: {
             options: {
                 mode: 'gzip'
-            },
-            fdsStyles: {
-                files: [{
-                    expand: true,
-                    src: ['./platform/core/common/styles/css/flow-design-system.min.css'],
-                    dest: './',
-                    ext: '.min.css.gz'
-                }]
             },
             fdsDemoStyles: {
                 files: [{
@@ -77,6 +64,5 @@ module.exports = function (grunt) {
             }
         }
     });
-    grunt.registerTask('compile-fds-styles', ['sass:minifyFds', 'compress:fdsStyles']);
     grunt.registerTask('compile-fds-demo-styles', ['sass:minifyFdsDemo', 'compress:fdsDemoStyles']);
 };

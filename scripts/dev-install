@@ -16,8 +16,25 @@
 set -e
 
 # build
-bash ./scripts/dev-install-skipTests
+cp -Rf ./src/demo-app/ ./target/demo-app
+cp -Rf ./src/platform/ ./target/platform
+cp package.json ./target/package.json
+cp package-lock.json ./target/package-lock.json
+cp ./src/demo-app/index.html ./target/index.html
+cp ./test/karma.conf.js ./target/karma.conf.js
+cp ./test/karma-test-shim.js ./target/karma-test-shim.js
+cp Gruntfile.js ./target/Gruntfile.js
+cp ./src/demo-app/gh-pages.* ./target/
 cd ./target
-
+npm install
 # test
-npm run test:dev
+npm test
+# simulate npm install of @nifi-fds/core
+rm -rf ./node_modules/@nifi-fds
+mkdir ./node_modules/@nifi-fds
+mv ./platform/core/ ./node_modules/@nifi-fds
+cp ../README.md ./node_modules/@nifi-fds/core/
+# clean up
+rm -rf ./platform
+# build theme
+npm run build:demo-app

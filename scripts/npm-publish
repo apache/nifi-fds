@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -e
+
+# build
+bash ./scripts/clean-install
+cd ./target/node_modules/@nifi-fds/core
+npm publish package.json --access=public
