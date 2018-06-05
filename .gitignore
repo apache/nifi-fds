@@ -5,6 +5,7 @@ node_modules/jasmine*
 node_modules/webdriver*
 .github/
 demo-app/gh-pages*
+demo-app/index.html
 scripts/
 src/
 test/

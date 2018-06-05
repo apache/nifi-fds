@@ -56,12 +56,14 @@ AppModule.annotations = [
 ...
 ```
 
-#### Theming
-The Apache NiFi Flow Design System provides a themeable UI/UX component platform. To customize the core FDS components create a simple Sass file that defines your palettes and passes them to mixins that output the corresponding styles. A typical theme file will look something like this:
+#### Style and Theming
+The Apache NiFi Flow Design System comes with a base CSS file `node_modules/@nifi-fds/core/common/styles/css/flow-design-system.min.css` (includes icons). This file must be included in the head of the HTML document before the theme file.
+
+
+NiFi FDS is also a themeable UI/UX component platform. To customize the core FDS components create a simple Sass file that defines your palettes and passes them to mixins that output the corresponding styles. A typical theme file will look something like this:
 
 ```javascript
 @import '../../node_modules/@nifi-fds/core/common/styles/globalVars';
-@import '../../node_modules/@nifi-fds/core/common/styles/flow-design-system';
 @import '../../node_modules/@nifi-fds/core/theming/all-theme';
 
 //Change these
@@ -89,10 +91,11 @@ $fds-theme: mat-light-theme($fds-primary, $fds-accent, $fds-warn);
 @include fds-theme($fds-theme);
 ```
 
-You don't have to use Sass to style the rest of your application but you will need to compile this one. Angular CLI, grunt-sass, gulp-sass, and node-sass are all great options; the output of which will be a CSS file that must be included in the head of the HTML document:
+You don't have to use Sass to style the rest of your application but you will need to compile this one. Angular CLI, grunt-sass, gulp-sass, and node-sass are all great options; the output of which will be a CSS file that must be included in the head of the HTML document after the base NiFi FDS CSS styles:
 
 ```javascript
-<link rel="stylesheet" href='node_modules/@nifi-fds/core/common/styles/css/fds-demo.min.css'/>
+<link rel="stylesheet" href='node_modules/@nifi-fds/core/common/styles/css/flow-design-system.min.css'/>
+<link rel="stylesheet" href='demo-app/css/fds-demo.min.css'/>
 ```
 
 NOTE: The theme file may be concatenated and minified with the rest of the application's CSS.
