@@ -3,8 +3,13 @@ node_modules/protractor*
 node_modules/grunt*
 node_modules/jasmine*
 node_modules/webdriver*
+scripts/
+src/
+test/
 target/
 npm-debug.log*
+Gruntfile.js
+
 
 # Intellij
 .idea/
