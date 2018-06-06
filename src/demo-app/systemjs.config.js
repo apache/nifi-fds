@@ -93,21 +93,19 @@
             'rxjs': 'npm:rxjs',
             'zone.js': 'npm:zone.js/dist/zone.js',
             'core-js': 'npm:core-js/client/shim.min.js',
-            'superagent': 'npm:superagent/superagent.js',
-            'querystring': 'npm:querystring',
             'tslib': 'npm:tslib/tslib.js',
 
             // Flow Design System
-            '@flow-design-system/core': 'platform/core/flow-design-system.module.js',
-            '@flow-design-system/dialogs': 'platform/core/dialogs/fds-dialogs.module.js',
-            '@flow-design-system/dialog-component': 'platform/core/dialogs/fds-dialog.component.js',
-            '@flow-design-system/dialog-service': 'platform/core/dialogs/services/dialog.service.js',
-            '@flow-design-system/confirm-dialog-component': 'platform/core/dialogs/confirm-dialog/confirm-dialog.component.js',
-            '@flow-design-system/snackbars': 'platform/core/snackbars/fds-snackbars.module.js',
-            '@flow-design-system/snackbar-component': 'platform/core/snackbars/fds-snackbar.component.js',
-            '@flow-design-system/snackbar-service': 'platform/core/snackbars/services/snackbar.service.js',
-            '@flow-design-system/coaster-component': 'platform/core/snackbars/coaster/coaster.component.js',
-            '@flow-design-system/common/storage-service': 'platform/core/common/services/fds-storage.service.js'
+            '@flow-design-system/core': 'npm:@nifi-fds/core/flow-design-system.module.js',
+            '@flow-design-system/dialogs': 'npm:@nifi-fds/core/dialogs/fds-dialogs.module.js',
+            '@flow-design-system/dialog-component': 'npm:@nifi-fds/core/dialogs/fds-dialog.component.js',
+            '@flow-design-system/dialog-service': 'npm:@nifi-fds/core/dialogs/services/dialog.service.js',
+            '@flow-design-system/confirm-dialog-component': 'npm:@nifi-fds/core/dialogs/confirm-dialog/confirm-dialog.component.js',
+            '@flow-design-system/snackbars': 'npm:@nifi-fds/core/snackbars/fds-snackbars.module.js',
+            '@flow-design-system/snackbar-component': 'npm:@nifi-fds/core/snackbars/fds-snackbar.component.js',
+            '@flow-design-system/snackbar-service': 'npm:@nifi-fds/core/snackbars/services/snackbar.service.js',
+            '@flow-design-system/coaster-component': 'npm:@nifi-fds/core/snackbars/coaster/coaster.component.js',
+            '@flow-design-system/common/storage-service': 'npm:@nifi-fds/core/common/services/fds-storage.service.js'
         },
         // packages tells the System loader how to load when no filename and/or no extension
         packages: {
@@ -123,18 +121,6 @@
                 loader: false
             },
             'rxjs': {
-                defaultExtension: 'js'
-            },
-            'querystring': {
-                main: './index.js',
-                defaultExtension: 'js'
-            },
-            'moment': {
-                main: './moment.js',
-                defaultExtension: 'js'
-            },
-            'angular2-moment': {
-                main: './index.js',
                 defaultExtension: 'js'
             }
         }
