@@ -1,4 +1,7 @@
 target/
+node_modules/
+demo-app/
+index.html
 npm-debug.log*
 
 # Intellij

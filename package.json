@@ -24,6 +24,7 @@
     "dev:install": "bash ./scripts/dev-install",
     "dev:install:skipTests": "bash ./scripts/dev-install-skipTests",
     "deploy:ghpages": "bash ./scripts/deploy-gh-pages",
+    "publish": "bash ./scripts/npm-publish",
     "test": "./node_modules/protractor/bin/webdriver-manager update --gecko false && karma start karma.conf.js --single-run",
     "test:dev": "./node_modules/protractor/bin/webdriver-manager update --gecko false && karma start karma.conf.js"
   },
@@ -36,6 +37,7 @@
     "material design",
     "components",
     "reusable",
+    "nifi-fds",
     "covalent"
   ],
   "repository": {
@@ -77,7 +79,7 @@
     "grunt-contrib-compress": "1.4.3",
     "grunt-sass": "2.1.0",
     "http-server": "0.11.1",
-    "jasmine-core": "3.1.0",
+    "jasmine": "3.1.0",
     "karma": "2.0.2",
     "karma-chrome-launcher": "2.2.0",
     "karma-cli": "1.0.1",
