@@ -62,7 +62,7 @@ The Apache NiFi Flow Design System comes with a base CSS file `node_modules/@nif
 
 NiFi FDS is also a themeable UI/UX component platform. To customize the core FDS components create a simple Sass file that defines your palettes and passes them to mixins that output the corresponding styles. A typical theme file will look something like this:
 
-```javascript
+```sass
 @import '../../node_modules/@nifi-fds/core/common/styles/globalVars';
 @import '../../node_modules/@nifi-fds/core/theming/all-theme';
 
@@ -93,7 +93,7 @@ $fds-theme: mat-light-theme($fds-primary, $fds-accent, $fds-warn);
 
 You don't have to use Sass to style the rest of your application but you will need to compile this one. Angular CLI, grunt-sass, gulp-sass, and node-sass are all great options; the output of which will be a CSS file that must be included in the head of the HTML document after the base NiFi FDS CSS styles:
 
-```javascript
+```html
 <link rel="stylesheet" href='node_modules/@nifi-fds/core/common/styles/css/flow-design-system.min.css'/>
 <link rel="stylesheet" href='demo-app/css/fds-demo.min.css'/>
 ```
@@ -150,9 +150,27 @@ For developers with permissions releasing a new version of the NiFi Flow Design 
 
 #### Deploying github.io demo
 
-The nifi-fds github.io demo can be staged to be deployed from the root nifi-fds directory via:
+Before deploying the demo-app to the gh-pages branch please make sure you have the following in your local repo:
+ 
+* Configured the apache git repo as a remote
+* Created a local gh-pages branch
 
 ```bash
+git remote add apache https://git-wip-us.apache.org/repos/asf/nifi-fds.git
+git branch -f gh-pages
+``` 
+
+Then you can deploy any branch (typically this should be the latest release version) to the nifi-fds github.io from the root nifi-fds directory via:
+
+```bash
+git checkout <branch_name>
 npm run deploy:ghpages
 ```
 
+#### npm publish
+Developers can easily publish the latest release artifacts to the public npm registry from the root nifi-fds directory via:
+
+```bash
+npm run publish
+```
+NOTE: These artifacts are maintained under the nifi-fds npm organization.
