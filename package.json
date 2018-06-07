@@ -23,7 +23,6 @@
     "clean:install:skipTests": "bash ./scripts/clean-install-skipTests",
     "dev:install": "bash ./scripts/dev-install",
     "dev:install:skipTests": "bash ./scripts/dev-install-skipTests",
-    "deploy:ghpages": "bash ./scripts/deploy-gh-pages",
     "publish": "bash ./scripts/npm-publish",
     "test": "./node_modules/protractor/bin/webdriver-manager update --gecko false && karma start karma.conf.js --single-run",
     "test:dev": "./node_modules/protractor/bin/webdriver-manager update --gecko false && karma start karma.conf.js"
