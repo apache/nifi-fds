@@ -19,8 +19,10 @@
  * In this file you should centralize your imports. After compilation simply import this file using the following HTML or equivalent:
  * <link href='demo-app/css/fds-demo.min.css' media='screen, projection' rel='stylesheet' type='text/css' /> */
 
-@import '../../platform/core/common/styles/globalVars';
-@import '../../platform/core/theming/all-theme';
+@import '../../node_modules/@nifi-fds/core/common/styles/globalVars';
+// Include the base styles for Nifi FDS core. We include this here so that you only
+// have to load a single css file for Nifi FDS in your app.
+@import '../../node_modules/@nifi-fds/core/theming/all-theme';
 @import 'structureElements';
 @import 'helperClasses';
 

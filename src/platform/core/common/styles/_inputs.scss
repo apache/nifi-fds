@@ -19,6 +19,7 @@
 
 body[fds] .mat-input-container {
   min-width: 200px;
+  width: 100%;
 }
 
 body[fds] .mat-input-wrapper {
@@ -32,7 +33,7 @@ body[fds] input.mat-input-element, body[fds] textarea.mat-input-element {
   border: 1px solid $grey8;
   height: 32px;
   padding: 0px 10px;
-  width: calc(100% - 26px);
+  width: calc(100% - 20px);
 }
 
 body[fds] textarea.mat-input-element {
@@ -87,7 +88,6 @@ body[fds] .mat-form-field-can-float .mat-form-field-autofill-control:-webkit-aut
 
 body[fds] .input-button {
   top: 5px;
-  left: -4px;
   border-left: none !important;
 }
 
