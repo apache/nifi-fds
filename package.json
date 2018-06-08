@@ -1,6 +1,6 @@
 {
   "name": "nifi-fds",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "scripts": {
     "build": "./node_modules/grunt-cli/bin/grunt compile-fds-styles",
     "test": "./node_modules/protractor/bin/webdriver-manager update --gecko false && karma start karma.conf.js --single-run",
