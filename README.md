@@ -131,7 +131,7 @@ cd target
 npm start
 ```
 
-The demo application should now be availalbe at: [http://127.0.0.1:8080/](http://127.0.0.1:8080/). The port may differ if there is a conflict on 8080. See the output of the start command for the available URLs.
+The demo application should now be available at: [http://127.0.0.1:8080/](http://127.0.0.1:8080/). The port may differ if there is a conflict on 8080. See the output of the start command for the available URLs.
 
 ## Contact us!
 The developer mailing list (dev@nifi.apache.org) is monitored pretty closely, and we tend to respond quickly.  If you have a question, don't hesitate to shoot us an e-mail - we're here to help! Unfortunately, though, e-mails can get lost in the shuffle, so if you do send an e-mail and don't get a response within a day or two, it's our fault - don't worry about bothering us. Just ping the mailing list again.
