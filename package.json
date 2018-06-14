@@ -14,7 +14,7 @@
   "//": "See the License for the specific language governing permissions and",
   "//": "limitations under the License.",
   "name": "nifi-fds",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "scripts": {
     "start": "./node_modules/http-server/bin/http-server .",
     "build:demo-app": "./node_modules/grunt-cli/bin/grunt compile-fds-demo-styles",
