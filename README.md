@@ -6,16 +6,14 @@ The demo application serves 2 main purposes
 * As a way for code reviewers to validate code changes as well as each `@nifi-fds/core` release 
 * Provides a working example of how an Angular application should leverage the `@nifi-fds/core`.
 
-## Consumers
-
-For developers not interested in building the FDS NgModule you can use **npm** to install the distribution files. (TBD: awaiting 0.1 release).
+## Quick Start
+For developers not interested in building the FDS NgModule you can use **npm** to install the distribution files.
 
 ```bash
 npm install @nifi-fds/core
 ```
 
-#### Setup
-
+#### SystemJS
 If your project is using the SystemJS module loader, you will need to add `@nifi-fds/core` to the configuration:
 
 ```javascript
@@ -100,16 +98,8 @@ You don't have to use Sass to style the rest of your application but you will ne
 
 NOTE: The theme file may be concatenated and minified with the rest of the application's CSS.
 
-## Developers
-The artifacts of the NiFi Flow Design System published to the npm repository are intended to be consumed. For developers interested in contributing to the `@nifi-fds/core` you should use **git** to clone the project:
-
-```bash
-git clone https://github.com/apache/nifi-fds.git
-```
-
 #### Building
-
-Developers can easily build this project using **npm** from the root nifi-fds directory via:
+Developers can perform code changes and easily build this project using **npm** from the root nifi-fds directory via:
 
 ```bash
 npm run clean:install
@@ -134,7 +124,6 @@ npm run dev:install:skipTests
 ```
 
 #### Running locally
-
 Once built you can start the application from the target directory via:
 
 ```bash
@@ -142,35 +131,10 @@ cd target
 npm start
 ```
 
-The demo application should now be availalbe at: [http://127.0.0.1:8080/](http://127.0.0.1:8080/). The port may differ if there is a conflict on 8080. See the output of the start command for the available URLs.
+The demo application should now be available at: [http://127.0.0.1:8080/](http://127.0.0.1:8080/). The port may differ if there is a conflict on 8080. See the output of the start command for the available URLs.
 
-#### Release Management
+## Contact us!
+The developer mailing list (dev@nifi.apache.org) is monitored pretty closely, and we tend to respond quickly.  If you have a question, don't hesitate to shoot us an e-mail - we're here to help! Unfortunately, though, e-mails can get lost in the shuffle, so if you do send an e-mail and don't get a response within a day or two, it's our fault - don't worry about bothering us. Just ping the mailing list again.
 
-For developers with permissions releasing a new version of the NiFi Flow Design System is simple with [grunt bump](https://github.com/vojtajina/grunt-bump).
-
-#### Deploying github.io demo
-
-Before deploying the demo-app to the gh-pages branch please make sure you have the following in your local repo:
- 
-* Configured the apache git repo as a remote
-* Created a local gh-pages branch
-
-```bash
-git remote add apache https://git-wip-us.apache.org/repos/asf/nifi-fds.git
-git branch -f gh-pages
-``` 
-
-Then you can deploy any branch (typically this should be the latest release version) to the nifi-fds github.io from the root nifi-fds directory via:
-
-```bash
-git checkout <branch_name>
-npm run deploy:ghpages
-```
-
-#### npm publish
-Developers can easily publish the latest release artifacts to the public npm registry from the root nifi-fds directory via:
-
-```bash
-npm run publish
-```
-NOTE: These artifacts are maintained under the nifi-fds npm organization.
+## Documentation
+* [Contributing Guidelines](docs/CONTRIBUTING.md)

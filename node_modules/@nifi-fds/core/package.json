@@ -1,6 +1,6 @@
 {
   "name": "@nifi-fds/core",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Flow Design System —a subproject of Apache NiFi— is an atomic reusable platform for providing a common set of UI/UX components for Apache NiFi, Apache NiFi Registry, Apache NiFi MiNiFi, and any other open source web applications to consume.",
   "keywords": [
     "angular",
