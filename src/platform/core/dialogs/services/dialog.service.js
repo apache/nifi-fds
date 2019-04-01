@@ -15,6 +15,7 @@
  * limitations under the License.
  */
 
+var $ = require('jquery');
 var ngCore = require('@angular/core');
 var ngMaterial = require('@angular/material');
 var FdsConfirmDialogComponent = require('@flow-design-system/confirm-dialog-component');
