@@ -19,7 +19,7 @@
     System.config({
         paths: {
             // paths serve as alias
-            'npm:': 'fds/node_modules/'
+            'npm:': 'node_modules/'
         },
         // map tells the System loader where to look for things
         map: {
@@ -30,6 +30,7 @@
             'jquery': 'npm:jquery/dist/jquery.min.js',
 
             // Angular
+            '@angular/core-testing': 'npm:@angular/core/bundles/core-testing.umd.js',
             '@angular/core': 'npm:@angular/core/bundles/core.umd.js',
             '@angular/common': 'npm:@angular/common/bundles/common.umd.js',
             '@angular/common/http': 'npm:@angular/common/bundles/common-http.umd.js',
@@ -52,6 +53,7 @@
             '@angular/material/chips': 'npm:@angular/material/bundles/material-chips.umd.js',
             '@angular/material/input': 'npm:@angular/material/bundles/material-input.umd.js',
             '@angular/material/icon': 'npm:@angular/material/bundles/material-icon.umd.js',
+            '@angular/material/tabs': 'npm:@angular/material/bundles/material-tabs.umd.js',
             '@angular/material/button': 'npm:@angular/material/bundles/material-button.umd.js',
             '@angular/material/checkbox': 'npm:@angular/material/bundles/material-checkbox.umd.js',
             '@angular/material/tooltip': 'npm:@angular/material/bundles/material-tooltip.umd.js',
@@ -72,6 +74,8 @@
             '@angular/cdk/platform': 'npm:@angular/cdk/bundles/cdk-platform.umd.js',
             '@angular/cdk/portal': 'npm:@angular/cdk/bundles/cdk-portal.umd.js',
             '@angular/cdk/keycodes': 'npm:@angular/cdk/bundles/cdk-keycodes.umd.js',
+            '@angular/cdk/text-field': 'npm:@angular/cdk/bundles/cdk-text-field.umd.js',
+            '@angular/cdk/tree': 'npm:@angular/cdk/bundles/cdk-tree.umd.js',
             '@angular/cdk/bidi': 'npm:@angular/cdk/bundles/cdk-bidi.umd.js',
             '@angular/cdk/coercion': 'npm:@angular/cdk/bundles/cdk-coercion.umd.js',
             '@angular/cdk/table': 'npm:@angular/cdk/bundles/cdk-table.umd.js',
@@ -108,6 +112,11 @@
         // packages tells the System loader how to load when no filename and/or no extension
         packages: {
             'rxjs': {
+                main: 'index.js',
+                defaultExtension: 'js'
+            },
+            'rxjs/operators' : {
+                main: 'index.js',
                 defaultExtension: 'js'
             }
         }

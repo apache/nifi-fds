@@ -70,7 +70,7 @@
     font-weight: 300;
   }
 
-  body[fds] .mat-input-placeholder {
+  body[fds] .mat-form-field-empty.mat-form-field-label {
     top: 29px;
     left: 10px;
     white-space: nowrap;
@@ -92,7 +92,7 @@
   }
 
   body[fds] .input-button {
-    top: 5px;
+    top: -3px;
     border-left: none !important;
   }
 

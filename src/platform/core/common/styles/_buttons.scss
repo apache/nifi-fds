@@ -72,6 +72,21 @@
     text-transform: uppercase;
     line-height: normal;
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
+    border-radius: 2px;
+  }
+
+  body[fds] .mat-button {
+    height: 34px;
+    font-family: $fontPrimary;
+    font-weight: lighter;
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: normal;
+    border-radius: 2px;
+  }
+
+  body[fds] .mat-button-toggle-button {
+    height: 100%;
   }
 
   body[fds] .mat-raised-button.cdk-focused:focus {
