@@ -107,3 +107,12 @@ body[fds] td-chips .mat-input-placeholder-wrapper::after {
 body[fds] .mat-hint {
   color: $grey3;
 }
+
+body[fds] td-chips {
+  input.mat-input-element,
+  textarea.mat-input-element {
+    /* subtract 42 (10 for padding-left, 30 for padding right, 2 the 1px border of the input on the left & right) */
+    width: calc(100% - 42px);   // account for padding and border as to line up with the underline
+    padding-right: 30px;        // Don't allow the text to overlap the filter icon
+  }
+}
