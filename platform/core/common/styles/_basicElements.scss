@@ -128,3 +128,14 @@ table {
   font-size: 13px;
   color: $grey2;
 }
+
+body[fds] .md-title {
+  font-weight: normal;
+  color: $grey3;
+}
+
+body[fds] .md-subhead {
+  font-weight: lighter;
+  font-size: 18px;
+  color: $grey3;
+}
