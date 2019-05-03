@@ -171,6 +171,7 @@
     color: $buttonFontRegularColorDisabled;
     background-color: $buttonBgColorRegularDisabled;
     border: 1px solid $buttonBorderColorRegularDisabled;
+    top: -4px;
   }
 
   body[fds] .mat-raised-button.mat-fds-warn {

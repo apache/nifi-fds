@@ -36,7 +36,6 @@ module.exports = {
         // SCSS files
         'fds-demo.styles.min': [
             path.resolve(__dirname, 'webapp/theming/vendor.scss'),
-            path.resolve(__dirname, 'platform/core/common/styles/flow-design-system.scss'),
             path.resolve(__dirname, 'webapp/theming/fds-demo.scss')
         ]
     },

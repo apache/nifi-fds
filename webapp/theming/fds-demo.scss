@@ -15,14 +15,8 @@
  * limitations under the License.
  */
 
-/* Welcome to Compass.
- * In this file you should centralize your imports. After compilation simply import this file using the following HTML or equivalent:
- * <link href='demo-app/css/fds-demo.min.css' media='screen, projection' rel='stylesheet' type='text/css' /> */
-
-@import 'platform/core/common/styles/globalVars';
-// Include the base styles for Nifi FDS core. We include this here so that you only
-// have to load a single css file for Nifi FDS in your app.
-@import 'platform/core/theming/all-theme';
+// Include the base variables, style rules, and mixins for NiFi FDS core
+@import 'platform/core/common/styles/flow-design-system';
 @import 'structureElements';
 @import 'helperClasses';
 

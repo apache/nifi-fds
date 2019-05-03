@@ -27,46 +27,13 @@ limitations under the License.
             <mat-card-title class="pad-bottom-sm">Apache NiFi Flow Design System</mat-card-title>
             <mat-divider></mat-divider>
             <mat-card-content class="pad-top-sm">
-                <p>With the Apache NiFi Flow Design System module, we get an atomic, reusable component platform for Apache NiFi and its sub-projects to consume, while collaborating in an open source model. This module packages the <a class="link" href="https://material.angular.io/components" target="_blank">Angular Material</a> module as well as the <a class="link" href="https://teradata.github.io/covalent/#/components" target="_blank">Teradata Covalent</a> module. These modules have been themed to match the FDS color palette.</p>
-            </mat-card-content>
-        </mat-card>
-        <mat-card>
-            <mat-card-title class="pad-bottom-sm" id="Setup">Setup <mat-icon class="link-to-component" routerLink="/" fragment="Setup">link</mat-icon></mat-card-title>
-            <mat-divider></mat-divider>
-            <mat-card-content>
-                <p>Import the FDS Core NgModule into your AppModule</p>
-                <p>Javascript:</p>
-                <pre lang="javascript">
-        <![CDATA[
-        var ngCore = require('@angular/core');
-        var fdsCore = require('flow-design-system/core');
-        // other imports
-          ...
-        new ngCore.NgModule({
-            imports: [
-                fdsCore,
-                // (optional) Additional imports
-              ],
-              ...
-        })
-        ]]>
-    </pre>
-                <p>The core FDS styles also need to be included in your `index.html` like:</p>
-                <p>HTML:</p>
-                <pre lang="html">
-        <![CDATA[
-        <link href="../node_modules/flow-design-system/core/common/styles/css/flow-design-system.css" rel="stylesheet">
-        ]]>
-    </pre>
-                <p>Or, if you are using the Angular CLI you will need to add a new entry to the "styles" list in .angular-cli.json.</p>
-                <p>JSON:</p>
-                <pre lang="json">
-        <![CDATA[
-        "styles": [
-            "../node_modules/flow-design-system/core/common/styles/flow-design-system.scss"
-        ]
-        ]]>
-    </pre>
+                <p>With the Apache NiFi Flow Design System module, we get an atomic, reusable component platform for
+                    Apache NiFi and its sub-projects to consume, while collaborating in an open source model. This
+                    module packages the <a class="link" href="https://material.angular.io/components" target="_blank">Angular
+                        Material</a> module as well as the <a class="link"
+                                                              href="https://teradata.github.io/covalent/#/components"
+                                                              target="_blank">Teradata Covalent</a> module. These
+                    modules have been themed to match the FDS color palette.</p>
             </mat-card-content>
         </mat-card>
         <mat-card>
@@ -96,8 +63,8 @@ limitations under the License.
                         <span class="mat-headline">Headline</span>
                     </div>
                     <div layout="row" layout-align="start center">
-                        <code flex="15">.mat-title</code>
-                        <span class="mat-title">Title</span>
+                        <code flex="15">.md-title</code>
+                        <span class="md-title">Title</span>
                     </div>
                     <div layout="row" layout-align="start center">
                         <code flex="15">.md-subhead</code>
@@ -120,7 +87,7 @@ limitations under the License.
                         <span class="mat-caption">Caption</span>
                     </div>
                 </div>
-                <h3 class="mat-title">Usage</h3>
+                <h3 class="md-title">Usage</h3>
                 <p>HTML:</p>
     <pre lang="html">
     <![CDATA[
@@ -160,11 +127,11 @@ limitations under the License.
                 <button mat-raised-button disabled color="fds-regular">FDS regular</button>
                 <button mat-raised-button disabled color="fds-warn">FDS warn</button>
                 <button mat-raised-button disabled color="fds-critical">FDS critical</button>
-                <h3 class="mat-title">Usage</h3>
+                <h3 class="md-title">Usage</h3>
                 <p>HTML:</p>
                 <pre lang="html">
     <![CDATA[
-                    <!-- Themed Raised Buttons -->
+        <!-- Themed Raised Buttons -->
         <button mat-raised-button color="primary">Primary</button>
         <button mat-raised-button color="accent">Secondary</button>
         <button mat-raised-button color="warn">warn</button>
@@ -173,7 +140,7 @@ limitations under the License.
         <button mat-raised-button color="fds-regular">FDS regular</button>
         <button mat-raised-button color="fds-warn">FDS warn</button>
         <button mat-raised-button color="fds-critical">FDS critical</button>
-                    <!-- Disabled Raised Buttons -->
+        <!-- Disabled Raised Buttons -->
         <button mat-raised-button disabled color="primary">Primary</button>
         <button mat-raised-button disabled color="accent">Secondary</button>
         <button mat-raised-button disabled color="warn">warn</button>
@@ -200,16 +167,16 @@ limitations under the License.
                     <button mat-button disabled color="accent">Disabled Secondary</button>
                     <button mat-button disabled color="warn">Disabled Warn</button>
                 </mat-card-actions>
-                <h3 class="mat-title">Usage</h3>
+                <h3 class="md-title">Usage</h3>
                 <p>HTML:</p>
                 <pre lang="html">
     <![CDATA[
-                    <!-- Themed Flat Buttons -->
+        <!-- Themed Flat Buttons -->
         <button mat-button>Default</button>
         <button mat-button color="primary">Primary</button>
         <button mat-button color="accent">Secondary</button>
         <button mat-button color="warn">warn</button>
-                    <!-- Disabled Flat Buttons -->
+        <!-- Disabled Flat Buttons -->
         <button mat-button disabled>disabled Default</button>
         <button mat-button disabled color="primary">disabled primary</button>
         <button mat-button disabled color="accent">disabled Secondary</button>
@@ -230,15 +197,15 @@ limitations under the License.
                     <button mat-mini-fab disabled color="accent">A</button>
                     <button mat-mini-fab disabled color="warn">W</button>
                 </mat-card-actions>
-                <h3 class="mat-title">Usage</h3>
+                <h3 class="md-title">Usage</h3>
                 <p>HTML:</p>
                 <pre lang="html">
     <![CDATA[
-                    <!-- Themed Fab Buttons -->
+        <!-- Themed Fab Buttons -->
         <button mat-mini-fab color="primary">P</button>
         <button mat-mini-fab color="accent">A</button>
         <button mat-mini-fab color="warn">W</button>
-                    <!-- Disabled Fab Buttons -->
+        <!-- Disabled Fab Buttons -->
         <button mat-mini-fab disabled color="primary">P</button>
         <button mat-mini-fab disabled color="accent">A</button>
         <button mat-mini-fab disabled color="warn">W</button>
@@ -274,7 +241,8 @@ limitations under the License.
                     </mat-button-toggle>
                 </mat-button-toggle-group>
                 <div fxLayout="row" class="pad-top-md pad-bot-md"></div>
-                <mat-button-toggle-group fxLayout="row" fxLayoutAlign="space-between center" class="expansion-panel-filter-toggle-group" multiple>
+                <mat-button-toggle-group fxLayout="row" fxLayoutAlign="space-between center"
+                                         class="expansion-panel-filter-toggle-group" multiple>
                     <mat-button-toggle>
                         <div fxFlex fxLayout="column" fxLayoutAlign="space-around stretch">
                             <div class="mat-display-1 pad-top-sm" fxFlex="55">34</div>
@@ -314,7 +282,7 @@ limitations under the License.
                         Workflow
                     </mat-button-toggle>
                 </mat-button-toggle-group>
-                <h3 class="mat-title">Usage</h3>
+                <h3 class="md-title">Usage</h3>
                 <p>HTML:</p>
                 <pre lang="html">
       <![CDATA[
@@ -342,7 +310,8 @@ limitations under the License.
             </mat-button-toggle>
         </mat-button-toggle-group>
         <div fxLayout="row" class="pad-top-md pad-bot-md"></div>
-        <mat-button-toggle-group fxLayout="row" fxLayoutAlign="space-between center" class="expansion-panel-filter-toggle-group" multiple>
+        <mat-button-toggle-group fxLayout="row" fxLayoutAlign="space-between center"
+                                 class="expansion-panel-filter-toggle-group" multiple>
             <mat-button-toggle>
                 <div fxFlex fxLayout="column" fxLayoutAlign="space-around stretch">
                     <div class="mat-display-1 pad-top-sm" fxFlex="55">34</div>
@@ -409,14 +378,16 @@ limitations under the License.
                             <mat-form-field floatLabel="always" flex>
                                 <input matInput placeholder="Button Addon with dropdown">
                             </mat-form-field>
-                            <button class="input-button" color="fds-regular" mat-raised-button [matMenuTriggerFor]="inputButtonDropdownAddonMenu">
+                            <button class="input-button" color="fds-regular" mat-raised-button
+                                    [matMenuTriggerFor]="inputButtonDropdownAddonMenu">
                                 Select<i class="fa fa-caret-down" aria-hidden="true"></i>
                             </button>
-                            <mat-menu xPosition="before" #inputButtonDropdownAddonMenu="matMenu" [overlapTrigger]="false">
-                                <button mat-menu-item> Refresh </button>
-                                <button mat-menu-item> Settings </button>
-                                <button mat-menu-item> Help </button>
-                                <button mat-menu-item disabled> Sign Out </button>
+                            <mat-menu xPosition="before" #inputButtonDropdownAddonMenu="matMenu"
+                                      [overlapTrigger]="false">
+                                <button mat-menu-item> Refresh</button>
+                                <button mat-menu-item> Settings</button>
+                                <button mat-menu-item> Help</button>
+                                <button mat-menu-item disabled> Sign Out</button>
                             </mat-menu>
                         </div>
                         <div flex fxLayoutAlign="start center">
@@ -469,11 +440,11 @@ limitations under the License.
                         </mat-form-field>
                     </div>
                 </form>
-                <h3 class="mat-title">Usage</h3>
+                <h3 class="md-title">Usage</h3>
                 <p>HTML:</p>
                 <pre lang="html">
     <![CDATA[
-                    <!-- Inputs -->
+        <!-- Inputs -->
         <form>
             <div layout="row" layout-margin>
                 <mat-form-field floatLabel="always" floatPlaceholder="always" flex>
@@ -493,7 +464,8 @@ limitations under the License.
                     <mat-form-field floatLabel="always" flex>
                         <input matInput placeholder="Button Addon with dropdown">
                     </mat-form-field>
-                    <button class="input-button" color="fds-regular" mat-raised-button [matMenuTriggerFor]="inputButtonDropdownAddonMenu">
+                    <button class="input-button" color="fds-regular" mat-raised-button
+                            [matMenuTriggerFor]="inputButtonDropdownAddonMenu">
                         Select<i class="fa fa-caret-down" aria-hidden="true"></i>
                     </button>
                     <mat-menu xPosition="before" #inputButtonDropdownAddonMenu="matMenu" [overlapTrigger]="false">
@@ -564,16 +536,29 @@ limitations under the License.
                 <mat-tab-group dynamicHeight>
                     <mat-tab>
                         <ng-template mat-tab-label>One</ng-template>
-                        <h3 class="mat-title">First tab content</h3>
-                        <p>Plaid echo park knausgaard normcore franzen cronut. Pickled humblebrag tofu hoodie, umami salvia farm-to-table schlitz try-hard food truck knausgaard pabst. Yuccie portland jean shorts, authentic mixtape waistcoat gentrify blue bottle. Fixie kickstarter church-key small batch seitan, shabby chic vegan listicle before they sold out. Hammock raw denim flannel tousled seitan you probably haven't heard of them. Trust fund man bun pug, kickstarter artisan selvage letterpress cornhole tote bag butcher locavore. Affogato try-hard kickstarter seitan, DIY pickled hella godard pork belly four loko ugh.</p>
+                        <h3 class="md-title">First tab content</h3>
+                        <p>Plaid echo park knausgaard normcore franzen cronut. Pickled humblebrag tofu hoodie, umami
+                            salvia farm-to-table schlitz try-hard food truck knausgaard pabst. Yuccie portland jean
+                            shorts, authentic mixtape waistcoat gentrify blue bottle. Fixie kickstarter church-key small
+                            batch seitan, shabby chic vegan listicle before they sold out. Hammock raw denim flannel
+                            tousled seitan you probably haven't heard of them. Trust fund man bun pug, kickstarter
+                            artisan selvage letterpress cornhole tote bag butcher locavore. Affogato try-hard
+                            kickstarter seitan, DIY pickled hella godard pork belly four loko ugh.</p>
                     </mat-tab>
                     <mat-tab>
                         <ng-template mat-tab-label>Two</ng-template>
-                        <h3 class="mat-title">Second tab content</h3>
-                        <p>Hashtag distillery skateboard man bun gochujang, salvia man braid art party meggings heirloom kitsch farm-to-table. Franzen beard fingerstache gentrify, heirloom portland ennui XOXO microdosing kitsch plaid. Chicharrones bushwick chia, banh mi irony tattooed hammock butcher shabby chic taxidermy semiotics marfa post-ironic. Blue bottle keffiyeh farm-to-table ennui, chambray pitchfork art party pinterest artisan pop-up. Etsy banjo marfa, blue bottle kombucha crucifix XOXO tousled beard. Tilde disrupt kale chips bicycle rights skateboard master cleanse hella shoreditch, meditation retro shabby chic vice heirloom. Etsy listicle vice actually, iPhone chia hoodie four loko.</p>
+                        <h3 class="md-title">Second tab content</h3>
+                        <p>Hashtag distillery skateboard man bun gochujang, salvia man braid art party meggings heirloom
+                            kitsch farm-to-table. Franzen beard fingerstache gentrify, heirloom portland ennui XOXO
+                            microdosing kitsch plaid. Chicharrones bushwick chia, banh mi irony tattooed hammock butcher
+                            shabby chic taxidermy semiotics marfa post-ironic. Blue bottle keffiyeh farm-to-table ennui,
+                            chambray pitchfork art party pinterest artisan pop-up. Etsy banjo marfa, blue bottle
+                            kombucha crucifix XOXO tousled beard. Tilde disrupt kale chips bicycle rights skateboard
+                            master cleanse hella shoreditch, meditation retro shabby chic vice heirloom. Etsy listicle
+                            vice actually, iPhone chia hoodie four loko.</p>
                     </mat-tab>
                 </mat-tab-group>
-                <h3 class="mat-title">Usage</h3>
+                <h3 class="md-title">Usage</h3>
                 <p>HTML:</p>
                 <pre lang="html">
       <![CDATA[
@@ -622,7 +607,7 @@ limitations under the License.
                         </div>
                     </td-step>
                 </td-steps>
-                <h3 class="mat-title">Usage</h3>
+                <h3 class="md-title">Usage</h3>
                 <p>HTML:</p>
                 <pre lang="html">
       <![CDATA[
@@ -661,7 +646,9 @@ limitations under the License.
             <mat-card-content>
                 <div class="pad-top-sm" layout="row">
                     <mat-form-field floatLabel="always" flex="50">
-                        <input matInput placeholder="State" [matAutocomplete]="tdAuto" [(ngModel)]="currentState" #modelDir="ngModel" (ngModelChange)="this.tdStates = filterStates(currentState)" [disabled]="tdDisabled">
+                        <input matInput placeholder="State" [matAutocomplete]="tdAuto" [(ngModel)]="currentState"
+                               #modelDir="ngModel" (ngModelChange)="this.tdStates = filterStates(currentState)"
+                               [disabled]="tdDisabled">
                     </mat-form-field>
                 </div>
                 <div class="push-top">
@@ -675,13 +662,15 @@ limitations under the License.
                         <span class="demo-secondary-text"> ({{state.code}}) </span>
                     </mat-option>
                 </mat-autocomplete>
-                <h3 class="mat-title">Usage</h3>
+                <h3 class="md-title">Usage</h3>
                 <p>HTML:</p>
                 <pre lang="html">
       <![CDATA[
         <div class="pad-top-sm" layout="row">
             <mat-form-field floatLabel="always" flex="50">
-                <input matInput placeholder="State" [matAutocomplete]="tdAuto" [(ngModel)]="currentState" #modelDir="ngModel" (ngModelChange)="this.tdStates = filterStates(currentState)" [disabled]="tdDisabled">
+                <input matInput placeholder="State" [matAutocomplete]="tdAuto" [(ngModel)]="currentState"
+                       #modelDir="ngModel" (ngModelChange)="this.tdStates = filterStates(currentState)"
+                       [disabled]="tdDisabled">
             </mat-form-field>
         </div>
         <div class="push-top">
@@ -705,66 +694,66 @@ limitations under the License.
         this.tdStates = [];
         this.tdDisabled = false;
         this.states = [
-                    { code: 'AL', name: 'Alabama' },
-                    { code: 'AK', name: 'Alaska' },
-                    { code: 'AZ', name: 'Arizona' },
-                    { code: 'AR', name: 'Arkansas' },
-                    { code: 'CA', name: 'California' },
-                    { code: 'CO', name: 'Colorado' },
-                    { code: 'CT', name: 'Connecticut' },
-                    { code: 'DE', name: 'Delaware' },
-                    { code: 'FL', name: 'Florida' },
-                    { code: 'GA', name: 'Georgia' },
-                    { code: 'HI', name: 'Hawaii' },
-                    { code: 'ID', name: 'Idaho' },
-                    { code: 'IL', name: 'Illinois' },
-                    { code: 'IN', name: 'Indiana' },
-                    { code: 'IA', name: 'Iowa' },
-                    { code: 'KS', name: 'Kansas' },
-                    { code: 'KY', name: 'Kentucky' },
-                    { code: 'LA', name: 'Louisiana' },
-                    { code: 'ME', name: 'Maine' },
-                    { code: 'MD', name: 'Maryland' },
-                    { code: 'MA', name: 'Massachusetts' },
-                    { code: 'MI', name: 'Michigan' },
-                    { code: 'MN', name: 'Minnesota' },
-                    { code: 'MS', name: 'Mississippi' },
-                    { code: 'MO', name: 'Missouri' },
-                    { code: 'MT', name: 'Montana' },
-                    { code: 'NE', name: 'Nebraska' },
-                    { code: 'NV', name: 'Nevada' },
-                    { code: 'NH', name: 'New Hampshire' },
-                    { code: 'NJ', name: 'New Jersey' },
-                    { code: 'NM', name: 'New Mexico' },
-                    { code: 'NY', name: 'New York' },
-                    { code: 'NC', name: 'North Carolina' },
-                    { code: 'ND', name: 'North Dakota' },
-                    { code: 'OH', name: 'Ohio' },
-                    { code: 'OK', name: 'Oklahoma' },
-                    { code: 'OR', name: 'Oregon' },
-                    { code: 'PA', name: 'Pennsylvania' },
-                    { code: 'RI', name: 'Rhode Island' },
-                    { code: 'SC', name: 'South Carolina' },
-                    { code: 'SD', name: 'South Dakota' },
-                    { code: 'TN', name: 'Tennessee' },
-                    { code: 'TX', name: 'Texas' },
-                    { code: 'UT', name: 'Utah' },
-                    { code: 'VT', name: 'Vermont' },
-                    { code: 'VA', name: 'Virginia' },
-                    { code: 'WA', name: 'Washington' },
-                    { code: 'WV', name: 'West Virginia' },
-                    { code: 'WI', name: 'Wisconsin' },
-                    { code: 'WY', name: 'Wyoming' },
+            { code: 'AL', name: 'Alabama' },
+            { code: 'AK', name: 'Alaska' },
+            { code: 'AZ', name: 'Arizona' },
+            { code: 'AR', name: 'Arkansas' },
+            { code: 'CA', name: 'California' },
+            { code: 'CO', name: 'Colorado' },
+            { code: 'CT', name: 'Connecticut' },
+            { code: 'DE', name: 'Delaware' },
+            { code: 'FL', name: 'Florida' },
+            { code: 'GA', name: 'Georgia' },
+            { code: 'HI', name: 'Hawaii' },
+            { code: 'ID', name: 'Idaho' },
+            { code: 'IL', name: 'Illinois' },
+            { code: 'IN', name: 'Indiana' },
+            { code: 'IA', name: 'Iowa' },
+            { code: 'KS', name: 'Kansas' },
+            { code: 'KY', name: 'Kentucky' },
+            { code: 'LA', name: 'Louisiana' },
+            { code: 'ME', name: 'Maine' },
+            { code: 'MD', name: 'Maryland' },
+            { code: 'MA', name: 'Massachusetts' },
+            { code: 'MI', name: 'Michigan' },
+            { code: 'MN', name: 'Minnesota' },
+            { code: 'MS', name: 'Mississippi' },
+            { code: 'MO', name: 'Missouri' },
+            { code: 'MT', name: 'Montana' },
+            { code: 'NE', name: 'Nebraska' },
+            { code: 'NV', name: 'Nevada' },
+            { code: 'NH', name: 'New Hampshire' },
+            { code: 'NJ', name: 'New Jersey' },
+            { code: 'NM', name: 'New Mexico' },
+            { code: 'NY', name: 'New York' },
+            { code: 'NC', name: 'North Carolina' },
+            { code: 'ND', name: 'North Dakota' },
+            { code: 'OH', name: 'Ohio' },
+            { code: 'OK', name: 'Oklahoma' },
+            { code: 'OR', name: 'Oregon' },
+            { code: 'PA', name: 'Pennsylvania' },
+            { code: 'RI', name: 'Rhode Island' },
+            { code: 'SC', name: 'South Carolina' },
+            { code: 'SD', name: 'South Dakota' },
+            { code: 'TN', name: 'Tennessee' },
+            { code: 'TX', name: 'Texas' },
+            { code: 'UT', name: 'Utah' },
+            { code: 'VT', name: 'Vermont' },
+            { code: 'VA', name: 'Virginia' },
+            { code: 'WA', name: 'Washington' },
+            { code: 'WV', name: 'West Virginia' },
+            { code: 'WI', name: 'Wisconsin' },
+            { code: 'WY', name: 'Wyoming' },
         ];
 
         ...
 
         displayFn: function(value) {
-                    return value && typeof value === 'object' ? value.name : value;
+            return value && typeof value === 'object' ? value.name : value;
         },
 
         filterStates: function(val) {
-                    return val ? this.states.filter((s) => s.name.match(new RegExp(val, 'gi'))) : this.states;
+            return val ? this.states.filter((s) => s.name.match(new RegExp(val, 'gi'))) : this.states;
         },
 
         ...
@@ -776,14 +765,16 @@ limitations under the License.
             <mat-card-title class="pad-bottom-sm" id="Filter">Filter <mat-icon class="link-to-component" routerLink="/" fragment="Filter">link</mat-icon></mat-card-title>
             <mat-divider></mat-divider>
             <mat-card-content>
-                <h3 class="mat-title">Autocomplete with chips and no custom inputs</h3>
+                <h3 class="md-title">Autocomplete with chips and no custom inputs</h3>
                 <mat-divider></mat-divider>
                 <mat-tab-group mat-stretch-tabs dynamicHeight>
                     <mat-tab>
                         <ng-template mat-tab-label>Demo</ng-template>
                         <div class="push">
                             <div class="mat-body-1">Type and select a preset option:</div>
-                            <td-chips [items]="items" [(ngModel)]="itemsRequireMatch" placeholder="Enter autocomplete strings" [disabled]="readOnly" requireMatch></td-chips>
+                            <td-chips [items]="items" [(ngModel)]="itemsRequireMatch"
+                                      placeholder="Enter autocomplete strings" [disabled]="readOnly"
+                                      requireMatch></td-chips>
                         </div>
                     </mat-tab>
                     <mat-tab>
@@ -792,7 +783,8 @@ limitations under the License.
                             <p>HTML:</p>
                             <pre lang="html">
                             <![CDATA[
-        <td-chips [items]="items" [(ngModel)]="itemsRequireMatch" placeholder="Enter autocomplete strings" [disabled]="readOnly" requireMatch></td-chips>
+        <td-chips [items]="items" [(ngModel)]="itemsRequireMatch" placeholder="Enter autocomplete strings"
+                  [disabled]="readOnly" requireMatch></td-chips>
           ]]>
                         </pre>
                             <p>Javascript:</p>
@@ -819,7 +811,7 @@ limitations under the License.
         ...
 
         toggleReadOnly: function() {
-                                this.readOnly = !this.readOnly;
+            this.readOnly = !this.readOnly;
         },
 
         ...
@@ -830,11 +822,12 @@ limitations under the License.
                 </mat-tab-group>
                 <mat-divider></mat-divider>
                 <mat-card-actions>
-                    <button mat-button color="primary" (click)="toggleReadOnly()" class="text-upper">Toggle ReadOnly</button>
+                    <button mat-button color="primary" (click)="toggleReadOnly()" class="text-upper">Toggle ReadOnly
+                    </button>
                 </mat-card-actions>
             </mat-card-content>
             <mat-card-content>
-                <h3 class="mat-title">Autocomplete with custom inputs</h3>
+                <h3 class="md-title">Autocomplete with custom inputs</h3>
                 <mat-divider></mat-divider>
                 <mat-tab-group mat-stretch-tabs dynamicHeight>
                     <mat-tab>
@@ -876,7 +869,7 @@ limitations under the License.
                 </mat-tab-group>
             </mat-card-content>
             <mat-card-content>
-                <h3 class="mat-title">Demo allowing custom inputs for tags</h3>
+                <h3 class="md-title">Demo allowing custom inputs for tags</h3>
                 <mat-divider></mat-divider>
                 <mat-tab-group mat-stretch-tabs dynamicHeight>
                     <mat-tab>
@@ -909,90 +902,119 @@ limitations under the License.
                         <ng-template mat-tab-label>Demo</ng-template>
                         <div class="pad-top-md pad-bottom-md pad-right-xxl pad-left-xxl">
                             <div class="pad-top-md pad-bottom-sm">
-                                <mat-button-toggle-group fxLayout="row" fxLayoutAlign="space-between center" class="expansion-panel-filter-toggle-group" multiple>
-                                    <mat-button-toggle (change)="toggleDropletsFilter('type:asset')" [checked]="isDropletFilterChecked('type:asset')">
+                                <mat-button-toggle-group fxLayout="row" fxLayoutAlign="space-between center"
+                                                         class="expansion-panel-filter-toggle-group" multiple>
+                                    <mat-button-toggle (change)="toggleDropletsFilter('type:asset')"
+                                                       [checked]="isDropletFilterChecked('type:asset')">
                                         <div fxFlex fxLayout="column" fxLayoutAlign="space-around stretch">
-                                            <div class="mat-display-1 pad-top-sm" fxFlex="55">{{getDropletTypeCount('asset')}}</div>
+                                            <div class="mat-display-1 pad-top-sm"
+                                                 fxFlex="55">{{getDropletTypeCount('asset')}}</div>
                                             <div class="pad-top-sm" fxFlex="45">Assets</div>
                                         </div>
                                     </mat-button-toggle>
-                                    <mat-button-toggle (change)="toggleDropletsFilter('type:extension')" [checked]="isDropletFilterChecked('type:extension')">
+                                    <mat-button-toggle (change)="toggleDropletsFilter('type:extension')"
+                                                       [checked]="isDropletFilterChecked('type:extension')">
                                         <div fxFlex fxLayout="column" fxLayoutAlign="space-around stretch">
-                                            <div class="mat-display-1 pad-top-sm" fxFlex="55">{{getDropletTypeCount('extension')}}</div>
+                                            <div class="mat-display-1 pad-top-sm"
+                                                 fxFlex="55">{{getDropletTypeCount('extension')}}</div>
                                             <div class="pad-top-sm" fxFlex="45">Extensions</div>
                                         </div>
                                     </mat-button-toggle>
-                                    <mat-button-toggle (change)="toggleDropletsFilter('type:flow')" [checked]="isDropletFilterChecked('type:flow')">
+                                    <mat-button-toggle (change)="toggleDropletsFilter('type:flow')"
+                                                       [checked]="isDropletFilterChecked('type:flow')">
                                         <div fxFlex fxLayout="column" fxLayoutAlign="space-around stretch">
-                                            <div class="mat-display-1 pad-top-sm" fxFlex="55">{{getDropletTypeCount('flow')}}</div>
+                                            <div class="mat-display-1 pad-top-sm"
+                                                 fxFlex="55">{{getDropletTypeCount('flow')}}</div>
                                             <div class="pad-top-sm" fxFlex="45">Flows</div>
                                         </div>
                                     </mat-button-toggle>
-                                    <mat-button-toggle (change)="toggleDropletsFilter('compliant.label:Compliant')" [checked]="isDropletFilterChecked('compliant.label:Compliant')">
+                                    <mat-button-toggle (change)="toggleDropletsFilter('compliant.label:Compliant')"
+                                                       [checked]="isDropletFilterChecked('compliant.label:Compliant')">
                                         <div fxFlex fxLayout="column" fxLayoutAlign="space-around stretch">
-                                            <div class="mat-display-1 pad-top-sm" fxFlex="55">{{getDropletCertificationCount('compliant')}}</div>
+                                            <div class="mat-display-1 pad-top-sm"
+                                                 fxFlex="55">{{getDropletCertificationCount('compliant')}}</div>
                                             <div class="pad-top-sm" fxFlex="45">Compliant</div>
                                         </div>
                                     </mat-button-toggle>
-                                    <mat-button-toggle (change)="toggleDropletsFilter('fleet.label:Fleet')" [checked]="isDropletFilterChecked('fleet.label:Fleet')">
+                                    <mat-button-toggle (change)="toggleDropletsFilter('fleet.label:Fleet')"
+                                                       [checked]="isDropletFilterChecked('fleet.label:Fleet')">
                                         <div fxFlex fxLayout="column" fxLayoutAlign="space-around stretch">
-                                            <div class="mat-display-1 pad-top-sm" fxFlex="55">{{getDropletCertificationCount('fleet')}}</div>
+                                            <div class="mat-display-1 pad-top-sm"
+                                                 fxFlex="55">{{getDropletCertificationCount('fleet')}}</div>
                                             <div class="pad-top-sm" fxFlex="45">Fleet</div>
                                         </div>
                                     </mat-button-toggle>
-                                    <mat-button-toggle (change)="toggleDropletsFilter('prod.label:Production Ready')" [checked]="isDropletFilterChecked('prod.label:Production Ready')">
+                                    <mat-button-toggle (change)="toggleDropletsFilter('prod.label:Production Ready')"
+                                                       [checked]="isDropletFilterChecked('prod.label:Production Ready')">
                                         <div fxFlex fxLayout="column" fxLayoutAlign="space-around stretch">
-                                            <div class="mat-display-1 pad-top-sm" fxFlex="55">{{getDropletCertificationCount('prod')}}</div>
+                                            <div class="mat-display-1 pad-top-sm"
+                                                 fxFlex="55">{{getDropletCertificationCount('prod')}}</div>
                                             <div class="pad-top-sm" fxFlex="45">Production Ready</div>
                                         </div>
                                     </mat-button-toggle>
-                                    <mat-button-toggle (change)="toggleDropletsFilter('secure.label:Secure')" [checked]="isDropletFilterChecked('secure.label:Secure')">
+                                    <mat-button-toggle (change)="toggleDropletsFilter('secure.label:Secure')"
+                                                       [checked]="isDropletFilterChecked('secure.label:Secure')">
                                         <div fxFlex fxLayout="column" fxLayoutAlign="space-around stretch">
-                                            <div class="mat-display-1 pad-top-sm" fxFlex="55">{{getDropletCertificationCount('secure')}}</div>
+                                            <div class="mat-display-1 pad-top-sm"
+                                                 fxFlex="55">{{getDropletCertificationCount('secure')}}</div>
                                             <div class="pad-top-sm" fxFlex="45">Secure</div>
                                         </div>
                                     </mat-button-toggle>
                                 </mat-button-toggle-group>
                                 <div id="fds-droplet-filter-clear-grouping-button-container">
-                                    <span *ngIf="dropletsSearchTerms.length > 0" (click)="dropletsSearchTerms = [];filterDroplets(activeDropletColumn.name, activeDropletColumn.sortOrder);"><i class="fa fa-plus-circle fa-rotate-45" aria-hidden="true"></i><span class="pad-left-sm link">Clear Grouping</span></span>
+                                    <span *ngIf="dropletsSearchTerms.length > 0"
+                                          (click)="dropletsSearchTerms = [];filterDroplets(activeDropletColumn.name, activeDropletColumn.sortOrder);"><i
+                                        class="fa fa-plus-circle fa-rotate-45" aria-hidden="true"></i><span
+                                        class="pad-left-sm link">Clear Grouping</span></span>
                                 </div>
                             </div>
                             <div layout="row" layout-align="space-between center">
                                 <div flex fxLayout="row" fxLayoutAlign="end center">
-                                    <td-chips [(ngModel)]="dropletsSearchTerms" [items]="autoCompleteDroplets" (add)="filterDroplets(activeDropletColumn.name, activeDropletColumn.sortOrder);" (remove)="filterDroplets(activeDropletColumn.name, activeDropletColumn.sortOrder);" class="push-right-sm"></td-chips>
+                                    <td-chips [(ngModel)]="dropletsSearchTerms" [items]="autoCompleteDroplets"
+                                              (add)="filterDroplets(activeDropletColumn.name, activeDropletColumn.sortOrder);"
+                                              (remove)="filterDroplets(activeDropletColumn.name, activeDropletColumn.sortOrder);"
+                                              class="push-right-sm"></td-chips>
                                     <span class="push-top-sm pad-right-sm">Sort by:</span>
-                                    <button class="push-top-sm" color="fds-primary" mat-raised-button [matMenuTriggerFor]="dropletGridSortMenu">
+                                    <button class="push-top-sm" color="fds-primary" mat-raised-button
+                                            [matMenuTriggerFor]="dropletGridSortMenu">
                                         {{getSortBy()}}<i class="fa fa-caret-down" aria-hidden="true"></i>
                                     </button>
                                 </div>
-                                <mat-menu class="fds-primary-dropdown-button-menu" #dropletGridSortMenu="matMenu" [overlapTrigger]="false">
+                                <mat-menu class="fds-primary-dropdown-button-menu" #dropletGridSortMenu="matMenu"
+                                          [overlapTrigger]="false">
                                     <div *ngFor="let column of dropletColumns">
-                                        <button mat-menu-item *ngIf="column.sortable" (click)="sortDroplets(column);">{{column.label}} {{(column.sortOrder === 'ASC') ? 'DESC' : 'ASC'}}</button>
+                                        <button mat-menu-item *ngIf="column.sortable"
+                                                (click)="sortDroplets(column);">{{column.label}} {{(column.sortOrder === 'ASC') ? 'DESC' : 'ASC'}}</button>
                                     </div>
                                 </mat-menu>
                             </div>
                         </div>
                         <div class="pad-right-xxl pad-left-xxl">
                             <div *ngFor="let droplet of filteredDroplets">
-                                <td-expansion-panel class="mat-elevation-z5" label={{droplet.label}} sublabel={{droplet.sublabel}} [disabled]="disabled">
+                                <td-expansion-panel class="mat-elevation-z5" label={{droplet.label}}
+                                                    sublabel={{droplet.sublabel}} [disabled]="disabled">
                                     <ng-template td-expansion-panel-label>
                                         <div fxLayout="column" fxLayoutAlign="space-between start">
-                                            <span class="mat-title capitalize">{{droplet.displayName}}</span>
+                                            <span class="md-title capitalize">{{droplet.displayName}}</span>
                                             <span class="md-subhead">{{droplet.type}}</span>
                                         </div>
                                     </ng-template>
                                     <ng-template td-expansion-panel-sublabel>
                                         <div fxLayout="row" fxLayoutAlign="space-between center">
-                                            <div class="pad-right-xxl pad-left-xxl" fxLayout="column" fxLayoutAlign="space-between start">
+                                            <div class="pad-right-xxl pad-left-xxl" fxLayout="column"
+                                                 fxLayoutAlign="space-between start">
                                                 <span class="uppercase">Versions</span> {{droplet.versions.length}}
                                             </div>
-                                            <div class="pad-right-xxl pad-left-xxl" fxLayout="column" fxLayoutAlign="space-between start">
+                                            <div class="pad-right-xxl pad-left-xxl" fxLayout="column"
+                                                 fxLayoutAlign="space-between start">
                                                 <span class="uppercase">Flows</span> {{droplet.flows.length}}
                                             </div>
-                                            <div class="pad-right-xxl pad-left-xxl" fxLayout="column" fxLayoutAlign="space-between start">
+                                            <div class="pad-right-xxl pad-left-xxl" fxLayout="column"
+                                                 fxLayoutAlign="space-between start">
                                                 <span class="uppercase">Extensions</span> {{droplet.extensions.length}}
                                             </div>
-                                            <div class="pad-right-xxl pad-left-xxl" fxLayout="column" fxLayoutAlign="space-between start">
+                                            <div class="pad-right-xxl pad-left-xxl" fxLayout="column"
+                                                 fxLayoutAlign="space-between start">
                                                 <span class="uppercase">Assests</span> {{droplet.assets.length}}
                                             </div>
                                         </div>
@@ -1000,10 +1022,13 @@ limitations under the License.
                                     <div class="mat-padding">
                                         <div fxLayout="column" fxLayoutAlign="space-between stretch">
                                             <div class="pad-bottom-sm" fxLayout="row" fxLayoutAlign="end center">
-                                                <button color="fds-primary" [matMenuTriggerFor]="primaryButtonDropdownMenu" mat-raised-button>
+                                                <button color="fds-primary"
+                                                        [matMenuTriggerFor]="primaryButtonDropdownMenu"
+                                                        mat-raised-button>
                                                     Actions<i class="fa fa-caret-down" aria-hidden="true"></i>
                                                 </button>
-                                                <mat-menu class="fds-primary-dropdown-button-menu" #primaryButtonDropdownMenu="matMenu" [overlapTrigger]="false">
+                                                <mat-menu class="fds-primary-dropdown-button-menu"
+                                                          #primaryButtonDropdownMenu="matMenu" [overlapTrigger]="false">
                                                     <button mat-menu-item *ngFor="let action of droplet.actions">
                                                         <span>{{action.name}}</span>
                                                     </button>
@@ -1012,7 +1037,16 @@ limitations under the License.
                                             <div fxLayout="row">
                                                 <div fxFlex="25">
                                                     <span class="uppercase">Description</span>
-                                                    <p>Blah blah bla, bla bla, blah blah blaBlah blah bla, bla bla, blah blah blaBlah blah bla, bla bla, blah blah blaBlah blah bla, bla bla, blah blah blaBlah blah bla, bla bla, blah blah blaBlah blah bla, bla bla, blah blah blaBlah blah bla, bla bla, blah blah blaBlah blah bla, bla bla, blah blah blaBlah blah bla, bla bla, blah blah blaBlah blah bla, bla bla, blah blah blaBlah blah bla, bla bla, blah blah blaBlah blah bla, bla bla, blah blah blaBlah blah bla, bla bla, blah blah blaBlah blah bla, bla bla, blah blah blaBlah blah bla, bla bla, blah blah blaBlah blah bla, bla bla, blah blah bla</p>
+                                                    <p>Blah blah bla, bla bla, blah blah blaBlah blah bla, bla bla, blah
+                                                        blah blaBlah blah bla, bla bla, blah blah blaBlah blah bla, bla
+                                                        bla, blah blah blaBlah blah bla, bla bla, blah blah blaBlah blah
+                                                        bla, bla bla, blah blah blaBlah blah bla, bla bla, blah blah
+                                                        blaBlah blah bla, bla bla, blah blah blaBlah blah bla, bla bla,
+                                                        blah blah blaBlah blah bla, bla bla, blah blah blaBlah blah bla,
+                                                        bla bla, blah blah blaBlah blah bla, bla bla, blah blah blaBlah
+                                                        blah bla, bla bla, blah blah blaBlah blah bla, bla bla, blah
+                                                        blah blaBlah blah bla, bla bla, blah blah blaBlah blah bla, bla
+                                                        bla, blah blah bla</p>
                                                 </div>
                                                 <div fxFlex="50">
                                                     <mat-card fxFlex>
@@ -1039,88 +1073,109 @@ limitations under the License.
                         <![CDATA[
         <div class="pad-top-md pad-bottom-md pad-right-xxl pad-left-xxl">
             <div class="pad-top-md pad-bottom-sm">
-                <mat-button-toggle-group fxLayout="row" fxLayoutAlign="space-between center" class="expansion-panel-filter-toggle-group" multiple>
-                    <mat-button-toggle (change)="toggleDropletsFilter('type:asset')" [checked]="isDropletFilterChecked('type:asset')">
+                <mat-button-toggle-group fxLayout="row" fxLayoutAlign="space-between center"
+                                         class="expansion-panel-filter-toggle-group" multiple>
+                    <mat-button-toggle (change)="toggleDropletsFilter('type:asset')"
+                                       [checked]="isDropletFilterChecked('type:asset')">
                         <div fxFlex fxLayout="column" fxLayoutAlign="space-around stretch">
                             <div class="mat-display-1 pad-top-sm" fxFlex="55">{ {getDropletTypeCount('asset')} }</div>
                             <div class="pad-top-sm" fxFlex="45">Assets</div>
                         </div>
                     </mat-button-toggle>
-                    <mat-button-toggle (change)="toggleDropletsFilter('type:extension')" [checked]="isDropletFilterChecked('type:extension')">
+                    <mat-button-toggle (change)="toggleDropletsFilter('type:extension')"
+                                       [checked]="isDropletFilterChecked('type:extension')">
                         <div fxFlex fxLayout="column" fxLayoutAlign="space-around stretch">
-                            <div class="mat-display-1 pad-top-sm" fxFlex="55">{ {getDropletTypeCount('extension')} }</div>
+                            <div class="mat-display-1 pad-top-sm" fxFlex="55">{
+                                {getDropletTypeCount('extension')} }</div>
                             <div class="pad-top-sm" fxFlex="45">Extensions</div>
                         </div>
                     </mat-button-toggle>
-                    <mat-button-toggle (change)="toggleDropletsFilter('type:flow')" [checked]="isDropletFilterChecked('type:flow')">
+                    <mat-button-toggle (change)="toggleDropletsFilter('type:flow')"
+                                       [checked]="isDropletFilterChecked('type:flow')">
                         <div fxFlex fxLayout="column" fxLayoutAlign="space-around stretch">
                             <div class="mat-display-1 pad-top-sm" fxFlex="55">{ {getDropletTypeCount('flow')} }</div>
                             <div class="pad-top-sm" fxFlex="45">Flows</div>
                         </div>
                     </mat-button-toggle>
-                    <mat-button-toggle (change)="toggleDropletsFilter('compliant.label:Compliant')" [checked]="isDropletFilterChecked('compliant.label:Compliant')">
+                    <mat-button-toggle (change)="toggleDropletsFilter('compliant.label:Compliant')"
+                                       [checked]="isDropletFilterChecked('compliant.label:Compliant')">
                         <div fxFlex fxLayout="column" fxLayoutAlign="space-around stretch">
                             <div class="mat-display-1 pad-top-sm" fxFlex="55">{ {getDropletCertificationCount('compliant')} }</div>
                             <div class="pad-top-sm" fxFlex="45">Compliant</div>
                         </div>
                     </mat-button-toggle>
-                    <mat-button-toggle (change)="toggleDropletsFilter('fleet.label:Fleet')" [checked]="isDropletFilterChecked('fleet.label:Fleet')">
+                    <mat-button-toggle (change)="toggleDropletsFilter('fleet.label:Fleet')"
+                                       [checked]="isDropletFilterChecked('fleet.label:Fleet')">
                         <div fxFlex fxLayout="column" fxLayoutAlign="space-around stretch">
                             <div class="mat-display-1 pad-top-sm" fxFlex="55">{ {getDropletCertificationCount('fleet')} }</div>
                             <div class="pad-top-sm" fxFlex="45">Fleet</div>
                         </div>
                     </mat-button-toggle>
-                    <mat-button-toggle (change)="toggleDropletsFilter('prod.label:Production Ready')" [checked]="isDropletFilterChecked('prod.label:Production Ready')">
+                    <mat-button-toggle (change)="toggleDropletsFilter('prod.label:Production Ready')"
+                                       [checked]="isDropletFilterChecked('prod.label:Production Ready')">
                         <div fxFlex fxLayout="column" fxLayoutAlign="space-around stretch">
-                            <div class="mat-display-1 pad-top-sm" fxFlex="55">{ {getDropletCertificationCount('prod')} }</div>
+                            <div class="mat-display-1 pad-top-sm" fxFlex="55">{
+                                {getDropletCertificationCount('prod')} }</div>
                             <div class="pad-top-sm" fxFlex="45">Production Ready</div>
                         </div>
                     </mat-button-toggle>
-                    <mat-button-toggle (change)="toggleDropletsFilter('secure.label:Secure')" [checked]="isDropletFilterChecked('secure.label:Secure')">
+                    <mat-button-toggle (change)="toggleDropletsFilter('secure.label:Secure')"
+                                       [checked]="isDropletFilterChecked('secure.label:Secure')">
                         <div fxFlex fxLayout="column" fxLayoutAlign="space-around stretch">
                             <div class="mat-display-1 pad-top-sm" fxFlex="55">{ {getDropletCertificationCount('secure')} }</div>
                             <div class="pad-top-sm" fxFlex="45">Secure</div>
                         </div>
                     </mat-button-toggle>
                 </mat-button-toggle-group>
-                <button *ngIf="activeDropletColumn" mat-button color="primary" (click)="dropletsSearchTerms = [];filterDroplets(activeDropletColumn.name, activeDropletColumn.sortOrder);">Clear Grouping</button>
+                <button *ngIf="activeDropletColumn" mat-button color="primary"
+                        (click)="dropletsSearchTerms = [];filterDroplets(activeDropletColumn.name, activeDropletColumn.sortOrder);">Clear Grouping</button>
             </div>
             <div layout="row" layout-align="space-between center">
                 <div flex fxLayout="row" fxLayoutAlign="end center">
-                    <td-chips [(ngModel)]="dropletsSearchTerms" [items]="autoCompleteDroplets" (add)="filterDroplets(activeDropletColumn.name, activeDropletColumn.sortOrder);" (remove)="filterDroplets(activeDropletColumn.name, activeDropletColumn.sortOrder);" class="push-right-sm"></td-chips>
+                    <td-chips [(ngModel)]="dropletsSearchTerms" [items]="autoCompleteDroplets"
+                              (add)="filterDroplets(activeDropletColumn.name, activeDropletColumn.sortOrder);"
+                              (remove)="filterDroplets(activeDropletColumn.name, activeDropletColumn.sortOrder);"
+                              class="push-right-sm"></td-chips>
                     <span class="pad-right-sm">Sort by:</span>
                     <button color="fds-primary" mat-raised-button [matMenuTriggerFor]="dropletGridSortMenu">
                         { {getSortBy()} }<i class="fa fa-caret-down" aria-hidden="true"></i>
                     </button>
                 </div>
-                <mat-menu class="fds-primary-dropdown-button-menu" #dropletGridSortMenu="matMenu" [overlapTrigger]="false">
+                <mat-menu class="fds-primary-dropdown-button-menu" #dropletGridSortMenu="matMenu"
+                          [overlapTrigger]="false">
                     <div *ngFor="let column of dropletColumns">
-                        <button mat-menu-item *ngIf="column.sortable" (click)="sortDroplets(column);">{ {column.label} } { {(column.sortOrder === 'ASC') ? 'DESC' : 'ASC'} }</button>
+                        <button mat-menu-item *ngIf="column.sortable" (click)="sortDroplets(column);">{
+                            {column.label} } { {(column.sortOrder === 'ASC') ? 'DESC' : 'ASC'} }</button>
                     </div>
                 </mat-menu>
             </div>
         </div>
         <div class="pad-right-xxl pad-left-xxl">
             <div *ngFor="let droplet of filteredDroplets">
-                <td-expansion-panel class="mat-elevation-z5" label={ {droplet.label} } sublabel={ {droplet.sublabel} } [disabled]="disabled">
+                <td-expansion-panel class="mat-elevation-z5" label={ {droplet.label} } sublabel={ {droplet.sublabel} }
+                                    [disabled]="disabled">
                     <ng-template td-expansion-panel-label>
                         <div fxLayout="column" fxLayoutAlign="space-between start">
-                            <span class="mat-title capitalize">{ {droplet.displayName} }</span>
+                            <span class="md-title capitalize">{ {droplet.displayName} }</span>
                             <span class="md-subhead">{ {droplet.type} }</span>
                         </div>
                     </ng-template>
                     <ng-template td-expansion-panel-sublabel>
                         <div fxLayout="row" fxLayoutAlign="space-between center">
-                            <div class="pad-right-xxl pad-left-xxl" fxLayout="column" fxLayoutAlign="space-between start">
+                            <div class="pad-right-xxl pad-left-xxl" fxLayout="column"
+                                 fxLayoutAlign="space-between start">
                                 <span class="uppercase">Versions</span> { {droplet.versions.length} }
                             </div>
-                            <div class="pad-right-xxl pad-left-xxl" fxLayout="column" fxLayoutAlign="space-between start">
+                            <div class="pad-right-xxl pad-left-xxl" fxLayout="column"
+                                 fxLayoutAlign="space-between start">
                                 <span class="uppercase">Flows</span> { {droplet.flows.length} }
                             </div>
-                            <div class="pad-right-xxl pad-left-xxl" fxLayout="column" fxLayoutAlign="space-between start">
+                            <div class="pad-right-xxl pad-left-xxl" fxLayout="column"
+                                 fxLayoutAlign="space-between start">
                                 <span class="uppercase">Extensions</span> { {droplet.extensions.length} }
                             </div>
-                            <div class="pad-right-xxl pad-left-xxl" fxLayout="column" fxLayoutAlign="space-between start">
+                            <div class="pad-right-xxl pad-left-xxl" fxLayout="column"
+                                 fxLayoutAlign="space-between start">
                                 <span class="uppercase">Assests</span> { {droplet.assets.length} }
                             </div>
                         </div>
@@ -1128,10 +1183,12 @@ limitations under the License.
                     <div class="mat-padding">
                         <div fxLayout="column" fxLayoutAlign="space-between stretch">
                             <div class="pad-bottom-sm" fxLayout="row" fxLayoutAlign="end center">
-                                <button color="fds-primary" [matMenuTriggerFor]="primaryButtonDropdownMenu" mat-raised-button>
+                                <button color="fds-primary" [matMenuTriggerFor]="primaryButtonDropdownMenu"
+                                        mat-raised-button>
                                     Actions<i class="fa fa-caret-down" aria-hidden="true"></i>
                                 </button>
-                                <mat-menu class="fds-primary-dropdown-button-menu" #primaryButtonDropdownMenu="matMenu" [overlapTrigger]="false">
+                                <mat-menu class="fds-primary-dropdown-button-menu" #primaryButtonDropdownMenu="matMenu"
+                                          [overlapTrigger]="false">
                                     <button mat-menu-item *ngFor="let action of droplet.actions">
                                         <span>{ {action.name} }</span>
                                     </button>
@@ -1166,143 +1223,168 @@ limitations under the License.
                         <![CDATA[
         this.dataTableService = TdDataTableService;
 
-        this.droplets = [{
-                            id: '23f6cc59-0156-1000-09b4-2b0610089090',
-                            name: "Decompression_Circular_Flow",
-                            displayName: 'Decompressed Circular flow',
-                            type: 'flow',
-                            sublabel: 'A sublabel',
-                            compliant: {
-                id: '25fd6vv87-3549-0001-05g6-4d4567890765',
-                label: 'Compliant',
-                type: 'certification'
-            },
-            fleet: {
-                id: '23f6cc59-3549-0001-05g6-4d4567890765',
-                label: 'Fleet',
-                type: 'certification'
-            },
-            prod: {
-                id: '52fd6vv87-3549-0001-05g6-4d4567890765',
-                label: 'Production Ready',
-                type: 'certification'
-            },
-            secure: {
-                id: '32f6cc59-3549-0001-05g6-4d4567890765',
-                label: 'Secure',
-                type: 'certification'
-            },
-            versions: [{
-                id: '23f6cc59-0156-1000-06b4-2b0810089090',
-                revision: '1',
-                dependentFlows: [{
-                            id: '25fd6vv87-3549-0001-05g6-4d4567890765'
-                }],
-                created: date.setDate(date.getDate() - 1),
-                updated: new Date()
-            }, {
-                id: '25fd6vv87-3549-0001-05g6-4d4567890765',
-                revision: '2',
-                dependentFlows: [{
-                            id: '23f6cc59-0156-1000-06b4-2b0810089090'
-                }],
-                created: new Date(),
-                updated: new Date()
-            }],
-            flows: [],
-            extensions: [],
-            assets: [],
-            actions: [{
-                'name': 'Delete',
-                'icon': 'fa fa-close',
-                'tooltip': 'Delete User'
-            }, {
-                'name': 'Manage',
-                'icon': 'fa fa-user',
-                'tooltip': 'Manage User'
-            }, {
-                'name': 'Action 3',
-                'icon': 'fa fa-question',
-                'tooltip': 'Whatever else we want to do...'
-            }]
-        }, {
-                            id: '25fd6vv87-3249-0001-05g6-4d4767890765',
-                            name: "DateConversion",
-                            displayName: 'Date conversion',
-                            type: 'asset',
-                            sublabel: 'A sublabel',
-                            compliant: {
-                id: '25fd6vv34-3549-0001-05g6-4d4567890765',
-                label: 'Compliant',
-                type: 'certification'
-            },
-            prod: {
-                id: '52vn6vv87-3549-0001-05g6-4d4567890765',
-                label: 'Production Ready',
-                type: 'certification'
-            },
-            versions: [{
-                id: '23f6ic59-0156-1000-06b4-2b0810089090',
-                revision: '1',
-                dependentFlows: [{
-                            id: '23f6cc19-0156-1000-06b4-2b0810089090'
-                }],
-                created: new Date(),
-                updated: new Date()
-            }],
-            flows: [],
-            extensions: [],
-            assets: [],
-            actions: [{
-                'name': 'Delete',
-                'icon': 'fa fa-close',
-                'tooltip': 'Delete User'
-            }]
-        }, {
-                            id: '52fd6vv87-3294-0001-05g6-4d4767890765',
-                            name: "nifi-email-bundle",
-                            displayName: 'nifi-email-bundle',
-                            type: 'extension',
-                            sublabel: 'A sublabel',
-                            compliant: {
-                id: '33fd6vv87-3549-0001-05g6-4d4567890765',
-                label: 'Compliant',
-                test: {
-                            label: 'test'
+        this.droplets = [
+            {
+                id: '23f6cc59-0156-1000-09b4-2b0610089090',
+                name: "Decompression_Circular_Flow",
+                displayName: 'Decompressed Circular flow',
+                type: 'flow',
+                sublabel: 'A sublabel',
+                compliant: {
+                    id: '25fd6vv87-3549-0001-05g6-4d4567890765',
+                    label: 'Compliant',
+                    type: 'certification'
                 },
-                type: 'certification'
+                fleet: {
+                    id: '23f6cc59-3549-0001-05g6-4d4567890765',
+                    label: 'Fleet',
+                    type: 'certification'
+                },
+                prod: {
+                    id: '52fd6vv87-3549-0001-05g6-4d4567890765',
+                    label: 'Production Ready',
+                    type: 'certification'
+                },
+                secure: {
+                    id: '32f6cc59-3549-0001-05g6-4d4567890765',
+                    label: 'Secure',
+                    type: 'certification'
+                },
+                versions: [
+                    {
+                        id: '23f6cc59-0156-1000-06b4-2b0810089090',
+                        revision: '1',
+                        dependentFlows: [
+                            {
+                                id: '25fd6vv87-3549-0001-05g6-4d4567890765'
+                            }
+                        ],
+                        created: date.setDate(date.getDate() - 1),
+                        updated: new Date()
+                    }, {
+                        id: '25fd6vv87-3549-0001-05g6-4d4567890765',
+                        revision: '2',
+                        dependentFlows: [
+                            {
+                                id: '23f6cc59-0156-1000-06b4-2b0810089090'
+                            }
+                        ],
+                        created: new Date(),
+                        updated: new Date()
+                    }
+                ],
+                flows: [],
+                extensions: [],
+                assets: [],
+                actions: [
+                    {
+                        'name': 'Delete',
+                        'icon': 'fa fa-close',
+                        'tooltip': 'Delete User'
+                    },
+                    {
+                        'name': 'Manage',
+                        'icon': 'fa fa-user',
+                        'tooltip': 'Manage User'
+                    },
+                    {
+                        'name': 'Action 3',
+                        'icon': 'fa fa-question',
+                        'tooltip': 'Whatever else we want to do...'
+                    }
+                ]
             },
-            versions: [{
-                id: '23d3cc59-0156-1000-06b4-2b0810089090',
-                revision: '1',
-                dependentFlows: [{
-                            id: '23f6cc89-0156-1000-06b4-2b0810089090'
-                }],
-                created: new Date(),
-                updated: new Date()
-            }],
-            flows: [],
-            extensions: [],
-            assets: [],
-            actions: [{
-                'name': 'Delete',
-                'icon': 'fa fa-close',
-                'tooltip': 'Delete User'
-            }, {
-                'name': 'Manage',
-                'icon': 'fa fa-user',
-                'tooltip': 'Manage User'
-            }, ]
+            {
+                id: '25fd6vv87-3249-0001-05g6-4d4767890765',
+                name: "DateConversion",
+                displayName: 'Date conversion',
+                type: 'asset',
+                sublabel: 'A sublabel',
+                compliant: {
+                    id: '25fd6vv34-3549-0001-05g6-4d4567890765',
+                    label: 'Compliant',
+                    type: 'certification'
+                },
+                prod: {
+                    id: '52vn6vv87-3549-0001-05g6-4d4567890765',
+                    label: 'Production Ready',
+                    type: 'certification'
+                },
+                versions: [
+                    {
+                        id: '23f6ic59-0156-1000-06b4-2b0810089090',
+                        revision: '1',
+                        dependentFlows: [
+                            {
+                                id: '23f6cc19-0156-1000-06b4-2b0810089090'
+                            }
+                        ],
+                        created: new Date(),
+                        updated: new Date()
+                    }
+                ],
+                flows: [],
+                extensions: [],
+                assets: [],
+                actions: [
+                    {
+                        'name': 'Delete',
+                        'icon': 'fa fa-close',
+                        'tooltip': 'Delete User'
+                    }
+                ]
+            },
+            {
+                id: '52fd6vv87-3294-0001-05g6-4d4767890765',
+                name: "nifi-email-bundle",
+                displayName: 'nifi-email-bundle',
+                type: 'extension',
+                sublabel: 'A sublabel',
+                compliant: {
+                    id: '33fd6vv87-3549-0001-05g6-4d4567890765',
+                    label: 'Compliant',
+                    test: {
+                        label: 'test'
+                    },
+                    type: 'certification'
+                },
+                versions: [
+                    {
+                        id: '23d3cc59-0156-1000-06b4-2b0810089090',
+                        revision: '1',
+                        dependentFlows: [
+                            {
+                                id: '23f6cc89-0156-1000-06b4-2b0810089090'
+                            }
+                        ],
+                        created: new Date(),
+                        updated: new Date()
+                    }
+                ],
+                flows: [],
+                extensions: [],
+                assets: [],
+                actions: [
+                    {
+                        'name': 'Delete',
+                        'icon': 'fa fa-close',
+                        'tooltip': 'Delete User'
+                    }, {
+                        'name': 'Manage',
+                        'icon': 'fa fa-user',
+                        'tooltip': 'Manage User'
+                    }
+                ]
         }];
 
         this.filteredDroplets = [];
 
         this.dropletColumns = [
-                            { name: 'id', label: 'ID', sortable: true },
-                            { name: 'name', label: 'Name', sortable: true },
-                            { name: 'displayName', label: 'Display Name', sortable: true },
-                            { name: 'sublabel', label: 'Label', sortable: true },
-                            { name: 'type', label: 'Type', sortable: true }
+            { name: 'id', label: 'ID', sortable: true },
+            { name: 'name', label: 'Name', sortable: true },
+            { name: 'displayName', label: 'Display Name', sortable: true },
+            { name: 'sublabel', label: 'Label', sortable: true },
+            { name: 'type', label: 'Type', sortable: true }
         ];
 
         this.autoCompleteDroplets = [];
@@ -1311,19 +1393,19 @@ limitations under the License.
         ...
 
         isDropletFilterChecked: function(term) {
-                            return (this.dropletsSearchTerms.indexOf(term) > -1);
+            return (this.dropletsSearchTerms.indexOf(term) > -1);
         },
 
         getDropletTypeCount: function(type) {
-                            return this.filteredDroplets.filter(function(droplet) {
+            return this.filteredDroplets.filter(function(droplet) {
                 return droplet.type === type;
             }).length;
         },
 
         getDropletCertificationCount: function(certification) {
-                            return this.filteredDroplets.filter(droplet => {
+            return this.filteredDroplets.filter(droplet => {
                 return Object.keys(droplet).find((key) => {
-                            if (key === certification && droplet[certification].type === 'certification') {
+                    if (key === certification && droplet[certification].type === 'certification') {
                         return droplet;
                     }
                 });
@@ -1331,26 +1413,28 @@ limitations under the License.
         },
 
         getSortBy: function() {
-                            var sortByColumnLabel;
-                            var arrayLength = this.dropletColumns.length;
-                            for (var i = 0; i < arrayLength; i++) {
+            var sortByColumnLabel;
+            var arrayLength = this.dropletColumns.length;
+            for (var i = 0; i < arrayLength; i++) {
                 if (this.dropletColumns[i].active === true) {
-                            sortByColumnLabel = this.dropletColumns[i].label;
-                            break;
+                    sortByColumnLabel = this.dropletColumns[i].label;
+                    break;
                 }
             }
             return sortByColumnLabel;
         },
 
         sortDroplets: function(column) {
-                            if (column.sortable === true) {
+            if (column.sortable === true) {
                 // toggle column sort order
                 var sortOrder = column.sortOrder = (column.sortOrder === 'ASC') ? 'DESC' : 'ASC';
                 this.filterDroplets(column.name, sortOrder);
+
                 //only one column can be actively sorted so we reset all to inactive
                 this.dropletColumns.forEach(function (c) {
                             c.active = false;
                 });
+
                 //and set this column as the actively sorted column
                 column.active = true;
                 this.activeDropletColumn = column;
@@ -1358,13 +1442,13 @@ limitations under the License.
         },
 
         toggleDropletsFilter: function(searchTerm) {
-                            var applySearchTerm = true;
-                            // check if the search term is already applied and remove it if true
-                            if (this.dropletsSearchTerms.length > 0) {
+            var applySearchTerm = true;
+            // check if the search term is already applied and remove it if true
+            if (this.dropletsSearchTerms.length > 0) {
                 var arrayLength = this.dropletsSearchTerms.length;
                 for (var i = 0; i < arrayLength; i++) {
-                            var index = this.dropletsSearchTerms.indexOf(searchTerm);
-                            if (index > -1) {
+                    var index = this.dropletsSearchTerms.indexOf(searchTerm);
+                    if (index > -1) {
                         this.dropletsSearchTerms.splice(index, 1);
                         applySearchTerm = false;
                     }
@@ -1380,15 +1464,17 @@ limitations under the License.
         },
 
         filterDroplets: function(sortBy, sortOrder) {
-                            // if `sortBy` is `undefined` then find the first sortable column in this.dropletColumns
-                            if (sortBy === undefined) {
+            // if `sortBy` is `undefined` then find the first sortable column in this.dropletColumns
+            if (sortBy === undefined) {
                 var arrayLength = this.dropletColumns.length;
                 for (var i = 0; i < arrayLength; i++) {
-                            if (this.dropletColumns[i].sortable === true) {
+                    if (this.dropletColumns[i].sortable === true) {
                         sortBy = this.dropletColumns[i].name;
                         this.activeDropletColumn = this.dropletColumns[i];
+
                         //only one column can be actively sorted so we reset all to inactive
                         this.dropletColumns.forEach(c => c.active = false);
+
                         //and set this column as the actively sorted column
                         this.dropletColumns[i].active = true;
                         break;
@@ -1413,13 +1499,13 @@ limitations under the License.
         },
 
         getAutoCompleteDroplets: function() {
-                            this.autoCompleteDroplets = [];
-                            this.dropletColumns.forEach(c => this.filteredDroplets.forEach(r => (r[c.name.toLowerCase()]) ? this.autoCompleteDroplets.push(r[c.name.toLowerCase()].toString()) : ''));
+            this.autoCompleteDroplets = [];
+            this.dropletColumns.forEach(c => this.filteredDroplets.forEach(r => (r[c.name.toLowerCase()]) ? this.autoCompleteDroplets.push(r[c.name.toLowerCase()].toString()) : ''));
         },
 
         filterData: function(data, searchTerm, ignoreCase) {
-                            var field = '';
-                            if (searchTerm.indexOf(":") > -1) {
+            var field = '';
+            if (searchTerm.indexOf(":") > -1) {
                 field = searchTerm.split(':')[0].trim();
                 searchTerm = searchTerm.split(':')[1].trim();
             }
@@ -1427,16 +1513,16 @@ limitations under the License.
 
             if (filter) {
                 data = data.filter(item => {
-                            var res = Object.keys(item).find((key) => {
+                        var res = Object.keys(item).find((key) => {
                         if (field.indexOf(".") > -1) {
                             var objArray = field.split(".");
                             var obj = item;
                             var arrayLength = objArray.length;
                             for (var i = 0; i < arrayLength; i++) {
                                 try {
-                            obj = obj[objArray[i]];
+                                    obj = obj[objArray[i]];
                                 } catch (e) {
-                            return false;
+                                    return false;
                                 }
                             }
                             var preItemValue = ('' + obj);
@@ -1473,73 +1559,104 @@ limitations under the License.
                 <mat-tab-group mat-stretch-tabs>
                     <mat-tab>
                         <ng-template mat-tab-label>Demo</ng-template>
-                        <div layout="row" layout-align="space-between center" class="pad-top-md pad-bottom-sm pad-left-md pad-right-md">
+                        <div layout="row" layout-align="space-between center"
+                             class="pad-top-md pad-bottom-sm pad-left-md pad-right-md">
                             <span class="table-title">
                             <span>Table title</span>
                             </span>
                             <div flex class="push-right-sm" fxLayout="row" fxLayoutAlign="end center">
-                                <td-chips [items]="autoCompleteData" (add)="searchAdd($event)" (remove)="searchRemove($event)"></td-chips>
-                                <button class="push-top-sm" color="fds-primary" mat-raised-button [matMenuTriggerFor]="dataTableActionMenu">
+                                <td-chips [items]="autoCompleteData" (add)="searchAdd($event)"
+                                          (remove)="searchRemove($event)"></td-chips>
+                                <button class="push-top-sm" color="fds-primary" mat-raised-button
+                                        [matMenuTriggerFor]="dataTableActionMenu">
                                     Actions<i class="fa fa-caret-down" aria-hidden="true"></i>
                                 </button>
                             </div>
-                            <mat-menu class="fds-primary-dropdown-button-menu" #dataTableActionMenu="matMenu" [overlapTrigger]="false">
-                                <button mat-menu-item> Option 1 </button>
-                                <button mat-menu-item> Option 2 </button>
+                            <mat-menu class="fds-primary-dropdown-button-menu" #dataTableActionMenu="matMenu"
+                                      [overlapTrigger]="false">
+                                <button mat-menu-item> Option 1</button>
+                                <button mat-menu-item> Option 2</button>
                             </mat-menu>
                         </div>
                         <div class="pad-left-md pad-right-md">
                             <div fxLayout="row" fxLayoutAlign="space-between center" class="td-data-table">
-                                <div class="td-data-table-column" (click)="sort($event, column)" [matTooltip]="column.tooltip" *ngFor="let column of columns" fxFlex="{{column.width}}">
-                                    <i *ngIf="column.active && column.sortable && column.sortOrder === 'ASC'" class="fa fa-caret-up" aria-hidden="true"></i>
-                                    <i *ngIf="column.active && column.sortable && column.sortOrder === 'DESC'" class="fa fa-caret-down" aria-hidden="true"></i>
+                                <div class="td-data-table-column" (click)="sort($event, column)"
+                                     [matTooltip]="column.tooltip" *ngFor="let column of columns"
+                                     fxFlex="{{column.width}}">
+                                    <i *ngIf="column.active && column.sortable && column.sortOrder === 'ASC'"
+                                       class="fa fa-caret-up" aria-hidden="true"></i>
+                                    <i *ngIf="column.active && column.sortable && column.sortOrder === 'DESC'"
+                                       class="fa fa-caret-down" aria-hidden="true"></i>
                                     {{column.label}}
                                 </div>
                                 <div class="td-data-table-column" fxFlex=10>
                                     <div fxLayout="row" fxLayoutAlign="end center">
-                                        <mat-checkbox class="pad-left-sm" [(ngModel)]="allRowsSelected" (checked)="allRowsSelected" (change)="toggleSelectAll()"></mat-checkbox>
+                                        <mat-checkbox class="pad-left-sm" [(ngModel)]="allRowsSelected"
+                                                      (checked)="allRowsSelected"
+                                                      (change)="toggleSelectAll()"></mat-checkbox>
                                     </div>
                                 </div>
                             </div>
                             <div>
-                                <div fxLayout="row" fxLayoutAlign="space-between center" class="td-data-table-row" [ngClass]="{'selected' : row.checked}" *ngFor="let row of filteredData" (click)="row.checked = !row.checked;toggleSelect(row)">
-                                    <div class="td-data-table-cell" *ngFor="let column of columns" fxFlex="{{column.width}}">
+                                <div fxLayout="row" fxLayoutAlign="space-between center" class="td-data-table-row"
+                                     [ngClass]="{'selected' : row.checked}" *ngFor="let row of filteredData"
+                                     (click)="row.checked = !row.checked;toggleSelect(row)">
+                                    <div class="td-data-table-cell" *ngFor="let column of columns"
+                                         fxFlex="{{column.width}}">
                                         <div *ngIf="column.name !== 'comments' || row['comments']">
                                             {{column.format ? column.format(row[column.name]) : row[column.name]}}
                                         </div>
                                     </div>
                                     <div class="td-data-table-cell" fxFlex=10>
                                         <div *ngIf="row.actions">
-                                            <div *ngIf="row.actions.length <= 4" fxLayout="row" fxLayoutAlign="end center">
-                                                <button (click)="row.checked = !row.checked" *ngFor="let action of row.actions" matTooltip="{{action.tooltip}}" mat-icon-button color="accent" [disabled]="action.disabled ? '' : null">
+                                            <div *ngIf="row.actions.length <= 4" fxLayout="row"
+                                                 fxLayoutAlign="end center">
+                                                <button (click)="row.checked = !row.checked"
+                                                        *ngFor="let action of row.actions"
+                                                        matTooltip="{{action.tooltip}}" mat-icon-button color="accent"
+                                                        [disabled]="action.disabled ? '' : null">
                                                     <i class="{{action.icon}}" aria-hidden="true"></i>
                                                 </button>
-                                                <mat-checkbox class="pad-left-sm" [(ngModel)]="row.checked" [checked]="row.checked" (change)="toggleSelect(row)" (click)="row.checked = !row.checked;toggleSelect(row)"></mat-checkbox>
+                                                <mat-checkbox class="pad-left-sm" [(ngModel)]="row.checked"
+                                                              [checked]="row.checked" (change)="toggleSelect(row)"
+                                                              (click)="row.checked = !row.checked;toggleSelect(row)"></mat-checkbox>
                                             </div>
-                                            <div *ngIf="row.actions.length > 4" fxLayout="row" fxLayoutAlign="end center">
-                                                <button (click)="row.checked = !row.checked" matTooltip="Actions" mat-icon-button color="accent" [matMenuTriggerFor]="tableActionMenu">
+                                            <div *ngIf="row.actions.length > 4" fxLayout="row"
+                                                 fxLayoutAlign="end center">
+                                                <button (click)="row.checked = !row.checked" matTooltip="Actions"
+                                                        mat-icon-button color="accent"
+                                                        [matMenuTriggerFor]="tableActionMenu">
                                                     <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
                                                 </button>
                                                 <mat-menu #tableActionMenu="matMenu" [overlapTrigger]="false">
-                                                    <button *ngFor="let action of row.actions" matTooltip="{{action.tooltip}}" mat-menu-item [disabled]="action.disabled ? '' : null">
+                                                    <button *ngFor="let action of row.actions"
+                                                            matTooltip="{{action.tooltip}}" mat-menu-item
+                                                            [disabled]="action.disabled ? '' : null">
                                                         <i class="{{action.icon}}" aria-hidden="true"></i>
                                                         <span>{{action.name}}</span>
                                                     </button>
                                                 </mat-menu>
-                                                <mat-checkbox class="pad-left-sm" [(ngModel)]="row.checked" [checked]="row.checked" (change)="toggleSelect(row)" (click)="row.checked = !row.checked;toggleSelect(row)"></mat-checkbox>
+                                                <mat-checkbox class="pad-left-sm" [(ngModel)]="row.checked"
+                                                              [checked]="row.checked" (change)="toggleSelect(row)"
+                                                              (click)="row.checked = !row.checked;toggleSelect(row)"></mat-checkbox>
                                             </div>
                                         </div>
                                         <div *ngIf="!row.actions" fxLayout="row" fxLayoutAlign="end center">
-                                            <mat-checkbox class="pad-left-sm" [(ngModel)]="row.checked" [checked]="row.checked" (change)="toggleSelect(row)" (click)="row.checked = !row.checked;toggleSelect(row)"></mat-checkbox>
+                                            <mat-checkbox class="pad-left-sm" [(ngModel)]="row.checked"
+                                                          [checked]="row.checked" (change)="toggleSelect(row)"
+                                                          (click)="row.checked = !row.checked;toggleSelect(row)"></mat-checkbox>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="mat-padding" *ngIf="!filteredData.length > 0" layout="row" layout-align="center center">
+                            <div class="mat-padding" *ngIf="!filteredData.length > 0" layout="row"
+                                 layout-align="center center">
                                 <h3>No results to display.</h3>
                             </div>
-                            <td-paging-bar #pagingBar [initialPage]="1" [pageSize]="pageSize" [total]="pageCount" (change)="page($event)">
-                                <span hide-xs>Row per page:</span> {{pagingBar.range}} <span hide-xs>of {{pagingBar.total}}</span>
+                            <td-paging-bar #pagingBar [initialPage]="1" [pageSize]="pageSize" [total]="pageCount"
+                                           (change)="page($event)">
+                                <span hide-xs>Row per page:</span> {{pagingBar.range}} <span
+                                hide-xs>of {{pagingBar.total}}</span>
                             </td-paging-bar>
                         </div>
                     </mat-tab>
@@ -1553,7 +1670,8 @@ limitations under the License.
             <span>Table title</span>
             </span>
             <div flex class="push-right-sm" fxLayout="row" fxLayoutAlign="end center">
-                <td-chips [items]="autoCompleteData" (add)="searchAdd($event)" (remove)="searchRemove($event)"></td-chips>
+                <td-chips [items]="autoCompleteData" (add)="searchAdd($event)"
+                          (remove)="searchRemove($event)"></td-chips>
                 <button color="fds-primary" mat-raised-button [matMenuTriggerFor]="dataTableActionMenu">
                     Actions<i class="fa fa-caret-down" aria-hidden="true"></i>
                 </button>
@@ -1565,19 +1683,25 @@ limitations under the License.
         </div>
         <div class="pad-left-md pad-right-md">
             <div fxLayout="row" fxLayoutAlign="space-between center" class="td-data-table">
-                <div class="td-data-table-column" (click)="sort($event, column)" [matTooltip]="column.tooltip" *ngFor="let column of columns" fxFlex="{ { column.width } }">
+                <div class="td-data-table-column" (click)="sort($event, column)" [matTooltip]="column.tooltip"
+                     *ngFor="let column of columns" fxFlex="{ { column.width } }">
                     { { column.label } }
-                    <i *ngIf="column.active && column.sortable && column.sortOrder === 'ASC'" class="fa fa-caret-up" aria-hidden="true"></i>
-                    <i *ngIf="column.active && column.sortable && column.sortOrder === 'DESC'" class="fa fa-caret-down" aria-hidden="true"></i>
+                    <i *ngIf="column.active && column.sortable && column.sortOrder === 'ASC'" class="fa fa-caret-up"
+                       aria-hidden="true"></i>
+                    <i *ngIf="column.active && column.sortable && column.sortOrder === 'DESC'" class="fa fa-caret-down"
+                       aria-hidden="true"></i>
                 </div>
                 <div class="td-data-table-column" fxFlex=10>
                     <div fxLayout="row" fxLayoutAlign="end center">
-                        <mat-checkbox class="pad-left-sm" [(ngModel)]="allRowsSelected" (checked)="allRowsSelected" (change)="toggleSelectAll()"></mat-checkbox>
+                        <mat-checkbox class="pad-left-sm" [(ngModel)]="allRowsSelected" (checked)="allRowsSelected"
+                                      (change)="toggleSelectAll()"></mat-checkbox>
                     </div>
                 </div>
             </div>
             <div>
-                <div fxLayout="row" fxLayoutAlign="space-between center" class="td-data-table-row" [ngClass]="{'selected' : row.checked}" *ngFor="let row of filteredData" (click)="row.checked = !row.checked;toggleSelect(row)">
+                <div fxLayout="row" fxLayoutAlign="space-between center" class="td-data-table-row"
+                     [ngClass]="{'selected' : row.checked}" *ngFor="let row of filteredData"
+                     (click)="row.checked = !row.checked;toggleSelect(row)">
                     <div class="td-data-table-cell" *ngFor="let column of columns" fxFlex="{ { column.width } }">
                         <div *ngIf="column.name !== 'comments' || row['comments']">
                             { { column.format ? column.format(row[column.name]) : row[column.name] } }
@@ -1586,26 +1710,36 @@ limitations under the License.
                     <div class="td-data-table-cell" fxFlex=10>
                         <div *ngIf="row.actions">
                             <div *ngIf="row.actions.length <= 4" fxLayout="row" fxLayoutAlign="end center">
-                                <button (click)="row.checked = !row.checked" *ngFor="let action of row.actions" matTooltip="{ { action.tooltip } }" mat-icon-button color="accent" [disabled]="action.disabled ? '' : null">
+                                <button (click)="row.checked = !row.checked" *ngFor="let action of row.actions"
+                                        matTooltip="{ { action.tooltip } }" mat-icon-button color="accent"
+                                        [disabled]="action.disabled ? '' : null">
                                     <i class="{ { action.icon } }" aria-hidden="true"></i>
                                 </button>
-                                <mat-checkbox class="pad-left-sm" [(ngModel)]="row.checked" [checked]="row.checked" (change)="toggleSelect(row)" (click)="row.checked = !row.checked;toggleSelect(row)"></mat-checkbox>
+                                <mat-checkbox class="pad-left-sm" [(ngModel)]="row.checked" [checked]="row.checked"
+                                              (change)="toggleSelect(row)"
+                                              (click)="row.checked = !row.checked;toggleSelect(row)"></mat-checkbox>
                             </div>
                             <div *ngIf="row.actions.length > 4" fxLayout="row" fxLayoutAlign="end center">
-                                <button (click)="row.checked = !row.checked" matTooltip="Actions" mat-icon-button color="accent" [matMenuTriggerFor]="tableActionMenu">
+                                <button (click)="row.checked = !row.checked" matTooltip="Actions" mat-icon-button
+                                        color="accent" [matMenuTriggerFor]="tableActionMenu">
                                     <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
                                 </button>
                                 <mat-menu #tableActionMenu="matMenu" [overlapTrigger]="false">
-                                    <button *ngFor="let action of row.actions" matTooltip="{ { action.tooltip } }" mat-menu-item [disabled]="action.disabled ? '' : null">
+                                    <button *ngFor="let action of row.actions" matTooltip="{ { action.tooltip } }"
+                                            mat-menu-item [disabled]="action.disabled ? '' : null">
                                         <i class="{ { action.icon } }" aria-hidden="true"></i>
                                         <span>{ { action.name } }</span>
                                     </button>
                                 </mat-menu>
-                                <mat-checkbox class="pad-left-sm" [(ngModel)]="row.checked" [checked]="row.checked" (change)="toggleSelect(row)" (click)="row.checked = !row.checked;toggleSelect(row)"></mat-checkbox>
+                                <mat-checkbox class="pad-left-sm" [(ngModel)]="row.checked" [checked]="row.checked"
+                                              (change)="toggleSelect(row)"
+                                              (click)="row.checked = !row.checked;toggleSelect(row)"></mat-checkbox>
                             </div>
                         </div>
                         <div *ngIf="!row.actions" fxLayout="row" fxLayoutAlign="end center">
-                            <mat-checkbox class="pad-left-sm" [(ngModel)]="row.checked" [checked]="row.checked" (change)="toggleSelect(row)" (click)="row.checked = !row.checked;toggleSelect(row)"></mat-checkbox>
+                            <mat-checkbox class="pad-left-sm" [(ngModel)]="row.checked" [checked]="row.checked"
+                                          (change)="toggleSelect(row)"
+                                          (click)="row.checked = !row.checked;toggleSelect(row)"></mat-checkbox>
                         </div>
                     </div>
                 </div>
@@ -1613,8 +1747,10 @@ limitations under the License.
             <div class="mat-padding" *ngIf="!filteredData.length > 0" layout="row" layout-align="center center">
                 <h3>No results to display.</h3>
             </div>
-            <td-paging-bar #pagingBar [initialPage]="1" [pageSize]="pageSize" [total]="pageCount" (change)="page($event)">
-                <span hide-xs>Row per page:</span> { { pagingBar.range } } <span hide-xs>of { { pagingBar.total } }</span>
+            <td-paging-bar #pagingBar [initialPage]="1" [pageSize]="pageSize" [total]="pageCount"
+                           (change)="page($event)">
+                <span hide-xs>Row per page:</span> { { pagingBar.range } } <span hide-xs>of {
+                { pagingBar.total } }</span>
             </td-paging-bar>
         </div>
           ]]>
@@ -1624,210 +1760,229 @@ limitations under the License.
                         <![CDATA[
         this.dataTableService = TdDataTableService;
 
-        this.data = [{
-                            'id': 1,
-                            'name': 'Frozen yogurt',
-                            'type': 'Ice cream',
-                            'calories': 159.0,
-                            'fat': 6.0,
-                            'carbs': 24.0,
-                            'protein': 4.0,
-                            'sodium': 87.0,
-                            'calcium': 14.0,
-                            'iron': 1.0,
-                            'comments': 'I love froyo!',
-                            'actions': [{
-                'name': 'Action 1',
-                'icon': 'fa fa-user',
-                'tooltip': 'Manage Users'
-            }, {
-                'name': 'Action 2',
-                'icon': 'fa fa-key',
-                'tooltip': 'Manage Permissions'
-            }]
-        }, {
-                            'id': 2,
-                            'name': 'Ice cream sandwich',
-                            'type': 'Ice cream',
-                            'calories': 237.0,
-                            'fat': 9.0,
-                            'carbs': 37.0,
-                            'protein': 4.3,
-                            'sodium': 129.0,
-                            'calcium': 8.0,
-                            'iron': 1.0,
-                            'actions': [{
-                'name': 'Action 1',
-                'icon': 'fa fa-user',
-                'tooltip': 'Manage Users'
-            }, {
-                'name': 'Action 2',
-                'icon': 'fa fa-key',
-                'tooltip': 'Manage Permissions'
-            }, {
-                'name': 'Action 3',
-                'tooltip': 'Action 3'
-            }, {
-                'name': 'Action 4',
-                'disabled': true,
-                'tooltip': 'Action 4'
-            }, {
-                'name': 'Action 5',
-                'tooltip': 'Action 5'
-            }]
-        }, {
-                            'id': 3,
-                            'name': 'Eclair',
-                            'type': 'Pastry',
-                            'calories': 262.0,
-                            'fat': 16.0,
-                            'carbs': 24.0,
-                            'protein': 6.0,
-                            'sodium': 337.0,
-                            'calcium': 6.0,
-                            'iron': 7.0,
-                            'actions': [{
-                'name': 'Action 1',
-                'icon': 'fa fa-user',
-                'tooltip': 'Manage Users'
-            }, {
-                'name': 'Action 2',
-                'icon': 'fa fa-key',
-                'tooltip': 'Manage Permissions'
-            }, {
-                'name': 'Action 3',
-                'tooltip': 'Action 3'
-            }, {
-                'name': 'Action 4',
-                'disabled': true,
-                'tooltip': 'Action 4'
-            }, {
-                'name': 'Action 5',
-                'tooltip': 'Action 5'
-            }],
-        }, {
-                            'id': 4,
-                            'name': 'Cupcake',
-                            'type': 'Pastry',
-                            'calories': 305.0,
-                            'fat': 3.7,
-                            'carbs': 67.0,
-                            'protein': 4.3,
-                            'sodium': 413.0,
-                            'calcium': 3.0,
-                            'iron': 8.0,
-                            'actions': [{
-                'name': 'Action 1',
-                'icon': 'fa fa-user',
-                'tooltip': 'Manage Users'
-            }, {
-                'name': 'Action 2',
-                'icon': 'fa fa-key',
-                'tooltip': 'Manage Permissions'
-            }, {
-                'name': 'Action 3',
-                'tooltip': 'Action 3'
-            }, {
-                'name': 'Action 4',
-                'disabled': true,
-                'tooltip': 'Action 4'
-            }, {
-                'name': 'Action 5',
-                'tooltip': 'Action 5'
-            }],
-        }, {
-                            'id': 5,
-                            'name': 'Jelly bean',
-                            'type': 'Candy',
-                            'calories': 375.0,
-                            'fat': 0.0,
-                            'carbs': 94.0,
-                            'protein': 0.0,
-                            'sodium': 50.0,
-                            'calcium': 0.0,
-                            'iron': 0.0,
-        }, {
-                            'id': 6,
-                            'name': 'Lollipop',
-                            'type': 'Candy',
-                            'calories': 392.0,
-                            'fat': 0.2,
-                            'carbs': 98.0,
-                            'protein': 0.0,
-                            'sodium': 38.0,
-                            'calcium': 0.0,
-                            'iron': 2.0,
-        }, {
-                            'id': 7,
-                            'name': 'Honeycomb',
-                            'type': 'Other',
-                            'calories': 408.0,
-                            'fat': 3.2,
-                            'carbs': 87.0,
-                            'protein': 6.5,
-                            'sodium': 562.0,
-                            'calcium': 0.0,
-                            'iron': 45.0,
-        }, {
-                            'id': 8,
-                            'name': 'Donut',
-                            'type': 'Pastry',
-                            'calories': 452.0,
-                            'fat': 25.0,
-                            'carbs': 51.0,
-                            'protein': 4.9,
-                            'sodium': 326.0,
-                            'calcium': 2.0,
-                            'iron': 22.0,
-        }, {
-                            'id': 9,
-                            'name': 'KitKat',
-                            'type': 'Candy',
-                            'calories': 518.0,
-                            'fat': 26.0,
-                            'carbs': 65.0,
-                            'protein': 7.0,
-                            'sodium': 54.0,
-                            'calcium': 12.0,
-                            'iron': 6.0,
-        }, {
-                            'id': 10,
-                            'name': 'Chocolate',
-                            'type': 'Candy',
-                            'calories': 518.0,
-                            'fat': 26.0,
-                            'carbs': 65.0,
-                            'protein': 7.0,
-                            'sodium': 54.0,
-                            'calcium': 12.0,
-                            'iron': 6.0,
-        }, {
-                            'id': 11,
-                            'name': 'Chamoy',
-                            'type': 'Candy',
-                            'calories': 518.0,
-                            'fat': 26.0,
-                            'carbs': 65.0,
-                            'protein': 7.0,
-                            'sodium': 54.0,
-                            'calcium': 12.0,
-                            'iron': 6.0,
-        }, ];
+        this.data = [
+            {
+                'id': 1,
+                'name': 'Frozen yogurt',
+                'type': 'Ice cream',
+                'calories': 159.0,
+                'fat': 6.0,
+                'carbs': 24.0,
+                'protein': 4.0,
+                'sodium': 87.0,
+                'calcium': 14.0,
+                'iron': 1.0,
+                'comments': 'I love froyo!',
+                'actions': [
+                    {
+                        'name': 'Action 1',
+                        'icon': 'fa fa-user',
+                        'tooltip': 'Manage Users'
+                    }, {
+                        'name': 'Action 2',
+                        'icon': 'fa fa-key',
+                        'tooltip': 'Manage Permissions'
+                    }
+                ]
+            },
+            {
+                'id': 2,
+                'name': 'Ice cream sandwich',
+                'type': 'Ice cream',
+                'calories': 237.0,
+                'fat': 9.0,
+                'carbs': 37.0,
+                'protein': 4.3,
+                'sodium': 129.0,
+                'calcium': 8.0,
+                'iron': 1.0,
+                'actions': [
+                    {
+                        'name': 'Action 1',
+                        'icon': 'fa fa-user',
+                        'tooltip': 'Manage Users'
+                    }, {
+                        'name': 'Action 2',
+                        'icon': 'fa fa-key',
+                        'tooltip': 'Manage Permissions'
+                    }, {
+                        'name': 'Action 3',
+                        'tooltip': 'Action 3'
+                    }, {
+                        'name': 'Action 4',
+                        'disabled': true,
+                        'tooltip': 'Action 4'
+                    }, {
+                        'name': 'Action 5',
+                        'tooltip': 'Action 5'
+                    }
+                ]
+            },
+            {
+                'id': 3,
+                'name': 'Eclair',
+                'type': 'Pastry',
+                'calories': 262.0,
+                'fat': 16.0,
+                'carbs': 24.0,
+                'protein': 6.0,
+                'sodium': 337.0,
+                'calcium': 6.0,
+                'iron': 7.0,
+                'actions': [{
+                        'name': 'Action 1',
+                        'icon': 'fa fa-user',
+                        'tooltip': 'Manage Users'
+                    }, {
+                        'name': 'Action 2',
+                        'icon': 'fa fa-key',
+                        'tooltip': 'Manage Permissions'
+                    }, {
+                        'name': 'Action 3',
+                        'tooltip': 'Action 3'
+                    }, {
+                        'name': 'Action 4',
+                        'disabled': true,
+                        'tooltip': 'Action 4'
+                    }, {
+                        'name': 'Action 5',
+                        'tooltip': 'Action 5'
+                    }
+                ],
+            },
+            {
+                'id': 4,
+                'name': 'Cupcake',
+                'type': 'Pastry',
+                'calories': 305.0,
+                'fat': 3.7,
+                'carbs': 67.0,
+                'protein': 4.3,
+                'sodium': 413.0,
+                'calcium': 3.0,
+                'iron': 8.0,
+                'actions': [{
+                        'name': 'Action 1',
+                        'icon': 'fa fa-user',
+                        'tooltip': 'Manage Users'
+                    }, {
+                        'name': 'Action 2',
+                        'icon': 'fa fa-key',
+                        'tooltip': 'Manage Permissions'
+                    }, {
+                        'name': 'Action 3',
+                        'tooltip': 'Action 3'
+                    }, {
+                        'name': 'Action 4',
+                        'disabled': true,
+                        'tooltip': 'Action 4'
+                    }, {
+                        'name': 'Action 5',
+                        'tooltip': 'Action 5'
+                    }
+                ],
+            },
+            {
+                'id': 5,
+                'name': 'Jelly bean',
+                'type': 'Candy',
+                'calories': 375.0,
+                'fat': 0.0,
+                'carbs': 94.0,
+                'protein': 0.0,
+                'sodium': 50.0,
+                'calcium': 0.0,
+                'iron': 0.0,
+            },
+            {
+                'id': 6,
+                'name': 'Lollipop',
+                'type': 'Candy',
+                'calories': 392.0,
+                'fat': 0.2,
+                'carbs': 98.0,
+                'protein': 0.0,
+                'sodium': 38.0,
+                'calcium': 0.0,
+                'iron': 2.0,
+            },
+            {
+                'id': 7,
+                'name': 'Honeycomb',
+                'type': 'Other',
+                'calories': 408.0,
+                'fat': 3.2,
+                'carbs': 87.0,
+                'protein': 6.5,
+                'sodium': 562.0,
+                'calcium': 0.0,
+                'iron': 45.0,
+            },
+            {
+                'id': 8,
+                'name': 'Donut',
+                'type': 'Pastry',
+                'calories': 452.0,
+                'fat': 25.0,
+                'carbs': 51.0,
+                'protein': 4.9,
+                'sodium': 326.0,
+                'calcium': 2.0,
+                'iron': 22.0,
+            },
+            {
+                'id': 9,
+                'name': 'KitKat',
+                'type': 'Candy',
+                'calories': 518.0,
+                'fat': 26.0,
+                'carbs': 65.0,
+                'protein': 7.0,
+                'sodium': 54.0,
+                'calcium': 12.0,
+                'iron': 6.0,
+            },
+            {
+                'id': 10,
+                'name': 'Chocolate',
+                'type': 'Candy',
+                'calories': 518.0,
+                'fat': 26.0,
+                'carbs': 65.0,
+                'protein': 7.0,
+                'sodium': 54.0,
+                'calcium': 12.0,
+                'iron': 6.0,
+            },
+            {
+                'id': 11,
+                'name': 'Chamoy',
+                'type': 'Candy',
+                'calories': 518.0,
+                'fat': 26.0,
+                'carbs': 65.0,
+                'protein': 7.0,
+                'sodium': 54.0,
+                'calcium': 12.0,
+                'iron': 6.0,
+            }
+        ];
 
         this.filteredData = this.data;
         this.filteredTotal = this.data.length;
 
         this.columns = [
-                            { name: 'comments', label: 'Comments' },
-                            { name: 'name', label: 'Dessert (100g serving)', sortable: true },
-                            { name: 'type', label: 'Type', sortable: true },
-                            { name: 'calories', label: 'Calories', numeric: true, format: NUMBER_FORMAT, sortable: true },
-                            { name: 'fat', label: 'Fat (g)', numeric: true, format: DECIMAL_FORMAT, sortable: true },
-                            { name: 'carbs', label: 'Carbs (g)', numeric: true, format: NUMBER_FORMAT, sortable: true },
-                            { name: 'protein', label: 'Protein (g)', numeric: true, format: DECIMAL_FORMAT, sortable: true },
-                            { name: 'sodium', label: 'Sodium (mg)', numeric: true, format: NUMBER_FORMAT, sortable: true },
-                            { name: 'calcium', label: 'Calcium (%)', numeric: true, format: NUMBER_FORMAT, sortable: true },
-                            { name: 'iron', label: 'Iron (%)', numeric: true, format: NUMBER_FORMAT },
+            { name: 'comments', label: 'Comments' },
+            { name: 'name', label: 'Dessert (100g serving)', sortable: true },
+            { name: 'type', label: 'Type', sortable: true },
+            { name: 'calories', label: 'Calories', numeric: true, format: NUMBER_FORMAT, sortable: true },
+            { name: 'fat', label: 'Fat (g)', numeric: true, format: DECIMAL_FORMAT, sortable: true },
+            { name: 'carbs', label: 'Carbs (g)', numeric: true, format: NUMBER_FORMAT, sortable: true },
+            {
+            name: 'protein', label: 'Protein (g)', numeric: true, format: DECIMAL_FORMAT, sortable: true },
+            { name: 'sodium', label: 'Sodium (mg)', numeric: true, format: NUMBER_FORMAT, sortable: true },
+            {name: 'calcium', label: 'Calcium (%)', numeric: true, format: NUMBER_FORMAT, sortable: true },
+            { name: 'iron', label: 'Iron (%)', numeric: true, format: NUMBER_FORMAT },
         ];
 
         this.allRowsSelected = false;
@@ -1842,42 +1997,43 @@ limitations under the License.
         ...
 
         sort: function(sortEvent, column) {
-                            if (column.sortable) {
+            if (column.sortable) {
                 var sortBy = column.name;
                 var sortOrder = column.sortOrder = (column.sortOrder === 'ASC') ? 'DESC' : 'ASC';
                 this.filter(sortBy, sortOrder);
 
                 //only one column can be actively sorted so we reset all to inactive
                 this.columns.forEach(c => c.active = false);
+
                 //and set this column as the actively sorted column
                 column.active = true;
             }
         },
 
         searchRemove: function(searchTerm) {
-                            //only remove the first occurrence of the search term
-                            var index = this.searchTerm.indexOf(searchTerm);
-                            if (index !== -1) {
+            //only remove the first occurrence of the search term
+            var index = this.searchTerm.indexOf(searchTerm);
+            if (index !== -1) {
                 this.searchTerm.splice(index, 1);
             }
             this.filter();
         },
 
         searchAdd: function(searchTerm) {
-                            this.searchTerm.push(searchTerm);
-                            this.filter();
+            this.searchTerm.push(searchTerm);
+            this.filter();
         },
 
         page: function(pagingEvent) {
-                            this.fromRow = pagingEvent.fromRow;
-                            this.currentPage = pagingEvent.page;
-                            this.pageSize = pagingEvent.pageSize;
-                            this.filter();
+            this.fromRow = pagingEvent.fromRow;
+            this.currentPage = pagingEvent.page;
+            this.pageSize = pagingEvent.pageSize;
+            this.filter();
         },
 
         filterData: function(data, searchTerm, ignoreCase) {
-                            var field = '';
-                            if (searchTerm.indexOf(":") > -1) {
+            var field = '';
+            if (searchTerm.indexOf(":") > -1) {
                 field = searchTerm.split(':')[0].trim();
                 searchTerm = searchTerm.split(':')[1].trim();
             }
@@ -1885,16 +2041,16 @@ limitations under the License.
 
             if (filter) {
                 data = data.filter(item => {
-                            var res = Object.keys(item).find((key) => {
+                    var res = Object.keys(item).find((key) => {
                         if (field.indexOf(".") > -1) {
                             var objArray = field.split(".");
                             var obj = item;
                             var arrayLength = objArray.length;
                             for (var i = 0; i < arrayLength; i++) {
                                 try {
-                            obj = obj[objArray[i]];
+                                    obj = obj[objArray[i]];
                                 } catch (e) {
-                            return false;
+                                    return false;
                                 }
                             }
                             var preItemValue = ('' + obj);
@@ -1916,7 +2072,7 @@ limitations under the License.
         },
 
         filter: function(sortBy, sortOrder) {
-                            if (this.allRowsSelected) {
+            if (this.allRowsSelected) {
                 this.toggleSelectAll();
             }
             this.deselectAll();
@@ -1924,8 +2080,8 @@ limitations under the License.
 
             if (this.searchTerm.length > 0) {
                 for (var i = 0; i < this.searchTerm.length; i++) {
-                            //account for column/field name specific search syntax
-                            if (this.searchTerm[i].indexOf(":") > -1) {
+                    //account for column/field name specific search syntax
+                    if (this.searchTerm[i].indexOf(":") > -1) {
                         newData = this.filterData(newData, this.searchTerm[i].split(':')[1].trim(), true, this.searchTerm[i].split(':')[0].trim());
                     } else { //otherwise search all cells
                         newData = this.filterData(newData, this.searchTerm[i], true);
@@ -1942,72 +2098,72 @@ limitations under the License.
         },
 
         toggleSelect: function(row) {
-                            if (!row.checked) {
-                                this.allRowsSelected = false;
-                                } else {
-                                if (this.allFilteredRowsSelected()) {
-                                this.allRowsSelected = true;
-                                } else {
-                                this.allRowsSelected = false;
-                                }
-                                }
-                                },
+            if (!row.checked) {
+                this.allRowsSelected = false;
+            } else {
+                if (this.allFilteredRowsSelected()) {
+                    this.allRowsSelected = true;
+                } else {
+                    this.allRowsSelected = false;
+                }
+            }
+        },
 
-                                toggleSelectAll: function() {
-                                this.allRowsSelected = !this.allRowsSelected;
-                                if (this.allRowsSelected) {
-                                this.selectAll();
-                                } else {
-                                this.deselectAll();
-                                }
-                                },
+        toggleSelectAll: function() {
+            this.allRowsSelected = !this.allRowsSelected;
+            if (this.allRowsSelected) {
+                this.selectAll();
+            } else {
+                this.deselectAll();
+            }
+        },
 
-                                selectAll: function() {
-                                this.filteredData.forEach(c => c.checked = true);
-                                },
+        selectAll: function() {
+            this.filteredData.forEach(c => c.checked = true);
+        },
 
-                                deselectAll: function() {
-                                this.filteredData.forEach(c => c.checked = false);
-                                },
+        deselectAll: function() {
+            this.filteredData.forEach(c => c.checked = false);
+        },
 
-                                allFilteredRowsSelected: function() {
-                                var allFilteredRowsSelected = true;
-                                this.filteredData.forEach(function(c) {
-                                if (c.checked === undefined || c.checked === false) {
-                                allFilteredRowsSelected = false;
-                                }
-                                });
+        allFilteredRowsSelected: function() {
+            var allFilteredRowsSelected = true;
+            this.filteredData.forEach(function(c) {
+                if (c.checked === undefined || c.checked === false) {
+                    allFilteredRowsSelected = false;
+                }
+            });
 
-                                return allFilteredRowsSelected;
-                                },
+            return allFilteredRowsSelected;
+        },
 
-                                areTooltipsOn: function() {
-                                return this.columns[0].hasOwnProperty('tooltip');
-                                },
+        areTooltipsOn: function() {
+            return this.columns[0].hasOwnProperty('tooltip');
+        },
 
-                                toggleTooltips: function() {
-                                if (this.columns[0].tooltip) {
-                                this.columns.forEach(c => delete c.tooltip);
-                                } else {
-                                this.columns.forEach(c => c.tooltip = `This is ${c.label}!`);
-                                }
-                                },
+        toggleTooltips: function() {
+            if (this.columns[0].tooltip) {
+                this.columns.forEach(c => delete c.tooltip);
+            } else {
+                this.columns.forEach(c => c.tooltip = `This is ${c.label}!`);
+            }
+        },
 
-                                openDataTablePrompt: function(row, name) {
-                                this.dialogService.openPrompt({
-                                message: 'Enter comment?',
-                                value: row[name],
-                            }).afterClosed().subscribe(value => {
-                                if (value !== undefined) {
-                                row[name] = value;
-                                }
-                                })
-                                },
+        openDataTablePrompt: function(row, name) {
+            this.dialogService.openPrompt({
+                message: 'Enter comment?',
+                value: row[name],
+            }).afterClosed().subscribe(value => {
+                if (value !== undefined) {
+                    row[name] = value;
+                }
+            })
+        },
 
-                                getAutoCompleteData: function() {
-                                this.autoCompleteData = [];
-                                this.columns.forEach(c => this.filteredData.forEach(r => (r[c.name.toLowerCase()]) ? this.autoCompleteData.push(r[c.name.toLowerCase()].toString()):''));
-                                },
+        getAutoCompleteData: function() {
+            this.autoCompleteData = [];
+            this.columns.forEach(c => this.filteredData.forEach(r => (r[c.name.toLowerCase()]) ? this.autoCompleteData.push(r[c.name.toLowerCase()].toString()):''));
+        },
 
                                 ...
                                 ]]>
@@ -2023,10 +2179,10 @@ limitations under the License.
                             </mat-card-actions>
                             </mat-card>
                             <mat-card>
-                            <mat-card-title class="pad-bottom-sm">Checkbox</mat-card-title>
+                            <mat-card-title class="pad-bottom-sm" id="Checkboxes">Checkbox <mat-icon class="link-to-component" routerLink="/" fragment="Checkboxes">link</mat-icon></mat-card-title>
                                 <mat-divider></mat-divider>
                                 <mat-card-content>
-                                <h3 class="mat-title">Basic Usage</h3>
+                                <h3 class="md-title">Basic Usage</h3>
                             <mat-divider></mat-divider>
                             <mat-list>
                             <mat-list-item *ngFor="let grocery of groceries">
@@ -2035,39 +2191,45 @@ limitations under the License.
                                 </mat-checkbox>
                             </mat-list-item>
                             </mat-list>
-                            <h3 class="mat-title">Usage</h3>
+                            <h3 class="md-title">Usage</h3>
                                 <p>HTML:</p>
                             <pre lang="html">
                                 <![CDATA[
-                                <!-- Basic Usage -->
-                                <mat-checkbox [checked]="grocery.bought">
-                                    { {grocery.name} }
-                                </mat-checkbox>
+        <!-- Basic Usage -->
+        <mat-checkbox [checked]="grocery.bought">
+            { {grocery.name} }
+        </mat-checkbox>
                                 ]]>
                                 </pre>
                             <p>Javascript:</p>
                             <pre lang="javascript">
-                                <![CDATA[
-                                    this.groceries = [{
-                                        bought: true,
-                                name: 'Seitan',
-                                }, {
-                            bought: false,
-                                name: 'Almond Meal Flour',
-                                }, {
-                            bought: false,
-                                name: 'Organic Eggs',
-                                }, ];
-                        ]]>
+        <![CDATA[
+        this.groceries = [
+            {
+                bought: true,
+                name: 'Seitan',
+            },
+            {
+                bought: false,
+                name: 'Almond Meal Flour',
+            },
+            {
+                bought: false,
+                name: 'Organic Eggs',
+            }
+        ];
+        ]]>
                     </pre>
-                        <h3 class="mat-title">Usage within Forms</h3>
+                        <h3 class="md-title">Usage within Forms</h3>
                         <mat-divider></mat-divider>
                         <form>
                             <div layout="row" layout-align="start center">
                                 <mat-checkbox flex="initial" [(ngModel)]="user.agreesToTOS" name="agreesToTOS">
                                     I agree to the terms
                                 </mat-checkbox>
-                                <button mat-raised-button color="fds-secondary" [disabled]="!user.agreesToTOS" class="pad-right-sm" class="text-upper">Sign Up</button>
+                                <button mat-raised-button color="fds-secondary" [disabled]="!user.agreesToTOS"
+                                        class="pad-right-sm" class="text-upper">Sign Up
+                                </button>
                             </div>
                             <mat-divider></mat-divider>
                             <div layout="row" layout-align="start center" class="pad-top-sm pad-bottom-sm">
@@ -2083,17 +2245,18 @@ limitations under the License.
                             </div>
                             <mat-divider></mat-divider>
                         </form>
-                        <h3 class="mat-title">Usage</h3>
+                        <h3 class="md-title">Usage</h3>
                         <p>HTML:</p>
                         <pre lang="html">
         <![CDATA[
-                            <!-- Usage within Forms -->
+        <!-- Usage within Forms -->
         <form>
             <div layout="row" layout-align="start center">
                 <mat-checkbox flex="initial" [(ngModel)]="user.agreesToTOS" name="agreesToTOS">
                     I agree to the terms
                 </mat-checkbox>
-                <button mat-raised-button color="fds-secondary" [disabled]="!user.agreesToTOS" class="pad-right-sm" class="text-upper">Sign Up</button>
+                <button mat-raised-button color="fds-secondary" [disabled]="!user.agreesToTOS" class="pad-right-sm"
+                        class="text-upper">Sign Up</button>
             </div>
             <mat-divider></mat-divider>
             <div layout="row" layout-align="start center" class="pad-top-sm pad-bottom-sm">
@@ -2115,7 +2278,7 @@ limitations under the License.
                         <pre lang="javascript">
                         <![CDATA[
         this.user = {
-                            agreesToTOS: false
+            agreesToTOS: false
         };
                         ]]>
                     </pre>
@@ -2127,39 +2290,41 @@ limitations under the License.
             <mat-card-content layout="row">
                 <div flex="48" class="pad-right">
                     <!-- Basic Radios -->
-                    <h3 class="mat-title">Basic Radios</h3>
+                    <h3 class="md-title">Basic Radios</h3>
                     <mat-radio-group name="group1">
-                        <mat-radio-button class="pad-right-sm" name="group1">Option 1 </mat-radio-button>
-                        <mat-radio-button class="pad-right-sm" name="group1">Option 2 </mat-radio-button>
-                        <mat-radio-button class="pad-right-sm" name="group1" disabled="true">Option 3 (disabled) </mat-radio-button>
+                        <mat-radio-button class="pad-right-sm" name="group1">Option 1</mat-radio-button>
+                        <mat-radio-button class="pad-right-sm" name="group1">Option 2</mat-radio-button>
+                        <mat-radio-button class="pad-right-sm" name="group1" disabled="true">Option 3 (disabled)
+                        </mat-radio-button>
                     </mat-radio-group>
-                    <h3 class="mat-title">Usage</h3>
+                    <h3 class="md-title">Usage</h3>
                     <p>HTML:</p>
                     <pre lang="html">
                 <![CDATA[
-                        <!-- Basic Radios -->
+        <!-- Basic Radios -->
         <mat-radio-group name="group1">
             <mat-radio-button class="pad-right-sm" name="group1">Option 1 </mat-radio-button>
             <mat-radio-button class="pad-right-sm" name="group1">Option 2 </mat-radio-button>
             <mat-radio-button class="pad-right-sm" name="group1" disabled="true">Option 3 (disabled) </mat-radio-button>
         </mat-radio-group>
-        ]]>
+                ]]>
         </pre>
                 </div>
                 <div flex="48">
                     <!-- Dynamic Radios -->
-                    <h3 class="mat-title">Dynamic Radios</h3>
+                    <h3 class="md-title">Dynamic Radios</h3>
                     <mat-radio-group name="more_options" [(ngModel)]="favoriteSeason">
-                        <mat-radio-button class="fds-radio pad-right-sm" *ngFor="let season of seasonOptions" name="more_options" [value]="season">
+                        <mat-radio-button class="fds-radio pad-right-sm" *ngFor="let season of seasonOptions"
+                                          name="more_options" [value]="season">
                             {{season}}
                         </mat-radio-button>
                     </mat-radio-group>
                     <p>Your favorite season is: <strong>{{favoriteSeason}}</strong></p>
-                    <h3 class="mat-title">Usage</h3>
+                    <h3 class="md-title">Usage</h3>
                     <p>HTML:</p>
                     <pre lang="html">
       <![CDATA[
-                        <!-- Dynamic Radios -->
+        <!-- Dynamic Radios -->
         <mat-radio-group name="more_options" [(ngModel)]="favoriteSeason">
           <mat-radio-button class="fds-radio" *ngFor="let season of seasonOptions" name="more_options" [value]="season">
             { {season} }
@@ -2189,18 +2354,30 @@ limitations under the License.
             <mat-card-title class="pad-bottom-sm" id="Tooltips">Tooltips <mat-icon class="link-to-component" routerLink="/" fragment="Tooltips">link</mat-icon></mat-card-title>
             <mat-divider></mat-divider>
             <mat-card-content>
-                <button mat-raised-button color="fds-primary" matTooltip="I show above" matTooltipPosition="above" class="text-upper">Above Tooltip</button>
-                <button mat-raised-button color="fds-primary" matTooltip="I show after" matTooltipPosition="after" class="text-upper">After Tooltip</button>
-                <button mat-raised-button color="fds-primary" matTooltip="I show below" matTooltipPosition="below" class="text-upper">Below Tooltip</button>
-                <button mat-raised-button color="fds-primary" matTooltip="I show before" matTooltipPosition="before" class="text-upper">Before Tooltip</button>
-                <h3 class="mat-title">Usage</h3>
+                <button mat-raised-button color="fds-primary" matTooltip="I show above" matTooltipPosition="above"
+                        class="text-upper">Above Tooltip
+                </button>
+                <button mat-raised-button color="fds-primary" matTooltip="I show after" matTooltipPosition="after"
+                        class="text-upper">After Tooltip
+                </button>
+                <button mat-raised-button color="fds-primary" matTooltip="I show below" matTooltipPosition="below"
+                        class="text-upper">Below Tooltip
+                </button>
+                <button mat-raised-button color="fds-primary" matTooltip="I show before" matTooltipPosition="before"
+                        class="text-upper">Before Tooltip
+                </button>
+                <h3 class="md-title">Usage</h3>
                 <p>HTML:</p>
                 <pre lang="html">
       <![CDATA[
-        <button mat-raised-button color="fds-primary" matTooltip="I show above" matTooltipPosition="above" class="text-upper">Bottom Tooltip</button>
-        <button mat-raised-button color="fds-primary" matTooltip="I show after" matTooltipPosition="after" class="text-upper">Bottom Tooltip</button>
-        <button mat-raised-button color="fds-primary" matTooltip="I show below" matTooltipPosition="below" class="text-upper">Bottom Tooltip</button>
-        <button mat-raised-button color="fds-primary" matTooltip="I show before" matTooltipPosition="before" class="text-upper">Bottom Tooltip</button>
+        <button mat-raised-button color="fds-primary" matTooltip="I show above" matTooltipPosition="above"
+                class="text-upper">Bottom Tooltip</button>
+        <button mat-raised-button color="fds-primary" matTooltip="I show after" matTooltipPosition="after"
+                class="text-upper">Bottom Tooltip</button>
+        <button mat-raised-button color="fds-primary" matTooltip="I show below" matTooltipPosition="below"
+                class="text-upper">Bottom Tooltip</button>
+        <button mat-raised-button color="fds-primary" matTooltip="I show before" matTooltipPosition="before"
+                class="text-upper">Bottom Tooltip</button>
         ]]>
       </pre>
             </mat-card-content>
@@ -2209,9 +2386,10 @@ limitations under the License.
             <mat-card-title class="pad-bottom-sm" id="Panels">Panels <mat-icon class="link-to-component" routerLink="/" fragment="Panels">link</mat-icon></mat-card-title>
             <mat-divider></mat-divider>
             <mat-card-content>
-                <h3 class="mat-title">Standard Card</h3>
+                <h3 class="md-title">Standard Card</h3>
                 <mat-card>
-                    <button class="fds-panel-menu-button" matTooltip="Standard Card Menu" mat-icon-button [matMenuTriggerFor]="standardCardMenu">
+                    <button class="fds-panel-menu-button" matTooltip="Standard Card Menu" mat-icon-button
+                            [matMenuTriggerFor]="standardCardMenu">
                         <i class="fa fa-ellipsis-v " aria-hidden="true"></i>
                     </button>
                     <mat-menu class="primary-icon-button-menu" #standardCardMenu="matMenu" [overlapTrigger]="false">
@@ -2226,19 +2404,21 @@ limitations under the License.
                         <span>Title</span>
                     </mat-card-title>
                     <mat-card-content>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do tempor incididunt ut labore et dolore magna aliqua. Ut enim ad</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do tempor incididunt ut labore
+                            et dolore magna aliqua. Ut enim ad</p>
                     </mat-card-content>
                     <mat-card-actions fxLayout="row" fxLayoutAlign="end center">
                         <button mat-raised-button color="fds-primary" class="text-upper">Action</button>
                     </mat-card-actions>
                 </mat-card>
-                <h3 class="mat-title">Usage</h3>
+                <h3 class="md-title">Usage</h3>
                 <p>HTML:</p>
                 <pre lang="html">
                 <![CDATA[
-                    <!-- Basic Card -->
+        <!-- Basic Card -->
         <mat-card>
-            <button class="fds-panel-menu-button" matTooltip="Standard Card Menu" mat-icon-button [matMenuTriggerFor]="standardCardMenu">
+            <button class="fds-panel-menu-button" matTooltip="Standard Card Menu" mat-icon-button
+                    [matMenuTriggerFor]="standardCardMenu">
                 <i class="fa fa-ellipsis-v " aria-hidden="true"></i>
             </button>
             <mat-menu class="primary-icon-button-menu" #standardCardMenu="matMenu" [overlapTrigger]="false">
@@ -2259,11 +2439,12 @@ limitations under the License.
                 <button mat-raised-button color="fds-primary" class="text-upper">Action</button>
             </mat-card-actions>
         </mat-card>
-    ]]>
+                ]]>
             </pre>
-                <h3 class="mat-title">Tabbed Card</h3>
+                <h3 class="md-title">Tabbed Card</h3>
                 <mat-card>
-                    <button class="fds-panel-menu-button" matTooltip="Standard Card Menu" mat-icon-button [matMenuTriggerFor]="standardCardMenu">
+                    <button class="fds-panel-menu-button" matTooltip="Standard Card Menu" mat-icon-button
+                            [matMenuTriggerFor]="standardCardMenu">
                         <i class="fa fa-ellipsis-v " aria-hidden="true"></i>
                     </button>
                     <mat-menu class="primary-icon-button-menu" #standardCardMenu="matMenu" [overlapTrigger]="false">
@@ -2278,13 +2459,28 @@ limitations under the License.
                         <mat-tab-group dynamicHeight>
                             <mat-tab>
                                 <ng-template mat-tab-label>One</ng-template>
-                                <h3 class="mat-title">First tab content</h3>
-                                <p>Plaid echo park knausgaard normcore franzen cronut. Pickled humblebrag tofu hoodie, umami salvia farm-to-table schlitz try-hard food truck knausgaard pabst. Yuccie portland jean shorts, authentic mixtape waistcoat gentrify blue bottle. Fixie kickstarter church-key small batch seitan, shabby chic vegan listicle before they sold out. Hammock raw denim flannel tousled seitan you probably haven't heard of them. Trust fund man bun pug, kickstarter artisan selvage letterpress cornhole tote bag butcher locavore. Affogato try-hard kickstarter seitan, DIY pickled hella godard pork belly four loko ugh.</p>
+                                <h3 class="md-title">First tab content</h3>
+                                <p>Plaid echo park knausgaard normcore franzen cronut. Pickled humblebrag tofu hoodie,
+                                    umami salvia farm-to-table schlitz try-hard food truck knausgaard pabst. Yuccie
+                                    portland jean shorts, authentic mixtape waistcoat gentrify blue bottle. Fixie
+                                    kickstarter church-key small batch seitan, shabby chic vegan listicle before they
+                                    sold out. Hammock raw denim flannel tousled seitan you probably haven't heard of
+                                    them. Trust fund man bun pug, kickstarter artisan selvage letterpress cornhole tote
+                                    bag butcher locavore. Affogato try-hard kickstarter seitan, DIY pickled hella godard
+                                    pork belly four loko ugh.</p>
                             </mat-tab>
                             <mat-tab>
                                 <ng-template mat-tab-label>Two</ng-template>
-                                <h3 class="mat-title">Second tab content</h3>
-                                <p>Hashtag distillery skateboard man bun gochujang, salvia man braid art party meggings heirloom kitsch farm-to-table. Franzen beard fingerstache gentrify, heirloom portland ennui XOXO microdosing kitsch plaid. Chicharrones bushwick chia, banh mi irony tattooed hammock butcher shabby chic taxidermy semiotics marfa post-ironic. Blue bottle keffiyeh farm-to-table ennui, chambray pitchfork art party pinterest artisan pop-up. Etsy banjo marfa, blue bottle kombucha crucifix XOXO tousled beard. Tilde disrupt kale chips bicycle rights skateboard master cleanse hella shoreditch, meditation retro shabby chic vice heirloom. Etsy listicle vice actually, iPhone chia hoodie four loko.</p>
+                                <h3 class="md-title">Second tab content</h3>
+                                <p>Hashtag distillery skateboard man bun gochujang, salvia man braid art party meggings
+                                    heirloom kitsch farm-to-table. Franzen beard fingerstache gentrify, heirloom
+                                    portland ennui XOXO microdosing kitsch plaid. Chicharrones bushwick chia, banh mi
+                                    irony tattooed hammock butcher shabby chic taxidermy semiotics marfa post-ironic.
+                                    Blue bottle keffiyeh farm-to-table ennui, chambray pitchfork art party pinterest
+                                    artisan pop-up. Etsy banjo marfa, blue bottle kombucha crucifix XOXO tousled beard.
+                                    Tilde disrupt kale chips bicycle rights skateboard master cleanse hella shoreditch,
+                                    meditation retro shabby chic vice heirloom. Etsy listicle vice actually, iPhone chia
+                                    hoodie four loko.</p>
                             </mat-tab>
                         </mat-tab-group>
                     </mat-card-content>
@@ -2292,13 +2488,14 @@ limitations under the License.
                         <button mat-raised-button color="fds-primary" class="text-upper">Action</button>
                     </mat-card-actions>
                 </mat-card>
-                <h3 class="mat-title">Usage</h3>
+                <h3 class="md-title">Usage</h3>
                 <p>HTML:</p>
                 <pre lang="html">
                 <![CDATA[
-                    <!-- Basic Card -->
+        <!-- Basic Card -->
         <mat-card>
-            <button class="fds-panel-menu-button" matTooltip="Standard Card Menu" mat-icon-button [matMenuTriggerFor]="standardCardMenu">
+            <button class="fds-panel-menu-button" matTooltip="Standard Card Menu" mat-icon-button
+                    [matMenuTriggerFor]="standardCardMenu">
                 <i class="fa fa-ellipsis-v " aria-hidden="true"></i>
             </button>
             <mat-menu class="primary-icon-button-menu" #standardCardMenu="matMenu" [overlapTrigger]="false">
@@ -2313,12 +2510,12 @@ limitations under the License.
                 <mat-tab-group dynamicHeight>
                     <mat-tab>
                         <ng-template mat-tab-label>One</ng-template>
-                        <h3 class="mat-title">First tab content</h3>
+                        <h3 class="md-title">First tab content</h3>
                         <p>Plaid echo park knausgaard normcore franzen cronut. Pickled humblebrag tofu hoodie, umami salvia farm-to-table schlitz try-hard food truck knausgaard pabst. Yuccie portland jean shorts, authentic mixtape waistcoat gentrify blue bottle. Fixie kickstarter church-key small batch seitan, shabby chic vegan listicle before they sold out. Hammock raw denim flannel tousled seitan you probably haven't heard of them. Trust fund man bun pug, kickstarter artisan selvage letterpress cornhole tote bag butcher locavore. Affogato try-hard kickstarter seitan, DIY pickled hella godard pork belly four loko ugh.</p>
                     </mat-tab>
                     <mat-tab>
                         <ng-template mat-tab-label>Two</ng-template>
-                        <h3 class="mat-title">Second tab content</h3>
+                        <h3 class="md-title">Second tab content</h3>
                         <p>Hashtag distillery skateboard man bun gochujang, salvia man braid art party meggings heirloom kitsch farm-to-table. Franzen beard fingerstache gentrify, heirloom portland ennui XOXO microdosing kitsch plaid. Chicharrones bushwick chia, banh mi irony tattooed hammock butcher shabby chic taxidermy semiotics marfa post-ironic. Blue bottle keffiyeh farm-to-table ennui, chambray pitchfork art party pinterest artisan pop-up. Etsy banjo marfa, blue bottle kombucha crucifix XOXO tousled beard. Tilde disrupt kale chips bicycle rights skateboard master cleanse hella shoreditch, meditation retro shabby chic vice heirloom. Etsy listicle vice actually, iPhone chia hoodie four loko.</p>
                     </mat-tab>
                 </mat-tab-group>
@@ -2327,7 +2524,7 @@ limitations under the License.
                 <button mat-raised-button color="fds-primary" class="text-upper">Action</button>
             </mat-card-actions>
         </mat-card>
-    ]]>
+                ]]>
             </pre>
             </mat-card-content>
         </mat-card>
@@ -2337,7 +2534,8 @@ limitations under the License.
             <mat-card-content>
                 <form>
                     <div layout="row" layout-margin>
-                        <mat-select color="accent" floatPlaceholder="never" placeholder="Favorite food" [(ngModel)]="selectedValue" name="food">
+                        <mat-select color="accent" floatPlaceholder="never" placeholder="Favorite food"
+                                    [(ngModel)]="selectedValue" name="food">
                             <mat-option *ngFor="let food of foods" [value]="food.value">
                                 {{food.viewValue}}
                             </mat-option>
@@ -2347,13 +2545,14 @@ limitations under the License.
                         <div flex> Selected food value: {{selectedValue}} </div>
                     </div>
                 </form>
-                <h3 class="mat-title">Usage</h3>
+                <h3 class="md-title">Usage</h3>
                 <p>HTML:</p>
                 <pre lang="html">
       <![CDATA[
         <form>
             <div layout="row" layout-margin>
-                <mat-select color="accent" floatPlaceholder="never" placeholder="Favorite food" [(ngModel)]="selectedValue" name="food">
+                <mat-select color="accent" floatPlaceholder="never" placeholder="Favorite food"
+                            [(ngModel)]="selectedValue" name="food">
                     <mat-option *ngFor="let food of foods" [value]="food.value">
                         { {food.viewValue} }
                     </mat-option>
@@ -2371,9 +2570,9 @@ limitations under the License.
         this.selectedValue = '';
 
         this.foods = [
-                    { value: 'steak-0', viewValue: 'Steak' },
-                    { value: 'pizza-1', viewValue: 'Pizza' },
-                    { value: 'tacos-2', viewValue: 'Tacos' },
+            { value: 'steak-0', viewValue: 'Steak' },
+            { value: 'pizza-1', viewValue: 'Pizza' },
+            { value: 'tacos-2', viewValue: 'Tacos' },
         ];
         ]]>
       </pre>
@@ -2438,7 +2637,7 @@ limitations under the License.
                         <span>Option 2</span>
                     </button>
                 </mat-menu>
-                <h3 class="mat-title">Usage</h3>
+                <h3 class="md-title">Usage</h3>
                 <p>HTML:</p>
                 <pre lang="html">
       <![CDATA[
@@ -2506,7 +2705,7 @@ limitations under the License.
             <mat-divider></mat-divider>
             <mat-card-content>
                 <button mat-raised-button color="fds-primary" (click)="openDialog()">Show simple dialog</button>
-                <h3 class="mat-title">Usage</h3>
+                <h3 class="md-title">Usage</h3>
                 <p>HTML:</p>
                 <pre lang="html">
       <![CDATA[
@@ -2538,12 +2737,13 @@ limitations under the License.
 
         openDialog: function() {
             this.dialog.open(DialogComponent, {
-                            height: '50%', // can be px or %
-                                    width: '60%', // can be px or %
-                            });
-                            }
+                    height: '50%', // can be px or %
+                    width: '60%', // can be px or %
+                }
+            );
+        }
 
-                    ...
+        ...
 
         ]]>
       </pre>
@@ -2554,9 +2754,11 @@ limitations under the License.
             <mat-divider></mat-divider>
             <mat-card-content>
                 <div class="pad-left-sm">
-                    <button mat-raised-button color="fds-primary" (click)="openConfirm()" class="text-upper">Open Confirm</button>
+                    <button mat-raised-button color="fds-primary" (click)="openConfirm()" class="text-upper">Open
+                        Confirm
+                    </button>
                 </div>
-                <h3 class="mat-title">Usage</h3>
+                <h3 class="md-title">Usage</h3>
                 <p>HTML:</p>
                 <pre lang="html">
       <![CDATA[
@@ -2569,13 +2771,13 @@ limitations under the License.
         ...
 
         constructor(TdDialogService) {
-                    this.dialogService = TdDialogService
+            this.dialogService = TdDialogService
         }
 
         ...
 
         openConfirm: function() {
-                    this.dialogService.openConfirm({
+                this.dialogService.openConfirm({
                 title: 'Confirm',
                 message: 'This is how simple it is to create a confirm with this wrapper service. Do you agree?',
                 cancelButton: 'Disagree',
@@ -2596,14 +2798,14 @@ limitations under the License.
                 <button mat-raised-button color="fds-primary" (click)="showWarnSnackBar()">Warning Snack Bar</button>
                 <button mat-raised-button color="fds-primary" (click)="showErrorSnackBar()">Error Snack Bar</button>
                 <button mat-raised-button color="fds-primary" (click)="showRegularSnackBar()">Regular Snack Bar</button>
-                <h3 class="mat-title">Usage</h3>
+                <h3 class="md-title">Usage</h3>
                 <p>HTML:</p>
                 <pre lang="html">
       <![CDATA[
-                <button mat-raised-button color="fds-primary" (click)="showSuccessSnackBar()">Success Snack Bar</button>
-                <button mat-raised-button color="fds-primary" (click)="showWarnSnackBar()">Warning Snack Bar</button>
-                <button mat-raised-button color="fds-primary" (click)="showErrorSnackBar()">Error Snack Bar</button>
-                <button mat-raised-button color="fds-primary" (click)="showRegularSnackBar()">Regular Snack Bar</button>
+        <button mat-raised-button color="fds-primary" (click)="showSuccessSnackBar()">Success Snack Bar</button>
+        <button mat-raised-button color="fds-primary" (click)="showWarnSnackBar()">Warning Snack Bar</button>
+        <button mat-raised-button color="fds-primary" (click)="showErrorSnackBar()">Error Snack Bar</button>
+        <button mat-raised-button color="fds-primary" (click)="showRegularSnackBar()">Regular Snack Bar</button>
       ]]>
     </pre>
                 <p>Javascript:</p>
@@ -2612,7 +2814,7 @@ limitations under the License.
         ...
 
         constructor(FdsSnackBarService) {
-                    this.snackBarService = FdsSnackBarService;
+            this.snackBarService = FdsSnackBarService;
         },
 
         ...
@@ -2622,7 +2824,7 @@ limitations under the License.
         /** Possible values for icon on MatSnackBarConfig are any available icons loaded on the page. */
 
         showSuccessSnackBar: function () {
-                    var snackBarRef = this.snackBarService.openCoaster({
+                var snackBarRef = this.snackBarService.openCoaster({
                 title: 'Success',
                 message: 'Some help text regarding the successful event.',
                 verticalPosition: 'top',
@@ -2634,7 +2836,7 @@ limitations under the License.
         },
 
         showWarnSnackBar: function () {
-                    var snackBarRef = this.snackBarService.openCoaster({
+                var snackBarRef = this.snackBarService.openCoaster({
                 title: 'Warning',
                 message: 'Some help text regarding the warning.',
                 verticalPosition: 'top',
@@ -2646,7 +2848,7 @@ limitations under the License.
         },
 
         showErrorSnackBar: function () {
-                    var snackBarRef = this.snackBarService.openCoaster({
+                var snackBarRef = this.snackBarService.openCoaster({
                 title: 'Error',
                 message: 'Some help text regarding the critical error. This coaster will stay open until closed with the `x` or if another coaster is created.',
                 verticalPosition: 'bottom',
@@ -2657,7 +2859,7 @@ limitations under the License.
         },
 
         showRegularSnackBar: function () {
-                    var snackBarRef = this.snackBarService.openCoaster({
+                var snackBarRef = this.snackBarService.openCoaster({
                 title: 'Regular',
                 message: 'Something interesting.',
                 verticalPosition: 'bottom',
@@ -2678,12 +2880,18 @@ limitations under the License.
             <mat-card-content>
                 <p>Expand/Collapse Event for Expansion 1: {{expandCollapseExpansion1Msg}}</p>
                 <div>
-                    <button mat-button color="primary" (click)="toggleDisabled()" class="text-upper">Toggle disable</button>
-                    <button mat-button color="primary" (click)="toggleExpansion1()" class="text-upper">Toggle first</button>
+                    <button mat-button color="primary" (click)="toggleDisabled()" class="text-upper">Toggle disable
+                    </button>
+                    <button mat-button color="primary" (click)="toggleExpansion1()" class="text-upper">Toggle first
+                    </button>
                 </div>
                 <div layout-gt-xs="row" layout-align-gt-xs="center start">
                     <div flex-gt-xs="90">
-                        <td-expansion-panel label="Google" sublabel="1600 Amphitheatre Pkwy, Mountain View, CA 94043, USA" [expand]="expansion1" [disabled]="disabled" (expanded)="expandExpansion1Event()" (collapsed)="collapseExpansion1Event()">
+                        <td-expansion-panel label="Google"
+                                            sublabel="1600 Amphitheatre Pkwy, Mountain View, CA 94043, USA"
+                                            [expand]="expansion1" [disabled]="disabled"
+                                            (expanded)="expandExpansion1Event()"
+                                            (collapsed)="collapseExpansion1Event()">
                             <td-expansion-summary>
                                 <mat-list>
                                     <mat-list-item>
@@ -2700,7 +2908,7 @@ limitations under the License.
                             <div class="mat-padding">
                                 <form class="mat-padding" layout="column">
                                     <mat-form-field floatLabel="always" flex>
-                                        <input matInput placeholder="Company (disabled)" disabled value="Google" />
+                                        <input matInput placeholder="Company (disabled)" disabled value="Google"/>
                                     </mat-form-field>
                                     <mat-form-field floatLabel="always" flex>
                                         <textarea matInput placeholder="Description" rows="4"></textarea>
@@ -2714,11 +2922,13 @@ limitations under the License.
                         </td-expansion-panel>
                     </div>
                 </div>
-                <h3 class="mat-title">Usage</h3>
+                <h3 class="md-title">Usage</h3>
                 <p>HTML:</p>
                 <pre lang="html">
       <![CDATA[
-        <td-expansion-panel label="Google" sublabel="1600 Amphitheatre Pkwy, Mountain View, CA 94043, USA" [expand]="expansion1" [disabled]="disabled" (expanded)="expandExpansion1Event()" (collapsed)="collapseExpansion1Event()">
+        <td-expansion-panel label="Google" sublabel="1600 Amphitheatre Pkwy, Mountain View, CA 94043, USA"
+                            [expand]="expansion1" [disabled]="disabled" (expanded)="expandExpansion1Event()"
+                            (collapsed)="collapseExpansion1Event()">
             <td-expansion-summary>
                 <mat-list>
                     <mat-list-item>
@@ -2735,7 +2945,7 @@ limitations under the License.
             <div class="mat-padding">
                 <form class="mat-padding" layout="column">
                     <mat-form-field floatLabel="always" flex>
-                        <input matInput placeholder="Company (disabled)" disabled value="Google" />
+                        <input matInput placeholder="Company (disabled)" disabled value="Google"/>
                     </mat-form-field>
                     <mat-form-field floatLabel="always" flex>
                         <textarea matInput placeholder="Description" rows="4"></textarea>
@@ -2787,7 +2997,7 @@ limitations under the License.
             <mat-divider></mat-divider>
             <mat-card-content layout="row">
                 <div flex="48" class="pad-right">
-                    <h3 class="mat-title">Progress Bars</h3>
+                    <h3 class="md-title">Progress Bars</h3>
                     <h4>Determinate</h4>
                     <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
                     <h4>Indeterminate</h4>
@@ -2800,23 +3010,23 @@ limitations under the License.
                     <mat-progress-bar mode="indeterminate" color="primary"></mat-progress-bar>
                     <mat-progress-bar mode="indeterminate" color="accent"></mat-progress-bar>
                     <mat-progress-bar mode="indeterminate" color="warn"></mat-progress-bar>
-                    <h3 class="mat-title">Usage</h3>
+                    <h3 class="md-title">Usage</h3>
                     <p>HTML:</p>
                     <pre lang="html">
       <![CDATA[
-                        <!-- Determinate-->
+        <!-- Determinate-->
         <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
 
-                        <!-- Indeterminate-->
+        <!-- Indeterminate-->
         <mat-progress-bar mode="indeterminate"></mat-progress-bar>
 
-                        <!-- Buffer-->
+        <!-- Buffer-->
         <mat-progress-bar mode="buffer" value="15" bufferValue="15"></mat-progress-bar>
 
-                        <!-- Query-->
+        <!-- Query-->
         <mat-progress-bar mode="query"></mat-progress-bar>
 
-                        <!-- Colors-->
+        <!-- Colors-->
         <mat-progress-bar mode="indeterminate" color="primary"></mat-progress-bar>
 
         <mat-progress-bar mode="indeterminate" color="accent"></mat-progress-bar>
@@ -2827,7 +3037,7 @@ limitations under the License.
                 </div>
                 <div flex="48">
                     <!-- Progress circles-->
-                    <h3 class="mat-title">Progress Spinner</h3>
+                    <h3 class="md-title">Progress Spinner</h3>
                     <div layout="row">
                         <div>
                             <h4>Determinate</h4>
@@ -2850,17 +3060,17 @@ limitations under the License.
                             <mat-progress-spinner mode="indeterminate" color="warn"></mat-progress-spinner>
                         </div>
                     </div>
-                    <h3 class="mat-title">Usage</h3>
+                    <h3 class="md-title">Usage</h3>
                     <p>HTML:</p>
                     <pre lang="html">
       <![CDATA[
-                        <!-- Determinate -->
+        <!-- Determinate -->
         <mat-progress-spinner mode="determinate" value="66"></mat-progress-spinner>
-                        <!-- Indeterminate -->
+        <!-- Indeterminate -->
         <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
-                        <!-- Spinner -->
+        <!-- Spinner -->
         <mat-spinner></mat-spinner>
-                        <!-- Colors -->
+        <!-- Colors -->
         <mat-progress-spinner mode="indeterminate" color="primary"></mat-progress-spinner>
         <mat-progress-spinner mode="indeterminate" color="accent"></mat-progress-spinner>
         <mat-progress-spinner mode="indeterminate" color="warn"></mat-progress-spinner>
@@ -2873,15 +3083,16 @@ limitations under the License.
             <mat-card-title class="pad-bottom-sm" id="SideNav">Side Nav <mat-icon class="link-to-component" routerLink="/" fragment="SideNav">link</mat-icon></mat-card-title>
             <mat-divider></mat-divider>
             <mat-card-content>
-                <p>The side nav can be opened at the `start` or `end` of a container and can be displayed in `over`, `side`, or `push` mode. You can also define its width.</p>
+                <p>The side nav can be opened at the `start` or `end` of a container and can be displayed in `over`,
+                    `side`, or `push` mode. You can also define its width.</p>
                 <button matTooltip="Open side nav" mat-raised-button color="fds-primary" (click)="sidenav.toggle()">
                     Open
                 </button>
-                <h3 class="mat-title">Usage</h3>
+                <h3 class="md-title">Usage</h3>
                 <p>HTML:</p>
                 <pre lang="html">
         <![CDATA[
-                    <!-- Basic Usage -->
+        <!-- Basic Usage -->
         <mat-sidenav #sidenav mode="over" align="end" opened="false">
             ...
         </mat-sidenav>
@@ -2893,7 +3104,7 @@ limitations under the License.
             <mat-card-title class="pad-bottom-sm" id="SlideToggle">Slide Toggle <mat-icon class="link-to-component" routerLink="/" fragment="SlideToggle">link</mat-icon></mat-card-title>
             <mat-divider></mat-divider>
             <mat-card-content>
-                <h3 class="mat-title">Basic Usage</h3>
+                <h3 class="md-title">Basic Usage</h3>
                 <mat-divider></mat-divider>
                 <mat-list>
                     <mat-list-item *ngFor="let system of systems">
@@ -2902,11 +3113,11 @@ limitations under the License.
                         </mat-slide-toggle>
                     </mat-list-item>
                 </mat-list>
-                <h3 class="mat-title">Usage</h3>
+                <h3 class="md-title">Usage</h3>
                 <p>HTML:</p>
                 <pre lang="html">
         <![CDATA[
-                    <!-- Basic Usage -->
+        <!-- Basic Usage -->
         <mat-list>
             <mat-list-item *ngFor="let system of systems">
               <mat-slide-toggle [color]="system.color" [(ngModel)]="system.on">
@@ -2918,23 +3129,23 @@ limitations under the License.
         </pre>
                 <p>Javascript:</p>
                 <pre lang="javascript">
-          <![CDATA[
+        <![CDATA[
         this.systems = [{
-                    name: 'Lights',
-                    on: false,
-                    color: 'primary',
+            name: 'Lights',
+            on: false,
+            color: 'primary',
         }, {
-                    name: 'Surround Sound',
-                    on: true,
-                    color: 'accent',
+            name: 'Surround Sound',
+            on: true,
+            color: 'accent',
         }, {
-                    name: 'T.V.',
-                    on: true,
-                    color: 'warn',
+            name: 'T.V.',
+            on: true,
+            color: 'warn',
         }, ];
             ]]>
           </pre>
-                <h3 class="mat-title">Usage within Forms</h3>
+                <h3 class="md-title">Usage within Forms</h3>
                 <form>
                     <mat-list>
                         <mat-list-item>
@@ -2950,11 +3161,11 @@ limitations under the License.
                         </mat-list-item>
                     </mat-list>
                 </form>
-                <h3 class="mat-title">Usage</h3>
+                <h3 class="md-title">Usage</h3>
                 <p>HTML:</p>
                 <pre lang="html">
         <![CDATA[
-                    <!-- Usage within Forms -->
+        <!-- Usage within Forms -->
         <form>
             <mat-list>
                 <mat-list-item>
@@ -2974,9 +3185,9 @@ limitations under the License.
         </pre>
                 <p>Javascript:</p>
                 <pre lang="javascript">
-          <![CDATA[
+        <![CDATA[
         this.house = {
-                    lockHouse: false,
+            lockHouse: false,
         };
             ]]>
           </pre>
@@ -2986,11 +3197,11 @@ limitations under the License.
             <mat-card-title class="pad-bottom-sm" id="Slider">Slider <mat-icon class="link-to-component" routerLink="/" fragment="Slider">link</mat-icon></mat-card-title>
             <mat-divider></mat-divider>
             <mat-card-content>
-                <h3 class="mat-title">Horizontal Slider</h3>
+                <h3 class="md-title">Horizontal Slider</h3>
                 <mat-slider min="1" max="5" thumbLabel tickInterval="1" value="2" color="primary"></mat-slider>
                 <mat-slider step="5" thumbLabel tickInterval="5" value="20" color="accent"></mat-slider>
                 <mat-slider thumbLabel tick-interval="auto" value="2" color="warn"></mat-slider>
-                <h3 class="mat-title">Usage</h3>
+                <h3 class="md-title">Usage</h3>
                 <p>HTML:</p>
                 <pre lang="html">
       <![CDATA[
@@ -2999,18 +3210,18 @@ limitations under the License.
         <mat-slider thumbLabel tick-interval="auto" value="2" color="warn"></mat-slider>
         ]]>
       </pre>
-                <h3 class="mat-title">Vertical Slider</h3>
+                <h3 class="md-title">Vertical Slider</h3>
                 <mat-slider vertical min="1" max="100" thumbLabel tickInterval="10" value="2"></mat-slider>
-                <h3 class="mat-title">Usage</h3>
+                <h3 class="md-title">Usage</h3>
                 <p>HTML:</p>
                 <pre lang="html">
       <![CDATA[
         <mat-slider vertical min="1" max="100" thumbLabel tickInterval="10" value="2"></mat-slider>
         ]]>
       </pre>
-                <h3 class="mat-title">Inverted Slider</h3>
+                <h3 class="md-title">Inverted Slider</h3>
                 <mat-slider invert min="1" max="100" thumbLabel tickInterval="10" value="2"></mat-slider>
-                <h3 class="mat-title">Usage</h3>
+                <h3 class="md-title">Usage</h3>
                 <p>HTML:</p>
                 <pre lang="html">
       <![CDATA[
