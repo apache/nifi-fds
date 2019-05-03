@@ -17,19 +17,28 @@
 
 /* Links */
 
-body[fds] .link {
-  color: $linkColor;
-  font-size: 14px;
-  text-decoration: none;
-  line-height: 24px;
-  cursor: pointer;
-}
+@mixin fds-links-theme($theme) {
+  $primaryColor: map-get(map-get($theme, primary), 500);
+  $primaryColorHover: map-get(map-get($theme, primary), 100);
+  $accentColor: map-get(map-get($theme, accent), 500);
+  $accentColorHover: map-get(map-get($theme, accent), 100);
 
-body[fds] .link:hover {
-  text-decoration: underline;
-}
+  body[fds] {
+    .link {
+      color: $accentColor;
+      font-size: 14px;
+      text-decoration: none;
+      line-height: 24px;
+      cursor: pointer;
+    }
 
-body[fds] .link .disabled {
-  color: $linkColorDisabled;
-  text-decoration: none;
+    .link:hover {
+      text-decoration: underline;
+    }
+
+    .link .disabled {
+      color: $linkColorDisabled;
+      text-decoration: none;
+    }
+  }
 }
