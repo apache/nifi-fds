@@ -54,12 +54,8 @@ body[fds] .td-data-table-row.selected {
 }
 
 body[fds] .td-data-table-row:hover {
-  background-color: $grey6;
-  border: 1px solid $blue-grey2;
-}
-
-body[fds] .td-data-table-cell .mat-icon-button {
-  color: $linkColor;
+  background-color: $blue4;
+  border: 1px solid $blue3;
 }
 
 body[fds] .td-data-table-cell .mat-button,
@@ -82,13 +78,6 @@ body[fds] .td-data-table-cell .mat-icon-button.badge {
 
 body[fds] .td-data-table-cell .mat-icon-button.badge[disabled] {
   opacity: 0.3;
-}
-
-body[fds] .td-data-table-column .fa-caret-up,
-body[fds] .td-data-table-column .fa-caret-down {
-  color: $blue-grey1;
-  font-size: 12px;
-  margin-bottom: 2px;
 }
 
 body[fds] td-paging-bar {
@@ -115,4 +104,25 @@ body[fds] div .td-data-table {
   border-bottom: 2px solid $grey7;
   border-right: 1px transparent;
   border-left: 1px transparent;
+  display: flex;
+}
+
+@mixin fds-tables-theme($theme) {
+  $primaryColor: map-get(map-get($theme, primary), 500);
+  $primaryColorHover: map-get(map-get($theme, primary), 100);
+  $accentColor: map-get(map-get($theme, accent), 500);
+  $accentColorHover: map-get(map-get($theme, accent), 100);
+
+  body[fds] {
+    .td-data-table-cell .mat-icon-button {
+      color: $accentColor;
+    }
+
+    .td-data-table-column .fa-caret-up,
+    .td-data-table-column .fa-caret-down {
+      color: $accentColor;
+      font-size: 12px;
+      margin-bottom: 2px;
+    }
+  }
 }
