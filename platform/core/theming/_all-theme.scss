@@ -22,6 +22,7 @@
 @import '../common/styles/menus';
 @import '../common/styles/inputs';
 @import '../common/styles/checkboxes';
+@import '../common/styles/links';
 
 // Create a theme.
 @mixin fds-theme($theme) {
@@ -35,4 +36,5 @@
   @include fds-menus-theme($theme);
   @include fds-input-element-theme($theme);
   @include fds-checkboxes-theme($theme);
+  @include fds-links-theme($theme);
 }
