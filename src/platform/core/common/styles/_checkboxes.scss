@@ -58,37 +58,6 @@
       width: 10px;
     }
 
-    /* Covalent TdDataTableComponent 'selectable' property checkboxes */
-
-    .mat-pseudo-checkbox {
-      height: 10px !important;
-      width: 10px !important;
-      border: 1px solid $grey7;
-    }
-
-    .mat-pseudo-checkbox:hover {
-      background-color: $blue-grey1;
-      border: 1px solid $blue-grey1;
-    }
-
-    .mat-pseudo-checkbox-checked::after {
-      content: '\f00c';
-      font-size: 8px;
-      font-family: fontawesome;
-      margin-top: -9px;
-      margin-left: -1px;
-      border: none;
-      transform: initial;
-    }
-
-    .mat-pseudo-checkbox-checked,
-    .mat-pseudo-checkbox-indeterminate {
-      background-color: $blue-grey1;
-      border: 1px solid $blue-grey1;
-      height: 10px;
-      width: 10px;
-    }
-
     .mat-checkbox-disabled {
       cursor: not-allowed;
     }
