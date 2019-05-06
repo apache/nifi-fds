@@ -20,6 +20,7 @@
 @import '../common/styles/buttons';
 @import '../common/styles/expansionPanels';
 @import '../common/styles/menus';
+@import '../common/styles/checkboxes';
 
 // Create a theme.
 @mixin fds-theme($theme) {
@@ -32,5 +33,6 @@
   @include fds-buttons-theme($theme);
   @include fds-expansion-panels-theme($theme);
   @include fds-menus-theme($theme);
+  @include fds-checkboxes-theme($theme);
 
 }
