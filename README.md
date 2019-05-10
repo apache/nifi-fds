@@ -1,6 +1,6 @@
 # Apache NiFi Flow Design System
 
-The Apache NiFi Flow Design System is an atomic reusable platform for providing a consistent set of UI/UX components for open source friendly web applications to consume. Users can interact with this design system by running the demo-app locally or by visiting: [https://apache.github.io/nifi-fds/](https://apache.github.io/nifi-fds/).
+The Apache NiFi Flow Design System is an atomic reusable platform for providing a consistent set of UI/UX components for open source friendly web applications to consume. Users can interact with this design system by running the demo application locally or by visiting: [https://apache.github.io/nifi-fds/](https://apache.github.io/nifi-fds/).
 
 The demo application serves 2 main purposes
 * As a way for code reviewers to validate code changes as well as each `@nifi-fds/core` release 
@@ -13,32 +13,30 @@ For developers not interested in building the FDS NgModule you can use **npm** t
 npm install @nifi-fds/core
 ```
 
-#### SystemJS
-If your project is using the SystemJS module loader, you will need to add `@nifi-fds/core` to the configuration:
+Clients will need to configure a few aliases within their preferred module loader/javascript bundler: 
 
 ```javascript
-System.config({
-  // existing configuration options
-  map: {
-    ...,
-    '@flow-design-system/core': 'node_modules/@nifi-fds/core/flow-design-system.module.js',
-    '@flow-design-system/dialogs': 'node_modules/@nifi-fds/core/dialogs/fds-dialogs.module.js',
-    '@flow-design-system/dialog-component': 'node_modules/@nifi-fds/core/dialogs/fds-dialog.component.js',
-    '@flow-design-system/dialog-service': 'node_modules/@nifi-fds/core/dialogs/services/dialog.service.js',
-    '@flow-design-system/confirm-dialog-component': 'node_modules/@nifi-fds/core/dialogs/confirm-dialog/confirm-dialog.component.js',
-    '@flow-design-system/snackbars': 'node_modules/@nifi-fds/core/snackbars/fds-snackbars.module.js',
-    '@flow-design-system/snackbar-component': 'node_modules/@nifi-fds/core/snackbars/fds-snackbar.component.js',
-    '@flow-design-system/snackbar-service': 'node_modules/@nifi-fds/core/snackbars/services/snackbar.service.js',
-    '@flow-design-system/coaster-component': 'node_modules/@nifi-fds/core/snackbars/coaster/coaster.component.js',
-    '@flow-design-system/common/storage-service': 'node_modules/@nifi-fds/core/common/services/fds-storage.service.js'
-  }
-});
+const path = require('path');
+
+module.exports = {
+    '@flow-design-system/core': path.resolve(__dirname, 'node_modules/@nifi-fds/core/flow-design-system.module.js'),
+    '@flow-design-system/dialogs': path.resolve(__dirname, 'node_modules/@nifi-fds/core/dialogs/fds-dialogs.module.js'),
+    '@flow-design-system/dialog-component': path.resolve(__dirname, 'node_modules/@nifi-fds/core/dialogs/fds-dialog.component.js'),
+    '@flow-design-system/dialog-service': path.resolve(__dirname, 'node_modules/@nifi-fds/core/dialogs/services/dialog.service.js'),
+    '@flow-design-system/confirm-dialog-component': path.resolve(__dirname, 'node_modules/@nifi-fds/core/dialogs/confirm-dialog/confirm-dialog.component.js'),
+    '@flow-design-system/snackbars': path.resolve(__dirname, 'node_modules/@nifi-fds/core/snackbars/fds-snackbars.module.js'),
+    '@flow-design-system/snackbar-component': path.resolve(__dirname, 'node_modules/@nifi-fds/core/snackbars/fds-snackbar.component.js'),
+    '@flow-design-system/snackbar-service': path.resolve(__dirname, 'node_modules/@nifi-fds/core/snackbars/services/snackbar.service.js'),
+    '@flow-design-system/coaster-component': path.resolve(__dirname, 'node_modules/@nifi-fds/core/snackbars/coaster/coaster.component.js'),
+    '@flow-design-system/common/storage-service': path.resolve(__dirname, 'node_modules/@nifi-fds/core/common/services/fds-storage.service.js'),
+    '@flow-design-system/common/animations': path.resolve(__dirname, 'node_modules/@nifi-fds/core/common/fds.animations.js')
+};
 ```
 
-Next, import the **Apache NiFi Flow Design System** NgModule into your angular application. 
+Once you have configured your module loader, you can import the **Apache NiFi Flow Design System** NgModule into your angular application. 
 
 ```javascript
-var fdsCore = require('flow-design-system/core');
+var fdsCore = require('@flow-design-system/core');
 AppModule.prototype = {
     constructor: AppModule
 };
@@ -98,8 +96,15 @@ You don't have to use Sass to style the rest of your application but you will ne
 
 NOTE: The theme file may be concatenated and minified with the rest of the application's CSS.
 
+#### Developing
+Developers can perform code changes and automatically build this project using **npm** and **webpack** from the root directory via:
+
+```bash
+npm run watch 
+```
+
 #### Building
-Developers can perform code changes and easily build this project using **npm** from the root nifi-fds directory via:
+Full builds are also available using **npm** from the root directory via:
 
 ```bash
 npm run clean:install
@@ -111,27 +116,17 @@ or to build without running unit tests run:
 npm run clean:install:skipTests
 ```
 
-Developers can speed up development time by skipping the re-installation of all node_modules:
+NOTE: Full builds for this project assume a 2 stage build but it only completes the first stage for you. In the first stage all of the assets for the project are copied into the `target/frontend-working-directory`, tested, and bundled/minified/obfuscated. It is up to the consumer of this project to integrate the second sta include the produced index.html and optimized assets files into any deployable archive of their choosing.
+
+#### Running full builds locally
+Once built you can start the application from the `target/frontend-working-directory` directory via:
 
 ```bash
-npm run dev:install
-```
-
-or to skip re-installation of node_modules as well as building without running unit tests:
-
-```bash
-npm run dev:install:skipTests
-```
-
-#### Running locally
-Once built you can start the application from the target directory via:
-
-```bash
-cd target
+cd target/frontend-working-directory
 npm start
 ```
 
-The demo application should now be available at: [http://127.0.0.1:8080/](http://127.0.0.1:8080/). The port may differ if there is a conflict on 8080. See the output of the start command for the available URLs.
+The demo application should now be available at: [http://127.0.0.1:28080/](http://127.0.0.1:28080/). The port may differ if there is a conflict on 28080. See the output of the start command for the available URLs.
 
 ## Contact us!
 The developer mailing list (dev@nifi.apache.org) is monitored pretty closely, and we tend to respond quickly.  If you have a question, don't hesitate to shoot us an e-mail - we're here to help! Unfortunately, though, e-mails can get lost in the shuffle, so if you do send an e-mail and don't get a response within a day or two, it's our fault - don't worry about bothering us. Just ping the mailing list again.

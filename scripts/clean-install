@@ -18,37 +18,25 @@ set -e
 # build
 rm -rf ./target
 mkdir target
-cp -R ./src/demo-app/ ./target/demo-app
-cp -R ./src/platform/ ./target/platform
-cp package.json ./target/package.json
-cp package-lock.json ./target/package-lock.json
-cp README.md ./target/README.md
-cp LICENSE ./target/LICENSE
-cp NOTICE ./target/NOTICE
-cp ./src/demo-app/index.html ./target/index.html
-cp ./test/karma.conf.js ./target/karma.conf.js
-cp ./test/karma-test-shim.js ./target/karma-test-shim.js
-cp Gruntfile.js ./target/Gruntfile.js
-cp ./src/demo-app/gh-pages.* ./target/
-cd ./target
+mkdir ./target/frontend-working-directory
+cp -R ./webapp/ ./target/frontend-working-directory/webapp
+cp -R ./platform/ ./target/frontend-working-directory/platform
+cp package.json ./target/frontend-working-directory/package.json
+cp package-lock.json ./target/frontend-working-directory/package-lock.json
+cp README.md ./target/frontend-working-directory/README.md
+cp LICENSE ./target/frontend-working-directory/LICENSE
+cp NOTICE ./target/frontend-working-directory/NOTICE
+cp ./webpack.*.js ./target/frontend-working-directory/
+cp ./karma.conf.js ./target/frontend-working-directory/karma.conf.js
+cp ./karma-test-shim.js ./target/frontend-working-directory/karma-test-shim.js
+cp Gruntfile.js ./target/frontend-working-directory/Gruntfile.js
+cp ./webapp/gh-pages.* ./target/frontend-working-directory/
+cd ./target/frontend-working-directory
 npm install
-
-# build platform base styles
-npm run build:platform
 
 # test
 npm test
 
-# simulate npm install of @nifi-fds/core
-mkdir ./node_modules/@nifi-fds
-mv ./platform/core/ ./node_modules/@nifi-fds
-cp ../README.md ./node_modules/@nifi-fds/core/
-cp ../LICENSE ./node_modules/@nifi-fds/core/
-cp ../NOTICE ./node_modules/@nifi-fds/core/
-
-# build demo theme
-npm run build:demo-app
-
-# clean up
-rm -rf ./platform
+# build js bundle
+npm run build:webapp:bundle:production
 

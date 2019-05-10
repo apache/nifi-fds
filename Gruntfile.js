@@ -14,51 +14,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-var sass = require('node-sass');
 
 module.exports = function (grunt) {
     // load all grunt tasks matching the ['grunt-*', '@*/grunt-*'] patterns
     require('load-grunt-tasks')(grunt);
 
     grunt.initConfig({
-        sass: {
-            options: {
-                implementation: sass,
-                outputStyle: 'compressed',
-                sourceMap: true
-            },
-            minifyFds: {
-                files: [{
-                    './platform/core/common/styles/css/flow-design-system.min.css': ['./platform/core/common/styles/flow-design-system.scss']
-                }]
-            },
-            minifyFdsDemo: {
-                files: [{
-                    './demo-app/css/fds-demo.min.css': ['./demo-app/theming/fds-demo.scss']
-                }]
-            }
-        },
-        compress: {
-            options: {
-                mode: 'gzip'
-            },
-            fdsStyles: {
-                files: [{
-                    expand: true,
-                    src: ['./platform/core/common/styles/css/flow-design-system.min.css'],
-                    dest: './',
-                    ext: '.min.css.gz'
-                }]
-            },
-            fdsDemoStyles: {
-                files: [{
-                    expand: true,
-                    src: ['./demo-app/css/fds-demo.min.css'],
-                    dest: './',
-                    ext: '.min.css.gz'
-                }]
-            }
-        },
         bump: {
             options: {
                 files: ['package.json'],
@@ -79,6 +40,4 @@ module.exports = function (grunt) {
             }
         }
     });
-    grunt.registerTask('compile-fds-styles', ['sass:minifyFds', 'compress:fdsStyles']);
-    grunt.registerTask('compile-fds-demo-styles', ['sass:minifyFdsDemo', 'compress:fdsDemoStyles']);
 };
