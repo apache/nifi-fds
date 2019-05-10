@@ -14,6 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+var sass = require('node-sass');
 
 module.exports = function (grunt) {
     // load all grunt tasks matching the ['grunt-*', '@*/grunt-*'] patterns
@@ -22,6 +23,7 @@ module.exports = function (grunt) {
     grunt.initConfig({
         sass: {
             options: {
+                implementation: sass,
                 outputStyle: 'compressed',
                 sourceMap: true
             },

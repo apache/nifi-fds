@@ -17,6 +17,8 @@
 
 body[fds] .expansion-panel-filter-toggle-group {
   box-shadow: none !important;
+  border: none;
+  border-radius: 0;
 }
 
 body[fds] .expansion-panel-filter-toggle-group .mat-button-toggle {
@@ -38,12 +40,13 @@ body[fds] .expansion-panel-filter-toggle-group .mat-button-toggle-checked {
   color: white;
 }
 
-body[fds] .expansion-panel-filter-toggle-group .mat-button-toggle-checked .md-display-1 {
+body[fds] .expansion-panel-filter-toggle-group .mat-button-toggle-checked .mat-display-1 {
   color: white;
 }
 
-body[fds] .expansion-panel-filter-toggle-group .md-display-1 {
+body[fds] .expansion-panel-filter-toggle-group .mat-display-1 {
   color: $blue-grey1;
+  margin: 0
 }
 
 body[fds] .expansion-panel-filter-toggle-group div {
@@ -52,6 +55,8 @@ body[fds] .expansion-panel-filter-toggle-group div {
 
 body[fds] .tab-toggle-group {
   box-shadow: none !important;
+  border: none;
+  border-radius: 0;
 }
 
 body[fds] .tab-toggle-group .mat-button-toggle-label-content {

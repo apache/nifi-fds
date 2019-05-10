@@ -16,7 +16,7 @@ limitations under the License.
 -->
 
 <mat-sidenav-container>
-    <mat-sidenav #sidenav mode="over" align="end" opened="false">
+    <mat-sidenav #sidenav mode="over" position="end" opened="false">
         <div fxLayout="column" fxLayoutAlign="space-between center">
             <p>You can also open a dialog from a side nav.</p>
             <button mat-raised-button color="fds-primary" (click)="openDialog()">Show simple dialog</button>
@@ -43,11 +43,11 @@ limitations under the License.
         // other imports
           ...
         new ngCore.NgModule({
-        imports: [
-            fdsCore,
-            // (optional) Additional imports
-          ],
-          ...
+                    imports: [
+                        fdsCore,
+                        // (optional) Additional imports
+                      ],
+                      ...
         })
         ]]>
     </pre>
@@ -310,25 +310,25 @@ limitations under the License.
                 <mat-button-toggle-group fxLayout="row" fxLayoutAlign="space-between center" class="expansion-panel-filter-toggle-group" multiple>
                     <mat-button-toggle>
                         <div fxFlex fxLayout="column" fxLayoutAlign="space-around stretch">
-                            <div class="md-display-1 pad-top-sm" fxFlex="55">34</div>
+                            <div class="mat-display-1 pad-top-sm" fxFlex="55">34</div>
                             <div class="pad-top-sm" fxFlex="45">Assets</div>
                         </div>
                     </mat-button-toggle>
                     <mat-button-toggle>
                         <div fxFlex fxLayout="column" fxLayoutAlign="space-around stretch">
-                            <div class="md-display-1 pad-top-sm" fxFlex="55">300</div>
+                            <div class="mat-display-1 pad-top-sm" fxFlex="55">300</div>
                             <div class="pad-top-sm" fxFlex="45">Extensions</div>
                         </div>
                     </mat-button-toggle>
                     <mat-button-toggle>
                         <div fxFlex fxLayout="column" fxLayoutAlign="space-around stretch">
-                            <div class="md-display-1 pad-top-sm" fxFlex="55">5000</div>
+                            <div class="mat-display-1 pad-top-sm" fxFlex="55">5000</div>
                             <div class="pad-top-sm" fxFlex="45">Flows</div>
                         </div>
                     </mat-button-toggle>
                     <mat-button-toggle>
                         <div fxFlex fxLayout="column" fxLayoutAlign="space-around stretch">
-                            <div class="md-display-1 pad-top-sm" fxFlex="55">0</div>
+                            <div class="mat-display-1 pad-top-sm" fxFlex="55">0</div>
                             <div class="pad-top-sm" fxFlex="45">Certifications</div>
                         </div>
                     </mat-button-toggle>
@@ -378,25 +378,25 @@ limitations under the License.
         <mat-button-toggle-group fxLayout="row" fxLayoutAlign="space-between center" class="expansion-panel-filter-toggle-group" multiple>
             <mat-button-toggle>
                 <div fxFlex fxLayout="column" fxLayoutAlign="space-around stretch">
-                    <div class="md-display-1 pad-top-sm" fxFlex="55">34</div>
+                    <div class="mat-display-1 pad-top-sm" fxFlex="55">34</div>
                     <div class="pad-top-sm" fxFlex="45">Assets</div>
                 </div>
             </mat-button-toggle>
             <mat-button-toggle>
                 <div fxFlex fxLayout="column" fxLayoutAlign="space-around stretch">
-                    <div class="md-display-1 pad-top-sm" fxFlex="55">300</div>
+                    <div class="mat-display-1 pad-top-sm" fxFlex="55">300</div>
                     <div class="pad-top-sm" fxFlex="45">Extensions</div>
                 </div>
             </mat-button-toggle>
             <mat-button-toggle>
                 <div fxFlex fxLayout="column" fxLayoutAlign="space-around stretch">
-                    <div class="md-display-1 pad-top-sm" fxFlex="55">5000</div>
+                    <div class="mat-display-1 pad-top-sm" fxFlex="55">5000</div>
                     <div class="pad-top-sm" fxFlex="45">Flows</div>
                 </div>
             </mat-button-toggle>
             <mat-button-toggle>
                 <div fxFlex fxLayout="column" fxLayoutAlign="space-around stretch">
-                    <div class="md-display-1 pad-top-sm" fxFlex="55">0</div>
+                    <div class="mat-display-1 pad-top-sm" fxFlex="55">0</div>
                     <div class="pad-top-sm" fxFlex="45">Certifications</div>
                 </div>
             </mat-button-toggle>
@@ -425,23 +425,23 @@ limitations under the License.
             <mat-card-content>
                 <form>
                     <div layout="row" layout-margin>
-                        <mat-input-container floatPlaceholder="always" flex>
+                        <mat-form-field floatLabel="always" floatPlaceholder="always" flex>
                             <input matInput placeholder="Company (disabled)" disabled value="Google">
-                        </mat-input-container>
+                        </mat-form-field>
                     </div>
                     <div layout="row" layout-margin>
-                        <mat-input-container floatPlaceholder="always" flex>
+                        <mat-form-field floatLabel="always" floatPlaceholder="always" flex>
                             <input matInput disabled placeholder="First name">
-                        </mat-input-container>
-                        <mat-input-container flex>
+                        </mat-form-field>
+                        <mat-form-field floatLabel="always" flex>
                             <input matInput placeholder="Long Last Name That Will Be Truncated">
-                        </mat-input-container>
+                        </mat-form-field>
                     </div>
                     <div layout="row" layout-margin>
                         <div flex fxLayoutAlign="start center">
-                            <mat-input-container flex>
+                            <mat-form-field floatLabel="always" flex>
                                 <input matInput placeholder="Button Addon with dropdown">
-                            </mat-input-container>
+                            </mat-form-field>
                             <button class="input-button" color="fds-regular" mat-raised-button [matMenuTriggerFor]="inputButtonDropdownAddonMenu">
                                 Select<i class="fa fa-caret-down" aria-hidden="true"></i>
                             </button>
@@ -453,9 +453,9 @@ limitations under the License.
                             </mat-menu>
                         </div>
                         <div flex fxLayoutAlign="start center">
-                            <mat-input-container floatPlaceholder="always" flex>
+                            <mat-form-field floatLabel="always" floatPlaceholder="always" flex>
                                 <input matInput placeholder="Button Addon">
-                            </mat-input-container>
+                            </mat-form-field>
                             <button class="input-button" color="fds-regular" mat-raised-button>
                                 Search
                             </button>
@@ -463,43 +463,43 @@ limitations under the License.
                     </div>
                     <div layout="row" layout-margin>
                         <div flex fxLayoutAlign="start center">
-                            <mat-input-container floatPlaceholder="always" flex>
+                            <mat-form-field floatLabel="always" floatPlaceholder="always" flex>
                                 <input disabled matInput placeholder="Button Addon with dropdown">
-                            </mat-input-container>
+                            </mat-form-field>
                             <button disabled class="input-button" color="fds-regular" mat-raised-button>
                                 Select<i class="fa fa-caret-down" aria-hidden="true"></i>
                             </button>
                         </div>
                         <div flex fxLayoutAlign="start center">
-                            <mat-input-container floatPlaceholder="always" flex>
+                            <mat-form-field floatLabel="always" floatPlaceholder="always" flex>
                                 <input disabled matInput placeholder="Button Addon">
-                            </mat-input-container>
+                            </mat-form-field>
                             <button disabled class="input-button" color="fds-regular" mat-raised-button>
                                 Search
                             </button>
                         </div>
                     </div>
                     <div layout="row" layout-margin>
-                        <mat-input-container flex>
+                        <mat-form-field floatLabel="always" flex>
                             <textarea matInput placeholder="Address" value="1600 Amphitheatre Pkway"></textarea>
-                        </mat-input-container>
+                        </mat-form-field>
                     </div>
                     <div layout="row" layout-margin>
-                        <mat-input-container floatPlaceholder="always" flex>
+                        <mat-form-field floatLabel="always" floatPlaceholder="always" flex>
                             <textarea disabled value="Address 2 Value" matInput placeholder="Address 2"></textarea>
-                        </mat-input-container>
+                        </mat-form-field>
                     </div>
                     <div layout="row" layout-margin>
-                        <mat-input-container floatPlaceholder="always" flex>
+                        <mat-form-field floatLabel="always" floatPlaceholder="always" flex>
                             <input matInput placeholder="City">
-                        </mat-input-container>
-                        <mat-input-container floatPlaceholder="always" flex>
+                        </mat-form-field>
+                        <mat-form-field floatLabel="always" floatPlaceholder="always" flex>
                             <input matInput placeholder="State">
-                        </mat-input-container>
-                        <mat-input-container floatPlaceholder="always" flex>
+                        </mat-form-field>
+                        <mat-form-field floatLabel="always" floatPlaceholder="always" flex>
                             <input matInput #postalCode maxlength="5" placeholder="Postal Code" value="94043">
                             <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
-                        </mat-input-container>
+                        </mat-form-field>
                     </div>
                 </form>
                 <h3 class="mat-title">Usage</h3>
@@ -509,23 +509,23 @@ limitations under the License.
                     <!-- Inputs -->
         <form>
             <div layout="row" layout-margin>
-                <mat-input-container floatPlaceholder="always" flex>
+                <mat-form-field floatLabel="always" floatPlaceholder="always" flex>
                     <input matInput placeholder="Company (disabled)" disabled value="Google">
-                </mat-input-container>
+                </mat-form-field>
             </div>
             <div layout="row" layout-margin>
-                <mat-input-container floatPlaceholder="always" flex>
+                <mat-form-field floatLabel="always" floatPlaceholder="always" flex>
                     <input matInput disabled placeholder="First name">
-                </mat-input-container>
-                <mat-input-container flex>
+                </mat-form-field>
+                <mat-form-field floatLabel="always" flex>
                     <input matInput placeholder="Long Last Name That Will Be Truncated">
-                </mat-input-container>
+                </mat-form-field>
             </div>
             <div layout="row" layout-margin>
                 <div flex fxLayoutAlign="start center">
-                    <mat-input-container flex>
+                    <mat-form-field floatLabel="always" flex>
                         <input matInput placeholder="Button Addon with dropdown">
-                    </mat-input-container>
+                    </mat-form-field>
                     <button class="input-button" color="fds-regular" mat-raised-button [matMenuTriggerFor]="inputButtonDropdownAddonMenu">
                         Select<i class="fa fa-caret-down" aria-hidden="true"></i>
                     </button>
@@ -537,9 +537,9 @@ limitations under the License.
                     </mat-menu>
                 </div>
                 <div flex fxLayoutAlign="start center">
-                    <mat-input-container floatPlaceholder="always" flex>
+                    <mat-form-field floatLabel="always" floatPlaceholder="always" flex>
                         <input matInput placeholder="Button Addon">
-                    </mat-input-container>
+                    </mat-form-field>
                     <button class="input-button" color="fds-regular" mat-raised-button>
                         Search
                     </button>
@@ -547,43 +547,43 @@ limitations under the License.
             </div>
             <div layout="row" layout-margin>
                 <div flex fxLayoutAlign="start center">
-                    <mat-input-container floatPlaceholder="always" flex>
+                    <mat-form-field floatLabel="always" floatPlaceholder="always" flex>
                         <input disabled matInput placeholder="Button Addon with dropdown">
-                    </mat-input-container>
+                    </mat-form-field>
                     <button disabled class="input-button" color="fds-regular" mat-raised-button>
                         Select<i class="fa fa-caret-down" aria-hidden="true"></i>
                     </button>
                 </div>
                 <div flex fxLayoutAlign="start center">
-                    <mat-input-container floatPlaceholder="always" flex>
+                    <mat-form-field floatLabel="always" floatPlaceholder="always" flex>
                         <input disabled matInput placeholder="Button Addon">
-                    </mat-input-container>
+                    </mat-form-field>
                     <button disabled class="input-button" color="fds-regular" mat-raised-button>
                         Search
                     </button>
                 </div>
             </div>
             <div layout="row" layout-margin>
-                <mat-input-container flex>
+                <mat-form-field floatLabel="always" flex>
                     <textarea matInput placeholder="Address" value="1600 Amphitheatre Pkway"></textarea>
-                </mat-input-container>
+                </mat-form-field>
             </div>
             <div layout="row" layout-margin>
-                <mat-input-container floatPlaceholder="always" flex>
+                <mat-form-field floatLabel="always" floatPlaceholder="always" flex>
                     <textarea disabled value="Address 2 Value" matInput placeholder="Address 2"></textarea>
-                </mat-input-container>
+                </mat-form-field>
             </div>
             <div layout="row" layout-margin>
-                <mat-input-container floatPlaceholder="always" flex>
+                <mat-form-field floatLabel="always" floatPlaceholder="always" flex>
                     <input matInput placeholder="City">
-                </mat-input-container>
-                <mat-input-container floatPlaceholder="always" flex>
+                </mat-form-field>
+                <mat-form-field floatLabel="always" floatPlaceholder="always" flex>
                     <input matInput placeholder="State">
-                </mat-input-container>
-                <mat-input-container floatPlaceholder="always" flex>
+                </mat-form-field>
+                <mat-form-field floatLabel="always" floatPlaceholder="always" flex>
                     <input matInput #postalCode maxlength="5" placeholder="Postal Code" value="94043">
                     <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
-                </mat-input-container>
+                </mat-form-field>
             </div>
         </form>
     ]]>
@@ -631,9 +631,9 @@ limitations under the License.
             <mat-divider></mat-divider>
             <mat-card-content>
                 <div class="pad-top-sm" layout="row">
-                    <mat-input-container flex="50">
+                    <mat-form-field floatLabel="always" flex="50">
                         <input matInput placeholder="State" [matAutocomplete]="tdAuto" [(ngModel)]="currentState" #modelDir="ngModel" (ngModelChange)="this.tdStates = filterStates(currentState)" [disabled]="tdDisabled">
-                    </mat-input-container>
+                    </mat-form-field>
                 </div>
                 <div class="push-top">
                     <button mat-button (click)="modelDir.reset()" class="text-upper">Reset</button>
@@ -651,9 +651,9 @@ limitations under the License.
                 <pre lang="html">
       <![CDATA[
         <div class="pad-top-sm" layout="row">
-            <mat-input-container flex="50">
+            <mat-form-field floatLabel="always" flex="50">
                 <input matInput placeholder="State" [matAutocomplete]="tdAuto" [(ngModel)]="currentState" #modelDir="ngModel" (ngModelChange)="this.tdStates = filterStates(currentState)" [disabled]="tdDisabled">
-            </mat-input-container>
+            </mat-form-field>
         </div>
         <div class="push-top">
             <button mat-button (click)="modelDir.reset()" class="text-upper">Reset</button>
@@ -676,66 +676,66 @@ limitations under the License.
         this.tdStates = [];
         this.tdDisabled = false;
         this.states = [
-            { code: 'AL', name: 'Alabama' },
-            { code: 'AK', name: 'Alaska' },
-            { code: 'AZ', name: 'Arizona' },
-            { code: 'AR', name: 'Arkansas' },
-            { code: 'CA', name: 'California' },
-            { code: 'CO', name: 'Colorado' },
-            { code: 'CT', name: 'Connecticut' },
-            { code: 'DE', name: 'Delaware' },
-            { code: 'FL', name: 'Florida' },
-            { code: 'GA', name: 'Georgia' },
-            { code: 'HI', name: 'Hawaii' },
-            { code: 'ID', name: 'Idaho' },
-            { code: 'IL', name: 'Illinois' },
-            { code: 'IN', name: 'Indiana' },
-            { code: 'IA', name: 'Iowa' },
-            { code: 'KS', name: 'Kansas' },
-            { code: 'KY', name: 'Kentucky' },
-            { code: 'LA', name: 'Louisiana' },
-            { code: 'ME', name: 'Maine' },
-            { code: 'MD', name: 'Maryland' },
-            { code: 'MA', name: 'Massachusetts' },
-            { code: 'MI', name: 'Michigan' },
-            { code: 'MN', name: 'Minnesota' },
-            { code: 'MS', name: 'Mississippi' },
-            { code: 'MO', name: 'Missouri' },
-            { code: 'MT', name: 'Montana' },
-            { code: 'NE', name: 'Nebraska' },
-            { code: 'NV', name: 'Nevada' },
-            { code: 'NH', name: 'New Hampshire' },
-            { code: 'NJ', name: 'New Jersey' },
-            { code: 'NM', name: 'New Mexico' },
-            { code: 'NY', name: 'New York' },
-            { code: 'NC', name: 'North Carolina' },
-            { code: 'ND', name: 'North Dakota' },
-            { code: 'OH', name: 'Ohio' },
-            { code: 'OK', name: 'Oklahoma' },
-            { code: 'OR', name: 'Oregon' },
-            { code: 'PA', name: 'Pennsylvania' },
-            { code: 'RI', name: 'Rhode Island' },
-            { code: 'SC', name: 'South Carolina' },
-            { code: 'SD', name: 'South Dakota' },
-            { code: 'TN', name: 'Tennessee' },
-            { code: 'TX', name: 'Texas' },
-            { code: 'UT', name: 'Utah' },
-            { code: 'VT', name: 'Vermont' },
-            { code: 'VA', name: 'Virginia' },
-            { code: 'WA', name: 'Washington' },
-            { code: 'WV', name: 'West Virginia' },
-            { code: 'WI', name: 'Wisconsin' },
-            { code: 'WY', name: 'Wyoming' },
+                    { code: 'AL', name: 'Alabama' },
+                    { code: 'AK', name: 'Alaska' },
+                    { code: 'AZ', name: 'Arizona' },
+                    { code: 'AR', name: 'Arkansas' },
+                    { code: 'CA', name: 'California' },
+                    { code: 'CO', name: 'Colorado' },
+                    { code: 'CT', name: 'Connecticut' },
+                    { code: 'DE', name: 'Delaware' },
+                    { code: 'FL', name: 'Florida' },
+                    { code: 'GA', name: 'Georgia' },
+                    { code: 'HI', name: 'Hawaii' },
+                    { code: 'ID', name: 'Idaho' },
+                    { code: 'IL', name: 'Illinois' },
+                    { code: 'IN', name: 'Indiana' },
+                    { code: 'IA', name: 'Iowa' },
+                    { code: 'KS', name: 'Kansas' },
+                    { code: 'KY', name: 'Kentucky' },
+                    { code: 'LA', name: 'Louisiana' },
+                    { code: 'ME', name: 'Maine' },
+                    { code: 'MD', name: 'Maryland' },
+                    { code: 'MA', name: 'Massachusetts' },
+                    { code: 'MI', name: 'Michigan' },
+                    { code: 'MN', name: 'Minnesota' },
+                    { code: 'MS', name: 'Mississippi' },
+                    { code: 'MO', name: 'Missouri' },
+                    { code: 'MT', name: 'Montana' },
+                    { code: 'NE', name: 'Nebraska' },
+                    { code: 'NV', name: 'Nevada' },
+                    { code: 'NH', name: 'New Hampshire' },
+                    { code: 'NJ', name: 'New Jersey' },
+                    { code: 'NM', name: 'New Mexico' },
+                    { code: 'NY', name: 'New York' },
+                    { code: 'NC', name: 'North Carolina' },
+                    { code: 'ND', name: 'North Dakota' },
+                    { code: 'OH', name: 'Ohio' },
+                    { code: 'OK', name: 'Oklahoma' },
+                    { code: 'OR', name: 'Oregon' },
+                    { code: 'PA', name: 'Pennsylvania' },
+                    { code: 'RI', name: 'Rhode Island' },
+                    { code: 'SC', name: 'South Carolina' },
+                    { code: 'SD', name: 'South Dakota' },
+                    { code: 'TN', name: 'Tennessee' },
+                    { code: 'TX', name: 'Texas' },
+                    { code: 'UT', name: 'Utah' },
+                    { code: 'VT', name: 'Vermont' },
+                    { code: 'VA', name: 'Virginia' },
+                    { code: 'WA', name: 'Washington' },
+                    { code: 'WV', name: 'West Virginia' },
+                    { code: 'WI', name: 'Wisconsin' },
+                    { code: 'WY', name: 'Wyoming' },
         ];
 
         ...
 
         displayFn: function(value) {
-            return value && typeof value === 'object' ? value.name : value;
+                    return value && typeof value === 'object' ? value.name : value;
         },
 
         filterStates: function(val) {
-            return val ? this.states.filter((s) => s.name.match(new RegExp(val, 'gi'))) : this.states;
+                    return val ? this.states.filter((s) => s.name.match(new RegExp(val, 'gi'))) : this.states;
         },
 
         ...
@@ -790,7 +790,7 @@ limitations under the License.
         ...
 
         toggleReadOnly: function() {
-            this.readOnly = !this.readOnly;
+                                this.readOnly = !this.readOnly;
         },
 
         ...
@@ -883,43 +883,43 @@ limitations under the License.
                                 <mat-button-toggle-group fxLayout="row" fxLayoutAlign="space-between center" class="expansion-panel-filter-toggle-group" multiple>
                                     <mat-button-toggle (change)="toggleDropletsFilter('type:asset')" [checked]="isDropletFilterChecked('type:asset')">
                                         <div fxFlex fxLayout="column" fxLayoutAlign="space-around stretch">
-                                            <div class="md-display-1 pad-top-sm" fxFlex="55">{{getDropletTypeCount('asset')}}</div>
+                                            <div class="mat-display-1 pad-top-sm" fxFlex="55">{{getDropletTypeCount('asset')}}</div>
                                             <div class="pad-top-sm" fxFlex="45">Assets</div>
                                         </div>
                                     </mat-button-toggle>
                                     <mat-button-toggle (change)="toggleDropletsFilter('type:extension')" [checked]="isDropletFilterChecked('type:extension')">
                                         <div fxFlex fxLayout="column" fxLayoutAlign="space-around stretch">
-                                            <div class="md-display-1 pad-top-sm" fxFlex="55">{{getDropletTypeCount('extension')}}</div>
+                                            <div class="mat-display-1 pad-top-sm" fxFlex="55">{{getDropletTypeCount('extension')}}</div>
                                             <div class="pad-top-sm" fxFlex="45">Extensions</div>
                                         </div>
                                     </mat-button-toggle>
                                     <mat-button-toggle (change)="toggleDropletsFilter('type:flow')" [checked]="isDropletFilterChecked('type:flow')">
                                         <div fxFlex fxLayout="column" fxLayoutAlign="space-around stretch">
-                                            <div class="md-display-1 pad-top-sm" fxFlex="55">{{getDropletTypeCount('flow')}}</div>
+                                            <div class="mat-display-1 pad-top-sm" fxFlex="55">{{getDropletTypeCount('flow')}}</div>
                                             <div class="pad-top-sm" fxFlex="45">Flows</div>
                                         </div>
                                     </mat-button-toggle>
                                     <mat-button-toggle (change)="toggleDropletsFilter('compliant.label:Compliant')" [checked]="isDropletFilterChecked('compliant.label:Compliant')">
                                         <div fxFlex fxLayout="column" fxLayoutAlign="space-around stretch">
-                                            <div class="md-display-1 pad-top-sm" fxFlex="55">{{getDropletCertificationCount('compliant')}}</div>
+                                            <div class="mat-display-1 pad-top-sm" fxFlex="55">{{getDropletCertificationCount('compliant')}}</div>
                                             <div class="pad-top-sm" fxFlex="45">Compliant</div>
                                         </div>
                                     </mat-button-toggle>
                                     <mat-button-toggle (change)="toggleDropletsFilter('fleet.label:Fleet')" [checked]="isDropletFilterChecked('fleet.label:Fleet')">
                                         <div fxFlex fxLayout="column" fxLayoutAlign="space-around stretch">
-                                            <div class="md-display-1 pad-top-sm" fxFlex="55">{{getDropletCertificationCount('fleet')}}</div>
+                                            <div class="mat-display-1 pad-top-sm" fxFlex="55">{{getDropletCertificationCount('fleet')}}</div>
                                             <div class="pad-top-sm" fxFlex="45">Fleet</div>
                                         </div>
                                     </mat-button-toggle>
                                     <mat-button-toggle (change)="toggleDropletsFilter('prod.label:Production Ready')" [checked]="isDropletFilterChecked('prod.label:Production Ready')">
                                         <div fxFlex fxLayout="column" fxLayoutAlign="space-around stretch">
-                                            <div class="md-display-1 pad-top-sm" fxFlex="55">{{getDropletCertificationCount('prod')}}</div>
+                                            <div class="mat-display-1 pad-top-sm" fxFlex="55">{{getDropletCertificationCount('prod')}}</div>
                                             <div class="pad-top-sm" fxFlex="45">Production Ready</div>
                                         </div>
                                     </mat-button-toggle>
                                     <mat-button-toggle (change)="toggleDropletsFilter('secure.label:Secure')" [checked]="isDropletFilterChecked('secure.label:Secure')">
                                         <div fxFlex fxLayout="column" fxLayoutAlign="space-around stretch">
-                                            <div class="md-display-1 pad-top-sm" fxFlex="55">{{getDropletCertificationCount('secure')}}</div>
+                                            <div class="mat-display-1 pad-top-sm" fxFlex="55">{{getDropletCertificationCount('secure')}}</div>
                                             <div class="pad-top-sm" fxFlex="45">Secure</div>
                                         </div>
                                     </mat-button-toggle>
@@ -1013,43 +1013,43 @@ limitations under the License.
                 <mat-button-toggle-group fxLayout="row" fxLayoutAlign="space-between center" class="expansion-panel-filter-toggle-group" multiple>
                     <mat-button-toggle (change)="toggleDropletsFilter('type:asset')" [checked]="isDropletFilterChecked('type:asset')">
                         <div fxFlex fxLayout="column" fxLayoutAlign="space-around stretch">
-                            <div class="md-display-1 pad-top-sm" fxFlex="55">{ {getDropletTypeCount('asset')} }</div>
+                            <div class="mat-display-1 pad-top-sm" fxFlex="55">{ {getDropletTypeCount('asset')} }</div>
                             <div class="pad-top-sm" fxFlex="45">Assets</div>
                         </div>
                     </mat-button-toggle>
                     <mat-button-toggle (change)="toggleDropletsFilter('type:extension')" [checked]="isDropletFilterChecked('type:extension')">
                         <div fxFlex fxLayout="column" fxLayoutAlign="space-around stretch">
-                            <div class="md-display-1 pad-top-sm" fxFlex="55">{ {getDropletTypeCount('extension')} }</div>
+                            <div class="mat-display-1 pad-top-sm" fxFlex="55">{ {getDropletTypeCount('extension')} }</div>
                             <div class="pad-top-sm" fxFlex="45">Extensions</div>
                         </div>
                     </mat-button-toggle>
                     <mat-button-toggle (change)="toggleDropletsFilter('type:flow')" [checked]="isDropletFilterChecked('type:flow')">
                         <div fxFlex fxLayout="column" fxLayoutAlign="space-around stretch">
-                            <div class="md-display-1 pad-top-sm" fxFlex="55">{ {getDropletTypeCount('flow')} }</div>
+                            <div class="mat-display-1 pad-top-sm" fxFlex="55">{ {getDropletTypeCount('flow')} }</div>
                             <div class="pad-top-sm" fxFlex="45">Flows</div>
                         </div>
                     </mat-button-toggle>
                     <mat-button-toggle (change)="toggleDropletsFilter('compliant.label:Compliant')" [checked]="isDropletFilterChecked('compliant.label:Compliant')">
                         <div fxFlex fxLayout="column" fxLayoutAlign="space-around stretch">
-                            <div class="md-display-1 pad-top-sm" fxFlex="55">{ {getDropletCertificationCount('compliant')} }</div>
+                            <div class="mat-display-1 pad-top-sm" fxFlex="55">{ {getDropletCertificationCount('compliant')} }</div>
                             <div class="pad-top-sm" fxFlex="45">Compliant</div>
                         </div>
                     </mat-button-toggle>
                     <mat-button-toggle (change)="toggleDropletsFilter('fleet.label:Fleet')" [checked]="isDropletFilterChecked('fleet.label:Fleet')">
                         <div fxFlex fxLayout="column" fxLayoutAlign="space-around stretch">
-                            <div class="md-display-1 pad-top-sm" fxFlex="55">{ {getDropletCertificationCount('fleet')} }</div>
+                            <div class="mat-display-1 pad-top-sm" fxFlex="55">{ {getDropletCertificationCount('fleet')} }</div>
                             <div class="pad-top-sm" fxFlex="45">Fleet</div>
                         </div>
                     </mat-button-toggle>
                     <mat-button-toggle (change)="toggleDropletsFilter('prod.label:Production Ready')" [checked]="isDropletFilterChecked('prod.label:Production Ready')">
                         <div fxFlex fxLayout="column" fxLayoutAlign="space-around stretch">
-                            <div class="md-display-1 pad-top-sm" fxFlex="55">{ {getDropletCertificationCount('prod')} }</div>
+                            <div class="mat-display-1 pad-top-sm" fxFlex="55">{ {getDropletCertificationCount('prod')} }</div>
                             <div class="pad-top-sm" fxFlex="45">Production Ready</div>
                         </div>
                     </mat-button-toggle>
                     <mat-button-toggle (change)="toggleDropletsFilter('secure.label:Secure')" [checked]="isDropletFilterChecked('secure.label:Secure')">
                         <div fxFlex fxLayout="column" fxLayoutAlign="space-around stretch">
-                            <div class="md-display-1 pad-top-sm" fxFlex="55">{ {getDropletCertificationCount('secure')} }</div>
+                            <div class="mat-display-1 pad-top-sm" fxFlex="55">{ {getDropletCertificationCount('secure')} }</div>
                             <div class="pad-top-sm" fxFlex="45">Secure</div>
                         </div>
                     </mat-button-toggle>
@@ -1138,12 +1138,12 @@ limitations under the License.
         this.dataTableService = TdDataTableService;
 
         this.droplets = [{
-            id: '23f6cc59-0156-1000-09b4-2b0610089090',
-            name: "Decompression_Circular_Flow",
-            displayName: 'Decompressed Circular flow',
-            type: 'flow',
-            sublabel: 'A sublabel',
-            compliant: {
+                            id: '23f6cc59-0156-1000-09b4-2b0610089090',
+                            name: "Decompression_Circular_Flow",
+                            displayName: 'Decompressed Circular flow',
+                            type: 'flow',
+                            sublabel: 'A sublabel',
+                            compliant: {
                 id: '25fd6vv87-3549-0001-05g6-4d4567890765',
                 label: 'Compliant',
                 type: 'certification'
@@ -1167,7 +1167,7 @@ limitations under the License.
                 id: '23f6cc59-0156-1000-06b4-2b0810089090',
                 revision: '1',
                 dependentFlows: [{
-                    id: '25fd6vv87-3549-0001-05g6-4d4567890765'
+                            id: '25fd6vv87-3549-0001-05g6-4d4567890765'
                 }],
                 created: date.setDate(date.getDate() - 1),
                 updated: new Date()
@@ -1175,7 +1175,7 @@ limitations under the License.
                 id: '25fd6vv87-3549-0001-05g6-4d4567890765',
                 revision: '2',
                 dependentFlows: [{
-                    id: '23f6cc59-0156-1000-06b4-2b0810089090'
+                            id: '23f6cc59-0156-1000-06b4-2b0810089090'
                 }],
                 created: new Date(),
                 updated: new Date()
@@ -1197,12 +1197,12 @@ limitations under the License.
                 'tooltip': 'Whatever else we want to do...'
             }]
         }, {
-            id: '25fd6vv87-3249-0001-05g6-4d4767890765',
-            name: "DateConversion",
-            displayName: 'Date conversion',
-            type: 'asset',
-            sublabel: 'A sublabel',
-            compliant: {
+                            id: '25fd6vv87-3249-0001-05g6-4d4767890765',
+                            name: "DateConversion",
+                            displayName: 'Date conversion',
+                            type: 'asset',
+                            sublabel: 'A sublabel',
+                            compliant: {
                 id: '25fd6vv34-3549-0001-05g6-4d4567890765',
                 label: 'Compliant',
                 type: 'certification'
@@ -1216,7 +1216,7 @@ limitations under the License.
                 id: '23f6ic59-0156-1000-06b4-2b0810089090',
                 revision: '1',
                 dependentFlows: [{
-                    id: '23f6cc19-0156-1000-06b4-2b0810089090'
+                            id: '23f6cc19-0156-1000-06b4-2b0810089090'
                 }],
                 created: new Date(),
                 updated: new Date()
@@ -1230,16 +1230,16 @@ limitations under the License.
                 'tooltip': 'Delete User'
             }]
         }, {
-            id: '52fd6vv87-3294-0001-05g6-4d4767890765',
-            name: "nifi-email-bundle",
-            displayName: 'nifi-email-bundle',
-            type: 'extension',
-            sublabel: 'A sublabel',
-            compliant: {
+                            id: '52fd6vv87-3294-0001-05g6-4d4767890765',
+                            name: "nifi-email-bundle",
+                            displayName: 'nifi-email-bundle',
+                            type: 'extension',
+                            sublabel: 'A sublabel',
+                            compliant: {
                 id: '33fd6vv87-3549-0001-05g6-4d4567890765',
                 label: 'Compliant',
                 test: {
-                    label: 'test'
+                            label: 'test'
                 },
                 type: 'certification'
             },
@@ -1247,7 +1247,7 @@ limitations under the License.
                 id: '23d3cc59-0156-1000-06b4-2b0810089090',
                 revision: '1',
                 dependentFlows: [{
-                    id: '23f6cc89-0156-1000-06b4-2b0810089090'
+                            id: '23f6cc89-0156-1000-06b4-2b0810089090'
                 }],
                 created: new Date(),
                 updated: new Date()
@@ -1269,11 +1269,11 @@ limitations under the License.
         this.filteredDroplets = [];
 
         this.dropletColumns = [
-            { name: 'id', label: 'ID', sortable: true },
-            { name: 'name', label: 'Name', sortable: true },
-            { name: 'displayName', label: 'Display Name', sortable: true },
-            { name: 'sublabel', label: 'Label', sortable: true },
-            { name: 'type', label: 'Type', sortable: true }
+                            { name: 'id', label: 'ID', sortable: true },
+                            { name: 'name', label: 'Name', sortable: true },
+                            { name: 'displayName', label: 'Display Name', sortable: true },
+                            { name: 'sublabel', label: 'Label', sortable: true },
+                            { name: 'type', label: 'Type', sortable: true }
         ];
 
         this.autoCompleteDroplets = [];
@@ -1282,19 +1282,19 @@ limitations under the License.
         ...
 
         isDropletFilterChecked: function(term) {
-            return (this.dropletsSearchTerms.indexOf(term) > -1);
+                            return (this.dropletsSearchTerms.indexOf(term) > -1);
         },
 
         getDropletTypeCount: function(type) {
-            return this.filteredDroplets.filter(function(droplet) {
+                            return this.filteredDroplets.filter(function(droplet) {
                 return droplet.type === type;
             }).length;
         },
 
         getDropletCertificationCount: function(certification) {
-            return this.filteredDroplets.filter(droplet => {
+                            return this.filteredDroplets.filter(droplet => {
                 return Object.keys(droplet).find((key) => {
-                    if (key === certification && droplet[certification].type === 'certification') {
+                            if (key === certification && droplet[certification].type === 'certification') {
                         return droplet;
                     }
                 });
@@ -1302,25 +1302,25 @@ limitations under the License.
         },
 
         getSortBy: function() {
-            var sortByColumnLabel;
-            var arrayLength = this.dropletColumns.length;
-            for (var i = 0; i < arrayLength; i++) {
+                            var sortByColumnLabel;
+                            var arrayLength = this.dropletColumns.length;
+                            for (var i = 0; i < arrayLength; i++) {
                 if (this.dropletColumns[i].active === true) {
-                    sortByColumnLabel = this.dropletColumns[i].label;
-                    break;
+                            sortByColumnLabel = this.dropletColumns[i].label;
+                            break;
                 }
             }
             return sortByColumnLabel;
         },
 
         sortDroplets: function(column) {
-            if (column.sortable === true) {
+                            if (column.sortable === true) {
                 // toggle column sort order
                 var sortOrder = column.sortOrder = (column.sortOrder === 'ASC') ? 'DESC' : 'ASC';
                 this.filterDroplets(column.name, sortOrder);
                 //only one column can be actively sorted so we reset all to inactive
                 this.dropletColumns.forEach(function (c) {
-                    c.active = false;
+                            c.active = false;
                 });
                 //and set this column as the actively sorted column
                 column.active = true;
@@ -1329,13 +1329,13 @@ limitations under the License.
         },
 
         toggleDropletsFilter: function(searchTerm) {
-            var applySearchTerm = true;
-            // check if the search term is already applied and remove it if true
-            if (this.dropletsSearchTerms.length > 0) {
+                            var applySearchTerm = true;
+                            // check if the search term is already applied and remove it if true
+                            if (this.dropletsSearchTerms.length > 0) {
                 var arrayLength = this.dropletsSearchTerms.length;
                 for (var i = 0; i < arrayLength; i++) {
-                    var index = this.dropletsSearchTerms.indexOf(searchTerm);
-                    if (index > -1) {
+                            var index = this.dropletsSearchTerms.indexOf(searchTerm);
+                            if (index > -1) {
                         this.dropletsSearchTerms.splice(index, 1);
                         applySearchTerm = false;
                     }
@@ -1351,11 +1351,11 @@ limitations under the License.
         },
 
         filterDroplets: function(sortBy, sortOrder) {
-            // if `sortBy` is `undefined` then find the first sortable column in this.dropletColumns
-            if (sortBy === undefined) {
+                            // if `sortBy` is `undefined` then find the first sortable column in this.dropletColumns
+                            if (sortBy === undefined) {
                 var arrayLength = this.dropletColumns.length;
                 for (var i = 0; i < arrayLength; i++) {
-                    if (this.dropletColumns[i].sortable === true) {
+                            if (this.dropletColumns[i].sortable === true) {
                         sortBy = this.dropletColumns[i].name;
                         this.activeDropletColumn = this.dropletColumns[i];
                         //only one column can be actively sorted so we reset all to inactive
@@ -1384,13 +1384,13 @@ limitations under the License.
         },
 
         getAutoCompleteDroplets: function() {
-            this.autoCompleteDroplets = [];
-            this.dropletColumns.forEach(c => this.filteredDroplets.forEach(r => (r[c.name.toLowerCase()]) ? this.autoCompleteDroplets.push(r[c.name.toLowerCase()].toString()) : ''));
+                            this.autoCompleteDroplets = [];
+                            this.dropletColumns.forEach(c => this.filteredDroplets.forEach(r => (r[c.name.toLowerCase()]) ? this.autoCompleteDroplets.push(r[c.name.toLowerCase()].toString()) : ''));
         },
 
         filterData: function(data, searchTerm, ignoreCase) {
-            var field = '';
-            if (searchTerm.indexOf(":") > -1) {
+                            var field = '';
+                            if (searchTerm.indexOf(":") > -1) {
                 field = searchTerm.split(':')[0].trim();
                 searchTerm = searchTerm.split(':')[1].trim();
             }
@@ -1398,16 +1398,16 @@ limitations under the License.
 
             if (filter) {
                 data = data.filter(item => {
-                    var res = Object.keys(item).find((key) => {
+                            var res = Object.keys(item).find((key) => {
                         if (field.indexOf(".") > -1) {
                             var objArray = field.split(".");
                             var obj = item;
                             var arrayLength = objArray.length;
                             for (var i = 0; i < arrayLength; i++) {
                                 try {
-                                    obj = obj[objArray[i]];
+                            obj = obj[objArray[i]];
                                 } catch (e) {
-                                    return false;
+                            return false;
                                 }
                             }
                             var preItemValue = ('' + obj);
@@ -1596,18 +1596,18 @@ limitations under the License.
         this.dataTableService = TdDataTableService;
 
         this.data = [{
-            'id': 1,
-            'name': 'Frozen yogurt',
-            'type': 'Ice cream',
-            'calories': 159.0,
-            'fat': 6.0,
-            'carbs': 24.0,
-            'protein': 4.0,
-            'sodium': 87.0,
-            'calcium': 14.0,
-            'iron': 1.0,
-            'comments': 'I love froyo!',
-            'actions': [{
+                            'id': 1,
+                            'name': 'Frozen yogurt',
+                            'type': 'Ice cream',
+                            'calories': 159.0,
+                            'fat': 6.0,
+                            'carbs': 24.0,
+                            'protein': 4.0,
+                            'sodium': 87.0,
+                            'calcium': 14.0,
+                            'iron': 1.0,
+                            'comments': 'I love froyo!',
+                            'actions': [{
                 'name': 'Action 1',
                 'icon': 'fa fa-user',
                 'tooltip': 'Manage Users'
@@ -1617,17 +1617,17 @@ limitations under the License.
                 'tooltip': 'Manage Permissions'
             }]
         }, {
-            'id': 2,
-            'name': 'Ice cream sandwich',
-            'type': 'Ice cream',
-            'calories': 237.0,
-            'fat': 9.0,
-            'carbs': 37.0,
-            'protein': 4.3,
-            'sodium': 129.0,
-            'calcium': 8.0,
-            'iron': 1.0,
-            'actions': [{
+                            'id': 2,
+                            'name': 'Ice cream sandwich',
+                            'type': 'Ice cream',
+                            'calories': 237.0,
+                            'fat': 9.0,
+                            'carbs': 37.0,
+                            'protein': 4.3,
+                            'sodium': 129.0,
+                            'calcium': 8.0,
+                            'iron': 1.0,
+                            'actions': [{
                 'name': 'Action 1',
                 'icon': 'fa fa-user',
                 'tooltip': 'Manage Users'
@@ -1647,17 +1647,17 @@ limitations under the License.
                 'tooltip': 'Action 5'
             }]
         }, {
-            'id': 3,
-            'name': 'Eclair',
-            'type': 'Pastry',
-            'calories': 262.0,
-            'fat': 16.0,
-            'carbs': 24.0,
-            'protein': 6.0,
-            'sodium': 337.0,
-            'calcium': 6.0,
-            'iron': 7.0,
-            'actions': [{
+                            'id': 3,
+                            'name': 'Eclair',
+                            'type': 'Pastry',
+                            'calories': 262.0,
+                            'fat': 16.0,
+                            'carbs': 24.0,
+                            'protein': 6.0,
+                            'sodium': 337.0,
+                            'calcium': 6.0,
+                            'iron': 7.0,
+                            'actions': [{
                 'name': 'Action 1',
                 'icon': 'fa fa-user',
                 'tooltip': 'Manage Users'
@@ -1677,17 +1677,17 @@ limitations under the License.
                 'tooltip': 'Action 5'
             }],
         }, {
-            'id': 4,
-            'name': 'Cupcake',
-            'type': 'Pastry',
-            'calories': 305.0,
-            'fat': 3.7,
-            'carbs': 67.0,
-            'protein': 4.3,
-            'sodium': 413.0,
-            'calcium': 3.0,
-            'iron': 8.0,
-            'actions': [{
+                            'id': 4,
+                            'name': 'Cupcake',
+                            'type': 'Pastry',
+                            'calories': 305.0,
+                            'fat': 3.7,
+                            'carbs': 67.0,
+                            'protein': 4.3,
+                            'sodium': 413.0,
+                            'calcium': 3.0,
+                            'iron': 8.0,
+                            'actions': [{
                 'name': 'Action 1',
                 'icon': 'fa fa-user',
                 'tooltip': 'Manage Users'
@@ -1707,98 +1707,98 @@ limitations under the License.
                 'tooltip': 'Action 5'
             }],
         }, {
-            'id': 5,
-            'name': 'Jelly bean',
-            'type': 'Candy',
-            'calories': 375.0,
-            'fat': 0.0,
-            'carbs': 94.0,
-            'protein': 0.0,
-            'sodium': 50.0,
-            'calcium': 0.0,
-            'iron': 0.0,
+                            'id': 5,
+                            'name': 'Jelly bean',
+                            'type': 'Candy',
+                            'calories': 375.0,
+                            'fat': 0.0,
+                            'carbs': 94.0,
+                            'protein': 0.0,
+                            'sodium': 50.0,
+                            'calcium': 0.0,
+                            'iron': 0.0,
         }, {
-            'id': 6,
-            'name': 'Lollipop',
-            'type': 'Candy',
-            'calories': 392.0,
-            'fat': 0.2,
-            'carbs': 98.0,
-            'protein': 0.0,
-            'sodium': 38.0,
-            'calcium': 0.0,
-            'iron': 2.0,
+                            'id': 6,
+                            'name': 'Lollipop',
+                            'type': 'Candy',
+                            'calories': 392.0,
+                            'fat': 0.2,
+                            'carbs': 98.0,
+                            'protein': 0.0,
+                            'sodium': 38.0,
+                            'calcium': 0.0,
+                            'iron': 2.0,
         }, {
-            'id': 7,
-            'name': 'Honeycomb',
-            'type': 'Other',
-            'calories': 408.0,
-            'fat': 3.2,
-            'carbs': 87.0,
-            'protein': 6.5,
-            'sodium': 562.0,
-            'calcium': 0.0,
-            'iron': 45.0,
+                            'id': 7,
+                            'name': 'Honeycomb',
+                            'type': 'Other',
+                            'calories': 408.0,
+                            'fat': 3.2,
+                            'carbs': 87.0,
+                            'protein': 6.5,
+                            'sodium': 562.0,
+                            'calcium': 0.0,
+                            'iron': 45.0,
         }, {
-            'id': 8,
-            'name': 'Donut',
-            'type': 'Pastry',
-            'calories': 452.0,
-            'fat': 25.0,
-            'carbs': 51.0,
-            'protein': 4.9,
-            'sodium': 326.0,
-            'calcium': 2.0,
-            'iron': 22.0,
+                            'id': 8,
+                            'name': 'Donut',
+                            'type': 'Pastry',
+                            'calories': 452.0,
+                            'fat': 25.0,
+                            'carbs': 51.0,
+                            'protein': 4.9,
+                            'sodium': 326.0,
+                            'calcium': 2.0,
+                            'iron': 22.0,
         }, {
-            'id': 9,
-            'name': 'KitKat',
-            'type': 'Candy',
-            'calories': 518.0,
-            'fat': 26.0,
-            'carbs': 65.0,
-            'protein': 7.0,
-            'sodium': 54.0,
-            'calcium': 12.0,
-            'iron': 6.0,
+                            'id': 9,
+                            'name': 'KitKat',
+                            'type': 'Candy',
+                            'calories': 518.0,
+                            'fat': 26.0,
+                            'carbs': 65.0,
+                            'protein': 7.0,
+                            'sodium': 54.0,
+                            'calcium': 12.0,
+                            'iron': 6.0,
         }, {
-            'id': 10,
-            'name': 'Chocolate',
-            'type': 'Candy',
-            'calories': 518.0,
-            'fat': 26.0,
-            'carbs': 65.0,
-            'protein': 7.0,
-            'sodium': 54.0,
-            'calcium': 12.0,
-            'iron': 6.0,
+                            'id': 10,
+                            'name': 'Chocolate',
+                            'type': 'Candy',
+                            'calories': 518.0,
+                            'fat': 26.0,
+                            'carbs': 65.0,
+                            'protein': 7.0,
+                            'sodium': 54.0,
+                            'calcium': 12.0,
+                            'iron': 6.0,
         }, {
-            'id': 11,
-            'name': 'Chamoy',
-            'type': 'Candy',
-            'calories': 518.0,
-            'fat': 26.0,
-            'carbs': 65.0,
-            'protein': 7.0,
-            'sodium': 54.0,
-            'calcium': 12.0,
-            'iron': 6.0,
+                            'id': 11,
+                            'name': 'Chamoy',
+                            'type': 'Candy',
+                            'calories': 518.0,
+                            'fat': 26.0,
+                            'carbs': 65.0,
+                            'protein': 7.0,
+                            'sodium': 54.0,
+                            'calcium': 12.0,
+                            'iron': 6.0,
         }, ];
 
         this.filteredData = this.data;
         this.filteredTotal = this.data.length;
 
         this.columns = [
-            { name: 'comments', label: 'Comments' },
-            { name: 'name', label: 'Dessert (100g serving)', sortable: true },
-            { name: 'type', label: 'Type', sortable: true },
-            { name: 'calories', label: 'Calories', numeric: true, format: NUMBER_FORMAT, sortable: true },
-            { name: 'fat', label: 'Fat (g)', numeric: true, format: DECIMAL_FORMAT, sortable: true },
-            { name: 'carbs', label: 'Carbs (g)', numeric: true, format: NUMBER_FORMAT, sortable: true },
-            { name: 'protein', label: 'Protein (g)', numeric: true, format: DECIMAL_FORMAT, sortable: true },
-            { name: 'sodium', label: 'Sodium (mg)', numeric: true, format: NUMBER_FORMAT, sortable: true },
-            { name: 'calcium', label: 'Calcium (%)', numeric: true, format: NUMBER_FORMAT, sortable: true },
-            { name: 'iron', label: 'Iron (%)', numeric: true, format: NUMBER_FORMAT },
+                            { name: 'comments', label: 'Comments' },
+                            { name: 'name', label: 'Dessert (100g serving)', sortable: true },
+                            { name: 'type', label: 'Type', sortable: true },
+                            { name: 'calories', label: 'Calories', numeric: true, format: NUMBER_FORMAT, sortable: true },
+                            { name: 'fat', label: 'Fat (g)', numeric: true, format: DECIMAL_FORMAT, sortable: true },
+                            { name: 'carbs', label: 'Carbs (g)', numeric: true, format: NUMBER_FORMAT, sortable: true },
+                            { name: 'protein', label: 'Protein (g)', numeric: true, format: DECIMAL_FORMAT, sortable: true },
+                            { name: 'sodium', label: 'Sodium (mg)', numeric: true, format: NUMBER_FORMAT, sortable: true },
+                            { name: 'calcium', label: 'Calcium (%)', numeric: true, format: NUMBER_FORMAT, sortable: true },
+                            { name: 'iron', label: 'Iron (%)', numeric: true, format: NUMBER_FORMAT },
         ];
 
         this.allRowsSelected = false;
@@ -1813,7 +1813,7 @@ limitations under the License.
         ...
 
         sort: function(sortEvent, column) {
-            if (column.sortable) {
+                            if (column.sortable) {
                 var sortBy = column.name;
                 var sortOrder = column.sortOrder = (column.sortOrder === 'ASC') ? 'DESC' : 'ASC';
                 this.filter(sortBy, sortOrder);
@@ -1826,29 +1826,29 @@ limitations under the License.
         },
 
         searchRemove: function(searchTerm) {
-            //only remove the first occurrence of the search term
-            var index = this.searchTerm.indexOf(searchTerm);
-            if (index !== -1) {
+                            //only remove the first occurrence of the search term
+                            var index = this.searchTerm.indexOf(searchTerm);
+                            if (index !== -1) {
                 this.searchTerm.splice(index, 1);
             }
             this.filter();
         },
 
         searchAdd: function(searchTerm) {
-            this.searchTerm.push(searchTerm);
-            this.filter();
+                            this.searchTerm.push(searchTerm);
+                            this.filter();
         },
 
         page: function(pagingEvent) {
-            this.fromRow = pagingEvent.fromRow;
-            this.currentPage = pagingEvent.page;
-            this.pageSize = pagingEvent.pageSize;
-            this.filter();
+                            this.fromRow = pagingEvent.fromRow;
+                            this.currentPage = pagingEvent.page;
+                            this.pageSize = pagingEvent.pageSize;
+                            this.filter();
         },
 
         filterData: function(data, searchTerm, ignoreCase) {
-            var field = '';
-            if (searchTerm.indexOf(":") > -1) {
+                            var field = '';
+                            if (searchTerm.indexOf(":") > -1) {
                 field = searchTerm.split(':')[0].trim();
                 searchTerm = searchTerm.split(':')[1].trim();
             }
@@ -1856,16 +1856,16 @@ limitations under the License.
 
             if (filter) {
                 data = data.filter(item => {
-                    var res = Object.keys(item).find((key) => {
+                            var res = Object.keys(item).find((key) => {
                         if (field.indexOf(".") > -1) {
                             var objArray = field.split(".");
                             var obj = item;
                             var arrayLength = objArray.length;
                             for (var i = 0; i < arrayLength; i++) {
                                 try {
-                                    obj = obj[objArray[i]];
+                            obj = obj[objArray[i]];
                                 } catch (e) {
-                                    return false;
+                            return false;
                                 }
                             }
                             var preItemValue = ('' + obj);
@@ -1887,7 +1887,7 @@ limitations under the License.
         },
 
         filter: function(sortBy, sortOrder) {
-            if (this.allRowsSelected) {
+                            if (this.allRowsSelected) {
                 this.toggleSelectAll();
             }
             this.deselectAll();
@@ -1895,8 +1895,8 @@ limitations under the License.
 
             if (this.searchTerm.length > 0) {
                 for (var i = 0; i < this.searchTerm.length; i++) {
-                    //account for column/field name specific search syntax
-                    if (this.searchTerm[i].indexOf(":") > -1) {
+                            //account for column/field name specific search syntax
+                            if (this.searchTerm[i].indexOf(":") > -1) {
                         newData = this.filterData(newData, this.searchTerm[i].split(':')[1].trim(), true, this.searchTerm[i].split(':')[0].trim());
                     } else { //otherwise search all cells
                         newData = this.filterData(newData, this.searchTerm[i], true);
@@ -1913,145 +1913,145 @@ limitations under the License.
         },
 
         toggleSelect: function(row) {
-            if (!row.checked) {
-                this.allRowsSelected = false;
-            } else {
-                if (this.allFilteredRowsSelected()) {
-                    this.allRowsSelected = true;
-                } else {
-                    this.allRowsSelected = false;
-                }
-            }
-        },
+                            if (!row.checked) {
+                                this.allRowsSelected = false;
+                                } else {
+                                if (this.allFilteredRowsSelected()) {
+                                this.allRowsSelected = true;
+                                } else {
+                                this.allRowsSelected = false;
+                                }
+                                }
+                                },
 
-        toggleSelectAll: function() {
-            this.allRowsSelected = !this.allRowsSelected;
-            if (this.allRowsSelected) {
-                this.selectAll();
-            } else {
-                this.deselectAll();
-            }
-        },
+                                toggleSelectAll: function() {
+                                this.allRowsSelected = !this.allRowsSelected;
+                                if (this.allRowsSelected) {
+                                this.selectAll();
+                                } else {
+                                this.deselectAll();
+                                }
+                                },
 
-        selectAll: function() {
-            this.filteredData.forEach(c => c.checked = true);
-        },
+                                selectAll: function() {
+                                this.filteredData.forEach(c => c.checked = true);
+                                },
 
-        deselectAll: function() {
-            this.filteredData.forEach(c => c.checked = false);
-        },
+                                deselectAll: function() {
+                                this.filteredData.forEach(c => c.checked = false);
+                                },
 
-        allFilteredRowsSelected: function() {
-            var allFilteredRowsSelected = true;
-            this.filteredData.forEach(function(c) {
-                if (c.checked === undefined || c.checked === false) {
-                    allFilteredRowsSelected = false;
-                }
-            });
+                                allFilteredRowsSelected: function() {
+                                var allFilteredRowsSelected = true;
+                                this.filteredData.forEach(function(c) {
+                                if (c.checked === undefined || c.checked === false) {
+                                allFilteredRowsSelected = false;
+                                }
+                                });
 
-            return allFilteredRowsSelected;
-        },
+                                return allFilteredRowsSelected;
+                                },
 
-        areTooltipsOn: function() {
-            return this.columns[0].hasOwnProperty('tooltip');
-        },
+                                areTooltipsOn: function() {
+                                return this.columns[0].hasOwnProperty('tooltip');
+                                },
 
-        toggleTooltips: function() {
-            if (this.columns[0].tooltip) {
-                this.columns.forEach(c => delete c.tooltip);
-            } else {
-                this.columns.forEach(c => c.tooltip = `This is ${c.label}!`);
-            }
-        },
+                                toggleTooltips: function() {
+                                if (this.columns[0].tooltip) {
+                                this.columns.forEach(c => delete c.tooltip);
+                                } else {
+                                this.columns.forEach(c => c.tooltip = `This is ${c.label}!`);
+                                }
+                                },
 
-        openDataTablePrompt: function(row, name) {
-            this.dialogService.openPrompt({
-                message: 'Enter comment?',
-                value: row[name],
-            }).afterClosed().subscribe(value => {
-                if (value !== undefined) {
-                    row[name] = value;
-                }
-            })
-        },
+                                openDataTablePrompt: function(row, name) {
+                                this.dialogService.openPrompt({
+                                message: 'Enter comment?',
+                                value: row[name],
+                            }).afterClosed().subscribe(value => {
+                                if (value !== undefined) {
+                                row[name] = value;
+                                }
+                                })
+                                },
 
-        getAutoCompleteData: function() {
-            this.autoCompleteData = [];
-            this.columns.forEach(c => this.filteredData.forEach(r => (r[c.name.toLowerCase()]) ? this.autoCompleteData.push(r[c.name.toLowerCase()].toString()):''));
-        },
+                                getAutoCompleteData: function() {
+                                this.autoCompleteData = [];
+                                this.columns.forEach(c => this.filteredData.forEach(r => (r[c.name.toLowerCase()]) ? this.autoCompleteData.push(r[c.name.toLowerCase()].toString()):''));
+                                },
 
-        ...
-          ]]>
-                    </pre>
-                    </mat-tab>
-                </mat-tab-group>
-            </mat-card-content>
-            <mat-divider></mat-divider>
-            <mat-card-actions>
-                <button matTooltip="Column field name tooltips toggle." mat-button color="primary" (click)="toggleTooltips()" class="text-upper">
-                    Tooltips ({{areTooltipsOn() ? 'ON' : 'OFF'}})
-                </button>
-            </mat-card-actions>
-        </mat-card>
-        <mat-card>
-            <mat-card-title class="pad-bottom-sm">Checkbox</mat-card-title>
-            <mat-divider></mat-divider>
-            <mat-card-content>
-                <h3 class="mat-title">Basic Usage</h3>
-                <mat-divider></mat-divider>
-                <mat-list>
-                    <mat-list-item *ngFor="let grocery of groceries">
-                        <mat-checkbox [checked]="grocery.bought">
-                            {{grocery.name}}
-                        </mat-checkbox>
-                    </mat-list-item>
-                </mat-list>
-                <h3 class="mat-title">Usage</h3>
-                <p>HTML:</p>
-                <pre lang="html">
-                        <![CDATA[
-                    <!-- Basic Usage -->
-        <mat-checkbox [checked]="grocery.bought">
-            { {grocery.name} }
-        </mat-checkbox>
+                                ...
+                                ]]>
+                                </pre>
+                            </mat-tab>
+                            </mat-tab-group>
+                            </mat-card-content>
+                            <mat-divider></mat-divider>
+                            <mat-card-actions>
+                            <button matTooltip="Column field name tooltips toggle." mat-button color="primary" (click)="toggleTooltips()" class="text-upper">
+                                Tooltips ({{areTooltipsOn() ? 'ON' : 'OFF'}})
+                                </button>
+                            </mat-card-actions>
+                            </mat-card>
+                            <mat-card>
+                            <mat-card-title class="pad-bottom-sm">Checkbox</mat-card-title>
+                                <mat-divider></mat-divider>
+                                <mat-card-content>
+                                <h3 class="mat-title">Basic Usage</h3>
+                            <mat-divider></mat-divider>
+                            <mat-list>
+                            <mat-list-item *ngFor="let grocery of groceries">
+                            <mat-checkbox [checked]="grocery.bought">
+                                {{grocery.name}}
+                                </mat-checkbox>
+                            </mat-list-item>
+                            </mat-list>
+                            <h3 class="mat-title">Usage</h3>
+                                <p>HTML:</p>
+                            <pre lang="html">
+                                <![CDATA[
+                                <!-- Basic Usage -->
+                                <mat-checkbox [checked]="grocery.bought">
+                                    { {grocery.name} }
+                                </mat-checkbox>
+                                ]]>
+                                </pre>
+                            <p>Javascript:</p>
+                            <pre lang="javascript">
+                                <![CDATA[
+                                    this.groceries = [{
+                                        bought: true,
+                                name: 'Seitan',
+                                }, {
+                            bought: false,
+                                name: 'Almond Meal Flour',
+                                }, {
+                            bought: false,
+                                name: 'Organic Eggs',
+                                }, ];
                         ]]>
                     </pre>
-                <p>Javascript:</p>
-                <pre lang="javascript">
-                        <![CDATA[
-        this.groceries = [{
-            bought: true,
-            name: 'Seitan',
-        }, {
-            bought: false,
-            name: 'Almond Meal Flour',
-        }, {
-            bought: false,
-            name: 'Organic Eggs',
-        }, ];
-                        ]]>
-                    </pre>
-                <h3 class="mat-title">Usage within Forms</h3>
-                <mat-divider></mat-divider>
-                <form>
-                    <div layout="row" layout-align="start center">
-                        <mat-checkbox flex="initial" [(ngModel)]="user.agreesToTOS" name="agreesToTOS">
-                            I agree to the terms
-                        </mat-checkbox>
-                        <button mat-raised-button color="fds-secondary" [disabled]="!user.agreesToTOS" class="pad-right-sm" class="text-upper">Sign Up</button>
-                    </div>
-                    <mat-divider></mat-divider>
-                    <mat-checkbox labelPosition="after">
-                        I come after my label.
-                    </mat-checkbox>
-                    <mat-divider></mat-divider>
-                    <mat-checkbox labelPosition="before">I come before my label</mat-checkbox>
-                </form>
-                <h3 class="mat-title">Usage</h3>
-                <p>HTML:</p>
-                <pre lang="html">
+                        <h3 class="mat-title">Usage within Forms</h3>
+                        <mat-divider></mat-divider>
+                        <form>
+                            <div layout="row" layout-align="start center">
+                                <mat-checkbox flex="initial" [(ngModel)]="user.agreesToTOS" name="agreesToTOS">
+                                    I agree to the terms
+                                </mat-checkbox>
+                                <button mat-raised-button color="fds-secondary" [disabled]="!user.agreesToTOS" class="pad-right-sm" class="text-upper">Sign Up</button>
+                            </div>
+                            <mat-divider></mat-divider>
+                            <mat-checkbox labelPosition="after">
+                                I come after my label.
+                            </mat-checkbox>
+                            <mat-divider></mat-divider>
+                            <mat-checkbox labelPosition="before">I come before my label</mat-checkbox>
+                        </form>
+                        <h3 class="mat-title">Usage</h3>
+                        <p>HTML:</p>
+                        <pre lang="html">
         <![CDATA[
-                    <!-- Usage within Forms -->
+                            <!-- Usage within Forms -->
         <form>
             <div layout="row" layout-align="start center">
                 <mat-checkbox flex="initial" [(ngModel)]="user.agreesToTOS" name="agreesToTOS">
@@ -2068,11 +2068,11 @@ limitations under the License.
         </form>
         ]]>
         </pre>
-                <p>Javascript:</p>
-                <pre lang="javascript">
+                        <p>Javascript:</p>
+                        <pre lang="javascript">
                         <![CDATA[
         this.user = {
-            agreesToTOS: false
+                            agreesToTOS: false
         };
                         ]]>
                     </pre>
@@ -2328,9 +2328,9 @@ limitations under the License.
         this.selectedValue = '';
 
         this.foods = [
-            { value: 'steak-0', viewValue: 'Steak' },
-            { value: 'pizza-1', viewValue: 'Pizza' },
-            { value: 'tacos-2', viewValue: 'Tacos' },
+                    { value: 'steak-0', viewValue: 'Steak' },
+                    { value: 'pizza-1', viewValue: 'Pizza' },
+                    { value: 'tacos-2', viewValue: 'Tacos' },
         ];
         ]]>
       </pre>
@@ -2495,12 +2495,12 @@ limitations under the License.
 
         openDialog: function() {
             this.dialog.open(DialogComponent, {
-                height: '50%', // can be px or %
-                width: '60%', // can be px or %
-            });
-        }
+                            height: '50%', // can be px or %
+                                    width: '60%', // can be px or %
+                            });
+                            }
 
-        ...
+                    ...
 
         ]]>
       </pre>
@@ -2526,13 +2526,13 @@ limitations under the License.
         ...
 
         constructor(TdDialogService) {
-            this.dialogService = TdDialogService
+                    this.dialogService = TdDialogService
         }
 
         ...
 
         openConfirm: function() {
-            this.dialogService.openConfirm({
+                    this.dialogService.openConfirm({
                 title: 'Confirm',
                 message: 'This is how simple it is to create a confirm with this wrapper service. Do you agree?',
                 cancelButton: 'Disagree',
@@ -2569,7 +2569,7 @@ limitations under the License.
         ...
 
         constructor(FdsSnackBarService) {
-            this.snackBarService = FdsSnackBarService;
+                    this.snackBarService = FdsSnackBarService;
         },
 
         ...
@@ -2579,7 +2579,7 @@ limitations under the License.
         /** Possible values for icon on MatSnackBarConfig are any available icons loaded on the page. */
 
         showSuccessSnackBar: function () {
-            var snackBarRef = this.snackBarService.openCoaster({
+                    var snackBarRef = this.snackBarService.openCoaster({
                 title: 'Success',
                 message: 'Some help text regarding the successful event.',
                 verticalPosition: 'top',
@@ -2591,7 +2591,7 @@ limitations under the License.
         },
 
         showWarnSnackBar: function () {
-            var snackBarRef = this.snackBarService.openCoaster({
+                    var snackBarRef = this.snackBarService.openCoaster({
                 title: 'Warning',
                 message: 'Some help text regarding the warning.',
                 verticalPosition: 'top',
@@ -2603,7 +2603,7 @@ limitations under the License.
         },
 
         showErrorSnackBar: function () {
-            var snackBarRef = this.snackBarService.openCoaster({
+                    var snackBarRef = this.snackBarService.openCoaster({
                 title: 'Error',
                 message: 'Some help text regarding the critical error. This coaster will stay open until closed with the `x` or if another coaster is created.',
                 verticalPosition: 'bottom',
@@ -2614,7 +2614,7 @@ limitations under the License.
         },
 
         showRegularSnackBar: function () {
-            var snackBarRef = this.snackBarService.openCoaster({
+                    var snackBarRef = this.snackBarService.openCoaster({
                 title: 'Regular',
                 message: 'Something interesting.',
                 verticalPosition: 'bottom',
@@ -2656,12 +2656,12 @@ limitations under the License.
                             </td-expansion-summary>
                             <div class="mat-padding">
                                 <form class="mat-padding" layout="column">
-                                    <mat-input-container flex>
+                                    <mat-form-field floatLabel="always" flex>
                                         <input matInput placeholder="Company (disabled)" disabled value="Google" />
-                                    </mat-input-container>
-                                    <mat-input-container flex>
+                                    </mat-form-field>
+                                    <mat-form-field floatLabel="always" flex>
                                         <textarea matInput placeholder="Description" rows="4"></textarea>
-                                    </mat-input-container>
+                                    </mat-form-field>
                                 </form>
                                 <div layout="row" layout-margin layout-align="end center">
                                     <button mat-button class="text-upper">Cancel</button>
@@ -2691,12 +2691,12 @@ limitations under the License.
             </td-expansion-summary>
             <div class="mat-padding">
                 <form class="mat-padding" layout="column">
-                    <mat-input-container flex>
+                    <mat-form-field floatLabel="always" flex>
                         <input matInput placeholder="Company (disabled)" disabled value="Google" />
-                    </mat-input-container>
-                    <mat-input-container flex>
+                    </mat-form-field>
+                    <mat-form-field floatLabel="always" flex>
                         <textarea matInput placeholder="Description" rows="4"></textarea>
-                    </mat-input-container>
+                    </mat-form-field>
                 </form>
                 <mat-divider></mat-divider>
                 <div layout="row" layout-margin layout-align="end center">
@@ -2717,21 +2717,21 @@ limitations under the License.
         ...
 
         toggleExpansion1: function() {
-            if (!this.disabled) {
+                    if (!this.disabled) {
                 this.expansion1 = !this.expansion1;
             }
         },
 
         toggleDisabled: function() {
-            this.disabled = !this.disabled;
+                    this.disabled = !this.disabled;
         },
 
         expandExpansion1Event: function() {
-            this.expandCollapseExpansion1Msg = 'Expand event emitted.';
+                    this.expandCollapseExpansion1Msg = 'Expand event emitted.';
         },
 
         collapseExpansion1Event: function() {
-            this.expandCollapseExpansion1Msg = 'Collapse event emitted.';
+                    this.expandCollapseExpansion1Msg = 'Collapse event emitted.';
         },
 
         ...
@@ -2877,17 +2877,17 @@ limitations under the License.
                 <pre lang="javascript">
           <![CDATA[
         this.systems = [{
-            name: 'Lights',
-            on: false,
-            color: 'primary',
+                    name: 'Lights',
+                    on: false,
+                    color: 'primary',
         }, {
-            name: 'Surround Sound',
-            on: true,
-            color: 'accent',
+                    name: 'Surround Sound',
+                    on: true,
+                    color: 'accent',
         }, {
-            name: 'T.V.',
-            on: true,
-            color: 'warn',
+                    name: 'T.V.',
+                    on: true,
+                    color: 'warn',
         }, ];
             ]]>
           </pre>
@@ -2933,7 +2933,7 @@ limitations under the License.
                 <pre lang="javascript">
           <![CDATA[
         this.house = {
-            lockHouse: false,
+                    lockHouse: false,
         };
             ]]>
           </pre>

@@ -94,12 +94,7 @@ FlowDesignSystemModule.annotations = [
             fdsDialogsModule.FdsDialogsModule,
             fdsSnackBarsModule.FdsSnackBarsModule,
             covalentCore.CovalentExpansionPanelModule,
-            covalentCore.CovalentLoadingModule,
-            covalentCore.CovalentMenuModule,
-            covalentCore.CovalentNotificationsModule,
-            covalentCore.CovalentPagingModule,
-            covalentCore.CovalentSearchModule,
-            covalentCore.CovalentStepsModule
+            covalentCore.CovalentPagingModule
         ],
         exports: [
             ngFlex.FlexLayoutModule,
@@ -143,12 +138,7 @@ FlowDesignSystemModule.annotations = [
             fdsDialogsModule.FdsDialogsModule,
             fdsSnackBarsModule.FdsSnackBarsModule,
             covalentCore.CovalentExpansionPanelModule,
-            covalentCore.CovalentLoadingModule,
-            covalentCore.CovalentMenuModule,
-            covalentCore.CovalentNotificationsModule,
-            covalentCore.CovalentPagingModule,
-            covalentCore.CovalentSearchModule,
-            covalentCore.CovalentStepsModule
+            covalentCore.CovalentPagingModule
         ]
     })
 ];
