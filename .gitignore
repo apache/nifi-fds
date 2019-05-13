@@ -1,8 +1,14 @@
+webapp/css/
+platform/core/common/styles/css/
+index.html
 target/
 node_modules/
-demo-app/
-index.html
+.cache-loader/
+coverage/
 npm-debug.log*
+fds-demo.bundle.min.js*
+fds-demo.vendor.min.js*
+fds-demo.styles.min.css*
 
 # Intellij
 .idea/
