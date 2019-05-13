@@ -38,36 +38,8 @@ body[fds] .mat-basic-chip {
   margin: 22px 8px 0 0;
 }
 
-body[fds] .mat-basic-chip.td-chip-after-pad {
-  padding: 4px 12px 4px 12px;
-}
-
 body[fds] .mat-basic-chip i {
   margin-left: 10px;
   float: right;
   margin-top: 2px;
-}
-
-body[fds] .mat-basic-chip .td-chip {
-  font-size: 10px;
-  min-height: unset;
-  line-height: 20px;
-  position: relative;
-  top: -3px;
-}
-
-body[fds] .td-chip span {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 65px;
-}
-
-body[fds] .td-chip-disabled .td-chip {
-  padding: 0 0 0 12px;
-}
-
-body[fds] .mat-basic-chip mat-icon.td-chip-removal {
-  font-size: 15px;
-  margin-bottom: 7px;
 }

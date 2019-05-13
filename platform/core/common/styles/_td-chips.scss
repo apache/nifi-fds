@@ -33,6 +33,35 @@ body[fds] td-chips {
   }
 }
 
+body[fds] .mat-basic-chip.td-chip-after-pad {
+    padding: 4px 12px 4px 12px;
+}
+
+body[fds] .mat-basic-chip .td-chip {
+    font-size: 10px;
+    min-height: unset;
+    line-height: 20px;
+    position: relative;
+    top: -3px;
+}
+
 body[fds] .td-chip span {
-  font-size: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 65px;
+    font-size: 10px;
+}
+
+body[fds] .td-chip-disabled .td-chip {
+    padding: 0 0 0 12px;
+}
+
+body[fds] .mat-basic-chip mat-icon.td-chip-removal {
+    font-size: 15px;
+    margin-bottom: 7px;
+}
+
+body[fds] mat-form-field.td-chips-form-field.mat-input-container {
+    width: unset;
 }
