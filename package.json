@@ -16,7 +16,7 @@
     "name": "nifi-fds",
     "version": "0.1.0",
     "scripts": {
-        "start": "./node_modules/http-server/bin/http-server .",
+        "start": "./node_modules/http-server/bin/http-server -p 28080 .",
         "build:webapp:bundle:development": "npm run webpack:development",
         "build:webapp:bundle:production": "npm run webpack:production",
         "clean:install": "bash ./scripts/clean-install",
