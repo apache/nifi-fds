@@ -43,11 +43,11 @@ limitations under the License.
         // other imports
           ...
         new ngCore.NgModule({
-                    imports: [
-                        fdsCore,
-                        // (optional) Additional imports
-                      ],
-                      ...
+            imports: [
+                fdsCore,
+                // (optional) Additional imports
+              ],
+              ...
         })
         ]]>
     </pre>
@@ -73,93 +73,68 @@ limitations under the License.
             <mat-card-title class="pad-bottom-sm">Typography</mat-card-title>
             <mat-divider></mat-divider>
             <mat-card-content>
-                <p class="mat-body-1">Angular Material provides <a class="link" href="https://material.io/guidelines/style/typography.html" target="_blank">typography</a> CSS classes you can use to create visual consistency across your application.</p>
-                <p class="mat-body-1">
-                    <strong>Note:</strong>
-                    <span>Base font size is 10px for easy rem units (1.2rem = 12px). Body font size is 14px. sp = scalable pixels.</span>
-                </p>
-                <h3 class="mat-title">Header Styles</h3>
-                <p class="mat-body-1">To preserve semantic structures, you can optionally style the <code>&lt;h1&gt;</code> - <code>&lt;h6&gt;</code> heading tags with the styling classes shown below:</p>
-                <p>CSS:</p>
+                <p class="mat-body-1">FDS provides typography CSS classes you can use to create visual consistency across your application. Optionally style tags with the classes shown below:</p>
                 <div layout-align="center end">
                     <div layout="row" layout-align="start center">
                         <code flex="15">.mat-display-4</code>
-                        <span class="mat-display-4">Light 112px</span>
+                        <span class="mat-display-4">Display 4</span>
                     </div>
                     <div layout="row" layout-align="start center">
                         <code flex="15">.mat-display-3</code>
-                        <span class="mat-display-3">Regular 56px</span>
+                        <span class="mat-display-3">Display 3</span>
                     </div>
                     <div layout="row" layout-align="start center">
                         <code flex="15">.mat-display-2</code>
-                        <span class="mat-display-2">Regular 45px</span>
+                        <span class="mat-display-2">Display 2</span>
                     </div>
                     <div layout="row" layout-align="start center">
                         <code flex="15">.mat-display-1</code>
-                        <span class="mat-display-1">Regular 34px</span>
+                        <span class="mat-display-1">Display 1</span>
                     </div>
                     <div layout="row" layout-align="start center">
                         <code flex="15">.mat-headline</code>
-                        <span class="mat-headline">Regular 24px</span>
+                        <span class="mat-headline">Headline</span>
                     </div>
                     <div layout="row" layout-align="start center">
                         <code flex="15">.mat-title</code>
-                        <span class="mat-title">Medium 20px</span>
+                        <span class="mat-title">Title</span>
                     </div>
                     <div layout="row" layout-align="start center">
                         <code flex="15">.md-subhead</code>
-                        <span class="md-subhead">Regular 16px</span>
+                        <span class="md-subhead">Subhead</span>
                     </div>
                     <div layout="row" layout-align="start center">
                         <code flex="15">.link</code>
-                        <span class="link">Angular Material</span>
+                        <span class="link">Link</span>
                     </div>
-                </div>
-                <h3 class="mat-title">Usage</h3>
-                <p>HTML:</p>
-                <pre lang="html">
-    <![CDATA[
-                    <!-- Large Heading -->
-        <span class="mat-display-4">Roboto is the standard typeface on Android.</span>
-        <span class="mat-display-3">Roboto and Noto are the standard typefaces on Android and Chrome.</span>
-        <span class="mat-display-2">Noto is the standard typeface for all languages on Chrome and Android for all languages not covered by Roboto.</span>
-                    <!-- Medium Heading -->
-        <span class="mat-display-1">Roboto is the standard typeface on Android.</span>
-        <span class="mat-headline">Roboto and Noto are the standard typefaces on Android and Chrome.</span>
-        <span class="md-title">Roboto and Noto are the standard typefaces on Android and Chrome.</span>
-        <span class="md-subhead">Noto is the standard typeface for all languages on Chrome and Android for all languages not covered by Roboto.</span>
-        <span class="link">Angular Material</span>
-    ]]>
-    </pre>
-                <h3 class="mat-title">Body Copy</h3>
-                <p>CSS:</p>
-                <div class="mat-body-1" layout-align="center end">
                     <div layout="row" layout-align="start center">
                         <code flex="15">.mat-body-1</code>
-                        <span class="mat-body-1">Regular 14px</span>
+                        <span class="mat-body-1">Body 1</span>
                     </div>
                     <div layout="row" layout-align="start center">
                         <code flex="15">.mat-body-2</code>
-                        <span class="mat-body-2">Medium 14px</span>
-                    </div>
-                    <div layout="row" layout-align="start center">
-                        <code flex="15">.mat-button</code>
-                        <span class="mat-button mat-raised">Medium 14px</span>
+                        <span class="mat-body-2">Body 2</span>
                     </div>
                     <div layout="row" layout-align="start center">
                         <code flex="15">.mat-caption</code>
-                        <span class="mat-caption">Regular 12px</span>
+                        <span class="mat-caption">Caption</span>
                     </div>
                 </div>
                 <h3 class="mat-title">Usage</h3>
                 <p>HTML:</p>
-                <pre lang="html">
+    <pre lang="html">
     <![CDATA[
-                    <!-- body copy -->
-        <p class="mat-body-1">Roboto is the standard typeface on Android.</p>
-        <p class="mat-body-2">Roboto and Noto are the standard typefaces on Android and Chrome.</p>
-        <p class="mat-button">Roboto and Noto are the standard typefaces on Android and Chrome.</p>
-        <p class="mat-caption">Noto is the standard typeface for all languages on Chrome and Android for all languages not covered by Roboto.</p>
+        <span class="mat-display-4">Display 4</span>
+        <span class="mat-display-3">Display 3</span>
+        <span class="mat-display-2">Display 2</span>
+        <span class="mat-display-1">Display 1</span>
+        <span class="mat-headline">Headline</span>
+        <span class="md-title">Title</span>
+        <span class="md-subhead">Subhead</span>
+        <span class="link">Link</span>
+        <span class="mat-body-1">Body 1</span>
+        <span class="mat-body-2">Body 2</span>
+        <span class="mat-caption">Caption</span>
     ]]>
     </pre>
             </mat-card-content>
