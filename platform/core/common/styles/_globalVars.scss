@@ -17,14 +17,12 @@
 
 /* Text */
 
-$fontPrimary: "Roboto",
-sans-serif;
-$fontSecondary: "Robot Slab",
-sans-serif;
-$fontMedium: "Roboto Medium",
-sans-serif;
-$fontLight: "Roboto Light",
-sans-serif;
+$fontPrimary: "Roboto", sans-serif;
+$fontSecondary: "Robot Slab", sans-serif;
+$fontMedium: "Roboto Medium", sans-serif;
+$fontLight: "Roboto Light", sans-serif;
+
+$fdsFontPath: '../../../../../node_modules/roboto-fontface/fonts' !default;
 
 /* Define colors */
 
