@@ -96,6 +96,13 @@ You don't have to use Sass to style the rest of your application but you will ne
 
 NOTE: The theme file may be concatenated and minified with the rest of the application's CSS.
 
+#### Overriding font files path
+Optionally you can override the font file paths if you want your font files to be served from a different location.
+
+```sass
+$fdsFontPath: '/path/to/font/files';
+```
+
 #### Developing
 Developers can perform code changes and automatically build this project using **npm** and **webpack** from the root directory via:
 
