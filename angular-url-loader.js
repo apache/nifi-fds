@@ -15,26 +15,17 @@
  * limitations under the License.
  */
 
-const merge = require('webpack-merge');
-const TerserJSPlugin = require('terser-webpack-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+/**
+ * Removes inline templateUrl properties and replaces them with NodeJS `require` syntax
+ *
+ *   templateUrl: './some-module.html'  ->  template: require('./some-module.html')
+ */
+const templateUrlRegex = /templateUrl\s*:(\s*['"`](.*?)['"`]\s*)/gm;
+module.exports = function (source) {
+    source = source
+        .replace(templateUrlRegex, function(match, quote, url){
+            return 'template: require(\'' + url + '\')';
+        });
 
-const commonConfig = require('./webpack.common');
-
-module.exports = merge(commonConfig, {
-    // Tells webpack to use its built-in optimizations accordingly
-    mode: 'production',
-
-    // Source maps
-    devtool: 'source-map',
-
-    optimization: {
-        minimizer: [
-            // Minify JavaScript
-            new TerserJSPlugin({}),
-
-            // Minify CSS
-            new OptimizeCSSAssetsPlugin({})
-        ],
-    },
-});
+    return source;
+};

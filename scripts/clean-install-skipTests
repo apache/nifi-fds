@@ -31,6 +31,7 @@ cp ./karma.conf.js ./target/frontend-working-directory/karma.conf.js
 cp ./karma-test-shim.js ./target/frontend-working-directory/karma-test-shim.js
 cp Gruntfile.js ./target/frontend-working-directory/Gruntfile.js
 cp ./webapp/gh-pages.* ./target/frontend-working-directory/
+cp angular-url-loader.js ./target/frontend-working-directory/
 cd ./target/frontend-working-directory
 npm install
 

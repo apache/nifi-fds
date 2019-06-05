@@ -21,6 +21,7 @@ const webpackAlias = require('./webpack.alias');
 const FixStyleOnlyEntriesPlugin = require('webpack-fix-style-only-entries');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const loaders = require('./webpack.loader');
 
 module.exports = {
     // Deployment target
@@ -58,73 +59,10 @@ module.exports = {
 
     module: {
         rules: [
-            {
-                test: /\.tsx?$/,
-                include: [
-                    path.resolve(__dirname, 'webapp'),
-                    path.resolve(__dirname, 'platform')
-                ],
-                use: ['cache-loader', 'ts-loader']
-            },
-            {
-                test: /\.js$/,
-                include: [
-                    path.resolve(__dirname, 'webapp'),
-                    path.resolve(__dirname, 'platform')
-                ],
-                use: [
-                    {
-                        loader: 'cache-loader'
-                    },
-                    {
-                        loader: 'babel-loader',
-                        options: {
-                            presets: ['@babel/preset-env']
-                        }
-                    }
-                ]
-            },
-            {
-                test: /\.js$/,
-                include: [
-                    path.resolve(__dirname, 'webapp'),
-                    path.resolve(__dirname, 'platform')
-                ],
-                enforce: 'post',
-                use: [
-                    {
-                        loader: 'cache-loader'
-                    },
-                    {
-                        loader: 'istanbul-instrumenter-loader',
-                        options: { esModules: true }
-                    }
-                ]
-            },
-            {
-                test: /\.(html)$/,
-                use: ['cache-loader', 'html-loader']
-            },
-            {
-                test: /\.scss$/,
-                use: [
-                    {
-                        // Create CSS files separately
-                        loader: MiniCssExtractPlugin.loader
-                    },
-                    {
-                        // Translate CSS into CommonJS
-                        loader: 'css-loader',
-                        options: {
-                            url: false
-                        }
-                    },
-                    {
-                        // Compile Sass to CSS
-                        loader: 'sass-loader'
-                    }
-                ]
-            }
+            loaders.ts,
+            loaders.js,
+            loaders.html,
+            loaders.scss
         ]
     },
 

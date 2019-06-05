@@ -23,7 +23,6 @@ import { FdsDialogService } from '@flow-design-system/dialogs';
 import { FdsSnackBarService } from '@flow-design-system/snackbars';
 import FdsService from 'webapp/services/fds.service.js';
 import FdsDemoDialog from 'webapp/components/flow-design-system/dialogs/demo/fds-demo-dialog.js';
-import html from './fds-demo.html';
 
 const NUMBER_FORMAT = function (v) {
     return v;
@@ -1050,7 +1049,7 @@ FdsDemo.prototype = {
 
 FdsDemo.annotations = [
     new Component({
-        template: html,
+        templateUrl: './fds-demo.html',
         animations: [animations.slideInLeftAnimation],
         host: {
             '[@routeAnimation]': 'routeAnimation'

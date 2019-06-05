@@ -16,25 +16,25 @@
  */
 
 const merge = require('webpack-merge');
-const TerserJSPlugin = require('terser-webpack-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 const commonConfig = require('./webpack.common');
+const loaders = require('./webpack.loader');
+
+delete commonConfig.entry;
+delete commonConfig.optimization;
+delete commonConfig.devServer;
+delete commonConfig.devtool;
+delete commonConfig.module.rules;
 
 module.exports = merge(commonConfig, {
-    // Tells webpack to use its built-in optimizations accordingly
-    mode: 'production',
+    mode: 'none',
 
-    // Source maps
-    devtool: 'source-map',
-
-    optimization: {
-        minimizer: [
-            // Minify JavaScript
-            new TerserJSPlugin({}),
-
-            // Minify CSS
-            new OptimizeCSSAssetsPlugin({})
-        ],
-    },
+    module: {
+        rules: [
+            loaders.tsDev,
+            loaders.jsDev,
+            loaders.html,
+            loaders.ignoreScss
+        ]
+    }
 });

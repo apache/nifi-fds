@@ -22,7 +22,6 @@ import {
 } from '@angular/core';
 import FdsService from 'webapp/services/fds.service.js';
 import animations from '@flow-design-system/common/animations';
-import html from './fds.html';
 
 /**
  * Fds constructor.
@@ -59,7 +58,7 @@ Fds.prototype = {
 Fds.annotations = [
     new Component({
         selector: 'fds-app',
-        template: html,
+        templateUrl: './fds.html',
         queries: {
             sidenav: new ViewChild('sidenav')
         },

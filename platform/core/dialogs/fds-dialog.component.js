@@ -20,7 +20,6 @@ import {
     ContentChildren,
     Directive
 } from '@angular/core';
-import html from './fds-dialog.component.html';
 
 export function FdsDialogTitleDirective() {
 }
@@ -88,7 +87,7 @@ FdsDialogComponent.prototype = {
 FdsDialogComponent.annotations = [
     new Component({
         selector: 'fds-dialog',
-        template: html,
+        templateUrl: './fds-dialog.component.html',
         queries: {
             dialogTitle: new ContentChildren(FdsDialogTitleDirective),
             dialogContent: new ContentChildren(FdsDialogContentDirective),
