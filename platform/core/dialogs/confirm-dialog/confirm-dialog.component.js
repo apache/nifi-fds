@@ -16,7 +16,6 @@
  */
 
 import { Component } from '@angular/core';
-import html from './confirm-dialog.component.html';
 
 /**
  * FdsConfirmDialogComponent constructor.
@@ -56,7 +55,7 @@ FdsConfirmDialogComponent.prototype = {
 FdsConfirmDialogComponent.annotations = [
     new Component({
         selector: 'fds-confirm-dialog',
-        template: html
+        templateUrl: './confirm-dialog.component.html'
     })
 ];
 

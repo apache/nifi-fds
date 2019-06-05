@@ -20,7 +20,6 @@ import {
     MAT_DIALOG_DATA
 } from '@angular/material';
 import { Component } from '@angular/core';
-import html from './fds-demo-dialog.html';
 
 /**
  * NfRegistryEditBucketPolicy constructor.
@@ -51,7 +50,7 @@ FdsDemoDialog.prototype = {
 
 FdsDemoDialog.annotations = [
     new Component({
-        template: html
+        templateUrl: './fds-demo-dialog.html'
     })
 ];
 

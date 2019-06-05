@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-const webpackConfig = require('./webpack.dev');
+const webpackConfig = require('./webpack.karma');
 const path = require('path');
 
 delete webpackConfig.entry;
@@ -62,9 +62,7 @@ module.exports = function (config) {
         exclude: [],
 
         preprocessors: {
-            'karma-test-shim.js': ['webpack'],
-            'webapp/**/!(*spec|*mock|*stub|*config|*extras).js': ['webpack'],
-            'platform/**/!(*spec|*mock|*stub|*config|*extras).js': ['webpack']
+            'karma-test-shim.js': ['webpack']
         },
 
         // Try Websocket for a faster transmission first. Fallback to polling if necessary.

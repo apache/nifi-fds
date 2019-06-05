@@ -17,7 +17,6 @@
 
 import { Component } from '@angular/core';
 import $ from 'jquery';
-import html from './coaster.component.html';
 
 /**
  * FdsCoasterComponent constructor.
@@ -62,7 +61,7 @@ FdsCoasterComponent.prototype = {
 FdsCoasterComponent.annotations = [
     new Component({
         selector: 'fds-coaster',
-        template: html
+        templateUrl: './coaster.component.html'
     })
 ];
 

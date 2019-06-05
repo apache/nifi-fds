@@ -16,7 +16,6 @@
  */
 
 import { Component, Directive, ContentChildren } from '@angular/core';
-import html from './fds-snackbar.component.html';
 
 export function FdsSnackBarTitleDirective() {
 }
@@ -84,7 +83,7 @@ FdsSnackBarComponent.prototype = {
 FdsSnackBarComponent.annotations = [
     new Component({
         selector: 'fds-snackbar',
-        template: html,
+        templateUrl: './fds-snackbar.component.html',
         queries: {
             snackBarTitle: new ContentChildren(FdsSnackBarTitleDirective),
             snackBarContent: new ContentChildren(FdsSnackBarContentDirective),
