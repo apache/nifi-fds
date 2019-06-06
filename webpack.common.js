@@ -22,6 +22,7 @@ const FixStyleOnlyEntriesPlugin = require('webpack-fix-style-only-entries');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const loaders = require('./webpack.loader');
+const CompressionPlugin = require('compression-webpack-plugin');
 
 module.exports = {
     // Deployment target
@@ -100,6 +101,11 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: 'webapp/template.html',
             filename: 'index.html'
+        }),
+
+        new CompressionPlugin({
+            algorithm: 'gzip',
+            test: /\.min.js$|\.min.css$|runtime.js$/
         })
     ]
 };
