@@ -53,6 +53,10 @@ body[fds] .expansion-panel-filter-toggle-group div {
   line-height: normal;
 }
 
+body[fds] .mat-button-toggle-checked .mat-button-toggle-focus-overlay {
+    border-bottom: none;
+}
+
 body[fds] .tab-toggle-group {
   box-shadow: none !important;
   border: none;
