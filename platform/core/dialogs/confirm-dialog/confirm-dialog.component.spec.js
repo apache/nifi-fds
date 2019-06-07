@@ -17,9 +17,9 @@
 
 import { TestBed } from '@angular/core/testing';
 
-import initTestBed from '@flow-design-system/testbed-factory';
+import initTestBed from '../../core.testbed-factory';
 
-import { FdsConfirmDialogComponent } from '@flow-design-system/confirm-dialog-component';
+import { FdsConfirmDialogComponent } from './confirm-dialog.component';
 
 describe('coasterComponent isolated unit tests', function () {
     let fdsConfirmDialogComponent;

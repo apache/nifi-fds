@@ -10,33 +10,15 @@ The demo application serves 2 main purposes
 For developers not interested in building the FDS NgModule you can use **npm** to install the distribution files.
 
 ```bash
-npm install @nifi-fds/core
+npm install @nifi-fds/core --save
 ```
 
-Clients will need to configure a few aliases within their preferred module loader/javascript bundler: 
-
+#### ES6
 ```javascript
-const path = require('path');
+import { FdsCoreModule } from '@nifi-fds/core';
 
-module.exports = {
-    '@flow-design-system/core': path.resolve(__dirname, 'node_modules/@nifi-fds/core/flow-design-system.module.js'),
-    '@flow-design-system/dialogs': path.resolve(__dirname, 'node_modules/@nifi-fds/core/dialogs/fds-dialogs.module.js'),
-    '@flow-design-system/dialog-component': path.resolve(__dirname, 'node_modules/@nifi-fds/core/dialogs/fds-dialog.component.js'),
-    '@flow-design-system/dialog-service': path.resolve(__dirname, 'node_modules/@nifi-fds/core/dialogs/services/dialog.service.js'),
-    '@flow-design-system/confirm-dialog-component': path.resolve(__dirname, 'node_modules/@nifi-fds/core/dialogs/confirm-dialog/confirm-dialog.component.js'),
-    '@flow-design-system/snackbars': path.resolve(__dirname, 'node_modules/@nifi-fds/core/snackbars/fds-snackbars.module.js'),
-    '@flow-design-system/snackbar-component': path.resolve(__dirname, 'node_modules/@nifi-fds/core/snackbars/fds-snackbar.component.js'),
-    '@flow-design-system/snackbar-service': path.resolve(__dirname, 'node_modules/@nifi-fds/core/snackbars/services/snackbar.service.js'),
-    '@flow-design-system/coaster-component': path.resolve(__dirname, 'node_modules/@nifi-fds/core/snackbars/coaster/coaster.component.js'),
-    '@flow-design-system/common/storage-service': path.resolve(__dirname, 'node_modules/@nifi-fds/core/common/services/fds-storage.service.js'),
-    '@flow-design-system/common/animations': path.resolve(__dirname, 'node_modules/@nifi-fds/core/common/fds.animations.js')
-};
-```
+function AppModule() {}
 
-Once you have configured your module loader, you can import the **Apache NiFi Flow Design System** NgModule into your angular application. 
-
-```javascript
-var fdsCore = require('@flow-design-system/core');
 AppModule.prototype = {
     constructor: AppModule
 };
@@ -44,7 +26,7 @@ AppModule.prototype = {
 AppModule.annotations = [
     new ngCore.NgModule({
         imports: [
-            fdsCore,
+            FdsCoreModule,
             ...
         ],
         ...

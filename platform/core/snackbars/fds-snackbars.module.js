@@ -30,12 +30,14 @@ import {
     FdsSnackBarTitleDirective,
     FdsSnackBarActionsDirective,
     FdsSnackBarContentDirective
-} from '@flow-design-system/snackbar';
+} from './fds-snackbar.component';
+
 import {
     ICoasterConfig,
     FdsSnackBarService
-} from '@flow-design-system/snackbar-service';
-import { FdsCoasterComponent } from '@flow-design-system/coaster';
+} from './services/snackbar.service';
+
+import { FdsCoasterComponent } from './coaster/coaster.component';
 
 const FDS_SNACKBARS = [
     FdsSnackBarComponent,

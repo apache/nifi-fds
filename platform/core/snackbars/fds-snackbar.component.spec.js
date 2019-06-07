@@ -16,9 +16,9 @@
  */
 
 import { TestBed } from '@angular/core/testing';
-import { FdsSnackBarComponent } from '@flow-design-system/snackbar';
+import { FdsSnackBarComponent } from './fds-snackbar.component';
 
-import initTestBed from '@flow-design-system/testbed-factory';
+import initTestBed from '../core.testbed-factory';
 
 describe('FdsSnackBarComponent isolated unit tests', function () {
     let fdsSnackBar;

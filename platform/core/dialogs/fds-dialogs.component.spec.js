@@ -16,9 +16,9 @@
  */
 
 import { TestBed } from '@angular/core/testing';
-import { FdsDialogComponent } from '@flow-design-system/dialog-component';
+import { FdsDialogComponent } from './fds-dialog.component';
 
-import initTestBed from '@flow-design-system/testbed-factory';
+import initTestBed from '../core.testbed-factory';
 
 describe('FdsDialogComponent isolated unit tests', function () {
     let fdsDialogs;

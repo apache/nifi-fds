@@ -61,8 +61,8 @@ import {
     CovalentExpansionPanelModule,
     CovalentPagingModule
 } from '@covalent/core/bundles/covalent-core.umd.min.js';
-import { FdsDialogsModule } from '@flow-design-system/dialogs';
-import { FdsSnackBarsModule } from '@flow-design-system/snackbars';
+import { FdsDialogsModule } from './dialogs/fds-dialogs.module';
+import { FdsSnackBarsModule } from './snackbars/fds-snackbars.module';
 
 /**
  * FlowDesignSystemModule constructor.

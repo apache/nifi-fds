@@ -17,10 +17,8 @@
 
 import { Component } from '@angular/core';
 import { TdDataTableService } from '@covalent/core/bundles/covalent-core.umd.min.js';
-import animations from '@flow-design-system/common/animations';
 import { MatDialog } from '@angular/material';
-import { FdsDialogService } from '@flow-design-system/dialogs';
-import { FdsSnackBarService } from '@flow-design-system/snackbars';
+import { FdsDialogService, FdsSnackBarService, FdsAnimations } from '@nifi-fds/core';
 import FdsService from 'webapp/services/fds.service.js';
 import FdsDemoDialog from 'webapp/components/flow-design-system/dialogs/demo/fds-demo-dialog.js';
 
@@ -1050,7 +1048,7 @@ FdsDemo.prototype = {
 FdsDemo.annotations = [
     new Component({
         templateUrl: './fds-demo.html',
-        animations: [animations.slideInLeftAnimation],
+        animations: [FdsAnimations.slideInLeftAnimation],
         host: {
             '[@routeAnimation]': 'routeAnimation'
         }

@@ -20,7 +20,7 @@ import {
     MatDialogConfig,
     MatDialog
 } from '@angular/material';
-import { FdsConfirmDialogComponent } from '@flow-design-system/confirm-dialog-component';
+import { FdsConfirmDialogComponent } from '../confirm-dialog/confirm-dialog.component';
 
 function IDialogConfig() {
     this.title = '';

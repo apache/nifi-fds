@@ -59,7 +59,7 @@ FdsDialogActionsDirective.decorators = [
  *
  * @constructor
  */
-export function FdsDialogComponent() {
+function FdsDialogComponent() {
     this.dialogTitle = '';
     this.dialogContent = '';
     this.dialogActions = '';
@@ -97,3 +97,5 @@ FdsDialogComponent.annotations = [
 ];
 
 FdsDialogComponent.parameters = [];
+
+export { FdsDialogComponent };

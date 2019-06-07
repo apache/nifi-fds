@@ -55,7 +55,7 @@ FdsSnackBarActionsDirective.decorators = [
  *
  * @constructor
  */
-export function FdsSnackBarComponent() {
+function FdsSnackBarComponent() {
     this.snackBarTitle = '';
     this.snackBarContent = '';
     this.snackBarActions = '';
@@ -93,3 +93,5 @@ FdsSnackBarComponent.annotations = [
 ];
 
 FdsSnackBarComponent.parameters = [];
+
+export { FdsSnackBarComponent };

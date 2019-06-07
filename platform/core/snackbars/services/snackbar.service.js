@@ -19,8 +19,8 @@ import {
     MatSnackBarConfig,
     MatSnackBar
 } from '@angular/material';
-import { FdsCoasterComponent } from '@flow-design-system/coaster';
 import $ from 'jquery';
+import { FdsCoasterComponent } from '../coaster/coaster.component';
 
 export function ISnackBarConfig() {
     this.title = '';

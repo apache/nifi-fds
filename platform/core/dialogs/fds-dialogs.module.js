@@ -30,12 +30,12 @@ import {
     FdsDialogContentDirective,
     FdsDialogActionsDirective,
     FdsDialogComponent
-} from '@flow-design-system/dialog-component';
+} from './fds-dialog.component';
 import {
     IConfirmConfig,
     FdsDialogService
-} from '@flow-design-system/dialog-service';
-import { FdsConfirmDialogComponent } from '@flow-design-system/confirm-dialog-component';
+} from './services/dialog.service';
+import { FdsConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 
 const FDS_DIALOGS = [
     FdsDialogComponent,

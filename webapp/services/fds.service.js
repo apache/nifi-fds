@@ -16,8 +16,7 @@
  */
 
 import { TdDataTableService } from '@covalent/core/bundles/covalent-core.umd.min.js';
-import { FdsDialogService } from '@flow-design-system/dialogs';
-import { FdsSnackBarService } from '@flow-design-system/snackbars';
+import { FdsDialogService, FdsSnackBarService } from '@nifi-fds/core';
 import {version} from '../../package.json';
 
 /**

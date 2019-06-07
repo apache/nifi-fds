@@ -23,7 +23,7 @@ import $ from 'jquery';
  *
  * @constructor
  */
-export function FdsCoasterComponent() {
+function FdsCoasterComponent() {
     this.title = '';
     this.message = '';
     this.icon = '';
@@ -66,3 +66,7 @@ FdsCoasterComponent.annotations = [
 ];
 
 FdsCoasterComponent.parameters = [];
+
+export {
+    FdsCoasterComponent
+};

@@ -16,9 +16,9 @@
  */
 
 import { TestBed } from '@angular/core/testing';
-import { FdsCoasterComponent } from '@flow-design-system/coaster';
+import { FdsCoasterComponent } from './coaster.component';
 
-import initTestBed from '@flow-design-system/testbed-factory';
+import initTestBed from '../../core.testbed-factory';
 
 describe('coasterComponent isolated unit tests', function () {
     let coaster;

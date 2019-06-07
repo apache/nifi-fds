@@ -17,9 +17,9 @@
 
 import { TestBed } from '@angular/core/testing';
 
-import initTestBed from '@flow-design-system/testbed-factory';
+import initTestBed from '../../core.testbed-factory';
 
-import FdsStorageService from '@flow-design-system/common/storage-service';
+import FdsStorageService from './fds-storage.service';
 
 describe('FdsStorageService isolated unit tests', function () {
     let fdsStorage;

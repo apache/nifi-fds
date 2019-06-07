@@ -16,7 +16,7 @@
  */
 
 import { NgModule } from '@angular/core';
-import { FdsStorageService } from '@flow-design-system/storage-service';
+import FdsStorageService from './services/fds-storage.service';
 
 /**
  * FdsCommonsModule constructor.

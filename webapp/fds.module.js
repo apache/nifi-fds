@@ -16,7 +16,7 @@
  */
 
 import { NgModule } from '@angular/core';
-import FdsCoreModule from '@flow-design-system/core';
+import { FdsCoreModule } from '@nifi-fds/core';
 import FdsRoutes from 'webapp/fds.routes.js';
 import Fds from 'webapp/fds.js';
 import FdsDemo from 'webapp/components/flow-design-system/fds-demo.js';

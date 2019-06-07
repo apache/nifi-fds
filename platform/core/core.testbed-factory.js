@@ -17,7 +17,7 @@
 
 import { BrowserDynamicTestingModule, platformBrowserDynamicTesting } from '@angular/platform-browser-dynamic/testing';
 import { TestBed } from '@angular/core/testing';
-import FdsCoreModule from '@flow-design-system/core';
+import FdsCoreModule from './flow-design-system.module';
 
 const initTestBed = ({ providers } = { providers: [] }) => {
     TestBed.resetTestEnvironment();

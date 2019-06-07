@@ -21,7 +21,7 @@ import {
     ChangeDetectorRef
 } from '@angular/core';
 import FdsService from 'webapp/services/fds.service.js';
-import animations from '@flow-design-system/common/animations';
+import { FdsAnimations } from '@nifi-fds/core';
 
 /**
  * Fds constructor.
@@ -62,7 +62,7 @@ Fds.annotations = [
         queries: {
             sidenav: new ViewChild('sidenav')
         },
-        animations: [animations.flyInOutAnimation]
+        animations: [FdsAnimations.flyInOutAnimation]
     })
 ];
 
