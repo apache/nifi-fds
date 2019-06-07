@@ -18,6 +18,7 @@
 import { TdDataTableService } from '@covalent/core/bundles/covalent-core.umd.min.js';
 import { FdsDialogService } from '@flow-design-system/dialogs';
 import { FdsSnackBarService } from '@flow-design-system/snackbars';
+import {version} from '../../package.json';
 
 /**
  * FdsService constructor.
@@ -34,7 +35,7 @@ function FdsService(tdDataTableService, fdsDialogService, fdsSnackBarService) {
     this.dataTableService = tdDataTableService;
 
     // General
-    this.title = 'Apache NiFi Flow Design System Demo';
+    this.title = 'Apache NiFi Flow Design System Demo v' + version;
     this.inProgress = true;
     this.perspective = '';
 }
