@@ -21,13 +21,14 @@ const merge = require('webpack-merge');
 const LicenseWebpackPlugin = require('license-webpack-plugin').LicenseWebpackPlugin;
 
 const commonConfig = require('./webpack.common');
+const loaders = require('./webpack.loader');
 
 module.exports = merge(commonConfig, {
     // Tells webpack to use its built-in optimizations accordingly
     mode: 'development',
 
     // Source maps
-    devtool: 'eval-source-map',
+    devtool: 'inline-source-map',
 
     // "webpack-dev-server" configuration
     devServer: {
@@ -55,14 +56,16 @@ module.exports = merge(commonConfig, {
         port: 28080
     },
 
+    module: {
+        rules: [
+            loaders.ts,
+            loaders.js,
+        ]
+    },
+
     plugins: [
         // Hot Module Replacement
         new webpack.HotModuleReplacementPlugin(),
-
-        // Source map generation
-        new webpack.SourceMapDevToolPlugin({
-            filename: '[file].map'
-        }),
 
         // generate a file with all bundled packages licenses' in it. This can be used to add to the LICENSE file
         new LicenseWebpackPlugin({
