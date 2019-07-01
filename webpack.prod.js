@@ -21,6 +21,7 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const cssnano = require('cssnano');
 
 const commonConfig = require('./webpack.common');
+const loaders = require('./webpack.loader');
 
 module.exports = merge(commonConfig, {
     // Tells webpack to use its built-in optimizations accordingly
@@ -28,6 +29,13 @@ module.exports = merge(commonConfig, {
 
     // Source maps
     devtool: 'source-map',
+
+    module: {
+        rules: [
+            loaders.ts,
+            loaders.js,
+        ]
+    },
 
     optimization: {
         noEmitOnErrors: true,

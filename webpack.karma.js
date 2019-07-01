@@ -31,8 +31,8 @@ module.exports = merge(commonConfig, {
 
     module: {
         rules: [
-            loaders.tsDev,
-            loaders.jsDev,
+            loaders.tsCoverage,
+            loaders.jsCoverage,
             loaders.html,
             loaders.ignoreScss
         ]

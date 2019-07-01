@@ -3,7 +3,7 @@ platform/core/common/styles/css/
 index.html
 target/
 node_modules/
-.cache-loader/
+.cache-loader*/
 coverage/
 npm-debug.log*
 fds-demo.bundle.min.js*
