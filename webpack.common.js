@@ -80,12 +80,6 @@ module.exports = {
     },
 
     plugins: [
-        // TODO: https://github.com/apache/nifi-fds/pull/12
-        new webpack.ProvidePlugin({
-            '$': 'jquery',
-            jQuery: 'jquery'
-        }),
-
         // Fix style only entry generating an extra js file
         new FixStyleOnlyEntriesPlugin(),
 

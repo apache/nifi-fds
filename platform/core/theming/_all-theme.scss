@@ -14,7 +14,6 @@
 * See the License for the specific language governing permissions and
 * limitations under the License.
 */
-
 @import '~@angular/material/theming';
 @import '~@covalent/core/theming/all-theme';
 @import '../common/styles/buttons';
@@ -23,24 +22,26 @@
 @import '../common/styles/inputs';
 @import '../common/styles/checkboxes';
 @import '../common/styles/tables';
+@import '../common/styles/stepper';
 @import '../common/styles/links';
 @import '../common/styles/buttonToggles';
 @import '../common/styles/radios';
 
 // Create a theme.
 @mixin fds-theme($theme) {
-  // Include theme styles for core and each component used in your app.
-  // Alternatively, you can import and @include the theme mixins for each component
-  // that you are using.
-  @include angular-material-theme($theme);
-  @include covalent-theme($theme);
-  @include fds-buttons-theme($theme);
-  @include fds-expansion-panels-theme($theme);
-  @include fds-menus-theme($theme);
-  @include fds-input-element-theme($theme);
-  @include fds-checkboxes-theme($theme);
-  @include fds-tables-theme($theme);
-  @include fds-links-theme($theme);
-  @include fds-button-toggles-theme($theme);
-  @include fds-radios-theme($theme);
+    // Include theme styles for core and each component used in your app.
+    // Alternatively, you can import and @include the theme mixins for each component
+    // that you are using.
+    @include angular-material-theme($theme);
+    @include covalent-theme($theme);
+    @include fds-buttons-theme($theme);
+    @include fds-expansion-panels-theme($theme);
+    @include fds-menus-theme($theme);
+    @include fds-input-element-theme($theme);
+    @include fds-checkboxes-theme($theme);
+    @include fds-tables-theme($theme);
+    @include fds-links-theme($theme);
+    @include fds-stepper-theme($theme);
+    @include fds-button-toggles-theme($theme);
+    @include fds-radios-theme($theme);
 }

@@ -594,6 +594,68 @@ limitations under the License.
             </mat-card-content>
         </mat-card>
         <mat-card>
+            <mat-card-title class="pad-bottom-sm" id="Stepper">Stepper <mat-icon class="link-to-component" routerLink="/" fragment="Stepper">link</mat-icon></mat-card-title>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+                <td-steps mode="vertical">
+                    <td-step label="Version 1"
+                             sublabel="by Admin"
+                             [active]="true">
+                        <div fxLayout="column" fxLayoutAlign="space-between stretch">
+                            <div fxLayout="row" class="md-body-2">
+                                Comments go here
+                            </div>
+                            <div fxLayout="row" class="mat-caption">
+                                An hour ago
+                            </div>
+                        </div>
+                    </td-step>
+                    <td-step label="Version 2"
+                             sublabel="by Admin">
+                        <div fxLayout="column" fxLayoutAlign="space-between stretch">
+                            <div fxLayout="row" class="md-body-2">
+                                Comments go here
+                            </div>
+                            <div fxLayout="row" class="mat-caption">
+                                A day ago
+                            </div>
+                        </div>
+                    </td-step>
+                </td-steps>
+                <h3 class="mat-title">Usage</h3>
+                <p>HTML:</p>
+                <pre lang="html">
+      <![CDATA[
+        <td-steps mode="vertical">
+            <td-step label="Version 1"
+                     sublabel="by Admin"
+                     [active]="true">
+                <div fxLayout="column" fxLayoutAlign="space-between stretch">
+                    <div fxLayout="row" class="md-body-2">
+                        Description goes here
+                    </div>
+                    <div fxLayout="row" class="mat-caption">
+                        An hour ago
+                    </div>
+                </div>
+            </td-step>
+            <td-step label="Version 2"
+                     sublabel="by Admin">
+                <div fxLayout="column" fxLayoutAlign="space-between stretch">
+                    <div fxLayout="row" class="md-body-2">
+                        Description goes here
+                    </div>
+                    <div fxLayout="row" class="mat-caption">
+                        A day ago
+                    </div>
+                </div>
+            </td-step>
+        </td-steps>
+        ]]>
+      </pre>
+            </mat-card-content>
+        </mat-card>
+        <mat-card>
             <mat-card-title class="pad-bottom-sm" id="Autocomplete">Autocomplete <mat-icon class="link-to-component" routerLink="/" fragment="Autocomplete">link</mat-icon></mat-card-title>
             <mat-divider></mat-divider>
             <mat-card-content>

@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-import { TdDataTableService } from '@covalent/core/bundles/covalent-core.umd.min.js';
+import { TdDataTableService } from '@covalent/core/data-table';
 import { FdsDialogService, FdsSnackBarService } from '@nifi-fds/core';
 import {version} from '../../package.json';
 
