@@ -56,11 +56,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
     CovalentCommonModule,
     CovalentChipsModule,
-    CovalentDataTableModule,
     CovalentDialogsModule,
     CovalentExpansionPanelModule,
     CovalentPagingModule
-} from '@covalent/core/bundles/covalent-core.umd.min.js';
+} from '@covalent/core';
+import { CovalentStepsModule } from '@covalent/core/steps';
+import { CovalentDataTableModule } from '@covalent/core/data-table';
 import { FdsDialogsModule } from './dialogs/fds-dialogs.module';
 import { FdsSnackBarsModule } from './snackbars/fds-snackbars.module';
 
@@ -127,6 +128,7 @@ FlowDesignSystemModule.annotations = [
             MatTableModule,
             CovalentCommonModule,
             CovalentChipsModule,
+            CovalentStepsModule,
             CovalentDataTableModule,
             CovalentDialogsModule,
             CovalentExpansionPanelModule,
@@ -171,6 +173,7 @@ FlowDesignSystemModule.annotations = [
             MatTableModule,
             CovalentCommonModule,
             CovalentChipsModule,
+            CovalentStepsModule,
             CovalentDataTableModule,
             CovalentDialogsModule,
             CovalentExpansionPanelModule,

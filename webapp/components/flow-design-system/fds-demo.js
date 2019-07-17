@@ -16,7 +16,7 @@
  */
 
 import { Component } from '@angular/core';
-import { TdDataTableService } from '@covalent/core/bundles/covalent-core.umd.min.js';
+import { TdDataTableService } from '@covalent/core/data-table';
 import { MatDialog } from '@angular/material';
 import { FdsDialogService, FdsSnackBarService, FdsAnimations } from '@nifi-fds/core';
 import FdsService from 'webapp/services/fds.service.js';

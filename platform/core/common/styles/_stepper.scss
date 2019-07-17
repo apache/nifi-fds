@@ -18,3 +18,16 @@
 .td-step-header span {
   display: none;
 }
+
+@mixin fds-stepper-theme($theme) {
+    $primaryColor: map-get(map-get($theme, primary), 500);
+    $primaryColorHover: map-get(map-get($theme, primary), 100);
+    $accentColor: map-get(map-get($theme, accent), 500);
+    $accentColorHover: map-get(map-get($theme, accent), 100);
+
+    body[fds] {
+        .td-steps .td-circle.mat-active {
+            background-color: $accentColor;
+        }
+    }
+}
