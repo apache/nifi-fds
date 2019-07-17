@@ -49,3 +49,8 @@ $fds-theme: mat-light-theme($fds-primary, $fds-accent, $fds-warn);
 
 // FDS theme mixin
 @include fds-theme($fds-theme);
+
+.link-to-component {
+    cursor: pointer;
+    font-size: 16px;
+}
