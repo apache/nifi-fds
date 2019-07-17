@@ -44,7 +44,7 @@
 
   body[fds] td-expansion-panel .td-expansion-panel-header .td-expansion-panel-header-content mat-icon.td-expand-icon {
     font-size: 28px;
-    color: $blue-grey1;
+    color: $accentColor;
     font-weight: bold;
   }
 
@@ -54,7 +54,7 @@
     }
 
     &:hover:not(.mat-disabled) {
-      background: $blue4;
+      background: $accentColorHover;
     }
   }
 
