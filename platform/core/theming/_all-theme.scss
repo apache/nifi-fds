@@ -24,6 +24,7 @@
 @import '../common/styles/checkboxes';
 @import '../common/styles/tables';
 @import '../common/styles/links';
+@import '../common/styles/buttonToggles';
 @import '../common/styles/radios';
 
 // Create a theme.
@@ -40,5 +41,6 @@
   @include fds-checkboxes-theme($theme);
   @include fds-tables-theme($theme);
   @include fds-links-theme($theme);
+  @include fds-button-toggles-theme($theme);
   @include fds-radios-theme($theme);
 }
