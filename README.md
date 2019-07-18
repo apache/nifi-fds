@@ -6,6 +6,9 @@ The demo application serves 2 main purposes
 * As a way for code reviewers to validate code changes as well as each `@nifi-fds/core` release 
 * Provides a working example of how an Angular application should leverage the `@nifi-fds/core`.
 
+## Requirements
+This project requires npm version 5.6.0.
+
 ## Quick Start
 For developers not interested in building the FDS NgModule you can use **npm** to install the distribution files.
 
