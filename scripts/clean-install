@@ -19,6 +19,7 @@ set -e
 rm -rf ./target
 mkdir target
 mkdir ./target/frontend-working-directory
+
 cp -R ./webapp/ ./target/frontend-working-directory/webapp
 cp -R ./platform/ ./target/frontend-working-directory/platform
 cp package.json ./target/frontend-working-directory/package.json
@@ -32,7 +33,9 @@ cp ./karma-test-shim.js ./target/frontend-working-directory/karma-test-shim.js
 cp Gruntfile.js ./target/frontend-working-directory/Gruntfile.js
 cp ./webapp/gh-pages.* ./target/frontend-working-directory/
 cp angular-url-loader.js ./target/frontend-working-directory/
+cp .eslint* ./target/frontend-working-directory/
 cd ./target/frontend-working-directory
+
 npm install
 
 # test
