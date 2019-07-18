@@ -16,113 +16,112 @@
  */
 
 /* Tables */
-
-body[fds] .td-data-table-cell {
-  font-size: 13px;
-  color: $grey2;
-  padding: 0 28px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  height: 100%;
-  line-height: 30px;
-}
-
-body[fds] .td-data-table-column {
-  color: $grey3;
-  font-weight: normal;
-  font-size: 12px;
-  height: 34px;
-  line-height: 34px;
-  padding: 0 28px;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-
-body[fds] .td-data-table-row {
-  height: 34px;
-  border-top: 1px solid #fff;
-  border-left: 1px solid #fff;
-  border-right: 1px solid #fff;
-  border-bottom: 1px solid $grey5;
-}
-
-body[fds] .td-data-table-row.selected {
-  background-color: $grey5;
-  border: 1px solid $grey5;
-}
-
-body[fds] .td-data-table-row:hover {
-  background-color: $blue4;
-  border: 1px solid $blue3;
-}
-
-body[fds] .td-data-table-cell .mat-button,
-body[fds] .td-data-table-cell .mat-icon-button,
-body[fds] .td-data-table-cell .mat-raised-button {
-  height: 24px;
-  width: 24px;
-  line-height: 0;
-
-  &:disabled {
-    color: $grey13;
-    cursor: not-allowed;
-  }
-}
-
-body[fds] .td-data-table-cell .mat-icon-button.badge {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
-
-body[fds] .td-data-table-cell .mat-icon-button.badge[disabled] {
-  opacity: 0.3;
-}
-
-body[fds] td-paging-bar {
-  color: $grey3;
-}
-
-body[fds] td-paging-bar mat-select .mat-select-value,
-body[fds] td-paging-bar mat-select .mat-select-arrow {
-  color: $blue-grey1;
-}
-
-body[fds] .table-title {
-  font-size: 20px;
-  color: $grey1;
-  min-width: 250px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 50%;
-  margin-right: 10px;
-}
-
-body[fds] div .td-data-table {
-  border-bottom: 2px solid $grey7;
-  border-right: 1px transparent;
-  border-left: 1px transparent;
-  display: flex;
-}
-
 @mixin fds-tables-theme($theme) {
-  $primaryColor: map-get(map-get($theme, primary), 500);
-  $primaryColorHover: map-get(map-get($theme, primary), 100);
-  $accentColor: map-get(map-get($theme, accent), 500);
-  $accentColorHover: map-get(map-get($theme, accent), 100);
+    $primaryColor: map-get(map-get($theme, primary), 500);
+    $primaryColorHover: map-get(map-get($theme, primary), 100);
+    $accentColor: map-get(map-get($theme, accent), 500);
+    $accentColorHover: map-get(map-get($theme, accent), 100);
 
-  body[fds] {
-    .td-data-table-cell .mat-icon-button {
-      color: $accentColor;
+    body[fds] {
+        .td-data-table-cell .mat-icon-button {
+            color: $accentColor;
+        }
+
+        .td-data-table-column .fa-caret-up,
+        .td-data-table-column .fa-caret-down {
+            color: $accentColor;
+            font-size: 12px;
+            margin-bottom: 2px;
+        }
     }
 
-    .td-data-table-column .fa-caret-up,
-    .td-data-table-column .fa-caret-down {
-      color: $accentColor;
-      font-size: 12px;
-      margin-bottom: 2px;
+    body[fds] .td-data-table-cell {
+        font-size: 13px;
+        color: $grey2;
+        padding: 0 28px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height: 100%;
+        line-height: 30px;
     }
-  }
+
+    body[fds] .td-data-table-column {
+        color: $grey3;
+        font-weight: normal;
+        font-size: 12px;
+        height: 34px;
+        line-height: 34px;
+        padding: 0 28px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    body[fds] .td-data-table-row {
+        height: 34px;
+        border-top: 1px solid #fff;
+        border-left: 1px solid #fff;
+        border-right: 1px solid #fff;
+        border-bottom: 1px solid $grey5;
+    }
+
+    body[fds] .td-data-table-row.selected {
+        background-color: $grey5;
+        border: 1px solid $grey5;
+    }
+
+    body[fds] .td-data-table-row:hover {
+        background-color: $accentColorHover;
+        border: 1px solid $accentColor;
+    }
+
+    body[fds] .td-data-table-cell .mat-button,
+    body[fds] .td-data-table-cell .mat-icon-button,
+    body[fds] .td-data-table-cell .mat-raised-button {
+        height: 24px;
+        width: 24px;
+        line-height: 0;
+
+        &:disabled {
+            color: $grey13;
+            cursor: not-allowed;
+        }
+    }
+
+    body[fds] .td-data-table-cell .mat-icon-button.badge {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+    body[fds] .td-data-table-cell .mat-icon-button.badge[disabled] {
+        opacity: 0.3;
+    }
+
+    body[fds] td-paging-bar {
+        color: $grey3;
+    }
+
+    body[fds] td-paging-bar mat-select .mat-select-value,
+    body[fds] td-paging-bar mat-select .mat-select-arrow {
+        color: $blue-grey1;
+    }
+
+    body[fds] .table-title {
+        font-size: 20px;
+        color: $grey1;
+        min-width: 250px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 50%;
+        margin-right: 10px;
+    }
+
+    body[fds] div .td-data-table {
+        border-bottom: 2px solid $grey7;
+        border-right: 1px transparent;
+        border-left: 1px transparent;
+        display: flex;
+    }
 }
