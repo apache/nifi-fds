@@ -93,6 +93,8 @@ npm run watch
 ```
 
 #### Building
+_NOTE: Building depends on `bash` scripts found in the `scripts` folder. Therefore, building on Windows is not supported at this time._
+
 Full builds are also available using **npm** from the root directory via:
 
 ```bash
@@ -105,7 +107,7 @@ or to build without running unit tests run:
 npm run clean:install:skipTests
 ```
 
-NOTE: Full builds for this project assume a 2 stage build but it only completes the first stage for you. In the first stage all of the assets for the project are copied into the `target/frontend-working-directory`, tested, and bundled/minified/obfuscated. It is up to the consumer of this project to integrate the second sta include the produced index.html and optimized assets files into any deployable archive of their choosing.
+NOTE: Full builds for this project assume a 2 stage build but it only completes the first stage for you. In the first stage all of the assets for the project are copied into the `target/frontend-working-directory`, tested, and bundled/minified/obfuscated. It is up to the consumer of this project to integrate the second stage to include the produced index.html and optimized assets files into any deployable archive of their choosing.
 
 #### Running full builds locally
 Once built you can start the application from the `target/frontend-working-directory` directory via:
