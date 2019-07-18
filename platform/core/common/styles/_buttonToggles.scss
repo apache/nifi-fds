@@ -15,93 +15,100 @@
  * limitations under the License.
  */
 
-body[fds] .expansion-panel-filter-toggle-group {
-  box-shadow: none !important;
-  border: none;
-  border-radius: 0;
-}
+@mixin fds-button-toggles-theme($theme) {
+    $primaryColor: map-get(map-get($theme, primary), 500);
+    $primaryColorHover: map-get(map-get($theme, primary), 100);
+    $accentColor: map-get(map-get($theme, accent), 500);
+    $accentColorHover: map-get(map-get($theme, accent), 100);
 
-body[fds] .expansion-panel-filter-toggle-group .mat-button-toggle {
-  height: 75px;
-  width: 125px;
-  border: 1px solid $grey4;
-}
+    body[fds] .expansion-panel-filter-toggle-group {
+        box-shadow: none !important;
+        border: none;
+        border-radius: 0;
+    }
 
-body[fds] .expansion-panel-filter-toggle-group .mat-button-toggle-label-content {
-  height: 100%;
-  width: 100%;
-  padding: 0;
-  line-height: 63px;
-  text-align: center;
-}
+    body[fds] .expansion-panel-filter-toggle-group .mat-button-toggle {
+        height: 75px;
+        width: 125px;
+        border: 1px solid $grey4;
+    }
 
-body[fds] .expansion-panel-filter-toggle-group .mat-button-toggle-checked {
-  background-color: $blue-grey1;
-  color: white;
-}
+    body[fds] .expansion-panel-filter-toggle-group .mat-button-toggle-label-content {
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        line-height: 63px;
+        text-align: center;
+    }
 
-body[fds] .expansion-panel-filter-toggle-group .mat-display-1 {
-  color: $blue-grey1;
-  margin: 0;
-}
+    body[fds] .expansion-panel-filter-toggle-group .mat-button-toggle-checked {
+        background-color: $accentColor;
+        color: white;
+    }
 
-body[fds] .expansion-panel-filter-toggle-group .mat-button-toggle-checked .mat-display-1 {
-  color: white;
-}
+    body[fds] .expansion-panel-filter-toggle-group .mat-display-1 {
+        color: $accentColor;
+        margin: 0;
+    }
 
-body[fds] .expansion-panel-filter-toggle-group div {
-  line-height: normal;
-}
+    body[fds] .expansion-panel-filter-toggle-group .mat-button-toggle-checked .mat-display-1 {
+        color: white;
+    }
 
-body[fds] .mat-button-toggle-checked .mat-button-toggle-focus-overlay {
-    border-bottom: none;
-}
+    body[fds] .expansion-panel-filter-toggle-group div {
+        line-height: normal;
+    }
 
-body[fds] .tab-toggle-group {
-  box-shadow: none !important;
-  border: none;
-  border-radius: 0;
-}
+    body[fds] .mat-button-toggle-checked .mat-button-toggle-focus-overlay {
+        border-bottom: none;
+    }
 
-body[fds] .tab-toggle-group .mat-button-toggle-label-content {
-  border-bottom: 2px solid $grey5;
-}
+    body[fds] .tab-toggle-group {
+        box-shadow: none !important;
+        border: none;
+        border-radius: 0;
+    }
 
-body[fds] .tab-toggle-group .mat-button-toggle-checked {
-  background: transparent;
-}
+    body[fds] .tab-toggle-group .mat-button-toggle-label-content {
+        border-bottom: 2px solid $grey5;
+    }
 
-body[fds] .on-off-toggle-group .mat-button-toggle-label-content {
-  height: 100%;
-  width: 100%;
-  padding: 0;
-  line-height: 20px;
-  text-align: center;
-}
+    body[fds] .tab-toggle-group .mat-button-toggle-checked {
+        background: transparent;
+    }
 
-body[fds] .tab-toggle-group .mat-button-toggle-checked .mat-button-toggle-label-content {
-  border-bottom: 2px solid $blue-grey1;
-  background: transparent;
-}
+    body[fds] .on-off-toggle-group .mat-button-toggle-label-content {
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        line-height: 20px;
+        text-align: center;
+    }
 
-body[fds] .on-off-toggle-group {
-  box-shadow: none !important;
-}
+    body[fds] .tab-toggle-group .mat-button-toggle-checked .mat-button-toggle-label-content {
+        border-bottom: 2px solid $accentColor;
+        background: transparent;
+    }
 
-body[fds] .on-off-toggle-group .mat-button-toggle {
-  height: 20px;
-  width: 35px;
-  border: 1px solid $grey4;
-}
+    body[fds] .on-off-toggle-group {
+        box-shadow: none !important;
+    }
 
-body[fds] .on-off-toggle-group .mat-button-toggle-checked {
-  background-color: $blue-grey1;
-  color: white;
-  border: 1px solid $blue-grey1;
-}
+    body[fds] .on-off-toggle-group .mat-button-toggle {
+        height: 20px;
+        width: 35px;
+        border: 1px solid $grey4;
+    }
 
-body[fds] .off-toggle.mat-button-toggle-checked {
-  background-color: $grey4;
-  color: $grey1;
-  border: 1px solid $grey4;
+    body[fds] .on-off-toggle-group .mat-button-toggle-checked {
+        background-color: $accentColor;
+        color: white;
+        border: 1px solid $accentColor;
+    }
+
+    body[fds] .off-toggle.mat-button-toggle-checked {
+        background-color: $grey4;
+        color: $grey1;
+        border: 1px solid $grey4;
+    }
 }
