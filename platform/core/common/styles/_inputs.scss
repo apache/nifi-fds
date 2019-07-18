@@ -22,15 +22,6 @@
     $accentColor: map-get(map-get($theme, accent), 500);
     $accentColorHover: map-get(map-get($theme, accent), 100);
 
-    body[fds] .mat-input-container {
-        min-width: 200px;
-    }
-
-    body[fds] .mat-input-wrapper {
-        margin: 0;
-        padding-bottom: 0;
-    }
-
     body[fds] input.mat-input-element,
     body[fds] textarea.mat-input-element {
         border-radius: 2px;
@@ -63,14 +54,8 @@
         border-color: $accentColor;
     }
 
-    body[fds] .mat-input-underline {
+    body[fds] .mat-form-field-underline {
         display: none;
-    }
-
-    body[fds] .mat-input-placeholder {
-        font-size: 14px;
-        color: $grey3;
-        font-weight: 300;
     }
 
     body[fds] .mat-form-field-empty.mat-form-field-label {
@@ -80,10 +65,6 @@
         overflow: hidden;
         text-overflow: ellipsis;
         width: calc(100% - 44px);
-    }
-
-    body[fds] mat-input-container.mat-focused .mat-input-placeholder {
-        transform: translateY(-26px) translateX(-10px) scale(0.75);
     }
 
     body[fds] .mat-form-field-can-float.mat-form-field-should-float .mat-form-field-placeholder {

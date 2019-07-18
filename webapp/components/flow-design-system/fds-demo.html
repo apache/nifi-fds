@@ -37,46 +37,6 @@ limitations under the License.
             </mat-card-content>
         </mat-card>
         <mat-card>
-            <mat-card-title class="pad-bottom-sm" id="Setup">Setup <mat-icon class="link-to-component" routerLink="/" fragment="Setup">link</mat-icon></mat-card-title>
-            <mat-divider></mat-divider>
-            <mat-card-content>
-                <p>Import the FDS Core NgModule into your AppModule</p>
-                <p>Javascript:</p>
-                <pre lang="javascript">
-        <![CDATA[
-        var ngCore = require('@angular/core');
-        var fdsCore = require('flow-design-system/core');
-        // other imports
-          ...
-        new ngCore.NgModule({
-            imports: [
-                fdsCore,
-                // (optional) Additional imports
-              ],
-              ...
-        })
-        ]]>
-    </pre>
-                <p>The core FDS styles also need to be included in your `index.html` like:</p>
-                <p>HTML:</p>
-                <pre lang="html">
-        <![CDATA[
-        <link href="../node_modules/flow-design-system/core/common/styles/css/flow-design-system.css" rel="stylesheet">
-        ]]>
-    </pre>
-                <p>Or, if you are using the Angular CLI you will need to add a new entry to the "styles" list in
-                    .angular-cli.json.</p>
-                <p>JSON:</p>
-                <pre lang="json">
-        <![CDATA[
-        "styles": [
-            "../node_modules/flow-design-system/core/common/styles/flow-design-system.scss"
-        ]
-        ]]>
-    </pre>
-            </mat-card-content>
-        </mat-card>
-        <mat-card>
             <mat-card-title class="pad-bottom-sm" id="Typography">Typography <mat-icon class="link-to-component" routerLink="/" fragment="Typography">link</mat-icon></mat-card-title>
             <mat-divider></mat-divider>
             <mat-card-content>
@@ -2235,30 +2195,30 @@ limitations under the License.
                                 <p>HTML:</p>
                             <pre lang="html">
                                 <![CDATA[
-                                <!-- Basic Usage -->
-                                <mat-checkbox [checked]="grocery.bought">
-                                    { {grocery.name} }
-                                </mat-checkbox>
+        <!-- Basic Usage -->
+        <mat-checkbox [checked]="grocery.bought">
+            { {grocery.name} }
+        </mat-checkbox>
                                 ]]>
                                 </pre>
                             <p>Javascript:</p>
                             <pre lang="javascript">
-                        <![CDATA[
-                            this.groceries = [
-                                {
-                                    bought: true,
-                                    name: 'Seitan',
-                                },
-                                {
-                                    bought: false,
-                                    name: 'Almond Meal Flour',
-                                },
-                                {
-                                    bought: false,
-                                    name: 'Organic Eggs',
-                                }
-                            ];
-                        ]]>
+        <![CDATA[
+        this.groceries = [
+            {
+                bought: true,
+                name: 'Seitan',
+            },
+            {
+                bought: false,
+                name: 'Almond Meal Flour',
+            },
+            {
+                bought: false,
+                name: 'Organic Eggs',
+            }
+        ];
+        ]]>
                     </pre>
                         <h3 class="md-title">Usage within Forms</h3>
                         <mat-divider></mat-divider>
@@ -2289,37 +2249,37 @@ limitations under the License.
                         <p>HTML:</p>
                         <pre lang="html">
         <![CDATA[
-            <!-- Usage within Forms -->
-            <form>
-                <div layout="row" layout-align="start center">
-                    <mat-checkbox flex="initial" [(ngModel)]="user.agreesToTOS" name="agreesToTOS">
-                        I agree to the terms
-                    </mat-checkbox>
-                    <button mat-raised-button color="fds-secondary" [disabled]="!user.agreesToTOS" class="pad-right-sm"
-                            class="text-upper">Sign Up</button>
-                </div>
-                <mat-divider></mat-divider>
-                <div layout="row" layout-align="start center" class="pad-top-sm pad-bottom-sm">
-                    <mat-checkbox labelPosition="after">
-                        I come after my label.
-                    </mat-checkbox>
-                </div>
-                <mat-divider></mat-divider>
-                <div layout="row" layout-align="start center" class="pad-top-sm pad-bottom-sm">
-                    <mat-checkbox labelPosition="before">
-                        I come before my label
-                    </mat-checkbox>
-                </div>
-                <mat-divider></mat-divider>
-            </form>
+        <!-- Usage within Forms -->
+        <form>
+            <div layout="row" layout-align="start center">
+                <mat-checkbox flex="initial" [(ngModel)]="user.agreesToTOS" name="agreesToTOS">
+                    I agree to the terms
+                </mat-checkbox>
+                <button mat-raised-button color="fds-secondary" [disabled]="!user.agreesToTOS" class="pad-right-sm"
+                        class="text-upper">Sign Up</button>
+            </div>
+            <mat-divider></mat-divider>
+            <div layout="row" layout-align="start center" class="pad-top-sm pad-bottom-sm">
+                <mat-checkbox labelPosition="after">
+                    I come after my label.
+                </mat-checkbox>
+            </div>
+            <mat-divider></mat-divider>
+            <div layout="row" layout-align="start center" class="pad-top-sm pad-bottom-sm">
+                <mat-checkbox labelPosition="before">
+                    I come before my label
+                </mat-checkbox>
+            </div>
+            <mat-divider></mat-divider>
+        </form>
         ]]>
         </pre>
                         <p>Javascript:</p>
                         <pre lang="javascript">
                         <![CDATA[
-                            this.user = {
-                                agreesToTOS: false
-                            };
+        this.user = {
+            agreesToTOS: false
+        };
                         ]]>
                     </pre>
             </mat-card-content>
@@ -2341,12 +2301,12 @@ limitations under the License.
                     <p>HTML:</p>
                     <pre lang="html">
                 <![CDATA[
-                        <!-- Basic Radios -->
-                        <mat-radio-group name="group1">
-                            <mat-radio-button class="pad-right-sm" name="group1">Option 1 </mat-radio-button>
-                            <mat-radio-button class="pad-right-sm" name="group1">Option 2 </mat-radio-button>
-                            <mat-radio-button class="pad-right-sm" name="group1" disabled="true">Option 3 (disabled) </mat-radio-button>
-                        </mat-radio-group>
+        <!-- Basic Radios -->
+        <mat-radio-group name="group1">
+            <mat-radio-button class="pad-right-sm" name="group1">Option 1 </mat-radio-button>
+            <mat-radio-button class="pad-right-sm" name="group1">Option 2 </mat-radio-button>
+            <mat-radio-button class="pad-right-sm" name="group1" disabled="true">Option 3 (disabled) </mat-radio-button>
+        </mat-radio-group>
                 ]]>
         </pre>
                 </div>
@@ -2364,13 +2324,13 @@ limitations under the License.
                     <p>HTML:</p>
                     <pre lang="html">
       <![CDATA[
-                        <!-- Dynamic Radios -->
-                        <mat-radio-group name="more_options" [(ngModel)]="favoriteSeason">
-                          <mat-radio-button class="fds-radio" *ngFor="let season of seasonOptions" name="more_options" [value]="season">
-                            { {season} }
-                          </mat-radio-button>
-                        </mat-radio-group>
-                        <p>Your favorite season is: <strong>{ { favoriteSeason } }</strong></p>
+        <!-- Dynamic Radios -->
+        <mat-radio-group name="more_options" [(ngModel)]="favoriteSeason">
+          <mat-radio-button class="fds-radio" *ngFor="let season of seasonOptions" name="more_options" [value]="season">
+            { {season} }
+          </mat-radio-button>
+        </mat-radio-group>
+        <p>Your favorite season is: <strong>{ { favoriteSeason } }</strong></p>
       ]]>
       </pre>
                     <p>Javascript:</p>
@@ -2410,14 +2370,14 @@ limitations under the License.
                 <p>HTML:</p>
                 <pre lang="html">
       <![CDATA[
-            <button mat-raised-button color="fds-primary" matTooltip="I show above" matTooltipPosition="above"
-                    class="text-upper">Bottom Tooltip</button>
-            <button mat-raised-button color="fds-primary" matTooltip="I show after" matTooltipPosition="after"
-                    class="text-upper">Bottom Tooltip</button>
-            <button mat-raised-button color="fds-primary" matTooltip="I show below" matTooltipPosition="below"
-                    class="text-upper">Bottom Tooltip</button>
-            <button mat-raised-button color="fds-primary" matTooltip="I show before" matTooltipPosition="before"
-                    class="text-upper">Bottom Tooltip</button>
+        <button mat-raised-button color="fds-primary" matTooltip="I show above" matTooltipPosition="above"
+                class="text-upper">Bottom Tooltip</button>
+        <button mat-raised-button color="fds-primary" matTooltip="I show after" matTooltipPosition="after"
+                class="text-upper">Bottom Tooltip</button>
+        <button mat-raised-button color="fds-primary" matTooltip="I show below" matTooltipPosition="below"
+                class="text-upper">Bottom Tooltip</button>
+        <button mat-raised-button color="fds-primary" matTooltip="I show before" matTooltipPosition="before"
+                class="text-upper">Bottom Tooltip</button>
         ]]>
       </pre>
             </mat-card-content>
@@ -2455,30 +2415,30 @@ limitations under the License.
                 <p>HTML:</p>
                 <pre lang="html">
                 <![CDATA[
-                    <!-- Basic Card -->
-                    <mat-card>
-                        <button class="fds-panel-menu-button" matTooltip="Standard Card Menu" mat-icon-button
-                                [matMenuTriggerFor]="standardCardMenu">
-                            <i class="fa fa-ellipsis-v " aria-hidden="true"></i>
-                        </button>
-                        <mat-menu class="primary-icon-button-menu" #standardCardMenu="matMenu" [overlapTrigger]="false">
-                            <button mat-menu-item>
-                                <span>Option1</span>
-                            </button>
-                            <button mat-menu-item>
-                                <span>Option2</span>
-                            </button>
-                        </mat-menu>
-                        <mat-card-title class="pad-bottom-sm">
-                            <span>Title</span>
-                        </mat-card-title>
-                        <mat-card-content>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do tempor incididunt ut labore et dolore magna aliqua. Ut enim ad</p>
-                        </mat-card-content>
-                        <mat-card-actions fxLayout="row" fxLayoutAlign="end center">
-                            <button mat-raised-button color="fds-primary" class="text-upper">Action</button>
-                        </mat-card-actions>
-                    </mat-card>
+        <!-- Basic Card -->
+        <mat-card>
+            <button class="fds-panel-menu-button" matTooltip="Standard Card Menu" mat-icon-button
+                    [matMenuTriggerFor]="standardCardMenu">
+                <i class="fa fa-ellipsis-v " aria-hidden="true"></i>
+            </button>
+            <mat-menu class="primary-icon-button-menu" #standardCardMenu="matMenu" [overlapTrigger]="false">
+                <button mat-menu-item>
+                    <span>Option1</span>
+                </button>
+                <button mat-menu-item>
+                    <span>Option2</span>
+                </button>
+            </mat-menu>
+            <mat-card-title class="pad-bottom-sm">
+                <span>Title</span>
+            </mat-card-title>
+            <mat-card-content>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do tempor incididunt ut labore et dolore magna aliqua. Ut enim ad</p>
+            </mat-card-content>
+            <mat-card-actions fxLayout="row" fxLayoutAlign="end center">
+                <button mat-raised-button color="fds-primary" class="text-upper">Action</button>
+            </mat-card-actions>
+        </mat-card>
                 ]]>
             </pre>
                 <h3 class="md-title">Tabbed Card</h3>
@@ -2532,38 +2492,38 @@ limitations under the License.
                 <p>HTML:</p>
                 <pre lang="html">
                 <![CDATA[
-                    <!-- Basic Card -->
-                    <mat-card>
-                        <button class="fds-panel-menu-button" matTooltip="Standard Card Menu" mat-icon-button
-                                [matMenuTriggerFor]="standardCardMenu">
-                            <i class="fa fa-ellipsis-v " aria-hidden="true"></i>
-                        </button>
-                        <mat-menu class="primary-icon-button-menu" #standardCardMenu="matMenu" [overlapTrigger]="false">
-                            <button mat-menu-item>
-                                <span>Option1</span>
-                            </button>
-                            <button mat-menu-item>
-                                <span>Option2</span>
-                            </button>
-                        </mat-menu>
-                        <mat-card-content>
-                            <mat-tab-group dynamicHeight>
-                                <mat-tab>
-                                    <ng-template mat-tab-label>One</ng-template>
-                                    <h3 class="md-title">First tab content</h3>
-                                    <p>Plaid echo park knausgaard normcore franzen cronut. Pickled humblebrag tofu hoodie, umami salvia farm-to-table schlitz try-hard food truck knausgaard pabst. Yuccie portland jean shorts, authentic mixtape waistcoat gentrify blue bottle. Fixie kickstarter church-key small batch seitan, shabby chic vegan listicle before they sold out. Hammock raw denim flannel tousled seitan you probably haven't heard of them. Trust fund man bun pug, kickstarter artisan selvage letterpress cornhole tote bag butcher locavore. Affogato try-hard kickstarter seitan, DIY pickled hella godard pork belly four loko ugh.</p>
-                                </mat-tab>
-                                <mat-tab>
-                                    <ng-template mat-tab-label>Two</ng-template>
-                                    <h3 class="md-title">Second tab content</h3>
-                                    <p>Hashtag distillery skateboard man bun gochujang, salvia man braid art party meggings heirloom kitsch farm-to-table. Franzen beard fingerstache gentrify, heirloom portland ennui XOXO microdosing kitsch plaid. Chicharrones bushwick chia, banh mi irony tattooed hammock butcher shabby chic taxidermy semiotics marfa post-ironic. Blue bottle keffiyeh farm-to-table ennui, chambray pitchfork art party pinterest artisan pop-up. Etsy banjo marfa, blue bottle kombucha crucifix XOXO tousled beard. Tilde disrupt kale chips bicycle rights skateboard master cleanse hella shoreditch, meditation retro shabby chic vice heirloom. Etsy listicle vice actually, iPhone chia hoodie four loko.</p>
-                                </mat-tab>
-                            </mat-tab-group>
-                        </mat-card-content>
-                        <mat-card-actions fxLayout="row" fxLayoutAlign="end center">
-                            <button mat-raised-button color="fds-primary" class="text-upper">Action</button>
-                        </mat-card-actions>
-                    </mat-card>
+        <!-- Basic Card -->
+        <mat-card>
+            <button class="fds-panel-menu-button" matTooltip="Standard Card Menu" mat-icon-button
+                    [matMenuTriggerFor]="standardCardMenu">
+                <i class="fa fa-ellipsis-v " aria-hidden="true"></i>
+            </button>
+            <mat-menu class="primary-icon-button-menu" #standardCardMenu="matMenu" [overlapTrigger]="false">
+                <button mat-menu-item>
+                    <span>Option1</span>
+                </button>
+                <button mat-menu-item>
+                    <span>Option2</span>
+                </button>
+            </mat-menu>
+            <mat-card-content>
+                <mat-tab-group dynamicHeight>
+                    <mat-tab>
+                        <ng-template mat-tab-label>One</ng-template>
+                        <h3 class="md-title">First tab content</h3>
+                        <p>Plaid echo park knausgaard normcore franzen cronut. Pickled humblebrag tofu hoodie, umami salvia farm-to-table schlitz try-hard food truck knausgaard pabst. Yuccie portland jean shorts, authentic mixtape waistcoat gentrify blue bottle. Fixie kickstarter church-key small batch seitan, shabby chic vegan listicle before they sold out. Hammock raw denim flannel tousled seitan you probably haven't heard of them. Trust fund man bun pug, kickstarter artisan selvage letterpress cornhole tote bag butcher locavore. Affogato try-hard kickstarter seitan, DIY pickled hella godard pork belly four loko ugh.</p>
+                    </mat-tab>
+                    <mat-tab>
+                        <ng-template mat-tab-label>Two</ng-template>
+                        <h3 class="md-title">Second tab content</h3>
+                        <p>Hashtag distillery skateboard man bun gochujang, salvia man braid art party meggings heirloom kitsch farm-to-table. Franzen beard fingerstache gentrify, heirloom portland ennui XOXO microdosing kitsch plaid. Chicharrones bushwick chia, banh mi irony tattooed hammock butcher shabby chic taxidermy semiotics marfa post-ironic. Blue bottle keffiyeh farm-to-table ennui, chambray pitchfork art party pinterest artisan pop-up. Etsy banjo marfa, blue bottle kombucha crucifix XOXO tousled beard. Tilde disrupt kale chips bicycle rights skateboard master cleanse hella shoreditch, meditation retro shabby chic vice heirloom. Etsy listicle vice actually, iPhone chia hoodie four loko.</p>
+                    </mat-tab>
+                </mat-tab-group>
+            </mat-card-content>
+            <mat-card-actions fxLayout="row" fxLayoutAlign="end center">
+                <button mat-raised-button color="fds-primary" class="text-upper">Action</button>
+            </mat-card-actions>
+        </mat-card>
                 ]]>
             </pre>
             </mat-card-content>
@@ -2842,10 +2802,10 @@ limitations under the License.
                 <p>HTML:</p>
                 <pre lang="html">
       <![CDATA[
-                <button mat-raised-button color="fds-primary" (click)="showSuccessSnackBar()">Success Snack Bar</button>
-                <button mat-raised-button color="fds-primary" (click)="showWarnSnackBar()">Warning Snack Bar</button>
-                <button mat-raised-button color="fds-primary" (click)="showErrorSnackBar()">Error Snack Bar</button>
-                <button mat-raised-button color="fds-primary" (click)="showRegularSnackBar()">Regular Snack Bar</button>
+        <button mat-raised-button color="fds-primary" (click)="showSuccessSnackBar()">Success Snack Bar</button>
+        <button mat-raised-button color="fds-primary" (click)="showWarnSnackBar()">Warning Snack Bar</button>
+        <button mat-raised-button color="fds-primary" (click)="showErrorSnackBar()">Error Snack Bar</button>
+        <button mat-raised-button color="fds-primary" (click)="showRegularSnackBar()">Regular Snack Bar</button>
       ]]>
     </pre>
                 <p>Javascript:</p>
@@ -3054,19 +3014,19 @@ limitations under the License.
                     <p>HTML:</p>
                     <pre lang="html">
       <![CDATA[
-                        <!-- Determinate-->
+        <!-- Determinate-->
         <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
 
-                        <!-- Indeterminate-->
+        <!-- Indeterminate-->
         <mat-progress-bar mode="indeterminate"></mat-progress-bar>
 
-                        <!-- Buffer-->
+        <!-- Buffer-->
         <mat-progress-bar mode="buffer" value="15" bufferValue="15"></mat-progress-bar>
 
-                        <!-- Query-->
+        <!-- Query-->
         <mat-progress-bar mode="query"></mat-progress-bar>
 
-                        <!-- Colors-->
+        <!-- Colors-->
         <mat-progress-bar mode="indeterminate" color="primary"></mat-progress-bar>
 
         <mat-progress-bar mode="indeterminate" color="accent"></mat-progress-bar>
@@ -3104,13 +3064,13 @@ limitations under the License.
                     <p>HTML:</p>
                     <pre lang="html">
       <![CDATA[
-                        <!-- Determinate -->
+        <!-- Determinate -->
         <mat-progress-spinner mode="determinate" value="66"></mat-progress-spinner>
-                        <!-- Indeterminate -->
+        <!-- Indeterminate -->
         <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
-                        <!-- Spinner -->
+        <!-- Spinner -->
         <mat-spinner></mat-spinner>
-                        <!-- Colors -->
+        <!-- Colors -->
         <mat-progress-spinner mode="indeterminate" color="primary"></mat-progress-spinner>
         <mat-progress-spinner mode="indeterminate" color="accent"></mat-progress-spinner>
         <mat-progress-spinner mode="indeterminate" color="warn"></mat-progress-spinner>
@@ -3132,10 +3092,10 @@ limitations under the License.
                 <p>HTML:</p>
                 <pre lang="html">
         <![CDATA[
-            <!-- Basic Usage -->
-            <mat-sidenav #sidenav mode="over" align="end" opened="false">
-                ...
-            </mat-sidenav>
+        <!-- Basic Usage -->
+        <mat-sidenav #sidenav mode="over" align="end" opened="false">
+            ...
+        </mat-sidenav>
         ]]>
         </pre>
             </mat-card-content>
