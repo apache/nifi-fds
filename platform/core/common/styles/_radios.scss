@@ -17,40 +17,47 @@
 
 /* Radios */
 
-body[fds] .mat-radio-container {
-  height: 12px;
-  width: 12px;
-}
+@mixin fds-radios-theme($theme) {
+    $primaryColor: map-get(map-get($theme, primary), 500);
+    $primaryColorHover: map-get(map-get($theme, primary), 100);
+    $accentColor: map-get(map-get($theme, accent), 500);
+    $accentColorHover: map-get(map-get($theme, accent), 100);
 
-body[fds] .mat-radio-outer-circle {
-  height: 12px;
-  width: 12px;
-  background-color: #fff;
-  border: 1px solid $grey7;
-}
+    body[fds] .mat-radio-container {
+        height: 12px;
+        width: 12px;
+    }
 
-body[fds] .mat-radio-outer-circle:hover {
-  background-color: $blue-grey1;
-  border-color: $blue-grey1;
-}
+    body[fds] .mat-radio-outer-circle {
+        height: 12px;
+        width: 12px;
+        background-color: #fff;
+        border: 1px solid $grey7;
+    }
 
-body[fds] .mat-radio-checked .mat-radio-outer-circle {
-  border: 1px solid $blue-grey1;
-  background-color: $blue-grey1;
-}
+    body[fds] .mat-radio-outer-circle:hover {
+        background-color: $accentColorHover;
+        border-color: $accentColorHover;
+    }
 
-body[fds] .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
-  border-color: $blue-grey1;
-}
+    body[fds] .mat-radio-checked .mat-radio-outer-circle {
+        border: 1px solid $accentColor;
+        background-color: $accentColor;
+    }
 
-body[fds] .mat-radio-inner-circle {
-  height: 10px;
-  width: 10px;
-  left: 1px;
-  top: 1px;
-  background-color: #fff;
-}
+    body[fds] .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+        border-color: $accentColor;
+    }
 
-body[fds] .mat-radio-checked .mat-radio-inner-circle {
-  background-color: #fff;
+    body[fds] .mat-radio-inner-circle {
+        height: 10px;
+        width: 10px;
+        left: 1px;
+        top: 1px;
+        background-color: #fff;
+    }
+
+    body[fds] .mat-radio-checked .mat-radio-inner-circle {
+        background-color: #fff;
+    }
 }

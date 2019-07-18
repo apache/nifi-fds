@@ -24,6 +24,7 @@
 @import '../common/styles/checkboxes';
 @import '../common/styles/tables';
 @import '../common/styles/links';
+@import '../common/styles/radios';
 
 // Create a theme.
 @mixin fds-theme($theme) {
@@ -39,4 +40,5 @@
   @include fds-checkboxes-theme($theme);
   @include fds-tables-theme($theme);
   @include fds-links-theme($theme);
+  @include fds-radios-theme($theme);
 }
