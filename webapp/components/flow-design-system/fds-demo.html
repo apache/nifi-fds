@@ -2591,15 +2591,6 @@ limitations under the License.
                     <button mat-menu-item> Help </button>
                     <button mat-menu-item disabled> Sign Out </button>
                 </mat-menu>
-                <button color="fds-regular" mat-raised-button [matMenuTriggerFor]="posXMenu">
-                    Before<i class="fa fa-caret-down" aria-hidden="true"></i>
-                </button>
-                <mat-menu xPosition="before" #posXMenu="matMenu">
-                    <button mat-menu-item> Refresh </button>
-                    <button mat-menu-item> Settings </button>
-                    <button mat-menu-item> Help </button>
-                    <button mat-menu-item disabled> Sign Out </button>
-                </mat-menu>
                 <button color="fds-regular" mat-raised-button [matMenuTriggerFor]="aboveMenu">
                     Above<i class="fa fa-caret-down" aria-hidden="true"></i>
                 </button>
@@ -2637,6 +2628,15 @@ limitations under the License.
                         <span>Option 2</span>
                     </button>
                 </mat-menu>
+                <button color="fds-regular" mat-raised-button [matMenuTriggerFor]="posXMenu">
+                    Before<i class="fa fa-caret-down" aria-hidden="true"></i>
+                </button>
+                <mat-menu xPosition="before" #posXMenu="matMenu">
+                    <button mat-menu-item> Refresh </button>
+                    <button mat-menu-item> Settings </button>
+                    <button mat-menu-item> Help </button>
+                    <button mat-menu-item disabled> Sign Out </button>
+                </mat-menu>
                 <h3 class="md-title">Usage</h3>
                 <p>HTML:</p>
                 <pre lang="html">
@@ -2645,15 +2645,6 @@ limitations under the License.
             <mat-icon>more_vert</mat-icon>
         </button>
         <mat-menu #menu="matMenu">
-            <button mat-menu-item> Refresh </button>
-            <button mat-menu-item> Settings </button>
-            <button mat-menu-item> Help </button>
-            <button mat-menu-item disabled> Sign Out </button>
-        </mat-menu>
-        <button color="fds-regular" mat-raised-button [matMenuTriggerFor]="posXMenu">
-            Before<i class="fa fa-caret-down" aria-hidden="true"></i>
-        </button>
-        <mat-menu xPosition="before" #posXMenu="matMenu">
             <button mat-menu-item> Refresh </button>
             <button mat-menu-item> Settings </button>
             <button mat-menu-item> Help </button>
@@ -2695,6 +2686,15 @@ limitations under the License.
             <button mat-menu-item disabled>
                 <span>Option 2</span>
             </button>
+        </mat-menu>
+        <button color="fds-regular" mat-raised-button [matMenuTriggerFor]="posXMenu">
+            Before<i class="fa fa-caret-down" aria-hidden="true"></i>
+        </button>
+        <mat-menu xPosition="before" #posXMenu="matMenu">
+            <button mat-menu-item> Refresh </button>
+            <button mat-menu-item> Settings </button>
+            <button mat-menu-item> Help </button>
+            <button mat-menu-item disabled> Sign Out </button>
         </mat-menu>
         ]]>
       </pre>
