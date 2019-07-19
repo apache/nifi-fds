@@ -17,10 +17,6 @@
 
 /* Text */
 
-.camel-case {
-  text-transform: capitalize;
-}
-
 .header {
   font-family: $fontMedium;
   font-size: 16px;
@@ -82,4 +78,19 @@
 
 .pointer {
   cursor: pointer;
+}
+
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block !important;
+}
+
+.fa-rotate-45 {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
 }

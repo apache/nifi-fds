@@ -270,15 +270,15 @@ limitations under the License.
                 </mat-button-toggle-group>
                 <div fxLayout="row" class="pad-top-md pad-bot-md"></div>
                 <mat-button-toggle-group name="fds-administration-perspective" fxLayout="row" class="tab-toggle-group">
-                    <mat-button-toggle value="general" class="uppercase">
+                    <mat-button-toggle value="general" class="text-upper">
                         general
                     </mat-button-toggle>
                     <div fxLayout="row" class="pad-left-md"></div>
-                    <mat-button-toggle value="users" class="uppercase">
+                    <mat-button-toggle value="users" class="text-upper">
                         Users
                     </mat-button-toggle>
                     <div fxLayout="row" class="pad-left-md"></div>
-                    <mat-button-toggle value="workflow" class="uppercase">
+                    <mat-button-toggle value="workflow" class="text-upper">
                         Workflow
                     </mat-button-toggle>
                 </mat-button-toggle-group>
@@ -339,15 +339,15 @@ limitations under the License.
         </mat-button-toggle-group>
         <div fxLayout="row" class="pad-top-md pad-bot-md"></div>
         <mat-button-toggle-group name="fds-administration-perspective" fxLayout="row" class="tab-toggle-group">
-            <mat-button-toggle value="general" class="uppercase">
+            <mat-button-toggle value="general" class="text-upper">
                 general
             </mat-button-toggle>
             <div fxLayout="row" class="pad-left-md"></div>
-            <mat-button-toggle value="users" class="uppercase">
+            <mat-button-toggle value="users" class="text-upper">
                 Users
             </mat-button-toggle>
             <div fxLayout="row" class="pad-left-md"></div>
-            <mat-button-toggle value="workflow" class="uppercase">
+            <mat-button-toggle value="workflow" class="text-upper">
                 Workflow
             </mat-button-toggle>
         </mat-button-toggle-group>
@@ -995,7 +995,7 @@ limitations under the License.
                                                     sublabel={{droplet.sublabel}} [disabled]="disabled">
                                     <ng-template td-expansion-panel-label>
                                         <div fxLayout="column" fxLayoutAlign="space-between start">
-                                            <span class="md-title capitalize">{{droplet.displayName}}</span>
+                                            <span class="md-title text-caps">{{droplet.displayName}}</span>
                                             <span class="md-subhead">{{droplet.type}}</span>
                                         </div>
                                     </ng-template>
@@ -1003,19 +1003,19 @@ limitations under the License.
                                         <div fxLayout="row" fxLayoutAlign="space-between center">
                                             <div class="pad-right-xxl pad-left-xxl" fxLayout="column"
                                                  fxLayoutAlign="space-between start">
-                                                <span class="uppercase">Versions</span> {{droplet.versions.length}}
+                                                <span class="text-upper">Versions</span> {{droplet.versions.length}}
                                             </div>
                                             <div class="pad-right-xxl pad-left-xxl" fxLayout="column"
                                                  fxLayoutAlign="space-between start">
-                                                <span class="uppercase">Flows</span> {{droplet.flows.length}}
+                                                <span class="text-upper">Flows</span> {{droplet.flows.length}}
                                             </div>
                                             <div class="pad-right-xxl pad-left-xxl" fxLayout="column"
                                                  fxLayoutAlign="space-between start">
-                                                <span class="uppercase">Extensions</span> {{droplet.extensions.length}}
+                                                <span class="text-upper">Extensions</span> {{droplet.extensions.length}}
                                             </div>
                                             <div class="pad-right-xxl pad-left-xxl" fxLayout="column"
                                                  fxLayoutAlign="space-between start">
-                                                <span class="uppercase">Assests</span> {{droplet.assets.length}}
+                                                <span class="text-upper">Assests</span> {{droplet.assets.length}}
                                             </div>
                                         </div>
                                     </ng-template>
@@ -1036,7 +1036,7 @@ limitations under the License.
                                             </div>
                                             <div fxLayout="row">
                                                 <div fxFlex="25">
-                                                    <span class="uppercase">Description</span>
+                                                    <span class="text-upper">Description</span>
                                                     <p>Blah blah bla, bla bla, blah blah blaBlah blah bla, bla bla, blah
                                                         blah blaBlah blah bla, bla bla, blah blah blaBlah blah bla, bla
                                                         bla, blah blah blaBlah blah bla, bla bla, blah blah blaBlah blah
@@ -1056,7 +1056,7 @@ limitations under the License.
                                                     </mat-card>
                                                 </div>
                                                 <div fxFlex="25">
-                                                    <span class="uppercase">Change Log</span>
+                                                    <span class="text-upper">Change Log</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -1156,7 +1156,7 @@ limitations under the License.
                                     [disabled]="disabled">
                     <ng-template td-expansion-panel-label>
                         <div fxLayout="column" fxLayoutAlign="space-between start">
-                            <span class="md-title capitalize">{ {droplet.displayName} }</span>
+                            <span class="md-title text-caps">{ {droplet.displayName} }</span>
                             <span class="md-subhead">{ {droplet.type} }</span>
                         </div>
                     </ng-template>
@@ -1164,19 +1164,19 @@ limitations under the License.
                         <div fxLayout="row" fxLayoutAlign="space-between center">
                             <div class="pad-right-xxl pad-left-xxl" fxLayout="column"
                                  fxLayoutAlign="space-between start">
-                                <span class="uppercase">Versions</span> { {droplet.versions.length} }
+                                <span class="text-upper">Versions</span> { {droplet.versions.length} }
                             </div>
                             <div class="pad-right-xxl pad-left-xxl" fxLayout="column"
                                  fxLayoutAlign="space-between start">
-                                <span class="uppercase">Flows</span> { {droplet.flows.length} }
+                                <span class="text-upper">Flows</span> { {droplet.flows.length} }
                             </div>
                             <div class="pad-right-xxl pad-left-xxl" fxLayout="column"
                                  fxLayoutAlign="space-between start">
-                                <span class="uppercase">Extensions</span> { {droplet.extensions.length} }
+                                <span class="text-upper">Extensions</span> { {droplet.extensions.length} }
                             </div>
                             <div class="pad-right-xxl pad-left-xxl" fxLayout="column"
                                  fxLayoutAlign="space-between start">
-                                <span class="uppercase">Assests</span> { {droplet.assets.length} }
+                                <span class="text-upper">Assests</span> { {droplet.assets.length} }
                             </div>
                         </div>
                     </ng-template>
@@ -1196,7 +1196,7 @@ limitations under the License.
                             </div>
                             <div fxLayout="row">
                                 <div fxFlex="25">
-                                    <span class="uppercase">Description</span>
+                                    <span class="text-upper">Description</span>
                                     <p>Blah blah bla, bla bla, blah blah blaBlah blah bla, bla bla, blah blah blaBlah blah bla, bla bla, blah blah blaBlah blah bla, bla bla, blah blah blaBlah blah bla, bla bla, blah blah blaBlah blah bla, bla bla, blah blah blaBlah blah bla, bla bla, blah blah blaBlah blah bla, bla bla, blah blah blaBlah blah bla, bla bla, blah blah blaBlah blah bla, bla bla, blah blah blaBlah blah bla, bla bla, blah blah blaBlah blah bla, bla bla, blah blah blaBlah blah bla, bla bla, blah blah blaBlah blah bla, bla bla, blah blah blaBlah blah bla, bla bla, blah blah blaBlah blah bla, bla bla, blah blah bla</p>
                                 </div>
                                 <div fxFlex="50">
@@ -1207,7 +1207,7 @@ limitations under the License.
                                     </mat-card>
                                 </div>
                                 <div fxFlex="25">
-                                    <span class="uppercase">Change Log</span>
+                                    <span class="text-upper">Change Log</span>
                                 </div>
                             </div>
                         </div>

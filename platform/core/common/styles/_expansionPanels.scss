@@ -18,42 +18,46 @@
 /* Expansion Panels */
 
 @mixin fds-expansion-panels-theme($theme) {
-  $primaryColor: map-get(map-get($theme, primary), 500);
-  $primaryColorHover: map-get(map-get($theme, primary), 100);
-  $accentColor: map-get(map-get($theme, accent), 500);
-  $accentColorHover: map-get(map-get($theme, accent), 100);
+    $primaryColor: map-get(map-get($theme, primary), 500);
+    $primaryColorHover: map-get(map-get($theme, primary), 100);
+    $accentColor: map-get(map-get($theme, accent), 500);
+    $accentColorHover: map-get(map-get($theme, accent), 100);
 
-  body[fds] td-expansion-panel:not(:last-of-type) .td-expanded {
-    margin-bottom: 0;
-  }
-
-  body[fds] .td-expansion-panel-header-content {
-    height: 80px !important;
-    padding: 0 30px !important;
-    border-bottom: 1px solid $grey7;
-  }
-
-  body[fds] .td-expansion-content form {
-    padding: 15px 10px 20px 20px;
-  }
-
-  body[fds] td-expansion-panel .td-expansion-panel-header .td-expansion-panel-header-content mat-icon.td-expand-icon {
-    font-size: 28px;
-    color: $accentColor;
-    font-weight: bold;
-  }
-
-  body[fds] td-expansion-panel .td-expansion-panel-header {
-    &:focus {
-      background: #fff;
+    body[fds] td-expansion-panel:not(:last-of-type) .td-expanded {
+        margin-bottom: 0;
     }
 
-    &:hover:not(.mat-disabled) {
-      background: $accentColorHover;
+    body[fds] .td-expansion-panel-header-content {
+        height: 80px !important;
+        padding: 0 30px !important;
+        border-bottom: 1px solid $grey7;
     }
-  }
 
-  body[fds] td-expansion-panel .td-expansion-panel-header:focus .td-expansion-panel-header-content {
-    border-bottom: 1px solid $primaryColor;
-  }
+    body[fds] .td-expansion-content {
+        background: $grey6;
+    }
+
+    body[fds] .td-expansion-content form {
+        padding: 15px 10px 20px 20px;
+    }
+
+    body[fds] td-expansion-panel .td-expansion-panel-header .td-expansion-panel-header-content mat-icon.td-expand-icon {
+        font-size: 28px;
+        color: $accentColor;
+        font-weight: bold;
+    }
+
+    body[fds] td-expansion-panel .td-expansion-panel-header {
+        &:focus {
+            background: #fff;
+        }
+
+        &:hover:not(.mat-disabled) {
+            background: $accentColorHover;
+        }
+    }
+
+    body[fds] td-expansion-panel .td-expansion-panel-header:focus .td-expansion-panel-header-content {
+        border-bottom: 1px solid $primaryColor;
+    }
 }
