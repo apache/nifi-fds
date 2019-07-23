@@ -7,7 +7,32 @@ The demo application serves 2 main purposes
 * Provides a working example of how an Angular application should leverage `@nifi-fds/core`.
 
 ## Requirements
-This project requires npm version 5.6.0.
+This project requires node v8.10.0 and npm version 5.6.0 to build.
+
+A consuming application will need the following peer dependencies:
+
+```bash
+    "@angular/animations": "8.1.1",
+    "@angular/cdk": "8.1.0",
+    "@angular/common": "8.1.1",
+    "@angular/compiler": "8.1.1",
+    "@angular/core": "8.1.1",
+    "@angular/flex-layout": "8.0.0-beta.26",
+    "@angular/forms": "8.1.1",
+    "@angular/http": "8.0.0-beta.10",
+    "@angular/material": "8.1.0",
+    "@angular/platform-browser": "8.1.1",
+    "@angular/platform-browser-dynamic": "8.1.1",
+    "@angular/router": "8.1.1",
+    "@covalent/core": "2.1.0",
+    "detect-libc": "1.0.3",
+    "font-awesome": "4.7.0",
+    "hammerjs": "2.0.8",
+    "jquery": "3.4.1",
+    "roboto-fontface": "0.10.0",
+    "rxjs": "6.5.2",
+    "zone.js": "0.9.1"
+```
 
 ## Quick Start
 For developers not interested in building the FDS NgModule you can use **npm** to install the distribution files.
