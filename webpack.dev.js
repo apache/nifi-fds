@@ -71,6 +71,7 @@ module.exports = merge(commonConfig, {
         new LicenseWebpackPlugin({
             outputFilename: './target/thirdPartyLicenses.txt',
             unacceptableLicenseTest: (licenseType) => (licenseType === 'GPL' || licenseType === 'AGPL' || licenseType === 'LGPL' || licenseType === 'NGPL'),
+            licenseInclusionTest: (licenseType) => (licenseType !== 'Apache-2.0'),
             renderLicenses: (modules) => {
                 const licTextArray = modules.map((lic) => {
                     if (lic.licenseText && lic.licenseId) {

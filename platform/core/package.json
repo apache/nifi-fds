@@ -1,47 +1,65 @@
 {
-  "name": "@nifi-fds/core",
-  "version": "0.1.0",
-  "description": "Flow Design System —a subproject of Apache NiFi— is an atomic reusable platform for providing a common set of UI/UX components for Apache NiFi, Apache NiFi Registry, Apache NiFi MiNiFi, and any other open source web applications to consume.",
-  "keywords": [
-    "angular",
-    "material",
-    "material design",
-    "components",
-    "covalent",
-    "reusable",
-    "nifi-fds",
-    "flow design system"
-  ],
-  "scripts": {},
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/apache/nifi-fds.git"
-  },
-  "bugs": {
-    "url": "https://github.com/apache/nifi-fds/issues"
-  },
-  "license": "Apache-2.0",
-  "peerDependencies": {
-    "@angular/animations": "8.0.0-beta.10",
-    "@angular/cdk": "7.3.7",
-    "@angular/common": "8.0.0-beta.10",
-    "@angular/compiler": "8.0.0-beta.10",
-    "@angular/core": "8.0.0-beta.10",
-    "@angular/flex-layout": "7.0.0-beta.24",
-    "@angular/forms": "8.0.0-beta.10",
-    "@angular/http": "8.0.0-beta.10",
-    "@angular/material": "8.0.0-beta.1",
-    "@angular/platform-browser": "8.0.0-beta.10",
-    "@angular/platform-browser-dynamic": "8.0.0-beta.10",
-    "@angular/router": "8.0.0-beta.10",
-    "@covalent/core": "2.0.1",
-    "detect-libc": "1.0.3",
-    "font-awesome": "4.7.0",
-    "hammerjs": "2.0.8",
-    "jquery": "3.4.0",
-    "roboto-fontface": "0.10.0",
-    "rxjs": "6.4.0",
-    "zone.js": "0.9.0"
-  },
-  "dependencies": {}
+    "//": "Licensed to the Apache Software Foundation (ASF) under one or more",
+    "//": "contributor license agreements.  See the NOTICE file distributed with",
+    "//": "this work for additional information regarding copyright ownership.",
+    "//": "The ASF licenses this file to You under the Apache License, Version 2.0",
+    "//": "(the \"License\"); you may not use this file except in compliance with",
+    "//": "the License.  You may obtain a copy of the License at",
+    "//": "",
+    "//": "http://www.apache.org/licenses/LICENSE-2.0",
+    "//": "",
+    "//": "Unless required by applicable law or agreed to in writing, software",
+    "//": "distributed under the License is distributed on an \"AS IS\" BASIS,",
+    "//": "WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.",
+    "//": "See the License for the specific language governing permissions and",
+    "//": "limitations under the License.",
+    "name": "@nifi-fds/core",
+    "version": "0.3.0-SNAPSHOT",
+    "description": "The Apache NiFi Flow Design System module is an atomic reusable platform providing consistent set of UI/UX components for open source friendly web applications to consume.",
+    "keywords": [
+        "angular",
+        "material",
+        "material design",
+        "components",
+        "covalent",
+        "reusable",
+        "nifi-fds",
+        "flow design system"
+    ],
+    "scripts": {},
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/apache/nifi-fds.git"
+    },
+    "bugs": {
+        "url": "https://github.com/apache/nifi-fds/issues"
+    },
+    "license": "Apache-2.0",
+    "peerDependencies": {
+        "@angular/animations": "8.1.1",
+        "@angular/cdk": "8.1.0",
+        "@angular/common": "8.1.1",
+        "@angular/compiler": "8.1.1",
+        "@angular/core": "8.1.1",
+        "@angular/flex-layout": "8.0.0-beta.26",
+        "@angular/forms": "8.1.1",
+        "@angular/http": "8.0.0-beta.10",
+        "@angular/material": "8.1.0",
+        "@angular/platform-browser": "8.1.1",
+        "@angular/platform-browser-dynamic": "8.1.1",
+        "@angular/router": "8.1.1",
+        "@covalent/core": "2.1.0",
+        "detect-libc": "1.0.3",
+        "font-awesome": "4.7.0",
+        "hammerjs": "2.0.8",
+        "jquery": "3.4.1",
+        "roboto-fontface": "0.10.0",
+        "rxjs": "6.5.2",
+        "zone.js": "0.9.1"
+    },
+    "dependencies": {},
+    "engines": {
+        "node": "=8.10.0",
+        "npm": "=5.6.0"
+    }
 }

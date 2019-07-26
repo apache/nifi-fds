@@ -14,7 +14,7 @@
     "//": "See the License for the specific language governing permissions and",
     "//": "limitations under the License.",
     "name": "nifi-fds",
-    "version": "0.2.0-SNAPSHOT",
+    "version": "0.3.0-SNAPSHOT",
     "scripts": {
         "start": "./node_modules/http-server/bin/http-server --gzip -p 28080 .",
         "build:webapp:bundle:development": "npm run webpack:development",
