@@ -3,6 +3,7 @@
 module.exports = PrivateKey;
 
 var assert = require('assert-plus');
+var Buffer = require('safer-buffer').Buffer;
 var algs = require('./algs');
 var crypto = require('crypto');
 var Fingerprint = require('./fingerprint');
@@ -13,14 +14,8 @@ var utils = require('./utils');
 var dhe = require('./dhe');
 var generateECDSA = dhe.generateECDSA;
 var generateED25519 = dhe.generateED25519;
-var edCompat;
-var nacl;
-
-try {
-	edCompat = require('./ed-compat');
-} catch (e) {
-	/* Just continue through, and bail out if we try to use it. */
-}
+var edCompat = require('./ed-compat');
+var nacl = require('tweetnacl');
 
 var Key = require('./key');
 
@@ -59,8 +54,12 @@ PrivateKey.prototype.toBuffer = function (format, options) {
 	return (formats[format].write(this, options));
 };
 
-PrivateKey.prototype.hash = function (algo) {
-	return (this.toPublic().hash(algo));
+PrivateKey.prototype.hash = function (algo, type) {
+	return (this.toPublic().hash(algo, type));
+};
+
+PrivateKey.prototype.fingerprint = function (algo, type) {
+	return (this.toPublic().fingerprint(algo, type));
 };
 
 PrivateKey.prototype.toPublic = function () {
@@ -89,15 +88,12 @@ PrivateKey.prototype.derive = function (newType) {
 	var priv, pub, pair;
 
 	if (this.type === 'ed25519' && newType === 'curve25519') {
-		if (nacl === undefined)
-			nacl = require('tweetnacl');
-
 		priv = this.part.k.data;
 		if (priv[0] === 0x00)
 			priv = priv.slice(1);
 
 		pair = nacl.box.keyPair.fromSecretKey(new Uint8Array(priv));
-		pub = new Buffer(pair.publicKey);
+		pub = Buffer.from(pair.publicKey);
 
 		return (new PrivateKey({
 			type: 'curve25519',
@@ -107,15 +103,12 @@ PrivateKey.prototype.derive = function (newType) {
 			]
 		}));
 	} else if (this.type === 'curve25519' && newType === 'ed25519') {
-		if (nacl === undefined)
-			nacl = require('tweetnacl');
-
 		priv = this.part.k.data;
 		if (priv[0] === 0x00)
 			priv = priv.slice(1);
 
 		pair = nacl.sign.keyPair.fromSeed(new Uint8Array(priv));
-		pub = new Buffer(pair.publicKey);
+		pub = Buffer.from(pair.publicKey);
 
 		return (new PrivateKey({
 			type: 'ed25519',
@@ -166,7 +159,7 @@ PrivateKey.prototype.createSign = function (hashAlgo) {
 	v.sign = function () {
 		var sig = oldSign(key);
 		if (typeof (sig) === 'string')
-			sig = new Buffer(sig, 'binary');
+			sig = Buffer.from(sig, 'binary');
 		sig = Signature.parse(sig, type, 'asn1');
 		sig.hashAlgorithm = hashAlgo;
 		sig.curve = curve;
@@ -236,8 +229,9 @@ PrivateKey.generate = function (type, options) {
  * [1,3] -- added derive, ed, createDH
  * [1,4] -- first tagged version
  * [1,5] -- changed ed25519 part names and format
+ * [1,6] -- type arguments for hash() and fingerprint()
  */
-PrivateKey.prototype._sshpkApiVersion = [1, 5];
+PrivateKey.prototype._sshpkApiVersion = [1, 6];
 
 PrivateKey._oldVersionDetect = function (obj) {
 	assert.func(obj.toPublic);

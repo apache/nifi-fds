@@ -1,0 +1,7 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,uselessCode} checked by tsc
+ */
+export { CovalentSidesheetModule } from './sidesheet.module';
+export { TdSidesheetContentDirective, TdSidesheetTitleDirective, TdSidesheetActionsDirective, TdSidesheetHeaderComponent, TdSidesheetComponent } from './sidesheet.component';
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHVibGljLWFwaS5qcyIsInNvdXJjZVJvb3QiOiJuZzovL0Bjb3ZhbGVudC9jb3JlL3NpZGVzaGVldC8iLCJzb3VyY2VzIjpbInB1YmxpYy1hcGkudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7OztBQUFBLHdDQUFjLG9CQUFvQixDQUFDO0FBQ25DLHNKQUFjLHVCQUF1QixDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0ICogZnJvbSAnLi9zaWRlc2hlZXQubW9kdWxlJztcbmV4cG9ydCAqIGZyb20gJy4vc2lkZXNoZWV0LmNvbXBvbmVudCc7XG4iXX0=

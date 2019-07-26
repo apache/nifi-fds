@@ -5,16 +5,14 @@ module.exports = {
 	Signer: Signer
 };
 
-var nacl;
+var nacl = require('tweetnacl');
 var stream = require('stream');
 var util = require('util');
 var assert = require('assert-plus');
+var Buffer = require('safer-buffer').Buffer;
 var Signature = require('./signature');
 
 function Verifier(key, hashAlgo) {
-	if (nacl === undefined)
-		nacl = require('tweetnacl');
-
 	if (hashAlgo.toLowerCase() !== 'sha512')
 		throw (new Error('ED25519 only supports the use of ' +
 		    'SHA-512 hashes'));
@@ -33,7 +31,7 @@ Verifier.prototype._write = function (chunk, enc, cb) {
 
 Verifier.prototype.update = function (chunk) {
 	if (typeof (chunk) === 'string')
-		chunk = new Buffer(chunk, 'binary');
+		chunk = Buffer.from(chunk, 'binary');
 	this.chunks.push(chunk);
 };
 
@@ -45,7 +43,7 @@ Verifier.prototype.verify = function (signature, fmt) {
 		sig = signature.toBuffer('raw');
 
 	} else if (typeof (signature) === 'string') {
-		sig = new Buffer(signature, 'base64');
+		sig = Buffer.from(signature, 'base64');
 
 	} else if (Signature.isSignature(signature, [1, 0])) {
 		throw (new Error('signature was created by too old ' +
@@ -60,9 +58,6 @@ Verifier.prototype.verify = function (signature, fmt) {
 };
 
 function Signer(key, hashAlgo) {
-	if (nacl === undefined)
-		nacl = require('tweetnacl');
-
 	if (hashAlgo.toLowerCase() !== 'sha512')
 		throw (new Error('ED25519 only supports the use of ' +
 		    'SHA-512 hashes'));
@@ -81,7 +76,7 @@ Signer.prototype._write = function (chunk, enc, cb) {
 
 Signer.prototype.update = function (chunk) {
 	if (typeof (chunk) === 'string')
-		chunk = new Buffer(chunk, 'binary');
+		chunk = Buffer.from(chunk, 'binary');
 	this.chunks.push(chunk);
 };
 
@@ -90,7 +85,7 @@ Signer.prototype.sign = function () {
 	    new Uint8Array(Buffer.concat(this.chunks)),
 	    new Uint8Array(Buffer.concat([
 		this.key.part.k.data, this.key.part.A.data])));
-	var sigBuf = new Buffer(sig);
+	var sigBuf = Buffer.from(sig);
 	var sigObj = Signature.parse(sigBuf, 'ed25519', 'raw');
 	sigObj.hashAlgorithm = 'sha512';
 	return (sigObj);

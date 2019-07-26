@@ -1,0 +1,13 @@
+{
+  "main": "../bundles/covalent-core-tab-select.umd.js",
+  "module": "../fesm5/covalent-core-tab-select.js",
+  "es2015": "../fesm2015/covalent-core-tab-select.js",
+  "esm5": "../esm5/tab-select/covalent-core-tab-select.js",
+  "esm2015": "../esm2015/tab-select/covalent-core-tab-select.js",
+  "fesm5": "../fesm5/covalent-core-tab-select.js",
+  "fesm2015": "../fesm2015/covalent-core-tab-select.js",
+  "typings": "covalent-core-tab-select.d.ts",
+  "metadata": "covalent-core-tab-select.metadata.json",
+  "sideEffects": false,
+  "name": "@covalent/core/tab-select"
+}

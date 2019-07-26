@@ -35,8 +35,8 @@ export declare class TdMediaToggleDirective implements OnInit, OnDestroy {
     constructor(_renderer: Renderer2, _elementRef: ElementRef, _mediaService: TdMediaService);
     ngOnInit(): void;
     ngOnDestroy(): void;
-    private _mediaChange(matches);
-    private _changeAttributes();
-    private _changeClasses();
-    private _changeStyles();
+    private _mediaChange;
+    private _changeAttributes;
+    private _changeClasses;
+    private _changeStyles;
 }

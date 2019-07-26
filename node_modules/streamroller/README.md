@@ -21,7 +21,7 @@ The streams behave the same as standard node.js streams, except that when certai
 * `options` - Object
   * `encoding` - defaults to 'utf8'
   * `mode` - defaults to 0644
-  * `flags` - defaults to 'a'
+  * `flags` - defaults to 'a' (see [fs.open](https://nodejs.org/dist/latest-v8.x/docs/api/fs.html#fs_fs_open_path_flags_mode_callback) for more details)
   * `compress` - (boolean) defaults to `false` - compress the backup files using gzip (files will have `.gz` extension).
   * `keepFileExt` - (boolean) defaults to `false` - keep the file original extension. e.g.: `abc.log -> abc.1.log`.
 
@@ -47,7 +47,7 @@ When filename size >= maxSize then:
 * `options` - Object
 	* `encoding` - defaults to 'utf8'
 	* `mode` defaults to 0644
-	* `flags` defaults to 'a'
+	* `flags` defaults to 'a' (see [fs.open](https://nodejs.org/dist/latest-v8.x/docs/api/fs.html#fs_fs_open_path_flags_mode_callback) for more details)
     * `compress` - (boolean) compress the backup files, defaults to false
     * `keepFileExt` - (boolean) defaults to `false` - keep the file original extension. e.g.: `abc.log -> abc.2013-08-30.log`.
 	* `alwaysIncludePattern` - (boolean) extend the initial file with the pattern, defaults to false

@@ -112,7 +112,7 @@ export declare class TdLoadingService {
      * Clears timeout linked to the name.
      * @param name Name of the loading component to be cleared
      */
-    private _clearTimeout(name);
+    private _clearTimeout;
 }
 export declare function LOADING_PROVIDER_FACTORY(parent: TdLoadingService, loadingFactory: TdLoadingFactory): TdLoadingService;
 export declare const LOADING_PROVIDER: Provider;

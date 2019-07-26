@@ -3,5 +3,6 @@
   "typings": "../layout.d.ts",
   "main": "../bundles/cdk-layout.umd.js",
   "module": "../esm5/layout.es5.js",
-  "es2015": "../esm2015/layout.js"
+  "es2015": "../esm2015/layout.js",
+  "sideEffects": false
 }

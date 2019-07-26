@@ -6,3 +6,4 @@
  * found in the LICENSE file at https://angular.io/license
  */
 export * from './keycodes';
+export * from './modifiers';

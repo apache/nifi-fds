@@ -6,5 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 import { BreakPoint } from '../break-point';
-export declare const RESPONSIVE_ALIASES: string[];
+/**
+ * NOTE: Smaller ranges have HIGHER priority since the match is more specific
+ */
 export declare const DEFAULT_BREAKPOINTS: BreakPoint[];

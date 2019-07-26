@@ -1,4 +1,4 @@
-import { Constructor } from './constructor';
+declare type Constructor<T> = new (...args: any[]) => T;
 /** Interface to implement when applying the disabled mixin */
 export interface ICanDisable {
     disabled: boolean;
@@ -6,3 +6,4 @@ export interface ICanDisable {
 }
 /** Mixin to augment a component or directive with a `disabled` property. */
 export declare function mixinDisabled<T extends Constructor<{}>>(base: T): Constructor<ICanDisable> & T;
+export {};

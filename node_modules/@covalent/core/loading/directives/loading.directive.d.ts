@@ -67,5 +67,5 @@ export declare class TdLoadingDirective implements OnInit, OnDestroy {
      * Creates [TdLoadingComponent] and attaches it to this directive's [ViewContainerRef].
      * Passes this directive's [TemplateRef] to modify DOM depending on loading `strategy`.
      */
-    private _registerComponent();
+    private _registerComponent;
 }

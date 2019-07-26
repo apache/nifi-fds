@@ -63,6 +63,11 @@ export declare class TdSearchBoxComponent extends _TdSearchBoxMixinBase implemen
      * Event emitted after the clear icon has been clicked.
      */
     onClear: EventEmitter<void>;
+    /**
+     * blur: function()
+     * Event emitted after the blur event has been called in underlying input.
+     */
+    onBlur: EventEmitter<void>;
     constructor(_changeDetectorRef: ChangeDetectorRef);
     /**
      * Method executed when the search icon is clicked.
@@ -72,4 +77,5 @@ export declare class TdSearchBoxComponent extends _TdSearchBoxMixinBase implemen
     handleSearchDebounce(value: string): void;
     handleSearch(value: string): void;
     handleClear(): void;
+    handleBlur(): void;
 }

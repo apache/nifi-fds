@@ -14,4 +14,5 @@ export * from './version';
 export * from '@angular/flex-layout/core';
 export * from '@angular/flex-layout/extended';
 export * from '@angular/flex-layout/flex';
+export * from '@angular/flex-layout/grid';
 export * from './module';

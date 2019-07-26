@@ -14,9 +14,12 @@ import { Direction, Directionality } from './directionality';
  * Directionality to get the closest direction.
  */
 export declare class Dir implements Directionality, AfterContentInit, OnDestroy {
-    _dir: Direction;
+    /** Normalized direction that accounts for invalid/unsupported values. */
+    private _dir;
     /** Whether the `value` has been set to its initial value. */
     private _isInitialized;
+    /** Direction as passed in by the consumer. */
+    _rawDir: string;
     /** Event emitted when the direction changes. */
     change: EventEmitter<Direction>;
     /** @docs-private */

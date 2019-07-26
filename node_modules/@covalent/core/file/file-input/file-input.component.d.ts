@@ -48,4 +48,8 @@ export declare class TdFileInputComponent extends _TdFileInputMixinBase implemen
     clear(): void;
     /** Method executed when the disabled value changes */
     onDisabledChange(v: boolean): void;
+    /**
+     * Sets disable to the component. Implemented as part of ControlValueAccessor.
+     */
+    setDisabledState(isDisabled: boolean): void;
 }

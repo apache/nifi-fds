@@ -1,0 +1,60 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,uselessCode} checked by tsc
+ */
+import { Pipe } from '@angular/core';
+export class TdTimeDifferencePipe {
+    /**
+     * @param {?} start
+     * @param {?=} end
+     * @return {?}
+     */
+    transform(start, end) {
+        /** @type {?} */
+        let startTime = new Date(start);
+        /** @type {?} */
+        let endTime;
+        if (end !== undefined) {
+            endTime = new Date(end);
+        }
+        else {
+            endTime = new Date();
+        }
+        if (!startTime.getTime() || !endTime.getTime()) {
+            return 'Invalid Date';
+        }
+        /** @type {?} */
+        let diff = Math.floor((endTime.getTime() - startTime.getTime()) / 1000);
+        /** @type {?} */
+        let days = Math.floor(diff / (60 * 60 * 24));
+        diff = diff - (days * (60 * 60 * 24));
+        /** @type {?} */
+        let hours = Math.floor(diff / (60 * 60));
+        diff = diff - (hours * (60 * 60));
+        /** @type {?} */
+        let minutes = Math.floor(diff / (60));
+        diff -= minutes * (60);
+        /** @type {?} */
+        let seconds = diff;
+        /** @type {?} */
+        let pad = '00';
+        /** @type {?} */
+        let daysFormatted = '';
+        if (days > 0 && days < 2) {
+            daysFormatted = ' day - ';
+        }
+        else if (days > 1) {
+            daysFormatted = ' days - ';
+        }
+        return (days > 0 ? days + daysFormatted : daysFormatted) +
+            pad.substring(0, pad.length - (hours + '').length) + hours + ':' +
+            pad.substring(0, pad.length - (minutes + '').length) + minutes + ':' +
+            pad.substring(0, pad.length - (seconds + '').length) + seconds;
+    }
+}
+TdTimeDifferencePipe.decorators = [
+    { type: Pipe, args: [{
+                name: 'timeDifference',
+            },] }
+];
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidGltZS1kaWZmZXJlbmNlLnBpcGUuanMiLCJzb3VyY2VSb290Ijoibmc6Ly9AY292YWxlbnQvY29yZS8iLCJzb3VyY2VzIjpbImNvbW1vbi9waXBlcy90aW1lLWRpZmZlcmVuY2UvdGltZS1kaWZmZXJlbmNlLnBpcGUudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7OztBQUFBLE9BQU8sRUFBRSxJQUFJLEVBQWlCLE1BQU0sZUFBZSxDQUFDO0FBTXBELE1BQU0sT0FBTyxvQkFBb0I7Ozs7OztJQUMvQixTQUFTLENBQUMsS0FBVSxFQUFFLEdBQVM7O1lBQ3pCLFNBQVMsR0FBUyxJQUFJLElBQUksQ0FBQyxLQUFLLENBQUM7O1lBQ2pDLE9BQWE7UUFFakIsSUFBSSxHQUFHLEtBQUssU0FBUyxFQUFFO1lBQ3JCLE9BQU8sR0FBRyxJQUFJLElBQUksQ0FBQyxHQUFHLENBQUMsQ0FBQztTQUN6QjthQUFNO1lBQ0wsT0FBTyxHQUFHLElBQUksSUFBSSxFQUFFLENBQUM7U0FDdEI7UUFFRCxJQUFJLENBQUMsU0FBUyxDQUFDLE9BQU8sRUFBRSxJQUFJLENBQUMsT0FBTyxDQUFDLE9BQU8sRUFBRSxFQUFFO1lBQzlDLE9BQU8sY0FBYyxDQUFDO1NBQ3ZCOztZQUVHLElBQUksR0FBVyxJQUFJLENBQUMsS0FBSyxDQUFDLENBQUMsT0FBTyxDQUFDLE9BQU8sRUFBRSxHQUFHLFNBQVMsQ0FBQyxPQUFPLEVBQUUsQ0FBQyxHQUFHLElBQUksQ0FBQzs7WUFFM0UsSUFBSSxHQUFXLElBQUksQ0FBQyxLQUFLLENBQUMsSUFBSSxHQUFHLENBQUMsRUFBRSxHQUFHLEVBQUUsR0FBRyxFQUFFLENBQUMsQ0FBQztRQUNwRCxJQUFJLEdBQUcsSUFBSSxHQUFHLENBQUMsSUFBSSxHQUFHLENBQUMsRUFBRSxHQUFHLEVBQUUsR0FBRyxFQUFFLENBQUMsQ0FBQyxDQUFDOztZQUVsQyxLQUFLLEdBQVcsSUFBSSxDQUFDLEtBQUssQ0FBQyxJQUFJLEdBQUcsQ0FBQyxFQUFFLEdBQUcsRUFBRSxDQUFDLENBQUM7UUFDaEQsSUFBSSxHQUFHLElBQUksR0FBRyxDQUFDLEtBQUssR0FBRyxDQUFDLEVBQUUsR0FBRyxFQUFFLENBQUMsQ0FBQyxDQUFDOztZQUU5QixPQUFPLEdBQVcsSUFBSSxDQUFDLEtBQUssQ0FBQyxJQUFJLEdBQUcsQ0FBQyxFQUFFLENBQUMsQ0FBQztRQUM3QyxJQUFJLElBQUksT0FBTyxHQUFHLENBQUMsRUFBRSxDQUFDLENBQUM7O1lBRW5CLE9BQU8sR0FBVyxJQUFJOztZQUV0QixHQUFHLEdBQVcsSUFBSTs7WUFFbEIsYUFBYSxHQUFXLEVBQUU7UUFFOUIsSUFBSSxJQUFJLEdBQUcsQ0FBQyxJQUFJLElBQUksR0FBRyxDQUFDLEVBQUU7WUFDeEIsYUFBYSxHQUFHLFNBQVMsQ0FBQztTQUMzQjthQUFNLElBQUksSUFBSSxHQUFHLENBQUMsRUFBRTtZQUNuQixhQUFhLEdBQUcsVUFBVSxDQUFFO1NBQzdCO1FBRUQsT0FBTyxDQUFDLElBQUksR0FBRyxDQUFDLENBQUMsQ0FBQyxDQUFDLElBQUksR0FBRyxhQUFhLENBQUMsQ0FBQyxDQUFDLGFBQWEsQ0FBQztZQUN2RCxHQUFHLENBQUMsU0FBUyxDQUFDLENBQUMsRUFBRSxHQUFHLENBQUMsTUFBTSxHQUFHLENBQUMsS0FBSyxHQUFHLEVBQUUsQ0FBQyxDQUFDLE1BQU0sQ0FBQyxHQUFHLEtBQUssR0FBRyxHQUFHO1lBQ2hFLEdBQUcsQ0FBQyxTQUFTLENBQUMsQ0FBQyxFQUFFLEdBQUcsQ0FBQyxNQUFNLEdBQUcsQ0FBQyxPQUFPLEdBQUcsRUFBRSxDQUFDLENBQUMsTUFBTSxDQUFDLEdBQUcsT0FBTyxHQUFHLEdBQUc7WUFDcEUsR0FBRyxDQUFDLFNBQVMsQ0FBQyxDQUFDLEVBQUUsR0FBRyxDQUFDLE1BQU0sR0FBRyxDQUFDLE9BQU8sR0FBRyxFQUFFLENBQUMsQ0FBQyxNQUFNLENBQUMsR0FBRyxPQUFPLENBQUM7SUFDbEUsQ0FBQzs7O1lBOUNGLElBQUksU0FBQztnQkFDSixJQUFJLEVBQUUsZ0JBQWdCO2FBQ3ZCIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgUGlwZSwgUGlwZVRyYW5zZm9ybSB9IGZyb20gJ0Bhbmd1bGFyL2NvcmUnO1xuXG5AUGlwZSh7XG4gIG5hbWU6ICd0aW1lRGlmZmVyZW5jZScsXG59KVxuXG5leHBvcnQgY2xhc3MgVGRUaW1lRGlmZmVyZW5jZVBpcGUgaW1wbGVtZW50cyBQaXBlVHJhbnNmb3JtIHtcbiAgdHJhbnNmb3JtKHN0YXJ0OiBhbnksIGVuZD86IGFueSk6IHN0cmluZyB7XG4gICAgbGV0IHN0YXJ0VGltZTogRGF0ZSA9IG5ldyBEYXRlKHN0YXJ0KTtcbiAgICBsZXQgZW5kVGltZTogRGF0ZTtcblxuICAgIGlmIChlbmQgIT09IHVuZGVmaW5lZCkge1xuICAgICAgZW5kVGltZSA9IG5ldyBEYXRlKGVuZCk7XG4gICAgfSBlbHNlIHtcbiAgICAgIGVuZFRpbWUgPSBuZXcgRGF0ZSgpO1xuICAgIH1cblxuICAgIGlmICghc3RhcnRUaW1lLmdldFRpbWUoKSB8fCAhZW5kVGltZS5nZXRUaW1lKCkpIHtcbiAgICAgIHJldHVybiAnSW52YWxpZCBEYXRlJztcbiAgICB9XG5cbiAgICBsZXQgZGlmZjogbnVtYmVyID0gTWF0aC5mbG9vcigoZW5kVGltZS5nZXRUaW1lKCkgLSBzdGFydFRpbWUuZ2V0VGltZSgpKSAvIDEwMDApO1xuXG4gICAgbGV0IGRheXM6IG51bWJlciA9IE1hdGguZmxvb3IoZGlmZiAvICg2MCAqIDYwICogMjQpKTtcbiAgICBkaWZmID0gZGlmZiAtIChkYXlzICogKDYwICogNjAgKiAyNCkpO1xuXG4gICAgbGV0IGhvdXJzOiBudW1iZXIgPSBNYXRoLmZsb29yKGRpZmYgLyAoNjAgKiA2MCkpO1xuICAgIGRpZmYgPSBkaWZmIC0gKGhvdXJzICogKDYwICogNjApKTtcblxuICAgIGxldCBtaW51dGVzOiBudW1iZXIgPSBNYXRoLmZsb29yKGRpZmYgLyAoNjApKTtcbiAgICBkaWZmIC09IG1pbnV0ZXMgKiAoNjApO1xuXG4gICAgbGV0IHNlY29uZHM6IG51bWJlciA9IGRpZmY7XG5cbiAgICBsZXQgcGFkOiBzdHJpbmcgPSAnMDAnO1xuXG4gICAgbGV0IGRheXNGb3JtYXR0ZWQ6IHN0cmluZyA9ICcnO1xuXG4gICAgaWYgKGRheXMgPiAwICYmIGRheXMgPCAyKSB7XG4gICAgICBkYXlzRm9ybWF0dGVkID0gJyBkYXkgLSAnO1xuICAgIH0gZWxzZSBpZiAoZGF5cyA+IDEpIHtcbiAgICAgIGRheXNGb3JtYXR0ZWQgPSAnIGRheXMgLSAnIDtcbiAgICB9XG5cbiAgICByZXR1cm4gKGRheXMgPiAwID8gZGF5cyArIGRheXNGb3JtYXR0ZWQgOiBkYXlzRm9ybWF0dGVkKSArXG4gICAgIHBhZC5zdWJzdHJpbmcoMCwgcGFkLmxlbmd0aCAtIChob3VycyArICcnKS5sZW5ndGgpICsgaG91cnMgKyAnOicgK1xuICAgICBwYWQuc3Vic3RyaW5nKDAsIHBhZC5sZW5ndGggLSAobWludXRlcyArICcnKS5sZW5ndGgpICsgbWludXRlcyArICc6JyArXG4gICAgIHBhZC5zdWJzdHJpbmcoMCwgcGFkLmxlbmd0aCAtIChzZWNvbmRzICsgJycpLmxlbmd0aCkgKyBzZWNvbmRzO1xuICB9XG59XG4iXX0=

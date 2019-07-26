@@ -20,6 +20,11 @@ export declare class TdStepHeaderComponent extends _TdStepHeaderMixinBase implem
      */
     state: StepState;
     /**
+     * tabIndex?: number
+     * tabIndex of the step header for a11y
+     */
+    tabIndex: number;
+    /**
      * Returns 'true' if [state] equals to [StepState.Complete | 'complete'], else 'false'.
      */
     isComplete(): boolean;

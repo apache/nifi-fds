@@ -1,0 +1,8 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,uselessCode} checked by tsc
+ */
+export { CovalentVirtualScrollModule } from './virtual-scroll.module';
+export { TdVirtualScrollContainerComponent } from './virtual-scroll-container.component';
+export { TdVirtualScrollRowDirective } from './virtual-scroll-row.directive';
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHVibGljLWFwaS5qcyIsInNvdXJjZVJvb3QiOiJuZzovL0Bjb3ZhbGVudC9jb3JlLyIsInNvdXJjZXMiOlsidmlydHVhbC1zY3JvbGwvcHVibGljLWFwaS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7O0FBQUEsNENBQWMseUJBQXlCLENBQUM7QUFDeEMsa0RBQWMsc0NBQXNDLENBQUM7QUFDckQsNENBQWMsZ0NBQWdDLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgKiBmcm9tICcuL3ZpcnR1YWwtc2Nyb2xsLm1vZHVsZSc7XG5leHBvcnQgKiBmcm9tICcuL3ZpcnR1YWwtc2Nyb2xsLWNvbnRhaW5lci5jb21wb25lbnQnO1xuZXhwb3J0ICogZnJvbSAnLi92aXJ0dWFsLXNjcm9sbC1yb3cuZGlyZWN0aXZlJztcbiJdfQ==

@@ -1,0 +1,13 @@
+{
+  "main": "../bundles/covalent-core-breadcrumbs.umd.js",
+  "module": "../fesm5/covalent-core-breadcrumbs.js",
+  "es2015": "../fesm2015/covalent-core-breadcrumbs.js",
+  "esm5": "../esm5/breadcrumbs/covalent-core-breadcrumbs.js",
+  "esm2015": "../esm2015/breadcrumbs/covalent-core-breadcrumbs.js",
+  "fesm5": "../fesm5/covalent-core-breadcrumbs.js",
+  "fesm2015": "../fesm2015/covalent-core-breadcrumbs.js",
+  "typings": "covalent-core-breadcrumbs.d.ts",
+  "metadata": "covalent-core-breadcrumbs.metadata.json",
+  "sideEffects": false,
+  "name": "@covalent/core/breadcrumbs"
+}

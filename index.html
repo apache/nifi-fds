@@ -16,21 +16,14 @@
 <html>
 <head>
     <title>Apache NiFi Flow Design System Demo</title>
-    <base href='/nifi-fds/'>
+    <base href="/nifi-fds/">
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
-    <link rel="stylesheet" href="node_modules/@covalent/core/common/platform.css">
-    <link rel="stylesheet" href='node_modules/@nifi-fds/core/common/styles/css/flow-design-system.min.css'/>
-    <link rel="stylesheet" href='demo-app/css/fds-demo.min.css'/>
-    <link rel='stylesheet' href='node_modules/font-awesome/css/font-awesome.css'/>
-</head>
+    <!-- Styles will be injected here by webpack -->
+<link href="fds-demo.styles.min.css" rel="stylesheet"></head>
 <body>
-<fds-app></fds-app>
-</body>
-<script src="node_modules/systemjs/dist/system.src.js"></script>
-<script src="demo-app/systemjs.config.js?"></script>
-<script>
-  System.import('demo-app/fds-bootstrap.js').catch(function(err) {console.error(err);});
-</script>
+    <fds-app></fds-app>
+    <!-- Scripts will be injected here by webpack -->
+<script type="text/javascript" src="fds-demo.vendor.min.js"></script><script type="text/javascript" src="fds-demo.bundle.min.js"></script></body>
 </html>

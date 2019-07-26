@@ -7,6 +7,6 @@
  */
 import { TemplateRef } from '@angular/core';
 export declare class CdkStepLabel {
-    /** @docs-private */ template: TemplateRef<any>;
+    template: TemplateRef<any>;
     constructor(/** @docs-private */ template: TemplateRef<any>);
 }

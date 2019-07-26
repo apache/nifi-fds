@@ -8,16 +8,19 @@ module.exports = {
 
 var assert = require('assert-plus');
 var crypto = require('crypto');
+var Buffer = require('safer-buffer').Buffer;
 var algs = require('./algs');
 var utils = require('./utils');
-var nacl;
+var nacl = require('tweetnacl');
 
 var Key = require('./key');
 var PrivateKey = require('./private-key');
 
 var CRYPTO_HAVE_ECDH = (crypto.createECDH !== undefined);
 
-var ecdh, ec, jsbn;
+var ecdh = require('ecc-jsbn');
+var ec = require('ecc-jsbn/lib/ec');
+var jsbn = require('jsbn').BigInteger;
 
 function DiffieHellman(key) {
 	utils.assertCompatible(key, Key, [1, 4], 'key');
@@ -42,13 +45,6 @@ function DiffieHellman(key) {
 
 	} else if (key.type === 'ecdsa') {
 		if (!CRYPTO_HAVE_ECDH) {
-			if (ecdh === undefined)
-				ecdh = require('ecc-jsbn');
-			if (ec === undefined)
-				ec = require('ecc-jsbn/lib/ec');
-			if (jsbn === undefined)
-				jsbn = require('jsbn').BigInteger;
-
 			this._ecParams = new X9ECParameters(this._curve);
 
 			if (this._isPriv) {
@@ -75,9 +71,6 @@ function DiffieHellman(key) {
 		this._dh.setPublicKey(key.part.Q.data);
 
 	} else if (key.type === 'curve25519') {
-		if (nacl === undefined)
-			nacl = require('tweetnacl');
-
 		if (this._isPriv) {
 			utils.assertCompatible(key, PrivateKey, [1, 5], 'key');
 			this._priv = key.part.k.data;
@@ -189,7 +182,7 @@ DiffieHellman.prototype.computeSecret = function (otherpk) {
 		var secret = nacl.box.before(new Uint8Array(pub),
 		    new Uint8Array(priv));
 
-		return (new Buffer(secret));
+		return (Buffer.from(secret));
 	}
 
 	throw (new Error('Invalid algorithm: ' + this._algo));
@@ -218,7 +211,7 @@ DiffieHellman.prototype.generateKey = function () {
 			this._dh.generateKeys();
 
 			parts.push({name: 'curve',
-			    data: new Buffer(this._curve)});
+			    data: Buffer.from(this._curve)});
 			parts.push({name: 'Q', data: this._dh.getPublicKey()});
 			parts.push({name: 'd', data: this._dh.getPrivateKey()});
 			this._key = new PrivateKey({
@@ -236,14 +229,14 @@ DiffieHellman.prototype.generateKey = function () {
 			priv = r.mod(n1).add(jsbn.ONE);
 			pub = this._ecParams.getG().multiply(priv);
 
-			priv = new Buffer(priv.toByteArray());
-			pub = new Buffer(this._ecParams.getCurve().
+			priv = Buffer.from(priv.toByteArray());
+			pub = Buffer.from(this._ecParams.getCurve().
 			    encodePointHex(pub), 'hex');
 
 			this._priv = new ECPrivate(this._ecParams, priv);
 
 			parts.push({name: 'curve',
-			    data: new Buffer(this._curve)});
+			    data: Buffer.from(this._curve)});
 			parts.push({name: 'Q', data: pub});
 			parts.push({name: 'd', data: priv});
 
@@ -258,8 +251,8 @@ DiffieHellman.prototype.generateKey = function () {
 
 	} else if (this._algo === 'curve25519') {
 		var pair = nacl.box.keyPair();
-		priv = new Buffer(pair.secretKey);
-		pub = new Buffer(pair.publicKey);
+		priv = Buffer.from(pair.secretKey);
+		pub = Buffer.from(pair.publicKey);
 		priv = Buffer.concat([priv, pub]);
 		assert.strictEqual(priv.length, 64);
 		assert.strictEqual(pub.length, 32);
@@ -316,16 +309,13 @@ function ECPrivate(params, buffer) {
 ECPrivate.prototype.deriveSharedSecret = function (pubKey) {
 	assert.ok(pubKey instanceof ECPublic);
 	var S = pubKey._pub.multiply(this._priv);
-	return (new Buffer(S.getX().toBigInteger().toByteArray()));
+	return (Buffer.from(S.getX().toBigInteger().toByteArray()));
 };
 
 function generateED25519() {
-	if (nacl === undefined)
-		nacl = require('tweetnacl');
-
 	var pair = nacl.sign.keyPair();
-	var priv = new Buffer(pair.secretKey);
-	var pub = new Buffer(pair.publicKey);
+	var priv = Buffer.from(pair.secretKey);
+	var pub = Buffer.from(pair.publicKey);
 	assert.strictEqual(priv.length, 64);
 	assert.strictEqual(pub.length, 32);
 
@@ -362,7 +352,7 @@ function generateECDSA(curve) {
 		dh.generateKeys();
 
 		parts.push({name: 'curve',
-		    data: new Buffer(curve)});
+		    data: Buffer.from(curve)});
 		parts.push({name: 'Q', data: dh.getPublicKey()});
 		parts.push({name: 'd', data: dh.getPrivateKey()});
 
@@ -373,12 +363,6 @@ function generateECDSA(curve) {
 		});
 		return (key);
 	} else {
-		if (ecdh === undefined)
-			ecdh = require('ecc-jsbn');
-		if (ec === undefined)
-			ec = require('ecc-jsbn/lib/ec');
-		if (jsbn === undefined)
-			jsbn = require('jsbn').BigInteger;
 
 		var ecParams = new X9ECParameters(curve);
 
@@ -395,11 +379,11 @@ function generateECDSA(curve) {
 		var priv = c.mod(n1).add(jsbn.ONE);
 		var pub = ecParams.getG().multiply(priv);
 
-		priv = new Buffer(priv.toByteArray());
-		pub = new Buffer(ecParams.getCurve().
+		priv = Buffer.from(priv.toByteArray());
+		pub = Buffer.from(ecParams.getCurve().
 		    encodePointHex(pub), 'hex');
 
-		parts.push({name: 'curve', data: new Buffer(curve)});
+		parts.push({name: 'curve', data: Buffer.from(curve)});
 		parts.push({name: 'Q', data: pub});
 		parts.push({name: 'd', data: priv});
 

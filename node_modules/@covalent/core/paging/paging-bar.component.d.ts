@@ -102,11 +102,11 @@ export declare class TdPagingBarComponent implements OnInit {
     lastPage(): boolean;
     isMinPage(): boolean;
     isMaxPage(): boolean;
-    private _calculateRows();
+    private _calculateRows;
     /**
      * _calculatePageLinks?: function
      * Calculates the page links that should be shown to the user based on the current state of the paginator
      */
-    private _calculatePageLinks();
-    private _handleOnChange();
+    private _calculatePageLinks;
+    private _handleOnChange;
 }

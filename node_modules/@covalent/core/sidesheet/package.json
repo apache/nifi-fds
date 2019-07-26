@@ -1,0 +1,13 @@
+{
+  "main": "../bundles/covalent-core-sidesheet.umd.js",
+  "module": "../fesm5/covalent-core-sidesheet.js",
+  "es2015": "../fesm2015/covalent-core-sidesheet.js",
+  "esm5": "../esm5/sidesheet/covalent-core-sidesheet.js",
+  "esm2015": "../esm2015/sidesheet/covalent-core-sidesheet.js",
+  "fesm5": "../fesm5/covalent-core-sidesheet.js",
+  "fesm2015": "../fesm2015/covalent-core-sidesheet.js",
+  "typings": "covalent-core-sidesheet.d.ts",
+  "metadata": "covalent-core-sidesheet.metadata.json",
+  "sideEffects": false,
+  "name": "@covalent/core/sidesheet"
+}

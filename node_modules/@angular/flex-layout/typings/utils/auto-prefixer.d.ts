@@ -17,4 +17,8 @@
  *      // display: -moz-flexbox;  OLD - Firefox
  *    }
  */
-export declare function applyCssPrefixes(target: any): any;
+export declare function applyCssPrefixes(target: {
+    [key: string]: any | null;
+}): {
+    [key: string]: any;
+};

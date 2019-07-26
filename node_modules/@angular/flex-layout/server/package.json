@@ -3,5 +3,6 @@
   "typings": "../server.d.ts",
   "main": "../bundles/flex-layout-server.umd.js",
   "module": "../esm5/server.es5.js",
-  "es2015": "../esm2015/server.js"
+  "es2015": "../esm2015/server.js",
+  "sideEffects": false
 }

@@ -18,8 +18,8 @@ export declare class DomPortalOutlet extends BasePortalOutlet {
     private _appRef;
     private _defaultInjector;
     constructor(
-        /** Element into which the content is projected. */
-        outletElement: Element, _componentFactoryResolver: ComponentFactoryResolver, _appRef: ApplicationRef, _defaultInjector: Injector);
+    /** Element into which the content is projected. */
+    outletElement: Element, _componentFactoryResolver: ComponentFactoryResolver, _appRef: ApplicationRef, _defaultInjector: Injector);
     /**
      * Attach the given ComponentPortal to DOM element using the ComponentFactoryResolver.
      * @param portal Portal to be attached
@@ -37,5 +37,5 @@ export declare class DomPortalOutlet extends BasePortalOutlet {
      */
     dispose(): void;
     /** Gets the root HTMLElement for an instantiated component. */
-    private _getComponentRootNode(componentRef);
+    private _getComponentRootNode;
 }

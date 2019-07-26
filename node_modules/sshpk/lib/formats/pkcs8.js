@@ -1,10 +1,11 @@
-// Copyright 2015 Joyent, Inc.
+// Copyright 2018 Joyent, Inc.
 
 module.exports = {
 	read: read,
 	readPkcs8: readPkcs8,
 	write: write,
 	writePkcs8: writePkcs8,
+	pkcs8ToBuffer: pkcs8ToBuffer,
 
 	readECDSACurve: readECDSACurve,
 	writeECDSACurve: writeECDSACurve
@@ -12,6 +13,7 @@ module.exports = {
 
 var assert = require('assert-plus');
 var asn1 = require('asn1');
+var Buffer = require('safer-buffer').Buffer;
 var algs = require('../algs');
 var utils = require('../utils');
 var Key = require('../key');
@@ -299,15 +301,27 @@ function readPkcs8ECDSAPrivate(der) {
 	assert.equal(version[0], 1, 'unknown version of ECDSA key');
 
 	var d = der.readString(asn1.Ber.OctetString, true);
-	der.readSequence(0xa1);
+	var Q;
 
-	var Q = der.readString(asn1.Ber.BitString, true);
-	Q = utils.ecNormalize(Q);
+	if (der.peek() == 0xa0) {
+		der.readSequence(0xa0);
+		der._offset += der.length;
+	}
+	if (der.peek() == 0xa1) {
+		der.readSequence(0xa1);
+		Q = der.readString(asn1.Ber.BitString, true);
+		Q = utils.ecNormalize(Q);
+	}
+
+	if (Q === undefined) {
+		var pub = utils.publicFromPrivateECDSA(curveName, d);
+		Q = pub.part.Q.data;
+	}
 
 	var key = {
 		type: 'ecdsa',
 		parts: [
-			{ name: 'curve', data: new Buffer(curveName) },
+			{ name: 'curve', data: Buffer.from(curveName) },
 			{ name: 'Q', data: Q },
 			{ name: 'd', data: d }
 		]
@@ -326,7 +340,7 @@ function readPkcs8ECDSAPublic(der) {
 	var key = {
 		type: 'ecdsa',
 		parts: [
-			{ name: 'curve', data: new Buffer(curveName) },
+			{ name: 'curve', data: Buffer.from(curveName) },
 			{ name: 'Q', data: Q }
 		]
 	};
@@ -411,12 +425,17 @@ function readPkcs8X25519Private(der) {
 	return (new PrivateKey(key));
 }
 
+function pkcs8ToBuffer(key) {
+	var der = new asn1.BerWriter();
+	writePkcs8(der, key);
+	return (der.buffer);
+}
+
 function writePkcs8(der, key) {
 	der.startSequence();
 
 	if (PrivateKey.isPrivateKey(key)) {
-		var sillyInt = new Buffer(1);
-		sillyInt[0] = 0x0;
+		var sillyInt = Buffer.from([0]);
 		der.writeBuffer(sillyInt, asn1.Ber.Integer);
 	}
 
@@ -464,8 +483,7 @@ function writePkcs8RSAPrivate(key, der) {
 	der.startSequence(asn1.Ber.OctetString);
 	der.startSequence();
 
-	var version = new Buffer(1);
-	version[0] = 0;
+	var version = Buffer.from([0]);
 	der.writeBuffer(version, asn1.Ber.Integer);
 
 	der.writeBuffer(key.part.n.data, asn1.Ber.Integer);
@@ -536,8 +554,7 @@ function writeECDSACurve(key, der) {
 		// ECParameters sequence
 		der.startSequence();
 
-		var version = new Buffer(1);
-		version.writeUInt8(1, 0);
+		var version = Buffer.from([1]);
 		der.writeBuffer(version, asn1.Ber.Integer);
 
 		// FieldID sequence
@@ -560,8 +577,7 @@ function writeECDSACurve(key, der) {
 		der.writeBuffer(curve.n, asn1.Ber.Integer);
 		var h = curve.h;
 		if (!h) {
-			h = new Buffer(1);
-			h[0] = 1;
+			h = Buffer.from([1]);
 		}
 		der.writeBuffer(h, asn1.Ber.Integer);
 
@@ -585,8 +601,7 @@ function writePkcs8ECDSAPrivate(key, der) {
 	der.startSequence(asn1.Ber.OctetString);
 	der.startSequence();
 
-	var version = new Buffer(1);
-	version[0] = 1;
+	var version = Buffer.from([1]);
 	der.writeBuffer(version, asn1.Ber.Integer);
 
 	der.writeBuffer(key.part.d.data, asn1.Ber.OctetString);

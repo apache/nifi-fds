@@ -1,0 +1,10 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,uselessCode} checked by tsc
+ */
+/**
+ * Generated bundle index. Do not edit.
+ */
+export { CovalentBreadcrumbsModule, TdBreadcrumbsComponent } from './index';
+export { TdBreadcrumbComponent as ɵa } from './breadcrumb/breadcrumb.component';
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY292YWxlbnQtY29yZS1icmVhZGNydW1icy5qcyIsInNvdXJjZVJvb3QiOiJuZzovL0Bjb3ZhbGVudC9jb3JlL2JyZWFkY3J1bWJzLyIsInNvdXJjZXMiOlsiY292YWxlbnQtY29yZS1icmVhZGNydW1icy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7O0FBSUEsa0VBQWMsU0FBUyxDQUFDO0FBRXhCLE9BQU8sRUFBQyxxQkFBcUIsSUFBSSxFQUFFLEVBQUMsTUFBTSxtQ0FBbUMsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIi8qKlxuICogR2VuZXJhdGVkIGJ1bmRsZSBpbmRleC4gRG8gbm90IGVkaXQuXG4gKi9cblxuZXhwb3J0ICogZnJvbSAnLi9pbmRleCc7XG5cbmV4cG9ydCB7VGRCcmVhZGNydW1iQ29tcG9uZW50IGFzIMm1YX0gZnJvbSAnLi9icmVhZGNydW1iL2JyZWFkY3J1bWIuY29tcG9uZW50JzsiXX0=

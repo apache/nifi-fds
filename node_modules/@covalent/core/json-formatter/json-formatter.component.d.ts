@@ -68,5 +68,5 @@ export declare class TdJsonFormatterComponent {
      * Creates preview of nodes children to render in tooltip depending if its an array or an object.
      */
     getPreview(): string;
-    private parseChildren();
+    private parseChildren;
 }

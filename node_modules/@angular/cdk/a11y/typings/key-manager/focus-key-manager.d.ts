@@ -24,8 +24,14 @@ export declare class FocusKeyManager<T> extends ListKeyManager<FocusableOption &
      */
     setFocusOrigin(origin: FocusOrigin): this;
     /**
-     * This method sets the active item to the item at the specified index.
-     * It also adds focuses the newly active item.
+     * Sets the active item to the item at the specified
+     * index and focuses the newly active item.
+     * @param index Index of the item to be set as active.
      */
     setActiveItem(index: number): void;
+    /**
+     * Sets the active item to the item that is specified and focuses it.
+     * @param item Item to be set as active.
+     */
+    setActiveItem(item: T): void;
 }

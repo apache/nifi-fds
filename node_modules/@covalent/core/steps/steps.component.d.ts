@@ -7,7 +7,7 @@ export interface IStepChangeEvent {
 }
 export declare enum StepMode {
     Vertical = "vertical",
-    Horizontal = "horizontal",
+    Horizontal = "horizontal"
 }
 export declare class TdStepsComponent implements OnDestroy, AfterContentInit {
     private _subcriptions;
@@ -49,11 +49,11 @@ export declare class TdStepsComponent implements OnDestroy, AfterContentInit {
      * Wraps previous and new [TdStepComponent] numbers in an object that implements [IStepChangeEvent]
      * and emits [onStepChange] event.
      */
-    private _onStepSelection(step);
+    private _onStepSelection;
     /**
      * Loops through [TdStepComponent] children elements and deactivates them ignoring the one passed as an argument.
      */
-    private _deactivateAllBut(activeStep);
-    private _registerSteps();
-    private _deregisterSteps();
+    private _deactivateAllBut;
+    private _registerSteps;
+    private _deregisterSteps;
 }

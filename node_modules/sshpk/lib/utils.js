@@ -17,18 +17,21 @@ module.exports = {
 	publicFromPrivateECDSA: publicFromPrivateECDSA,
 	zeroPadToLength: zeroPadToLength,
 	writeBitString: writeBitString,
-	readBitString: readBitString
+	readBitString: readBitString,
+	pbkdf2: pbkdf2
 };
 
 var assert = require('assert-plus');
+var Buffer = require('safer-buffer').Buffer;
 var PrivateKey = require('./private-key');
 var Key = require('./key');
 var crypto = require('crypto');
 var algs = require('./algs');
 var asn1 = require('asn1');
 
-var ec, jsbn;
-var nacl;
+var ec = require('ecc-jsbn/lib/ec');
+var jsbn = require('jsbn').BigInteger;
+var nacl = require('tweetnacl');
 
 var MAX_CLASS_DEPTH = 3;
 
@@ -85,8 +88,9 @@ function assertCompatible(obj, klass, needVer, name) {
 }
 
 var CIPHER_LEN = {
-	'des-ede3-cbc': { key: 7, iv: 8 },
-	'aes-128-cbc': { key: 16, iv: 16 }
+	'des-ede3-cbc': { key: 24, iv: 8 },
+	'aes-128-cbc': { key: 16, iv: 16 },
+	'aes-256-cbc': { key: 32, iv: 16 }
 };
 var PKCS5_SALT_LEN = 8;
 
@@ -101,7 +105,7 @@ function opensslKeyDeriv(cipher, salt, passphrase, count) {
 	salt = salt.slice(0, PKCS5_SALT_LEN);
 
 	var D, D_prev, bufs;
-	var material = new Buffer(0);
+	var material = Buffer.alloc(0);
 	while (material.length < clen.key + clen.iv) {
 		bufs = [];
 		if (D_prev)
@@ -119,6 +123,40 @@ function opensslKeyDeriv(cipher, salt, passphrase, count) {
 	    key: material.slice(0, clen.key),
 	    iv: material.slice(clen.key, clen.key + clen.iv)
 	});
+}
+
+/* See: RFC2898 */
+function pbkdf2(hashAlg, salt, iterations, size, passphrase) {
+	var hkey = Buffer.alloc(salt.length + 4);
+	salt.copy(hkey);
+
+	var gen = 0, ts = [];
+	var i = 1;
+	while (gen < size) {
+		var t = T(i++);
+		gen += t.length;
+		ts.push(t);
+	}
+	return (Buffer.concat(ts).slice(0, size));
+
+	function T(I) {
+		hkey.writeUInt32BE(I, hkey.length - 4);
+
+		var hmac = crypto.createHmac(hashAlg, passphrase);
+		hmac.update(hkey);
+
+		var Ti = hmac.digest();
+		var Uc = Ti;
+		var c = 1;
+		while (c++ < iterations) {
+			hmac = crypto.createHmac(hashAlg, passphrase);
+			hmac.update(Uc);
+			Uc = hmac.digest();
+			for (var x = 0; x < Ti.length; ++x)
+				Ti[x] ^= Uc[x];
+		}
+		return (Ti);
+	}
 }
 
 /* Count leading zero bits on a buffer */
@@ -185,7 +223,7 @@ function ecNormalize(buf, addZero) {
 		if (!addZero)
 			return (buf);
 	}
-	var b = new Buffer(buf.length + 1);
+	var b = Buffer.alloc(buf.length + 1);
 	b[0] = 0x0;
 	buf.copy(b, 1);
 	return (b);
@@ -203,7 +241,7 @@ function readBitString(der, tag) {
 function writeBitString(der, buf, tag) {
 	if (tag === undefined)
 		tag = asn1.Ber.BitString;
-	var b = new Buffer(buf.length + 1);
+	var b = Buffer.alloc(buf.length + 1);
 	b[0] = 0x00;
 	buf.copy(b, 1);
 	der.writeBuffer(b, tag);
@@ -214,7 +252,7 @@ function mpNormalize(buf) {
 	while (buf.length > 1 && buf[0] === 0x00 && (buf[1] & 0x80) === 0x00)
 		buf = buf.slice(1);
 	if ((buf[0] & 0x80) === 0x80) {
-		var b = new Buffer(buf.length + 1);
+		var b = Buffer.alloc(buf.length + 1);
 		b[0] = 0x00;
 		buf.copy(b, 1);
 		buf = b;
@@ -237,7 +275,7 @@ function zeroPadToLength(buf, len) {
 		buf = buf.slice(1);
 	}
 	while (buf.length < len) {
-		var b = new Buffer(buf.length + 1);
+		var b = Buffer.alloc(buf.length + 1);
 		b[0] = 0x00;
 		buf.copy(b, 1);
 		buf = b;
@@ -246,7 +284,7 @@ function zeroPadToLength(buf, len) {
 }
 
 function bigintToMpBuf(bigint) {
-	var buf = new Buffer(bigint.toByteArray());
+	var buf = Buffer.from(bigint.toByteArray());
 	buf = mpNormalize(buf);
 	return (buf);
 }
@@ -255,15 +293,9 @@ function calculateDSAPublic(g, p, x) {
 	assert.buffer(g);
 	assert.buffer(p);
 	assert.buffer(x);
-	try {
-		var bigInt = require('jsbn').BigInteger;
-	} catch (e) {
-		throw (new Error('To load a PKCS#8 format DSA private key, ' +
-		    'the node jsbn library is required.'));
-	}
-	g = new bigInt(g);
-	p = new bigInt(p);
-	x = new bigInt(x);
+	g = new jsbn(g);
+	p = new jsbn(p);
+	x = new jsbn(x);
 	var y = g.modPow(x, p);
 	var ybuf = bigintToMpBuf(y);
 	return (ybuf);
@@ -272,38 +304,26 @@ function calculateDSAPublic(g, p, x) {
 function calculateED25519Public(k) {
 	assert.buffer(k);
 
-	if (nacl === undefined)
-		nacl = require('tweetnacl');
-
 	var kp = nacl.sign.keyPair.fromSeed(new Uint8Array(k));
-	return (new Buffer(kp.publicKey));
+	return (Buffer.from(kp.publicKey));
 }
 
 function calculateX25519Public(k) {
 	assert.buffer(k);
 
-	if (nacl === undefined)
-		nacl = require('tweetnacl');
-
 	var kp = nacl.box.keyPair.fromSeed(new Uint8Array(k));
-	return (new Buffer(kp.publicKey));
+	return (Buffer.from(kp.publicKey));
 }
 
 function addRSAMissing(key) {
 	assert.object(key);
 	assertCompatible(key, PrivateKey, [1, 1]);
-	try {
-		var bigInt = require('jsbn').BigInteger;
-	} catch (e) {
-		throw (new Error('To write a PEM private key from ' +
-		    'this source, the node jsbn lib is required.'));
-	}
 
-	var d = new bigInt(key.part.d.data);
+	var d = new jsbn(key.part.d.data);
 	var buf;
 
 	if (!key.part.dmodp) {
-		var p = new bigInt(key.part.p.data);
+		var p = new jsbn(key.part.p.data);
 		var dmodp = d.mod(p.subtract(1));
 
 		buf = bigintToMpBuf(dmodp);
@@ -311,7 +331,7 @@ function addRSAMissing(key) {
 		key.parts.push(key.part.dmodp);
 	}
 	if (!key.part.dmodq) {
-		var q = new bigInt(key.part.q.data);
+		var q = new jsbn(key.part.q.data);
 		var dmodq = d.mod(q.subtract(1));
 
 		buf = bigintToMpBuf(dmodq);
@@ -323,10 +343,6 @@ function addRSAMissing(key) {
 function publicFromPrivateECDSA(curveName, priv) {
 	assert.string(curveName, 'curveName');
 	assert.buffer(priv);
-	if (ec === undefined)
-		ec = require('ecc-jsbn/lib/ec');
-	if (jsbn === undefined)
-		jsbn = require('jsbn').BigInteger;
 	var params = algs.curves[curveName];
 	var p = new jsbn(params.p);
 	var a = new jsbn(params.a);
@@ -336,10 +352,10 @@ function publicFromPrivateECDSA(curveName, priv) {
 
 	var d = new jsbn(mpNormalize(priv));
 	var pub = G.multiply(d);
-	pub = new Buffer(curve.encodePointHex(pub), 'hex');
+	pub = Buffer.from(curve.encodePointHex(pub), 'hex');
 
 	var parts = [];
-	parts.push({name: 'curve', data: new Buffer(curveName)});
+	parts.push({name: 'curve', data: Buffer.from(curveName)});
 	parts.push({name: 'Q', data: pub});
 
 	var key = new Key({type: 'ecdsa', curve: curve, parts: parts});
