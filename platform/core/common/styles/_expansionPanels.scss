@@ -60,4 +60,8 @@
     body[fds] td-expansion-panel .td-expansion-panel-header:focus .td-expansion-panel-header-content {
         border-bottom: 1px solid $primaryColor;
     }
+
+    body[fds] .td-expansion-label {
+        font-size: 20px;
+    }
 }
