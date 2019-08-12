@@ -69,6 +69,11 @@
         font-weight: 300;
     }
 
+    body[fds] .mat-form-field .mat-form-field-label {
+        color: $grey3;
+        font-weight: 300;
+    }
+
     body[fds] .mat-form-field-can-float.mat-form-field-should-float .mat-form-field-placeholder {
         transform: translateY(-26px) translateX(-10px) scale(0.75);
     }
