@@ -30,7 +30,6 @@
         height: 32px;
         padding: 0 10px;
         width: calc(100% - 20px);
-        background-color: white;
         margin: 0;
     }
 
@@ -60,12 +59,14 @@
     }
 
     body[fds] .mat-form-field-empty.mat-form-field-label {
-        top: 26px;
+        top: 21px;
         left: 10px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
         width: calc(100% - 44px);
+        color: $grey3;
+        font-weight: 300;
     }
 
     body[fds] .mat-form-field-can-float.mat-form-field-should-float .mat-form-field-placeholder {

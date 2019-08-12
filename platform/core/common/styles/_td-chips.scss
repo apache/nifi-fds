@@ -15,12 +15,12 @@
 * limitations under the License.
 */
 
-body[fds] td-chips .mat-input-placeholder-wrapper::after {
+body[fds] td-chips .mat-form-field-label-wrapper::after {
   content: '\f0b0';
   display: inline-table;
   font-family: FontAwesome;
   float: right;
-  margin: 13px 10px 0 0;
+  margin: 9px 10px 0 0;
   color: $grey3;
 }
 
@@ -57,6 +57,15 @@ body[fds] .td-chip-disabled .td-chip {
     padding: 0 0 0 12px;
 }
 
+body[fds] td-chips .mat-form-field-appearance-legacy .mat-form-field-infix {
+    padding: 0;
+    border-top: 0;
+}
+
+body[fds] td-chips .mat-form-field {
+    top: 12px;
+}
+
 body[fds] .mat-basic-chip mat-icon.td-chip-removal {
     font-size: 15px;
     margin-bottom: 7px;
@@ -64,4 +73,8 @@ body[fds] .mat-basic-chip mat-icon.td-chip-removal {
 
 body[fds] mat-form-field.td-chips-form-field.mat-input-container {
     width: unset;
+}
+
+body[fds] mat-form-field.td-chips-form-field.mat-form-field.mat-form-field-disabled {
+    display: none;
 }
