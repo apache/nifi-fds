@@ -112,4 +112,18 @@
         color: $grey1;
         border: 1px solid $grey4;
     }
+
+    body[fds] .tab-toggle-group > .mat-button-toggle-checked.mat-button-toggle-appearance-standard {
+        color: rgba(0, 0, 0, 0.54);
+    }
+
+    body[fds] .tab-toggle-group > .mat-button-toggle-appearance-standard {
+        color: rgba(0, 0, 0, 0.38);
+        background: transparent;
+        border-left: 0;
+    }
+
+    body[fds] .tab-toggle-group > .mat-button-toggle-appearance-standard .mat-button-toggle-label-content {
+        line-height: 38px;
+    }
 }
