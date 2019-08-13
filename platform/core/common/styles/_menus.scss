@@ -26,6 +26,7 @@
     body[fds] .mat-menu-panel {
         border-radius: 2px;
         max-width: unset;
+        min-height: 40px;
     }
 
     body[fds] .mat-menu-item {
