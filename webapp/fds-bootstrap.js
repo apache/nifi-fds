@@ -32,18 +32,19 @@ import FdsModule from 'webapp/fds.module.js';
 enableProdMode();
 
 // Get the locale id from the global
-var locale = navigator.language;
+var locale = navigator.language.toLowerCase();
 
 var providers = [];
 
 // No locale or U.S. English: no translation providers so go ahead and bootstrap the app
-if (!locale || locale === 'en-US') {
+if (!locale || locale === 'en-us') {
     platformBrowserDynamic().bootstrapModule(FdsModule, {providers: providers});
 } else { //load the translation providers and bootstrap the module
-    var translationFile = '/locale/messages.' + locale + '.xlf';
+    var translationFile = './webapp/locale/messages.' + locale + '.xlf';
 
     $.ajax({
-        url: translationFile
+        url: translationFile,
+        dataType: 'text'
     }).done(function (translations) {
         // add providers if translation file for locale is loaded
         if (translations) {
