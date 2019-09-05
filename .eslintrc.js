@@ -85,6 +85,7 @@ module.exports = {
         "prefer-promise-reject-errors": 0,
         "object-curly-newline": 0,
         "no-restricted-globals": 0,
-        "import/prefer-default-export": 0
+        "import/prefer-default-export": 0,
+        "linebreak-style": 0
     }
 };
