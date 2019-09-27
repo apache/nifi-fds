@@ -74,3 +74,7 @@ body[fds] .mat-basic-chip mat-icon.td-chip-removal {
 body[fds] mat-form-field.td-chips-form-field.mat-input-container {
     width: unset;
 }
+
+body[fds] mat-form-field.td-chips-form-field.mat-form-field.mat-form-field-disabled {
+    display: none;
+}
