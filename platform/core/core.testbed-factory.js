@@ -15,6 +15,7 @@
  * limitations under the License.
  */
 
+import 'hammerjs';
 import { BrowserDynamicTestingModule, platformBrowserDynamicTesting } from '@angular/platform-browser-dynamic/testing';
 import { TestBed } from '@angular/core/testing';
 import FdsCoreModule from './flow-design-system.module';
