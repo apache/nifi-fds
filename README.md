@@ -7,7 +7,7 @@ The demo application serves 2 main purposes
 * Provides a working example of how an Angular application should leverage `@nifi-fds/core`.
 
 ## Requirements
-This project requires node v8.10.0 and npm version 5.6.0 to build.
+This project requires node v10.16.3 and npm version 6.9.0 to build.
 
 A consuming application will need the following peer dependencies:
 
