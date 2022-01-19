@@ -16,6 +16,7 @@
     "name": "nifi-fds",
     "version": "0.3.0-SNAPSHOT",
     "scripts": {
+        "ci": "npm ci --ignore-scripts",
         "start": "http-server --gzip -p 28080 .",
         "preinstall": "npm --ignore-scripts install npm-force-resolutions && npm-force-resolutions",
         "clean-and-copy": "node scripts/clean.js && node scripts/copy-files.js",

@@ -18,6 +18,7 @@
 module.exports = {
     "extends": "stylelint-config-standard-scss",
     "rules": {
+        "alpha-value-notation": null,
         "indentation": null,
         "at-rule-no-unknown": [true, {
             "ignoreAtRules": ["/include/", "/mixin/"]
