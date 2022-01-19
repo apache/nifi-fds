@@ -35,12 +35,12 @@ module.exports = merge(commonConfig, {
         // Open the browser after server had been started
         open: true,
 
-        // The bundled files will be available in the browser under this path.
-        publicPath: '/',
-
         // Tell the server where to serve content from
-        contentBase: [
-            path.join(__dirname, './')
+        static: [
+            {
+                directory: path.join(__dirname, './'),
+                publicPath: "/",
+            }
         ],
 
         // Enable Hot Module Replacement feature
@@ -50,7 +50,11 @@ module.exports = merge(commonConfig, {
         compress: true,
 
         // The filename that is considered the index file.
-        index: path.join(__dirname, 'index.html'),
+        devMiddleware: {
+            // The bundled files will be available in the browser under this path.
+            publicPath: '/',
+            index: path.join(__dirname, 'index.html'),
+        },
 
         // Specify a port number to listen for requests on
         port: 28080
