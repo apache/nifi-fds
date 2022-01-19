@@ -16,10 +16,7 @@
  */
 
 import $ from 'jquery';
-import {
-    MatDialogConfig,
-    MatDialog
-} from '@angular/material';
+import { MatDialog, MatDialogConfig } from "@angular/material/dialog";
 import { FdsConfirmDialogComponent } from '../confirm-dialog/confirm-dialog.component';
 
 function IDialogConfig() {

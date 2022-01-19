@@ -18,12 +18,6 @@
 import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CommonModule } from '@angular/common';
-import {
-    MatButtonModule,
-    MatIconModule,
-    MatInputModule,
-    MatSnackBarModule
-} from '@angular/material';
 import { FormsModule } from '@angular/forms';
 import {
     FdsSnackBarComponent,
@@ -38,6 +32,10 @@ import {
 } from './services/snackbar.service';
 
 import { FdsCoasterComponent } from './coaster/coaster.component';
+import {MatSnackBarModule} from "@angular/material/snack-bar";
+import {MatInputModule} from "@angular/material/input";
+import {MatButtonModule} from "@angular/material/button";
+import {MatIconModule} from "@angular/material/icon";
 
 const FDS_SNACKBARS = [
     FdsSnackBarComponent,
