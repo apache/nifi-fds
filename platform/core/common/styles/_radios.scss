@@ -16,12 +16,14 @@
 */
 
 /* Radios */
+/* stylelint-disable-next-line at-rule-no-unknown */
+@use 'sass:map';
 
 @mixin fds-radios-theme($theme) {
-    $primaryColor: map-get(map-get($theme, primary), 500);
-    $primaryColorHover: map-get(map-get($theme, primary), 100);
-    $accentColor: map-get(map-get($theme, accent), 500);
-    $accentColorHover: map-get(map-get($theme, accent), 100);
+    $primary-color: map.get(map.get($theme, primary), 500);
+    $primary-color-hover: map.get(map.get($theme, primary), 100);
+    $accent-color: map.get(map.get($theme, accent), 500);
+    $accent-color-hover: map.get(map.get($theme, accent), 100);
 
     body[fds] .mat-radio-container {
         height: 12px;
@@ -36,17 +38,17 @@
     }
 
     body[fds] .mat-radio-outer-circle:hover {
-        background-color: $accentColorHover;
-        border-color: $accentColorHover;
+        background-color: $accent-color-hover;
+        border-color: $accent-color-hover;
     }
 
     body[fds] .mat-radio-checked .mat-radio-outer-circle {
-        border: 1px solid $accentColor;
-        background-color: $accentColor;
+        border: 1px solid $accent-color;
+        background-color: $accent-color;
     }
 
     body[fds] .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
-        border-color: $accentColor;
+        border-color: $accent-color;
     }
 
     body[fds] .mat-radio-inner-circle {

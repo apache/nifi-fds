@@ -24,4 +24,4 @@ $fa-font-path: 'node_modules/font-awesome/fonts';
 // Include pre-bundled material-icons
 $mat-font-url: 'node_modules/@covalent/core/common/styles/font/';
 
-@include covalent-material-icons();
+@include covalent-material-icons;

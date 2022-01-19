@@ -15,19 +15,22 @@
 * limitations under the License.
 */
 
+/* stylelint-disable-next-line at-rule-no-unknown */
+@use 'sass:map';
+
 .td-step-header span {
-  display: none;
+    display: none;
 }
 
 @mixin fds-stepper-theme($theme) {
-    $primaryColor: map-get(map-get($theme, primary), 500);
-    $primaryColorHover: map-get(map-get($theme, primary), 100);
-    $accentColor: map-get(map-get($theme, accent), 500);
-    $accentColorHover: map-get(map-get($theme, accent), 100);
+    $primary-color: map.get(map.get($theme, primary), 500);
+    $primary-color-hover: map.get(map.get($theme, primary), 100);
+    $accent-color: map.get(map.get($theme, accent), 500);
+    $accent-color-hover: map.get(map.get($theme, accent), 100);
 
     body[fds] {
         .td-steps .td-circle.mat-active {
-            background-color: $accentColor;
+            background-color: $accent-color;
         }
     }
 }

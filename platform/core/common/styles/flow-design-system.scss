@@ -34,5 +34,6 @@
 @import 'tables';
 @import 'td-chips';
 @import '../../theming/dialogs/fds-dialog-component';
+/* stylelint-disable-next-line scss/at-import-partial-extension */
 @import '../../theming/snackbars/coaster/coaster.component';
 @import '../../theming/all-theme';

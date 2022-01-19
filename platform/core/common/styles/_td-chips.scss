@@ -16,25 +16,25 @@
 */
 
 body[fds] td-chips .mat-form-field-label-wrapper::after {
-  content: '\f0b0';
-  display: inline-table;
-  font-family: FontAwesome;
-  float: right;
-  margin: 9px 10px 0 0;
-  color: $grey3;
+    content: '\f0b0';
+    display: inline-table;
+    font-family: FontAwesome;
+    float: right;
+    margin: 9px 10px 0 0;
+    color: $grey3;
 }
 
 body[fds] td-chips {
-  input.mat-input-element,
-  textarea.mat-input-element {
-    /* subtract 42 (10 for padding-left, 30 for padding right, 2 the 1px border of the input on the left & right) */
-    width: calc(100% - 42px);   // account for padding and border as to line up with the underline
-    padding-right: 30px;        // Don't allow the text to overlap the filter icon
-  }
+    input.mat-input-element,
+    textarea.mat-input-element {
+        /* subtract 42 (10 for padding-left, 30 for padding right, 2 the 1px border of the input on the left & right) */
+        width: calc(100% - 42px); // account for padding and border as to line up with the underline
+        padding-right: 30px; // Don't allow the text to overlap the filter icon
+    }
 }
 
 body[fds] .mat-basic-chip.td-chip-after-pad {
-    padding: 4px 12px 4px 12px;
+    padding: 4px 12px;
 }
 
 body[fds] .mat-basic-chip .td-chip {

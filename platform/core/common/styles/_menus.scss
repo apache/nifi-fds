@@ -17,11 +17,14 @@
 
 /* Menus */
 
+/* stylelint-disable-next-line at-rule-no-unknown */
+@use 'sass:map';
+
 @mixin fds-menus-theme($theme) {
-    $primaryColor: map-get(map-get($theme, primary), 500);
-    $primaryColorHover: map-get(map-get($theme, primary), 100);
-    $accentColor: map-get(map-get($theme, accent), 500);
-    $accentColorHover: map-get(map-get($theme, accent), 100);
+    $primary-color: map.get(map.get($theme, primary), 500);
+    $primary-color-hover: map.get(map.get($theme, primary), 100);
+    $accent-color: map.get(map.get($theme, accent), 500);
+    $accent-color-hover: map.get(map.get($theme, accent), 100);
 
     body[fds] .mat-menu-panel {
         border-radius: 2px;
@@ -31,7 +34,7 @@
 
     body[fds] .mat-menu-item {
         font-size: 14px;
-        color: $bodyTextColor;
+        color: $body-text-color;
         min-width: 200px;
         text-transform: none;
         height: 24px;
@@ -44,7 +47,7 @@
     }
 
     body[fds] .mat-menu-item[disabled] {
-        color: rgba(0, 0, 0, 0.38);
+        color: rgba(0 0 0 / 38%);
         background-color: #fff;
         cursor: not-allowed;
     }
@@ -60,11 +63,11 @@
     }
 
     body[fds] .mat-menu-item[disabled] .mat-icon {
-        color: rgba(0, 0, 0, 0.38);
+        color: rgba(0 0 0 / 38%);
     }
 
     body[fds] .mat-menu-item[disabled] .fa {
-        color: rgba(0, 0, 0, 0.38);
+        color: rgba(0 0 0 / 38%);
     }
 
     body[fds] .mat-menu-item:hover:not([disabled]) .mat-icon {
@@ -84,7 +87,7 @@
     body[fds] .fds-primary-dropdown-button-menu .mat-menu-item:hover:not([disabled]),
     body[fds] .fds-primary-dropdown-button-menu .mat-menu-item:focus:not([disabled]) {
         color: #fff;
-        background-color: $primaryColorHover;
+        background-color: $primary-color-hover;
     }
 
     .mat-raised-button .mat-button-wrapper i {
@@ -94,7 +97,7 @@
 
     body[fds] .mat-option {
         font-size: 14px;
-        color: $bodyTextColor;
+        color: $body-text-color;
         text-transform: none;
         height: 24px;
         line-height: 24px;

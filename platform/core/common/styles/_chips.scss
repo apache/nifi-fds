@@ -18,28 +18,28 @@
 /* Chips */
 
 body[fds] .mat-chip {
-  border-radius: 2px;
-  font-size: 10px;
-  font-family: $fontPrimary;
-  font-style: normal;
-  font-weight: normal;
-  padding: 4px 12px 4px 12px;
+    border-radius: 2px;
+    font-size: 10px;
+    font-family: $font-primary;
+    font-style: normal;
+    font-weight: normal;
+    padding: 4px 12px;
 }
 
 body[fds] .mat-chip i {
-  margin-left: 10px;
-  float: right;
-  margin-top: 2px;
+    margin-left: 10px;
+    float: right;
+    margin-top: 2px;
 }
 
 body[fds] .mat-basic-chip {
-  color: $grey2;
-  height: 24px;
-  margin: 17px 8px 0 0;
+    color: $grey2;
+    height: 24px;
+    margin: 17px 8px 0 0;
 }
 
 body[fds] .mat-basic-chip i {
-  margin-left: 10px;
-  float: right;
-  margin-top: 2px;
+    margin-left: 10px;
+    float: right;
+    margin-top: 2px;
 }
