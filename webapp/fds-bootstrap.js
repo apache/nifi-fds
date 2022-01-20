@@ -17,7 +17,6 @@
 
 import 'core-js';
 import 'zone.js';
-// import 'hammerjs';
 import $ from 'jquery';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import {
