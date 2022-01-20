@@ -25,9 +25,6 @@ $primary-color-hover: $rose2;
 $accent-color: $blue-grey1;
 $accent-color-hover: $blue4;
 
-// $warn-color: #e81a07;
-// $warn-colorHover: #bf1408;
-
 // Include the base styles for Angular Material core. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
 @include mat-core;
