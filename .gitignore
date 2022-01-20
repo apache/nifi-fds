@@ -6,9 +6,9 @@ node_modules/
 .cache-loader*/
 coverage/
 npm-debug.log*
-fds-demo.bundle.min.js*
-fds-demo.vendor.min.js*
-fds-demo.styles.min.css*
+fds-demo.bundle.min.*
+fds-demo.vendor.min.*
+fds-demo.styles.min.*
 
 # Intellij
 .idea/
