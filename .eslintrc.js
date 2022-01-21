@@ -120,6 +120,6 @@ module.exports = {
         'quotes': [ERROR, 'single', { 'allowTemplateLiterals': true }],
         'no-useless-constructor': OFF,
         'no-empty-function': OFF,
-        'no-underscore-dangle': ['error', { 'allowAfterThis': true }]
+        'no-underscore-dangle': [ERROR, { 'allowAfterThis': true }]
     },
 };
