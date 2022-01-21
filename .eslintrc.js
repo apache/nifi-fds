@@ -21,7 +21,7 @@ const ERROR = 2; // turn the rule on as an error (exit code is 1 when triggered)
 
 module.exports = {
     'root': true,
-    'extends': 'eslint-config-airbnb',
+    'extends': 'eslint-config-airbnb-base',
     'env': {
         'browser': true,
         'es6': true,
