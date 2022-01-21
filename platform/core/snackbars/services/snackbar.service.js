@@ -16,7 +16,7 @@
  */
 
 import $ from 'jquery';
-import { MatSnackBar, MatSnackBarConfig } from "@angular/material/snack-bar";
+import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
 import { FdsCoasterComponent } from '../coaster/coaster.component';
 
 export function ISnackBarConfig() {

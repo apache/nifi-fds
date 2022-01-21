@@ -939,7 +939,7 @@ FdsDemo.prototype = {
         this.getAutoCompleteData();
     },
 
-    toggleSelect: function (row) {
+    toggleSelect: function () {
         if (this.allFilteredRowsSelected()) {
             this.allRowsSelected = true;
         } else {

@@ -33,8 +33,8 @@
         "webpack:analyze": "webpack-bundle-analyzer webpack-build-log.json ./",
         "webpack:development": "webpack --config webpack.dev.js",
         "webpack:production": "npm run lint && webpack --config webpack.prod.js --json > webpack-build-log.json",
-        "eslint": "eslint ./webapp/**/*.js ./platform/**/*.js",
-        "stylelint": "stylelint ./webapp/theming/**/*.scss ./platform/**/*.scss",
+        "eslint": "eslint webapp platform",
+        "stylelint": "stylelint webapp/**/*.scss webapp/**/*.css platform/**/*.scss platform/**/*.css",
         "lint": "npm run eslint && npm run stylelint"
     },
     "husky": {
@@ -102,6 +102,7 @@
         "eslint": "8.7.0",
         "eslint-config-airbnb": "19.0.4",
         "eslint-plugin-import": "2.25.4",
+        "eslint-plugin-jasmine": "4.1.3",
         "file-loader": "4.0.0",
         "fs-extra": "8.1.0",
         "grunt": "1.4.1",
