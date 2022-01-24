@@ -151,6 +151,8 @@
     "resolutions": {
         "glob-parent": "6.0.2",
         "node-forge": "1.0.0",
-        "trim-newlines": "3.0.1"
+        "trim-newlines": "3.0.1",
+        "log4js": "6.4.1",
+        "node-fetch": "3.2.0"
     }
 }
