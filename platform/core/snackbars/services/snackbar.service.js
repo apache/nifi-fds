@@ -15,11 +15,8 @@
  * limitations under the License.
  */
 
-import {
-    MatSnackBarConfig,
-    MatSnackBar
-} from '@angular/material';
 import $ from 'jquery';
+import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
 import { FdsCoasterComponent } from '../coaster/coaster.component';
 
 export function ISnackBarConfig() {

@@ -18,38 +18,38 @@
 /* Panels */
 
 body[fds] .md-card-title {
-  font-size: 20px;
-  color: $grey1;
-  margin-bottom: 0;
+    font-size: 20px;
+    color: $grey1;
+    margin-bottom: 0;
 }
 
 body[fds] md-card-title {
-  padding-top: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 body[fds] .md-card-subtitle {
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 10px;
-  margin-bottom: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    margin-bottom: 0;
 }
 
 body[fds] .md-card-content {
-  color: $grey2;
-  padding: 10px 20px 20px 20px;
-  margin: 0;
+    color: $grey2;
+    padding: 10px 20px 20px;
+    margin: 0;
 }
 
 body[fds] .md-card .md-card-actions:last-child,
 body[fds] .md-card .md-card .md-card-actions:last-child {
-  padding: 0 20px 20px 20px;
-  margin: 0;
+    padding: 0 20px 20px;
+    margin: 0;
 }
 
 body[fds] .fds-panel-menu-button {
-  position: absolute;
-  right: 0;
-  z-index: 2;
+    position: absolute;
+    right: 0;
+    z-index: 2;
 }

@@ -17,11 +17,14 @@
 
 /* Expansion Panels */
 
+/* stylelint-disable-next-line at-rule-no-unknown */
+@use 'sass:map';
+
 @mixin fds-expansion-panels-theme($theme) {
-    $primaryColor: map-get(map-get($theme, primary), 500);
-    $primaryColorHover: map-get(map-get($theme, primary), 100);
-    $accentColor: map-get(map-get($theme, accent), 500);
-    $accentColorHover: map-get(map-get($theme, accent), 100);
+    $primary-color: map.get(map.get($theme, primary), 500);
+    $primary-color-hover: map.get(map.get($theme, primary), 100);
+    $accent-color: map.get(map.get($theme, accent), 500);
+    $accent-color-hover: map.get(map.get($theme, accent), 100);
 
     body[fds] td-expansion-panel:not(:last-of-type) .td-expanded {
         margin-bottom: 0;
@@ -43,7 +46,7 @@
 
     body[fds] td-expansion-panel .td-expansion-panel-header .td-expansion-panel-header-content mat-icon.td-expand-icon {
         font-size: 28px;
-        color: $accentColor;
+        color: $accent-color;
         font-weight: bold;
     }
 
@@ -53,12 +56,12 @@
         }
 
         &:hover:not(.mat-disabled) {
-            background: $accentColorHover;
+            background: $accent-color-hover;
         }
     }
 
     body[fds] td-expansion-panel .td-expansion-panel-header:focus .td-expansion-panel-header-content {
-        border-bottom: 1px solid $primaryColor;
+        border-bottom: 1px solid $primary-color;
     }
 
     body[fds] .td-expansion-label {

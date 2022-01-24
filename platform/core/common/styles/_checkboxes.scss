@@ -17,11 +17,14 @@
 
 /* Checkboxes */
 
+/* stylelint-disable-next-line at-rule-no-unknown */
+@use 'sass:map';
+
 @mixin fds-checkboxes-theme($theme) {
-    $primaryColor: map-get(map-get($theme, primary), 500);
-    $primaryColorHover: map-get(map-get($theme, primary), 100);
-    $accentColor: map-get(map-get($theme, accent), 500);
-    $accentColorHover: map-get(map-get($theme, accent), 100);
+    $primary-color: map.get(map.get($theme, primary), 500);
+    $primary-color-hover: map.get(map.get($theme, primary), 100);
+    $accent-color: map.get(map.get($theme, accent), 500);
+    $accent-color-hover: map.get(map.get($theme, accent), 100);
 
     body[fds] {
         .mat-checkbox-inner-container {
@@ -29,7 +32,7 @@
             width: 10px !important;
 
             &:hover {
-                background-color: $accentColor;
+                background-color: $accent-color;
                 border-radius: 2px;
             }
         }
@@ -52,7 +55,7 @@
 
         .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background,
         .mat-checkbox-checked.mat-accent .mat-checkbox-background {
-            background-color: $accentColor;
+            background-color: $accent-color;
         }
 
         .mat-checkbox-disabled {

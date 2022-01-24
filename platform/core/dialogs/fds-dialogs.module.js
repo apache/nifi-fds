@@ -16,14 +16,12 @@
  */
 
 import { NgModule } from '@angular/core';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CommonModule } from '@angular/common';
-import {
-    MatButtonModule,
-    MatIconModule,
-    MatInputModule,
-    MatDialogModule
-} from '@angular/material';
 import { FormsModule } from '@angular/forms';
 import {
     FdsDialogTitleDirective,

@@ -17,28 +17,31 @@
 
 /* Links */
 
+/* stylelint-disable-next-line at-rule-no-unknown */
+@use 'sass:map';
+
 @mixin fds-links-theme($theme) {
-  $primaryColor: map-get(map-get($theme, primary), 500);
-  $primaryColorHover: map-get(map-get($theme, primary), 100);
-  $accentColor: map-get(map-get($theme, accent), 500);
-  $accentColorHover: map-get(map-get($theme, accent), 100);
+    $primary-color: map.get(map.get($theme, primary), 500);
+    $primary-color-hover: map.get(map.get($theme, primary), 100);
+    $accent-color: map.get(map.get($theme, accent), 500);
+    $accent-color-hover: map.get(map.get($theme, accent), 100);
 
-  body[fds] {
-    .link {
-      color: $accentColor;
-      font-size: 14px;
-      text-decoration: none;
-      line-height: 24px;
-      cursor: pointer;
-    }
+    body[fds] {
+        .link {
+            color: $accent-color;
+            font-size: 14px;
+            text-decoration: none;
+            line-height: 24px;
+            cursor: pointer;
+        }
 
-    .link:hover {
-      text-decoration: underline;
-    }
+        .link:hover {
+            text-decoration: underline;
+        }
 
-    .link .disabled {
-      color: $linkColorDisabled;
-      text-decoration: none;
+        .link .disabled {
+            color: $link-color-disabled;
+            text-decoration: none;
+        }
     }
-  }
 }

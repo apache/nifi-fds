@@ -17,12 +17,11 @@
 
 /* Text */
 
-$fontPrimary: "Roboto", sans-serif;
-$fontSecondary: "Robot Slab", sans-serif;
-$fontMedium: "Roboto Medium", sans-serif;
-$fontLight: "Roboto Light", sans-serif;
-
-$fdsFontPath: '../../../../../node_modules/roboto-fontface/fonts' !default;
+$font-primary: 'Roboto', sans-serif;
+$font-secondary: 'Robot Slab', sans-serif;
+$font-medium: 'Roboto Medium', sans-serif;
+$font-light: 'Roboto Light', sans-serif;
+$fds-font-path: '../../../../../node_modules/roboto-fontface/fonts' !default;
 
 /* Define colors */
 
@@ -58,10 +57,10 @@ $rose1: #9e737d;
 $rose2: #915d69;
 $blue-grey1: #6b8791;
 $blue-grey2: #b2c1c6;
-$bodyTextColor: $grey1;
-$pageHeaderTextColor: $grey1;
-$subHeaderTextColor: $grey2;
-$descriptionTextColor: $grey2;
-$linkColor: $blue-grey1;
-$linkColorDisabled: $grey1;
-$warnColor: $red1;
+$body-text-color: $grey1;
+$page-header-text-color: $grey1;
+$sub-header-text-color: $grey2;
+$description-text-color: $grey2;
+$link-color: $blue-grey1;
+$link-color-disabled: $grey1;
+$warn-color: $red1;

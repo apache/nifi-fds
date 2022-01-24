@@ -16,8 +16,9 @@
  */
 
 module.exports = {
-    "extends": "stylelint-config-standard",
+    "extends": "stylelint-config-standard-scss",
     "rules": {
+        "alpha-value-notation": null,
         "indentation": null,
         "at-rule-no-unknown": [true, {
             "ignoreAtRules": ["/include/", "/mixin/"]
@@ -26,6 +27,7 @@ module.exports = {
         "selector-type-no-unknown": [true, {
             "ignoreTypes": ["/mat-/", "/snack-/", "/fds-/", "/td-/", "/md-/"]
         }],
-        "font-family-no-missing-generic-family-keyword": null
+        "font-family-no-missing-generic-family-keyword": null,
+        "string-quotes": "single"
     }
 };

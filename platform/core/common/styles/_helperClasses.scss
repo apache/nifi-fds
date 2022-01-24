@@ -18,66 +18,66 @@
 /* Text */
 
 .header {
-  font-family: $fontMedium;
-  font-size: 16px;
-  color: $pageHeaderTextColor;
-  padding-bottom: 10px;
+    font-family: $font-medium;
+    font-size: 16px;
+    color: $page-header-text-color;
+    padding-bottom: 10px;
 }
 
 .help-icon {
-  font-size: 12px;
-  color: $blue1;
+    font-size: 12px;
+    color: $blue1;
 }
 
 .details-header {
-  height: 92px;
+    height: 92px;
 }
 
 .details-header-container {
-  position: relative;
-  top: 22px;
-  left: 10px;
+    position: relative;
+    top: 22px;
+    left: 10px;
 }
 
 .description {
-  font-family: $fontLight;
-  font-size: 12px;
-  color: $descriptionTextColor;
+    font-family: $font-light;
+    font-size: 12px;
+    color: $description-text-color;
 }
 
 .description i {
-  padding-right: 5px;
+    padding-right: 5px;
 }
 
 .label {
-  font-family: $fontMedium;
-  font-size: 14px;
-  color: $bodyTextColor;
-  text-transform: uppercase;
+    font-family: $font-medium;
+    font-size: 14px;
+    color: $body-text-color;
+    text-transform: uppercase;
 }
 
 .units {
-  font-family: $fontLight;
-  font-size: 14px;
-  color: $bodyTextColor;
+    font-family: $font-light;
+    font-size: 14px;
+    color: $body-text-color;
 }
 
 .align-vertical {
-  margin-top: auto;
-  margin-bottom: auto;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .align-horizontal {
-  margin-left: auto;
-  margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .fill-available-width {
-  width: 100%;
+    width: 100%;
 }
 
 .pointer {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .ellipsis {
@@ -88,9 +88,13 @@
 }
 
 .fa-rotate-45 {
+    /* stylelint-disable-next-line property-no-vendor-prefix */
     -webkit-transform: rotate(45deg);
+    /* stylelint-disable-next-line property-no-vendor-prefix */
     -moz-transform: rotate(45deg);
+    /* stylelint-disable-next-line property-no-vendor-prefix */
     -ms-transform: rotate(45deg);
+    /* stylelint-disable-next-line property-no-vendor-prefix */
     -o-transform: rotate(45deg);
     transform: rotate(45deg);
 }

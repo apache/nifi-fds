@@ -16,20 +16,24 @@
  */
 
 /* Tables */
+
+/* stylelint-disable-next-line at-rule-no-unknown */
+@use 'sass:map';
+
 @mixin fds-tables-theme($theme) {
-    $primaryColor: map-get(map-get($theme, primary), 500);
-    $primaryColorHover: map-get(map-get($theme, primary), 100);
-    $accentColor: map-get(map-get($theme, accent), 500);
-    $accentColorHover: map-get(map-get($theme, accent), 100);
+    $primary-color: map.get(map.get($theme, primary), 500);
+    $primary-color-hover: map.get(map.get($theme, primary), 100);
+    $accent-color: map.get(map.get($theme, accent), 500);
+    $accent-color-hover: map.get(map.get($theme, accent), 100);
 
     body[fds] {
         .td-data-table-cell .mat-icon-button {
-            color: $accentColor;
+            color: $accent-color;
         }
 
         .td-data-table-column .fa-caret-up,
         .td-data-table-column .fa-caret-down {
-            color: $accentColor;
+            color: $accent-color;
             font-size: 12px;
         }
     }
@@ -71,8 +75,8 @@
     }
 
     body[fds] .td-data-table-row:hover {
-        background-color: $accentColorHover;
-        border: 1px solid $accentColor;
+        background-color: $accent-color-hover;
+        border: 1px solid $accent-color;
     }
 
     body[fds] .td-data-table-cell .mat-button,

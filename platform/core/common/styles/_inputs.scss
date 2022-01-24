@@ -16,11 +16,15 @@
 */
 
 /* Inputs */
+
+/* stylelint-disable-next-line at-rule-no-unknown */
+@use 'sass:map';
+
 @mixin fds-input-element-theme($theme) {
-    $primaryColor: map-get(map-get($theme, primary), 500);
-    $primaryColorHover: map-get(map-get($theme, primary), 100);
-    $accentColor: map-get(map-get($theme, accent), 500);
-    $accentColorHover: map-get(map-get($theme, accent), 100);
+    $primary-color: map.get(map.get($theme, primary), 500);
+    $primary-color-hover: map.get(map.get($theme, primary), 100);
+    $accent-color: map.get(map.get($theme, accent), 500);
+    $accent-color-hover: map.get(map.get($theme, accent), 100);
 
     body[fds] input.mat-input-element,
     body[fds] textarea.mat-input-element {
@@ -34,7 +38,7 @@
     }
 
     body[fds] textarea.mat-input-element {
-        padding: 10px 10px;
+        padding: 10px;
     }
 
     body[fds] input.mat-input-element[disabled],
@@ -51,7 +55,7 @@
 
     body[fds] input.mat-input-element:focus,
     body[fds] textarea.mat-input-element:focus {
-        border-color: $accentColor;
+        border-color: $accent-color;
     }
 
     body[fds] .mat-form-field-underline {
@@ -78,6 +82,7 @@
         transform: translateY(-26px) translateX(-10px) scale(0.75);
     }
 
+    /* stylelint-disable-next-line max-line-length */
     body[fds] .mat-form-field-can-float .mat-form-field-autofill-control:-webkit-autofill + .mat-form-field-placeholder-wrapper .mat-form-field-placeholder {
         transform: translateY(-26px) translateX(-10px) scale(0.75);
     }

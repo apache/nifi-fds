@@ -15,11 +15,14 @@
  * limitations under the License.
  */
 
+/* stylelint-disable-next-line at-rule-no-unknown */
+@use 'sass:map';
+
 @mixin fds-button-toggles-theme($theme) {
-    $primaryColor: map-get(map-get($theme, primary), 500);
-    $primaryColorHover: map-get(map-get($theme, primary), 100);
-    $accentColor: map-get(map-get($theme, accent), 500);
-    $accentColorHover: map-get(map-get($theme, accent), 100);
+    $primary-color: map.get(map.get($theme, primary), 500);
+    $primary-color-hover: map.get(map.get($theme, primary), 100);
+    $accent-color: map.get(map.get($theme, accent), 500);
+    $accent-color-hover: map.get(map.get($theme, accent), 100);
 
     body[fds] .expansion-panel-filter-toggle-group {
         box-shadow: none !important;
@@ -42,12 +45,12 @@
     }
 
     body[fds] .expansion-panel-filter-toggle-group .mat-button-toggle-checked {
-        background-color: $accentColor;
+        background-color: $accent-color;
         color: white;
     }
 
     body[fds] .expansion-panel-filter-toggle-group .mat-display-1 {
-        color: $accentColor;
+        color: $accent-color;
         margin: 0;
     }
 
@@ -87,7 +90,7 @@
     }
 
     body[fds] .tab-toggle-group .mat-button-toggle-checked .mat-button-toggle-label-content {
-        border-bottom: 2px solid $accentColor;
+        border-bottom: 2px solid $accent-color;
         background: transparent;
     }
 
@@ -102,9 +105,9 @@
     }
 
     body[fds] .on-off-toggle-group .mat-button-toggle-checked {
-        background-color: $accentColor;
+        background-color: $accent-color;
         color: white;
-        border: 1px solid $accentColor;
+        border: 1px solid $accent-color;
     }
 
     body[fds] .off-toggle.mat-button-toggle-checked {
@@ -114,11 +117,11 @@
     }
 
     body[fds] .tab-toggle-group > .mat-button-toggle-checked.mat-button-toggle-appearance-standard {
-        color: rgba(0, 0, 0, 0.54);
+        color: rgba(0 0 0 / 54%);
     }
 
     body[fds] .tab-toggle-group > .mat-button-toggle-appearance-standard {
-        color: rgba(0, 0, 0, 0.38);
+        color: rgba(0 0 0 / 38%);
         background: transparent;
         border-left: 0;
     }
