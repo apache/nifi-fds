@@ -14,7 +14,7 @@
     "//-13": "See the License for the specific language governing permissions and",
     "//-14": "limitations under the License.",
     "name": "nifi-fds",
-    "version": "0.3.0-SNAPSHOT",
+    "version": "0.3.0",
     "scripts": {
         "ci": "npm ci --ignore-scripts",
         "start": "http-server --gzip -p 28080 .",
