@@ -14,7 +14,7 @@
     "//": "See the License for the specific language governing permissions and",
     "//": "limitations under the License.",
     "name": "@nifi-fds/core",
-    "version": "0.3.0",
+    "version": "0.4.0-SNAPSHOT",
     "description": "The Apache NiFi Flow Design System module is an atomic reusable platform providing consistent set of UI/UX components for open source friendly web applications to consume.",
     "keywords": [
         "angular",
