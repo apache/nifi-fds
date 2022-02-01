@@ -46,7 +46,7 @@ export declare class MockMatchMedia extends MatchMedia {
      * supports 0..n listeners for activation/deactivation
      */
     protected buildMQL(query: string): MediaQueryList;
-    protected readonly hasActivated: boolean;
+    protected get hasActivated(): boolean;
 }
 /**
  * Special internal class to simulate a MediaQueryList and
@@ -57,8 +57,8 @@ export declare class MockMediaQueryList implements MediaQueryList {
     private _mediaQuery;
     private _isActive;
     private _listeners;
-    readonly matches: boolean;
-    readonly media: string;
+    get matches(): boolean;
+    get media(): string;
     constructor(_mediaQuery: string);
     /**
      * Destroy the current list by deactivating the

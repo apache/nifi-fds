@@ -62,7 +62,7 @@ export declare class MediaTrigger {
      * Manually emit a MediaChange event via the MatchMedia to MediaMarshaller and MediaObserver
      */
     private emitChangeEvent;
-    private readonly currentActivations;
+    private get currentActivations();
     private hasCachedRegistryMatches;
     private originalActivations;
     private originalRegistry;

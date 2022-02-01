@@ -19,10 +19,10 @@ export declare class TdLayoutCardOverComponent {
      */
     cardWidth: number;
     /**
-     * color?: string
+     * color?: 'accent' | 'primary' | 'warn'
      *
      * toolbar color option: primary | accent | warn.
      * If [color] is not set, primary is used.
      */
-    color: string;
+    color: 'accent' | 'primary' | 'warn';
 }

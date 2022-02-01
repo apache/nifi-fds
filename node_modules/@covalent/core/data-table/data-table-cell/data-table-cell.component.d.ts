@@ -15,7 +15,8 @@ export declare class TdDataTableCellComponent {
      * Makes cell content align on demand
      * Defaults to 'left', overrides numeric
      */
-    align: TdDataTableCellAlign;
-    readonly bindNumeric: boolean;
+    set align(align: TdDataTableCellAlign);
+    get align(): TdDataTableCellAlign;
+    get bindNumeric(): boolean;
     constructor(_elementRef: ElementRef, _renderer: Renderer2);
 }

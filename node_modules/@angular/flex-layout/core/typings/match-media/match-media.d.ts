@@ -5,7 +5,7 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import { NgZone } from '@angular/core';
+import { NgZone, OnDestroy } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { MediaChange } from '../media-change';
 /**
@@ -15,18 +15,19 @@ import { MediaChange } from '../media-change';
  *
  * NOTE: both mediaQuery activations and de-activations are announced in notifications
  */
-export declare class MatchMedia {
+export declare class MatchMedia implements OnDestroy {
     protected _zone: NgZone;
     protected _platformId: Object;
     protected _document: any;
     /** Initialize source with 'all' so all non-responsive APIs trigger style updates */
     readonly source: BehaviorSubject<MediaChange>;
     registry: Map<string, MediaQueryList>;
+    private readonly pendingRemoveListenerFns;
     constructor(_zone: NgZone, _platformId: Object, _document: any);
     /**
      * Publish list of all current activations
      */
-    readonly activations: string[];
+    get activations(): string[];
     /**
      * For the specified mediaQuery?
      */
@@ -45,6 +46,7 @@ export declare class MatchMedia {
      * mediaQuery. Each listener emits specific MediaChange data to observers
      */
     registerQuery(mediaQuery: string | string[]): MediaChange[];
+    ngOnDestroy(): void;
     /**
      * Call window.matchMedia() to build a MediaQueryList; which
      * supports 0..n listeners for activation/deactivation

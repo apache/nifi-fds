@@ -1,10 +1,8 @@
 {
   "main": "../bundles/covalent-core-expansion-panel.umd.js",
-  "module": "../fesm5/covalent-core-expansion-panel.js",
+  "module": "../fesm2015/covalent-core-expansion-panel.js",
   "es2015": "../fesm2015/covalent-core-expansion-panel.js",
-  "esm5": "../esm5/expansion-panel/covalent-core-expansion-panel.js",
   "esm2015": "../esm2015/expansion-panel/covalent-core-expansion-panel.js",
-  "fesm5": "../fesm5/covalent-core-expansion-panel.js",
   "fesm2015": "../fesm2015/covalent-core-expansion-panel.js",
   "typings": "covalent-core-expansion-panel.d.ts",
   "metadata": "covalent-core-expansion-panel.metadata.json",

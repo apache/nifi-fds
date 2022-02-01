@@ -1,10 +1,8 @@
 {
   "main": "../bundles/covalent-core-loading.umd.js",
-  "module": "../fesm5/covalent-core-loading.js",
+  "module": "../fesm2015/covalent-core-loading.js",
   "es2015": "../fesm2015/covalent-core-loading.js",
-  "esm5": "../esm5/loading/covalent-core-loading.js",
   "esm2015": "../esm2015/loading/covalent-core-loading.js",
-  "fesm5": "../fesm5/covalent-core-loading.js",
   "fesm2015": "../fesm2015/covalent-core-loading.js",
   "typings": "covalent-core-loading.d.ts",
   "metadata": "covalent-core-loading.metadata.json",

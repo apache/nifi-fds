@@ -42,7 +42,7 @@ export declare class TdLoadingService {
      *
      * NOTE: @internal usage only.
      */
-    createComponent(config: ITdLoadingDirectiveConfig, viewContainerRef: ViewContainerRef, templateRef: TemplateRef<Object>, context: TdLoadingContext): ILoadingRef;
+    createComponent(config: ITdLoadingDirectiveConfig, viewContainerRef: ViewContainerRef, templateRef: TemplateRef<object>, context: TdLoadingContext): ILoadingRef;
     /**
      * params:
      * - config: ITdLoadingConfig

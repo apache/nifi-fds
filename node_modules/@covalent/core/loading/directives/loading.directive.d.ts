@@ -23,32 +23,32 @@ export declare class TdLoadingDirective implements OnInit, OnDestroy {
      * tdLoading: string
      * Name reference of the loading mask, used to register/resolve requests to the mask.
      */
-    name: string;
+    set name(name: string);
     /**
      * tdLoadingUntil?: any
      * If its null, undefined or false it will be used to register requests to the mask.
      * Else if its any value that can be resolved as true, it will resolve the mask.
      * [name] is optional when using [until], but can still be used to register/resolve it manually.
      */
-    until: any;
+    set until(until: any);
     /**
      * tdLoadingType?: LoadingType or ['linear' | 'circular']
      * Sets the type of loading mask depending on value.
      * Defaults to [LoadingType.Circular | 'circular'].
      */
-    type: LoadingType;
+    set type(type: LoadingType);
     /**
      * tdLoadingMode?: LoadingMode or ['determinate' | 'indeterminate']
      * Sets the mode of loading mask depending on value.
      * Defaults to [LoadingMode.Indeterminate | 'indeterminate'].
      */
-    mode: LoadingMode;
+    set mode(mode: LoadingMode);
     /**
      * tdLoadingStrategy?: LoadingStrategy or ['replace' | 'overlay']
      * Sets the strategy of loading mask depending on value.
      * Defaults to [LoadingMode.Replace | 'replace'].
      */
-    strategy: LoadingStrategy;
+    set strategy(strategy: LoadingStrategy);
     /**
      * tdLoadingColor?: "primary" | "accent" | "warn"
      * Sets the theme color of the loading component. Defaults to "primary"

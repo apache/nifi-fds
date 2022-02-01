@@ -25,8 +25,9 @@ export declare class TdVirtualScrollContainerComponent implements AfterViewInit,
      * data: any[]
      * List of items to virtually iterate on.
      */
-    data: any[];
-    readonly virtualData: any[];
+    set data(data: any[]);
+    get data(): any[];
+    get virtualData(): any[];
     /**
      * bottom: function
      * Method to be executed when user scrolled to the last item of the list.
@@ -35,11 +36,11 @@ export declare class TdVirtualScrollContainerComponent implements AfterViewInit,
     bottom: EventEmitter<ITdVirtualScrollBottomEvent>;
     _rows: QueryList<ElementRef>;
     _rowTemplate: TdVirtualScrollRowDirective;
-    readonly rowHeight: number;
-    readonly totalHeight: number;
-    readonly fromRow: number;
-    readonly toRow: number;
-    readonly offsetTransform: SafeStyle;
+    get rowHeight(): number;
+    get totalHeight(): number;
+    get fromRow(): number;
+    get toRow(): number;
+    get offsetTransform(): SafeStyle;
     constructor(_elementRef: ElementRef, _domSanitizer: DomSanitizer, _renderer: Renderer2, _changeDetectorRef: ChangeDetectorRef);
     ngAfterViewInit(): void;
     ngAfterViewChecked(): void;

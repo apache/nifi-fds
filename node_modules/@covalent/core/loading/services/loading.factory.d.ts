@@ -37,14 +37,14 @@ export declare class TdLoadingFactory {
      *
      * Saves a reference in context to be called when registering/resolving the loading element.
      */
-    createOverlayComponent(options: ITdLoadingConfig, viewContainerRef: ViewContainerRef, templateRef: TemplateRef<Object>): ILoadingRef;
+    createOverlayComponent(options: ITdLoadingConfig, viewContainerRef: ViewContainerRef, templateRef: TemplateRef<object>): ILoadingRef;
     /**
      * Creates a loading component dynamically and attaches it into the given viewContainerRef.
      * Replaces the template with the loading component depending if it was registered or resolved.
      *
      * Saves a reference in context to be called when registering/resolving the loading element.
      */
-    createReplaceComponent(options: ITdLoadingConfig, viewContainerRef: ViewContainerRef, templateRef: TemplateRef<Object>, context: TdLoadingContext): ILoadingRef;
+    createReplaceComponent(options: ITdLoadingConfig, viewContainerRef: ViewContainerRef, templateRef: TemplateRef<object>, context: TdLoadingContext): ILoadingRef;
     /**
      * Creates a fullscreen overlay for the loading usage.
      */

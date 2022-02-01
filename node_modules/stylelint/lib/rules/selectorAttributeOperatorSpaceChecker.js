@@ -1,95 +1,74 @@
-"use strict";
+// @ts-nocheck
 
-const isStandardSyntaxRule = require("../utils/isStandardSyntaxRule");
-const parseSelector = require("../utils/parseSelector");
-const report = require("../utils/report");
-const styleSearch = require("style-search");
+'use strict';
 
-module.exports = function(options) {
-  options.root.walkRules(rule => {
-    if (!isStandardSyntaxRule(rule)) {
-      return;
-    }
+const isStandardSyntaxRule = require('../utils/isStandardSyntaxRule');
+const parseSelector = require('../utils/parseSelector');
+const report = require('../utils/report');
+const styleSearch = require('style-search');
 
-    if (
-      rule.selector.indexOf("[") === -1 ||
-      rule.selector.indexOf("=") === -1
-    ) {
-      return;
-    }
+module.exports = function (options) {
+	options.root.walkRules((rule) => {
+		if (!isStandardSyntaxRule(rule)) {
+			return;
+		}
 
-    let hasFixed = false;
-    const selector = rule.raws.selector
-      ? rule.raws.selector.raw
-      : rule.selector;
+		if (!rule.selector.includes('[') || !rule.selector.includes('=')) {
+			return;
+		}
 
-    const fixedSelector = parseSelector(
-      selector,
-      options.result,
-      rule,
-      selectorTree => {
-        selectorTree.walkAttributes(attributeNode => {
-          const operator = attributeNode.operator;
+		let hasFixed = false;
+		const selector = rule.raws.selector ? rule.raws.selector.raw : rule.selector;
 
-          if (!operator) {
-            return;
-          }
+		const fixedSelector = parseSelector(selector, options.result, rule, (selectorTree) => {
+			selectorTree.walkAttributes((attributeNode) => {
+				const operator = attributeNode.operator;
 
-          const attributeNodeString = attributeNode.toString();
+				if (!operator) {
+					return;
+				}
 
-          styleSearch(
-            { source: attributeNodeString, target: operator },
-            match => {
-              const index = options.checkBeforeOperator
-                ? match.startIndex
-                : match.endIndex - 1;
+				const attributeNodeString = attributeNode.toString();
 
-              checkOperator(
-                attributeNodeString,
-                index,
-                rule,
-                attributeNode,
-                operator
-              );
-            }
-          );
-        });
-      }
-    );
+				styleSearch({ source: attributeNodeString, target: operator }, (match) => {
+					const index = options.checkBeforeOperator ? match.startIndex : match.endIndex - 1;
 
-    if (hasFixed) {
-      if (!rule.raws.selector) {
-        rule.selector = fixedSelector;
-      } else {
-        rule.raws.selector.raw = fixedSelector;
-      }
-    }
+					checkOperator(attributeNodeString, index, rule, attributeNode, operator);
+				});
+			});
+		});
 
-    function checkOperator(source, index, node, attributeNode, operator) {
-      options.locationChecker({
-        source,
-        index,
-        err: m => {
-          if (options.fix && options.fix(attributeNode)) {
-            hasFixed = true;
+		if (hasFixed) {
+			if (!rule.raws.selector) {
+				rule.selector = fixedSelector;
+			} else {
+				rule.raws.selector.raw = fixedSelector;
+			}
+		}
 
-            return;
-          }
+		function checkOperator(source, index, node, attributeNode, operator) {
+			options.locationChecker({
+				source,
+				index,
+				err: (m) => {
+					if (options.fix && options.fix(attributeNode)) {
+						hasFixed = true;
 
-          report({
-            message: m.replace(
-              options.checkBeforeOperator
-                ? operator[0]
-                : operator[operator.length - 1],
-              operator
-            ),
-            node,
-            index: attributeNode.sourceIndex + index,
-            result: options.result,
-            ruleName: options.checkedRuleName
-          });
-        }
-      });
-    }
-  });
+						return;
+					}
+
+					report({
+						message: m.replace(
+							options.checkBeforeOperator ? operator[0] : operator[operator.length - 1],
+							operator,
+						),
+						node,
+						index: attributeNode.sourceIndex + index,
+						result: options.result,
+						ruleName: options.checkedRuleName,
+					});
+				},
+			});
+		}
+	});
 };

@@ -17,8 +17,12 @@
 
 // Path overrides
 $fa-font-path: 'node_modules/font-awesome/fonts';
+
+@import '~font-awesome/scss/font-awesome';
+
+// Include pre-bundled material-icons
 $mat-font-url: 'node_modules/@covalent/core/common/styles/font/';
 
-// Node Modules
-@import '~@covalent/core/common/platform.scss';
-@import '~font-awesome/scss/font-awesome';
+@import '~@covalent/core/theming/all-theme';
+@import '~@covalent/core/common/platform';
+@include covalent-material-icons;

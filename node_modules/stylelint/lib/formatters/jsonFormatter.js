@@ -1,12 +1,20 @@
-"use strict";
+'use strict';
 
-const _ = require("lodash");
+/**
+ * Omit any properties starting with `_`, which are fake-private
+ *
+ * @type {import('stylelint').Formatter}
+ */
+module.exports = function jsonFormatter(results) {
+	const cleanedResults = results.map((result) =>
+		Object.entries(result)
+			.filter(([key]) => !key.startsWith('_'))
+			.reduce((/** @type {{ [key: string]: any }} */ obj, [key, value]) => {
+				obj[key] = value;
 
-// Omit any properties starting with `_`, which are fake-private
-module.exports = function(results) {
-  const cleanedResults = results.map(result => {
-    return _.omitBy(result, (value, key) => key[0] === "_");
-  });
+				return obj;
+			}, {}),
+	);
 
-  return JSON.stringify(cleanedResults);
+	return JSON.stringify(cleanedResults);
 };

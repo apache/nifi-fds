@@ -11,8 +11,8 @@ export interface PropertyNameUpgradeData {
     replace: string;
     /** The new name for the property. */
     replaceWith: string;
-    /** Whitelist where this replacement is made. If omitted it is made for all Classes. */
-    whitelist: {
+    /** Controls which classes in which this replacement is made. */
+    limitedTo: {
         /** Replace the property only when its type is one of the given Classes. */
         classes: string[];
     };

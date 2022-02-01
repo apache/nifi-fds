@@ -1,4 +1,3 @@
-import { Provider } from '@angular/core';
 import { TdDataTableSortingOrder } from '../data-table.component';
 export declare class TdDataTableService {
     /**
@@ -30,5 +29,3 @@ export declare class TdDataTableService {
      */
     pageData(data: any[], fromRow: number, toRow: number): any[];
 }
-export declare function DATA_TABLE_PROVIDER_FACTORY(parent: TdDataTableService): TdDataTableService;
-export declare const DATA_TABLE_PROVIDER: Provider;

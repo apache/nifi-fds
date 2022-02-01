@@ -1,10 +1,8 @@
 {
   "main": "../bundles/covalent-core-common.umd.js",
-  "module": "../fesm5/covalent-core-common.js",
+  "module": "../fesm2015/covalent-core-common.js",
   "es2015": "../fesm2015/covalent-core-common.js",
-  "esm5": "../esm5/common/covalent-core-common.js",
   "esm2015": "../esm2015/common/covalent-core-common.js",
-  "fesm5": "../fesm5/covalent-core-common.js",
   "fesm2015": "../fesm2015/covalent-core-common.js",
   "typings": "covalent-core-common.d.ts",
   "metadata": "covalent-core-common.metadata.json",

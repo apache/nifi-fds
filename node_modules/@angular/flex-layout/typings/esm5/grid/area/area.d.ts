@@ -13,10 +13,6 @@ export declare class GridAreaStyleBuilder extends StyleBuilder {
     };
 }
 export declare class GridAreaDirective extends BaseDirective2 {
-    protected elRef: ElementRef;
-    protected styleUtils: StyleUtils;
-    protected styleBuilder: GridAreaStyleBuilder;
-    protected marshal: MediaMarshaller;
     protected DIRECTIVE_KEY: string;
     constructor(elRef: ElementRef, styleUtils: StyleUtils, styleBuilder: GridAreaStyleBuilder, marshal: MediaMarshaller);
     protected styleCache: Map<string, StyleDefinition>;

@@ -16,22 +16,22 @@ export declare class TdMediaToggleDirective implements OnInit, OnDestroy {
      * Media query used to evaluate screen/window size.
      * Toggles attributes, classes and styles if media query is matched.
      */
-    query: string;
+    set query(query: string);
     /**
      * mediaAttributes: {[key: string]: string}
      * Attributes to be toggled when media query matches.
      */
-    attributes: any;
+    set attributes(attributes: any);
     /**
      * mediaClasses: string[]
      * CSS Classes to be toggled when media query matches.
      */
-    classes: string[];
+    set classes(classes: string[]);
     /**
      * mediaStyles: {[key: string]: string}
      * CSS Styles to be toggled when media query matches.
      */
-    styles: any;
+    set styles(styles: any);
     constructor(_renderer: Renderer2, _elementRef: ElementRef, _mediaService: TdMediaService);
     ngOnInit(): void;
     ngOnDestroy(): void;

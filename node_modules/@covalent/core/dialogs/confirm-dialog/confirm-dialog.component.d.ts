@@ -5,6 +5,7 @@ export declare class TdConfirmDialogComponent {
     message: string;
     cancelButton: string;
     acceptButton: string;
+    isDestructive: boolean;
     constructor(_dialogRef: MatDialogRef<TdConfirmDialogComponent>);
     cancel(): void;
     accept(): void;

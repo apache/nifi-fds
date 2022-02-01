@@ -1,52 +1,56 @@
-"use strict";
+// @ts-nocheck
 
-const ruleMessages = require("../../utils/ruleMessages");
-const selectorCombinatorSpaceChecker = require("../selectorCombinatorSpaceChecker");
-const validateOptions = require("../../utils/validateOptions");
-const whitespaceChecker = require("../../utils/whitespaceChecker");
+'use strict';
 
-const ruleName = "selector-combinator-space-before";
+const ruleMessages = require('../../utils/ruleMessages');
+const selectorCombinatorSpaceChecker = require('../selectorCombinatorSpaceChecker');
+const validateOptions = require('../../utils/validateOptions');
+const whitespaceChecker = require('../../utils/whitespaceChecker');
+
+const ruleName = 'selector-combinator-space-before';
 
 const messages = ruleMessages(ruleName, {
-  expectedBefore: combinator => `Expected single space before "${combinator}"`,
-  rejectedBefore: combinator => `Unexpected whitespace before "${combinator}"`
+	expectedBefore: (combinator) => `Expected single space before "${combinator}"`,
+	rejectedBefore: (combinator) => `Unexpected whitespace before "${combinator}"`,
 });
 
-const rule = function(expectation, options, context) {
-  const checker = whitespaceChecker("space", expectation, messages);
+function rule(expectation, options, context) {
+	const checker = whitespaceChecker('space', expectation, messages);
 
-  return (root, result) => {
-    const validOptions = validateOptions(result, ruleName, {
-      actual: expectation,
-      possible: ["always", "never"]
-    });
+	return (root, result) => {
+		const validOptions = validateOptions(result, ruleName, {
+			actual: expectation,
+			possible: ['always', 'never'],
+		});
 
-    if (!validOptions) {
-      return;
-    }
+		if (!validOptions) {
+			return;
+		}
 
-    selectorCombinatorSpaceChecker({
-      root,
-      result,
-      locationChecker: checker.before,
-      locationType: "before",
-      checkedRuleName: ruleName,
-      fix: context.fix
-        ? combinator => {
-            if (expectation === "always") {
-              combinator.spaces.before = " ";
+		selectorCombinatorSpaceChecker({
+			root,
+			result,
+			locationChecker: checker.before,
+			locationType: 'before',
+			checkedRuleName: ruleName,
+			fix: context.fix
+				? (combinator) => {
+						if (expectation === 'always') {
+							combinator.spaces.before = ' ';
 
-              return true;
-            } else if (expectation === "never") {
-              combinator.spaces.before = "";
+							return true;
+						}
 
-              return true;
-            }
-          }
-        : null
-    });
-  };
-};
+						if (expectation === 'never') {
+							combinator.spaces.before = '';
+
+							return true;
+						}
+				  }
+				: null,
+		});
+	};
+}
 
 rule.ruleName = ruleName;
 rule.messages = messages;

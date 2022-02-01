@@ -29,7 +29,7 @@ export declare class TdNavStepsHorizontalComponent implements AfterContentChecke
     _steps: QueryList<TdNavStepLinkComponent>;
     _stepListContainer: ElementRef;
     _stepList: ElementRef;
-    readonly nativeElementWidth: number;
+    get nativeElementWidth(): number;
     constructor(_elementRef: ElementRef, _viewportRuler: ViewportRuler, _dir: Directionality, _renderer: Renderer2, _changeDetectorRef: ChangeDetectorRef);
     ngAfterContentInit(): void;
     ngAfterContentChecked(): void;
@@ -47,7 +47,8 @@ export declare class TdNavStepsHorizontalComponent implements AfterContentChecke
     /** Performs the CSS transformation on the step list that will cause the list to scroll. */
     _updateStepScrollPosition(): void;
     /** Sets the distance in pixels that the step header should be transformed in the X-axis. */
-    scrollDistance: number;
+    get scrollDistance(): number;
+    set scrollDistance(v: number);
     /**
      * Moves the step list in the 'before' or 'after' direction (towards the beginning of the list or
      * the end of the list, respectively).

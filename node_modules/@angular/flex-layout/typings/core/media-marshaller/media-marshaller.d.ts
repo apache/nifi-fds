@@ -25,7 +25,7 @@ export declare class MediaMarshaller {
     private updateMap;
     private clearMap;
     private subject;
-    readonly activatedAlias: string;
+    get activatedAlias(): string;
     constructor(matchMedia: MatchMedia, breakpoints: BreakPointRegistry, hook: PrintHook);
     /**
      * Update styles on breakpoint activates or deactivates

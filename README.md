@@ -6,9 +6,6 @@ The demo application serves 2 main purposes
 * As a way for code reviewers to validate code changes and `@nifi-fds/core` releases. 
 * Provides a working example of how an Angular application should leverage `@nifi-fds/core`.
 
-## Requirements
-This project requires npm version 5.6.0.
-
 ## Quick Start
 For developers not interested in building the FDS NgModule you can use **npm** to install the distribution files.
 
@@ -46,19 +43,19 @@ NiFi FDS is a themeable UI/UX component platform. To customize the core FDS comp
 @import 'platform/core/common/styles/flow-design-system';
 
 //Change these
-$primaryColor: $rose1;
-$primaryColorHover: $rose2;
-$accentColor: $blue-grey1;
-$accentColorHover: $blue4;
+$primary-color: $rose1;
+$primary-color-hover: $rose2;
+$accent-color: $blue-grey1;
+$accent-color-hover: $blue4;
 
 // Include the base styles for Angular Material core. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
 @include mat-core;
 
 // Define the palettes
-$fds-base-palette: (50: #89df79, 100: $primaryColorHover, 200: #65d550, 300: #53d03b, 400: #46c32f, 500: $primaryColor, 600: $primaryColor, 700: #89df79, 800: #29701b, 900: #215c16, A100: #9be48d, A200: #ade9a2, A400: #bfedb6, A700: #1a4711, contrast: (50: $black-87-opacity, 100: $black-87-opacity, 200: $black-87-opacity, 300: white, 400: white, 500: $white-87-opacity, 600: $white-87-opacity, 700: $white-87-opacity, 800: $white-87-opacity, 900: $white-87-opacity, A100: $black-87-opacity, A200: white, A400: white, A700: $white-87-opacity));
-$fds-accent-palette: (50: #89df79, 100: $accentColorHover, 200: #65d550, 300: #53d03b, 400: #46c32f, 500: $accentColor, 600: $accentColor, 700: #89df79, 800: #29701b, 900: #215c16, A100: #9be48d, A200: #ade9a2, A400: #bfedb6, A700: #1a4711, contrast: (50: $black-87-opacity, 100: $black-87-opacity, 200: $black-87-opacity, 300: white, 400: white, 500: $white-87-opacity, 600: $white-87-opacity, 700: $white-87-opacity, 800: $white-87-opacity, 900: $white-87-opacity, A100: $black-87-opacity, A200: white, A400: white, A700: $white-87-opacity));
-$fds-warn-palette: (50: #81410f, 100: #D14A50, 200: #af5814, 300: #c66317, 400: #dd6f19, 500: $warnColor, 600: $warnColor, 700: #eea66e, 800: #f1b485, 900: #f4c29b, A100: #ec9857, A200: #89df79, A400: #89df79, A700: #f6d0b2, contrast: (50: $black-87-opacity, 100: $black-87-opacity, 200: $black-87-opacity, 300: white, 400: white, 500: $white-87-opacity, 600: $white-87-opacity, 700: $white-87-opacity, 800: $white-87-opacity, 900: $white-87-opacity, A100: $black-87-opacity, A200: white, A400: white, A700: $white-87-opacity));
+$fds-base-palette: (50: #89df79, 100: $primary-color-hover, 200: #65d550, 300: #53d03b, 400: #46c32f, 500: $primary-color, 600: $primary-color, 700: #89df79, 800: #29701b, 900: #215c16, A100: #9be48d, A200: #ade9a2, A400: #bfedb6, A700: #1a4711, contrast: (50: $black-87-opacity, 100: $black-87-opacity, 200: $black-87-opacity, 300: white, 400: white, 500: $white-87-opacity, 600: $white-87-opacity, 700: $white-87-opacity, 800: $white-87-opacity, 900: $white-87-opacity, A100: $black-87-opacity, A200: white, A400: white, A700: $white-87-opacity));
+$fds-accent-palette: (50: #89df79, 100: $accent-color-hover, 200: #65d550, 300: #53d03b, 400: #46c32f, 500: $accent-color, 600: $accent-color, 700: #89df79, 800: #29701b, 900: #215c16, A100: #9be48d, A200: #ade9a2, A400: #bfedb6, A700: #1a4711, contrast: (50: $black-87-opacity, 100: $black-87-opacity, 200: $black-87-opacity, 300: white, 400: white, 500: $white-87-opacity, 600: $white-87-opacity, 700: $white-87-opacity, 800: $white-87-opacity, 900: $white-87-opacity, A100: $black-87-opacity, A200: white, A400: white, A700: $white-87-opacity));
+$fds-warn-palette: (50: #81410f, 100: #D14A50, 200: #af5814, 300: #c66317, 400: #dd6f19, 500: $warn-color, 600: $warn-color, 700: #eea66e, 800: #f1b485, 900: #f4c29b, A100: #ec9857, A200: #89df79, A400: #89df79, A700: #f6d0b2, contrast: (50: $black-87-opacity, 100: $black-87-opacity, 200: $black-87-opacity, 300: white, 400: white, 500: $white-87-opacity, 600: $white-87-opacity, 700: $white-87-opacity, 800: $white-87-opacity, 900: $white-87-opacity, A100: $black-87-opacity, A200: white, A400: white, A700: $white-87-opacity));
 $fds-primary: mat-palette($fds-base-palette, 500, 100, 500);
 $fds-accent: mat-palette($fds-accent-palette, 500, 100, 500);
 $fds-warn: mat-palette($fds-warn-palette, 500, 100, 500);
@@ -82,7 +79,7 @@ _NOTE: The theme file may be concatenated and minified with the rest of the appl
 Optionally you can override the font file paths if you want your font files to be served from a different location.
 
 ```sass
-$fdsFontPath: '/path/to/font/files';
+$fds-font-path: '/path/to/font/files';
 ```
 
 #### Developing

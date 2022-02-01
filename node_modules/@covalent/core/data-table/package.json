@@ -1,10 +1,8 @@
 {
   "main": "../bundles/covalent-core-data-table.umd.js",
-  "module": "../fesm5/covalent-core-data-table.js",
+  "module": "../fesm2015/covalent-core-data-table.js",
   "es2015": "../fesm2015/covalent-core-data-table.js",
-  "esm5": "../esm5/data-table/covalent-core-data-table.js",
   "esm2015": "../esm2015/data-table/covalent-core-data-table.js",
-  "fesm5": "../fesm5/covalent-core-data-table.js",
   "fesm2015": "../fesm2015/covalent-core-data-table.js",
   "typings": "covalent-core-data-table.d.ts",
   "metadata": "covalent-core-data-table.metadata.json",

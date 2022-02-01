@@ -17,11 +17,11 @@ export declare class TdMessageComponent implements AfterViewInit {
     /**
      * Binding host to tdCollapse animation
      */
-    readonly collapsedAnimation: any;
+    get collapsedAnimation(): any;
     /**
      * Binding host to display style when hidden
      */
-    readonly hidden: string;
+    get hidden(): string;
     /**
      * label: string
      *
@@ -47,14 +47,16 @@ export declare class TdMessageComponent implements AfterViewInit {
      * Sets the color of the message.
      * Can also use any material color: purple | light-blue, etc.
      */
-    color: string;
+    set color(color: string);
+    get color(): string;
     /**
      * opened?: boolean
      *
      * Shows or hiddes the message depending on its value.
      * Defaults to 'true'.
      */
-    opened: boolean;
+    set opened(opened: boolean);
+    get opened(): boolean;
     constructor(_renderer: Renderer2, _changeDetectorRef: ChangeDetectorRef, _elementRef: ElementRef);
     /**
      * Detach element when close animation is finished to set animating state to false

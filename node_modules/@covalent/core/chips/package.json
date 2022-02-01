@@ -1,10 +1,8 @@
 {
   "main": "../bundles/covalent-core-chips.umd.js",
-  "module": "../fesm5/covalent-core-chips.js",
+  "module": "../fesm2015/covalent-core-chips.js",
   "es2015": "../fesm2015/covalent-core-chips.js",
-  "esm5": "../esm5/chips/covalent-core-chips.js",
   "esm2015": "../esm2015/chips/covalent-core-chips.js",
-  "fesm5": "../fesm5/covalent-core-chips.js",
   "fesm2015": "../fesm2015/covalent-core-chips.js",
   "typings": "covalent-core-chips.d.ts",
   "metadata": "covalent-core-chips.metadata.json",

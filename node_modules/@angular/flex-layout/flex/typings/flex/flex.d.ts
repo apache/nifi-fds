@@ -5,7 +5,7 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import { ElementRef } from '@angular/core';
+import { ElementRef, OnInit } from '@angular/core';
 import { BaseDirective2, LayoutConfigOptions, StyleUtils, StyleBuilder, StyleDefinition, MediaMarshaller, ElementMatcher } from '@angular/flex-layout/core';
 interface FlexBuilderParent {
     direction: string;
@@ -22,20 +22,20 @@ export declare class FlexStyleBuilder extends StyleBuilder {
  *
  * @see https://css-tricks.com/snippets/css/a-guide-to-flexbox/
  */
-export declare class FlexDirective extends BaseDirective2 {
-    protected elRef: ElementRef;
-    protected styleUtils: StyleUtils;
+export declare class FlexDirective extends BaseDirective2 implements OnInit {
     protected layoutConfig: LayoutConfigOptions;
-    protected styleBuilder: FlexStyleBuilder;
     protected marshal: MediaMarshaller;
     protected DIRECTIVE_KEY: string;
-    protected direction: string;
-    protected wrap: boolean;
-    shrink: string;
-    grow: string;
+    protected direction?: string;
+    protected wrap?: boolean;
+    get shrink(): string;
+    set shrink(value: string);
+    get grow(): string;
+    set grow(value: string);
     protected flexGrow: string;
     protected flexShrink: string;
     constructor(elRef: ElementRef, styleUtils: StyleUtils, layoutConfig: LayoutConfigOptions, styleBuilder: FlexStyleBuilder, marshal: MediaMarshaller);
+    ngOnInit(): void;
     /**
      * Caches the parent container's 'flex-direction' and updates the element's style.
      * Used as a handler for layout change events from the parent flex container.

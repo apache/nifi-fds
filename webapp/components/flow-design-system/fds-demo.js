@@ -17,7 +17,7 @@
 
 import { Component } from '@angular/core';
 import { TdDataTableService } from '@covalent/core/data-table';
-import { MatDialog } from '@angular/material';
+import { MatDialog } from '@angular/material/dialog';
 import { FdsDialogService, FdsSnackBarService, FdsAnimations } from '@nifi-fds/core';
 import FdsService from 'webapp/services/fds.service.js';
 import FdsDemoDialog from 'webapp/components/flow-design-system/dialogs/demo/fds-demo-dialog.js';
@@ -939,7 +939,7 @@ FdsDemo.prototype = {
         this.getAutoCompleteData();
     },
 
-    toggleSelect: function (row) {
+    toggleSelect: function () {
         if (this.allFilteredRowsSelected()) {
             this.allRowsSelected = true;
         } else {

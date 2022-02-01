@@ -12,18 +12,15 @@ export interface GridColumnsParent {
 }
 export declare class GridColumnsStyleBuilder extends StyleBuilder {
     buildStyles(input: string, parent: GridColumnsParent): {
-        'display': string;
+        display: string;
         'grid-auto-columns': string;
         'grid-template-columns': string;
     };
 }
 export declare class GridColumnsDirective extends BaseDirective2 {
-    protected elementRef: ElementRef;
-    protected styleBuilder: GridColumnsStyleBuilder;
-    protected styler: StyleUtils;
-    protected marshal: MediaMarshaller;
     protected DIRECTIVE_KEY: string;
-    inline: boolean;
+    get inline(): boolean;
+    set inline(val: boolean);
     protected _inline: boolean;
     constructor(elementRef: ElementRef, styleBuilder: GridColumnsStyleBuilder, styler: StyleUtils, marshal: MediaMarshaller);
     protected updateWithValue(value: string): void;

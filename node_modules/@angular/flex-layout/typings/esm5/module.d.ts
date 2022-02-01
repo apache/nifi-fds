@@ -18,6 +18,6 @@ export declare class FlexLayoutModule {
      * Initialize the FlexLayoutModule with a set of config options,
      * which sets the corresponding tokens accordingly
      */
-    static withConfig(configOptions: LayoutConfigOptions, breakpoints?: BreakPoint | BreakPoint[]): ModuleWithProviders;
+    static withConfig(configOptions: LayoutConfigOptions, breakpoints?: BreakPoint | BreakPoint[]): ModuleWithProviders<FlexLayoutModule>;
     constructor(serverModuleLoaded: boolean, platformId: Object);
 }

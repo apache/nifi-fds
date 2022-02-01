@@ -1,9 +1,10 @@
-/* @flow */
-"use strict";
+'use strict';
 
-module.exports = function(source /*: string*/) /*: string*/ {
-  const blurChar /*: string*/ =
-    arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "`";
-
-  return source.replace(/\/\*.*\*\//g, blurChar);
+/**
+ * @param {string} source
+ *
+ * @returns {string}
+ */
+module.exports = function (source, blurChar = '`') {
+	return source.replace(/\/\*.*\*\//g, blurChar);
 };

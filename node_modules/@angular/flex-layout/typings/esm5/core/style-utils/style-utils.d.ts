@@ -20,6 +20,7 @@ export declare class StyleUtils {
      * Check inline style first then check computed (stylesheet) style
      */
     getFlowDirection(target: HTMLElement): [string, string];
+    hasWrap(target: HTMLElement): boolean;
     /**
      * Find the DOM element's raw attribute value (if any)
      */

@@ -1,24 +1,26 @@
-/* @flow */
-"use strict";
+'use strict';
 
-const hasInterpolation = require("../utils/hasInterpolation");
+const hasInterpolation = require('../utils/hasInterpolation');
 
 /**
  * Check whether a media feature is standard
+ *
+ * @param {string} mediaFeature
+ * @returns {boolean}
  */
-module.exports = function(mediaFeature /*: string*/) /*: boolean*/ {
-  // Remove outside parens
-  mediaFeature = mediaFeature.slice(1, -1);
+module.exports = function (mediaFeature) {
+	// Remove outside parens
+	mediaFeature = mediaFeature.slice(1, -1);
 
-  // Parentheticals used for non-standard operations e.g. ($var - 10)
-  if (mediaFeature.indexOf("(") !== -1) {
-    return false;
-  }
+	// Parentheticals used for non-standard operations e.g. ($var - 10)
+	if (mediaFeature.includes('(')) {
+		return false;
+	}
 
-  // SCSS or Less interpolation
-  if (hasInterpolation(mediaFeature)) {
-    return false;
-  }
+	// SCSS or Less interpolation
+	if (hasInterpolation(mediaFeature)) {
+		return false;
+	}
 
-  return true;
+	return true;
 };

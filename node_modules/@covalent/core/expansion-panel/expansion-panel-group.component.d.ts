@@ -13,7 +13,7 @@ export declare class TdExpansionPanelGroupComponent implements AfterContentInit,
      * Set to false for accordion mode.
      * Defaults to false.
      */
-    multi: boolean;
+    set multi(multi: boolean);
     expansionPanels: QueryList<TdExpansionPanelComponent>;
     constructor(_renderer: Renderer2, _elementRef: ElementRef);
     ngOnDestroy(): void;

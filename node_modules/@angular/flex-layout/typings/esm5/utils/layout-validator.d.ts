@@ -11,7 +11,7 @@ export declare const LAYOUT_VALUES: string[];
  * Validate the direction|'direction wrap' value and then update the host's inline flexbox styles
  */
 export declare function buildLayoutCSS(value: string): {
-    'display': string;
+    display: string;
     'box-sizing': string;
     'flex-direction': string;
     'flex-wrap': string | null;

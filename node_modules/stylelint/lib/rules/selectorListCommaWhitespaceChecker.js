@@ -1,48 +1,48 @@
-"use strict";
+// @ts-nocheck
 
-const isStandardSyntaxRule = require("../utils/isStandardSyntaxRule");
-const report = require("../utils/report");
-const styleSearch = require("style-search");
+'use strict';
 
-module.exports = function(opts) {
-  opts.root.walkRules(rule => {
-    if (!isStandardSyntaxRule(rule)) {
-      return;
-    }
+const isStandardSyntaxRule = require('../utils/isStandardSyntaxRule');
+const report = require('../utils/report');
+const styleSearch = require('style-search');
 
-    const selector = rule.raws.selector
-      ? rule.raws.selector.raw
-      : rule.selector;
+module.exports = function (opts) {
+	opts.root.walkRules((rule) => {
+		if (!isStandardSyntaxRule(rule)) {
+			return;
+		}
 
-    styleSearch(
-      {
-        source: selector,
-        target: ",",
-        functionArguments: "skip"
-      },
-      match => {
-        checkDelimiter(selector, match.startIndex, rule);
-      }
-    );
-  });
+		const selector = rule.raws.selector ? rule.raws.selector.raw : rule.selector;
 
-  function checkDelimiter(source, index, node) {
-    opts.locationChecker({
-      source,
-      index,
-      err: m => {
-        if (opts.fix && opts.fix(node, index)) {
-          return;
-        }
+		styleSearch(
+			{
+				source: selector,
+				target: ',',
+				functionArguments: 'skip',
+			},
+			(match) => {
+				checkDelimiter(selector, match.startIndex, rule);
+			},
+		);
+	});
 
-        report({
-          message: m,
-          node,
-          index,
-          result: opts.result,
-          ruleName: opts.checkedRuleName
-        });
-      }
-    });
-  }
+	function checkDelimiter(source, index, node) {
+		opts.locationChecker({
+			source,
+			index,
+			err: (m) => {
+				if (opts.fix && opts.fix(node, index)) {
+					return;
+				}
+
+				report({
+					message: m,
+					node,
+					index,
+					result: opts.result,
+					ruleName: opts.checkedRuleName,
+				});
+			},
+		});
+	}
 };

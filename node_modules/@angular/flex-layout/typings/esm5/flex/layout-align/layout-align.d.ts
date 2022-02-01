@@ -24,10 +24,6 @@ export declare class LayoutAlignStyleBuilder extends StyleBuilder {
  *  @see https://css-tricks.com/almanac/properties/a/align-content/
  */
 export declare class LayoutAlignDirective extends BaseDirective2 {
-    protected elRef: ElementRef;
-    protected styleUtils: StyleUtils;
-    protected styleBuilder: LayoutAlignStyleBuilder;
-    protected marshal: MediaMarshaller;
     protected DIRECTIVE_KEY: string;
     protected layout: string;
     protected inline: boolean;

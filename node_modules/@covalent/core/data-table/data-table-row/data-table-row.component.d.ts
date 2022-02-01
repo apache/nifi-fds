@@ -8,8 +8,9 @@ export declare class TdDataTableRowComponent {
     private _elementRef;
     private _renderer;
     private _selected;
-    selected: boolean;
-    readonly height: number;
+    set selected(selected: boolean);
+    get selected(): boolean;
+    get height(): number;
     constructor(_elementRef: ElementRef, _renderer: Renderer2);
     /**
      * Listening to click event to explicitly focus the row element.

@@ -1,5 +1,4 @@
-/* @flow */
-"use strict";
+'use strict';
 
 /**
  * Check if a string is a single line (i.e. does not contain
@@ -8,6 +7,6 @@
  * @param {string} input
  * @return {boolean}
  */
-module.exports = function(input /*: string*/) /*: boolean*/ {
-  return !/[\n\r]/.test(input);
+module.exports = function (input) {
+	return !/[\n\r]/.test(input);
 };

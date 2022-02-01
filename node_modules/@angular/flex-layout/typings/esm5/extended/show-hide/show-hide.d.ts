@@ -9,22 +9,19 @@ import { ElementRef, OnChanges, SimpleChanges, AfterViewInit } from '@angular/co
 import { BaseDirective2, LayoutConfigOptions, MediaMarshaller, StyleUtils, StyleBuilder } from '@angular/flex-layout/core';
 export interface ShowHideParent {
     display: string;
+    isServer: boolean;
 }
 export declare class ShowHideStyleBuilder extends StyleBuilder {
     buildStyles(show: string, parent: ShowHideParent): {
-        'display': string;
+        display: string;
     };
 }
 export declare class ShowHideDirective extends BaseDirective2 implements AfterViewInit, OnChanges {
-    protected elementRef: ElementRef;
-    protected styleBuilder: ShowHideStyleBuilder;
-    protected styler: StyleUtils;
-    protected marshal: MediaMarshaller;
     protected layoutConfig: LayoutConfigOptions;
     protected platformId: Object;
     protected serverModuleLoaded: boolean;
     protected DIRECTIVE_KEY: string;
-    /** Original dom Elements CSS display style */
+    /** Original DOM Element CSS display style */
     protected display: string;
     protected hasLayout: boolean;
     protected hasFlexChild: boolean;

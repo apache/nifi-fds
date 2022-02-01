@@ -1,10 +1,8 @@
 {
   "main": "../bundles/covalent-core-layout.umd.js",
-  "module": "../fesm5/covalent-core-layout.js",
+  "module": "../fesm2015/covalent-core-layout.js",
   "es2015": "../fesm2015/covalent-core-layout.js",
-  "esm5": "../esm5/layout/covalent-core-layout.js",
   "esm2015": "../esm2015/layout/covalent-core-layout.js",
-  "fesm5": "../fesm5/covalent-core-layout.js",
   "fesm2015": "../fesm2015/covalent-core-layout.js",
   "typings": "covalent-core-layout.d.ts",
   "metadata": "covalent-core-layout.metadata.json",

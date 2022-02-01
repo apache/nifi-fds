@@ -38,7 +38,8 @@ export declare class TdExpansionPanelComponent extends _TdExpansionPanelMixinBas
      * expand?: boolean
      * Toggles [TdExpansionPanelComponent] between expand/collapse.
      */
-    expand: boolean;
+    set expand(expand: boolean);
+    get expand(): boolean;
     /**
      * expanded?: function
      * Event emitted when [TdExpansionPanelComponent] is expanded.

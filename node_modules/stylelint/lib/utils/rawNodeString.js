@@ -1,17 +1,20 @@
-/* @flow */
-"use strict";
+'use strict';
 
 /**
  * Stringify PostCSS node including its raw "before" string.
+ *
+ * @param {import('postcss').Node} node
+ *
+ * @returns {string}
  */
-module.exports = function(node /*: Object*/) /*: string*/ {
-  let result = "";
+module.exports = function (node) {
+	let result = '';
 
-  if (node.raws.before) {
-    result += node.raws.before;
-  }
+	if (node.raws.before) {
+		result += node.raws.before;
+	}
 
-  result += node.toString();
+	result += node.toString();
 
-  return result;
+	return result;
 };

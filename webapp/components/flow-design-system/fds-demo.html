@@ -111,7 +111,7 @@ limitations under the License.
             <mat-divider></mat-divider>
             <mat-card-content>
                 <p>Tip: Use UPPERCASE text for 1-2 words, and Titlecase text for 3+ words.</p>
-                <button mat-raised-button color="primary">Primary</button>
+                <button mat-raised-button color="primary" i18n="Primary Raised Button|A raised button for the primary use of a card, dialog, or perspective.@@primary-button">Primary</button>
                 <button mat-raised-button color="accent">Accent</button>
                 <button mat-raised-button color="warn">Warn</button>
                 <button mat-raised-button color="fds-primary">FDS Primary</button>
@@ -270,14 +270,12 @@ limitations under the License.
                 </mat-button-toggle-group>
                 <div fxLayout="row" class="pad-top-md pad-bot-md"></div>
                 <mat-button-toggle-group name="fds-administration-perspective" fxLayout="row" class="tab-toggle-group">
-                    <mat-button-toggle value="general">
+                    <mat-button-toggle disabled value="general">
                         general
                     </mat-button-toggle>
-                    <div fxLayout="row" class="pad-left-md"></div>
                     <mat-button-toggle value="users">
                         Users
                     </mat-button-toggle>
-                    <div fxLayout="row" class="pad-left-md"></div>
                     <mat-button-toggle value="workflow">
                         Workflow
                     </mat-button-toggle>
@@ -3093,7 +3091,7 @@ limitations under the License.
                 <pre lang="html">
         <![CDATA[
         <!-- Basic Usage -->
-        <mat-sidenav #sidenav mode="over" align="end" opened="false">
+        <mat-sidenav #sidenav mode="over" position="end" opened="false">
             ...
         </mat-sidenav>
         ]]>

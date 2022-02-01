@@ -13,10 +13,6 @@ export declare class GridRowStyleBuilder extends StyleBuilder {
     };
 }
 export declare class GridRowDirective extends BaseDirective2 {
-    protected elementRef: ElementRef;
-    protected styleBuilder: GridRowStyleBuilder;
-    protected styler: StyleUtils;
-    protected marshal: MediaMarshaller;
     protected DIRECTIVE_KEY: string;
     constructor(elementRef: ElementRef, styleBuilder: GridRowStyleBuilder, styler: StyleUtils, marshal: MediaMarshaller);
     protected styleCache: Map<string, StyleDefinition>;

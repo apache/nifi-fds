@@ -18,10 +18,6 @@ export declare class FlexOrderStyleBuilder extends StyleBuilder {
  * @see https://css-tricks.com/almanac/properties/o/order/
  */
 export declare class FlexOrderDirective extends BaseDirective2 implements OnChanges {
-    protected elRef: ElementRef;
-    protected styleUtils: StyleUtils;
-    protected styleBuilder: FlexOrderStyleBuilder;
-    protected marshal: MediaMarshaller;
     protected DIRECTIVE_KEY: string;
     constructor(elRef: ElementRef, styleUtils: StyleUtils, styleBuilder: FlexOrderStyleBuilder, marshal: MediaMarshaller);
     protected styleCache: Map<string, StyleDefinition>;

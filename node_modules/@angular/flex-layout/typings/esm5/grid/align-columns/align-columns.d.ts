@@ -14,12 +14,9 @@ export declare class GridAlignColumnsStyleBuilder extends StyleBuilder {
     buildStyles(input: string, parent: GridAlignColumnsParent): StyleDefinition;
 }
 export declare class GridAlignColumnsDirective extends BaseDirective2 {
-    protected elementRef: ElementRef;
-    protected styleBuilder: GridAlignColumnsStyleBuilder;
-    protected styler: StyleUtils;
-    protected marshal: MediaMarshaller;
     protected DIRECTIVE_KEY: string;
-    inline: boolean;
+    get inline(): boolean;
+    set inline(val: boolean);
     protected _inline: boolean;
     constructor(elementRef: ElementRef, styleBuilder: GridAlignColumnsStyleBuilder, styler: StyleUtils, marshal: MediaMarshaller);
     protected updateWithValue(value: string): void;

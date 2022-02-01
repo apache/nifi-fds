@@ -1,47 +1,67 @@
-/* @flow */
-"use strict";
+'use strict';
 
-module.exports = function(statement /*: postcss$node*/) /*: boolean*/ {
-  const parentNode = statement.parent;
+const { isComment, hasSource } = require('./typeGuards');
 
-  if (parentNode === undefined || parentNode.type === "root") {
-    return false;
-  }
+/**
+ * @param {import('postcss').Node} statement
+ * @returns {boolean}
+ */
+module.exports = function (statement) {
+	const parentNode = statement.parent;
 
-  if (statement === parentNode.first) {
-    return true;
-  }
+	if (parentNode === undefined || parentNode.type === 'root') {
+		return false;
+	}
 
-  /*
-   * Search for the statement in the parent's nodes, ignoring comment
-   * nodes on the same line as the parent's opening brace.
-   */
+	if (statement === parentNode.first) {
+		return true;
+	}
 
-  const parentNodes = parentNode.nodes;
-  const firstNode = parentNodes[0];
+	/*
+	 * Search for the statement in the parent's nodes, ignoring comment
+	 * nodes on the same line as the parent's opening brace.
+	 */
 
-  if (firstNode.type !== "comment" || firstNode.raws.before.includes("\n")) {
-    return false;
-  }
+	const parentNodes = parentNode.nodes;
 
-  const openingBraceLine = firstNode.source.start.line;
+	if (!parentNodes) {
+		return false;
+	}
 
-  if (openingBraceLine !== firstNode.source.end.line) {
-    return false;
-  }
+	const firstNode = parentNodes[0];
 
-  for (let i = 1; i < parentNodes.length; i++) {
-    const node = parentNodes[i];
+	if (
+		!isComment(firstNode) ||
+		(typeof firstNode.raws.before === 'string' && firstNode.raws.before.includes('\n'))
+	) {
+		return false;
+	}
 
-    if (node === statement) {
-      return true;
-    }
+	if (!hasSource(firstNode) || !firstNode.source.start) {
+		return false;
+	}
 
-    if (node.type !== "comment" || node.source.end.line !== openingBraceLine) {
-      return false;
-    }
-  }
+	const openingBraceLine = firstNode.source.start.line;
 
-  /* istanbul ignore next: Should always return in the loop */
-  return false;
+	if (!firstNode.source.end || openingBraceLine !== firstNode.source.end.line) {
+		return false;
+	}
+
+	for (let i = 1; i < parentNodes.length; i++) {
+		const node = parentNodes[i];
+
+		if (node === statement) {
+			return true;
+		}
+
+		if (
+			!isComment(node) ||
+			(hasSource(node) && node.source.end && node.source.end.line !== openingBraceLine)
+		) {
+			return false;
+		}
+	}
+
+	/* istanbul ignore next: Should always return in the loop */
+	return false;
 };

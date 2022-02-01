@@ -12,7 +12,8 @@ export declare class TdNavStepLinkComponent extends _TdStepMixinBase implements 
      * Sets state of component depending on value.
      * Defaults to [StepState.None | 'none'].
      */
-    state: StepState;
+    set state(state: StepState);
+    get state(): StepState;
     /**
      * label?: string
      * Label to display in step header
@@ -29,7 +30,8 @@ export declare class TdNavStepLinkComponent extends _TdStepMixinBase implements 
      * active?: boolean
      * Toggles component between active/deactive.
      */
-    active: boolean;
+    set active(active: boolean);
+    get active(): boolean;
     /**
      * tabIndex?: number
      * tabIndex for component

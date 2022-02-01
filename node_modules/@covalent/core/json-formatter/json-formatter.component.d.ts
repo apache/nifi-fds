@@ -24,20 +24,23 @@ export declare class TdJsonFormatterComponent {
      * levelsOpen?: number
      * Levels opened by default when JS object is formatted and rendered.
      */
-    levelsOpen: number;
-    readonly open: boolean;
+    set levelsOpen(levelsOpen: number);
+    get levelsOpen(): number;
+    get open(): boolean;
     /**
      * key?: string
      * Tag to be displayed next to formatted object.
      */
-    key: string;
+    set key(key: string);
+    get key(): string;
     /**
      * data: any
      * JS object to be formatted.
      */
-    data: any;
-    readonly children: string[];
-    readonly isRTL: boolean;
+    set data(data: any);
+    get data(): any;
+    get children(): string[];
+    get isRTL(): boolean;
     constructor(_changeDetectorRef: ChangeDetectorRef, _dir: Dir);
     /**
      * Refreshes json-formatter and rerenders [data]

@@ -1,42 +1,49 @@
-/* @flow */
-"use strict";
+'use strict';
 
-const _ = require("lodash");
-const blurInterpolation = require("./blurInterpolation");
-const isStandardSyntaxValue = require("./isStandardSyntaxValue");
-const valueParser = require("postcss-value-parser");
+const blurInterpolation = require('./blurInterpolation');
+const isStandardSyntaxValue = require('./isStandardSyntaxValue');
+const valueParser = require('postcss-value-parser');
 
 /**
  * Get unit from value node
  *
  * Returns `null` if the unit is not found.
+ *
+ * @param {import('postcss-value-parser').Node} node
+ *
+ * @returns {string | null}
  */
-module.exports = function(node /*: Object*/) /*: ?string*/ {
-  if (!node || (node && !node.value)) {
-    return null;
-  }
+module.exports = function (node) {
+	if (!node || !node.value) {
+		return null;
+	}
 
-  const value = blurInterpolation(node.value, "")
-    // ignore hack unit
-    .replace("\\0", "")
-    .replace("\\9", "")
-    // ignore decimal place
-    .replace(".", "");
+	// Ignore non-word nodes
+	if (node.type !== 'word') {
+		return null;
+	}
 
-  if (
-    node.type !== "word" ||
-    !isStandardSyntaxValue(value) ||
-    !_.isFinite(parseInt(value)) ||
-    node.value[0] === "#"
-  ) {
-    return null;
-  }
+	// Ignore non standard syntax
+	if (!isStandardSyntaxValue(node.value)) {
+		return null;
+	}
 
-  const parsedUnit = valueParser.unit(value);
+	// Ignore HEX
+	if (node.value.startsWith('#')) {
+		return null;
+	}
 
-  if (!parsedUnit) {
-    return null;
-  }
+	// Remove non standard stuff
+	const value = blurInterpolation(node.value, '')
+		// ignore hack unit
+		.replace('\\0', '')
+		.replace('\\9', '');
 
-  return parsedUnit.unit;
+	const parsedUnit = valueParser.unit(value);
+
+	if (!parsedUnit) {
+		return null;
+	}
+
+	return parsedUnit.unit;
 };

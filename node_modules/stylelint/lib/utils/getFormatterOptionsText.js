@@ -1,21 +1,19 @@
-/* @flow */
-"use strict";
+'use strict';
 
-const _ = require("lodash");
-const formatters = require("../formatters");
+const formatters = require('../formatters');
 
-module.exports = function getFormatterOptionsText(
-  options /*: { useOr?: boolean }*/ = {}
-) /*: string*/ {
-  let output = _.chain(formatters)
-    .keys()
-    .map(name => `"${name}"`)
-    .join(", ")
-    .value();
+/**
+ * @param {{ useOr?: boolean }} [options={}]
+ * @returns {string}
+ */
+module.exports = function getFormatterOptionsText(options = {}) {
+	let output = Object.keys(formatters)
+		.map((name) => `"${name}"`)
+		.join(', ');
 
-  if (options.useOr) {
-    output = output.replace(/, ([a-z"]+)$/u, " or $1");
-  }
+	if (options.useOr) {
+		output = output.replace(/, ([a-z"]+)$/u, ' or $1');
+	}
 
-  return output;
+	return output;
 };

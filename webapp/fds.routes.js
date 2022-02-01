@@ -21,6 +21,6 @@ import FdsDemo from 'webapp/components/flow-design-system/fds-demo.js';
 const FdsRoutes = RouterModule.forRoot([{
     path: '',
     component: FdsDemo
-}]);
+}], { useHash: true });
 
 export default FdsRoutes;

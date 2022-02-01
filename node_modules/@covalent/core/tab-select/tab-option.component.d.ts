@@ -9,7 +9,7 @@ export declare class TdTabOptionBase {
 export declare const _TdTabOptionMixinBase: (new (...args: any[]) => ICanDisable) & typeof TdTabOptionBase;
 export declare class TdTabOptionComponent extends _TdTabOptionMixinBase implements ICanDisable, OnInit {
     private _contentPortal;
-    readonly content: TemplatePortal<any>;
+    get content(): TemplatePortal<any>;
     _content: TemplateRef<any>;
     /**
      * Value to which the option will be binded to.

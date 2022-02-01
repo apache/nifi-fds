@@ -14,12 +14,9 @@ export declare class GridAlignRowsStyleBuilder extends StyleBuilder {
     buildStyles(input: string, parent: GridAlignRowsParent): StyleDefinition;
 }
 export declare class GridAlignRowsDirective extends BaseDirective2 {
-    protected elementRef: ElementRef;
-    protected styleBuilder: GridAlignRowsStyleBuilder;
-    protected styler: StyleUtils;
-    protected marshal: MediaMarshaller;
     protected DIRECTIVE_KEY: string;
-    inline: boolean;
+    get inline(): boolean;
+    set inline(val: boolean);
     protected _inline: boolean;
     constructor(elementRef: ElementRef, styleBuilder: GridAlignRowsStyleBuilder, styler: StyleUtils, marshal: MediaMarshaller);
     protected updateWithValue(value: string): void;

@@ -16,10 +16,6 @@ export declare class FlexAlignStyleBuilder extends StyleBuilder {
  * @see https://css-tricks.com/almanac/properties/a/align-self/
  */
 export declare class FlexAlignDirective extends BaseDirective2 {
-    protected elRef: ElementRef;
-    protected styleUtils: StyleUtils;
-    protected styleBuilder: FlexAlignStyleBuilder;
-    protected marshal: MediaMarshaller;
     protected DIRECTIVE_KEY: string;
     constructor(elRef: ElementRef, styleUtils: StyleUtils, styleBuilder: FlexAlignStyleBuilder, marshal: MediaMarshaller);
     protected styleCache: Map<string, StyleDefinition>;

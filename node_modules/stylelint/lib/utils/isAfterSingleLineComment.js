@@ -1,18 +1,22 @@
-/* @flow */
+'use strict';
 
-"use strict";
+const isSharedLineComment = require('./isSharedLineComment');
 
-const isSharedLineComment = require("./isSharedLineComment");
+/**
+ * @param {import('postcss').Node} node
+ */
+function isAfterSingleLineComment(node) {
+	const prevNode = node.prev();
 
-function isAfterSingleLineComment(node /*: postcss$node*/) /*: boolean*/ {
-  const prevNode = node.prev();
-
-  return (
-    prevNode !== undefined &&
-    prevNode.type === "comment" &&
-    !isSharedLineComment(prevNode) &&
-    prevNode.source.start.line === prevNode.source.end.line
-  );
+	return (
+		prevNode !== undefined &&
+		prevNode.type === 'comment' &&
+		!isSharedLineComment(prevNode) &&
+		prevNode.source &&
+		prevNode.source.start &&
+		prevNode.source.end &&
+		prevNode.source.start.line === prevNode.source.end.line
+	);
 }
 
 module.exports = isAfterSingleLineComment;

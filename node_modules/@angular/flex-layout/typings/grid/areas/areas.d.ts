@@ -12,17 +12,14 @@ export interface GridAreasParent {
 }
 export declare class GridAreasStyleBuiler extends StyleBuilder {
     buildStyles(input: string, parent: GridAreasParent): {
-        'display': string;
+        display: string;
         'grid-template-areas': string;
     };
 }
 export declare class GridAreasDirective extends BaseDirective2 {
-    protected elRef: ElementRef;
-    protected styleUtils: StyleUtils;
-    protected styleBuilder: GridAreasStyleBuiler;
-    protected marshal: MediaMarshaller;
     protected DIRECTIVE_KEY: string;
-    inline: boolean;
+    get inline(): boolean;
+    set inline(val: boolean);
     protected _inline: boolean;
     constructor(elRef: ElementRef, styleUtils: StyleUtils, styleBuilder: GridAreasStyleBuiler, marshal: MediaMarshaller);
     protected updateWithValue(value: string): void;

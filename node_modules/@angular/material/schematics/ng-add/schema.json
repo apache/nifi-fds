@@ -27,11 +27,11 @@
         ]
       }
     },
-    "gestures": {
+    "typography": {
       "type": "boolean",
-      "default": true,
-      "description": "Whether gesture support should be set up.",
-      "x-prompt": "Set up HammerJS for gesture recognition?"
+      "default": false,
+      "description": "Whether to set up global typography styles.",
+      "x-prompt": "Set up global Angular Material typography styles?"
     },
     "animations": {
       "type": "boolean",

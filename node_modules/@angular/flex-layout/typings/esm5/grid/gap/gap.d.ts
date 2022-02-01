@@ -12,17 +12,14 @@ export interface GridGapParent {
 }
 export declare class GridGapStyleBuilder extends StyleBuilder {
     buildStyles(input: string, parent: GridGapParent): {
-        'display': string;
+        display: string;
         'grid-gap': string;
     };
 }
 export declare class GridGapDirective extends BaseDirective2 {
-    protected elRef: ElementRef;
-    protected styleUtils: StyleUtils;
-    protected styleBuilder: GridGapStyleBuilder;
-    protected marshal: MediaMarshaller;
     protected DIRECTIVE_KEY: string;
-    inline: boolean;
+    get inline(): boolean;
+    set inline(val: boolean);
     protected _inline: boolean;
     constructor(elRef: ElementRef, styleUtils: StyleUtils, styleBuilder: GridGapStyleBuilder, marshal: MediaMarshaller);
     protected updateWithValue(value: string): void;

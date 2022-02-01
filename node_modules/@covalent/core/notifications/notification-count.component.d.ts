@@ -29,38 +29,40 @@ export declare class TdNotificationCountComponent implements AfterContentInit {
      * Sets the X position of the notification tip.
      * Defaults to "after" if it has content, else 'center'.
      */
-    positionX: TdNotificationCountPositionX;
+    set positionX(positionX: TdNotificationCountPositionX);
+    get positionX(): TdNotificationCountPositionX;
     /**
      * positionY?: TdNotificationCountPositionY or "top" | "bottom" | "center"
      * Sets the Y position of the notification tip.
      * Defaults to "top" if it has content, else 'center'.
      */
-    positionY: TdNotificationCountPositionY;
+    set positionY(positionY: TdNotificationCountPositionY);
+    get positionY(): TdNotificationCountPositionY;
     /**
      * notifications?: number | boolean
      * Number for the notification count. Shows component only if the input is a positive number or 'true'
      */
-    notifications: number | boolean;
+    set notifications(notifications: number | boolean);
     /**
      * limit?: number
      * Limit for notification count. If the number of notifications is greater than limit, then + will be added. Defaults to 99.
      */
-    limit: number;
-    readonly hideHost: boolean;
+    set limit(limit: number);
+    get hideHost(): boolean;
     /**
      * Sets the component in its 'noCount' state if [notifications] is a boolean 'true'.
      * Makes the notification tip show without a count.
      */
-    readonly noCount: string | boolean;
+    get noCount(): string | boolean;
     /**
      * Notification display string when a count is available.
      * Anything over 99 gets set as 99+
      */
-    readonly notificationsDisplay: string;
+    get notificationsDisplay(): string;
     /**
      * Shows notification tip only when [notifications] is true or a positive integer.
      */
-    readonly show: boolean;
+    get show(): boolean;
     /**
      * Check if [positionX] and [positionY] have been set as inputs, else use defaults depending on component content.
      */

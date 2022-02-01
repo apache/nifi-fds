@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 import { InjectionToken } from '@angular/core';
-import { BreakPoint, ɵMatchMedia as MatchMedia, StylesheetMap, LayoutConfigOptions } from '@angular/flex-layout/core';
+import { BreakPoint, ɵMatchMedia as MatchMedia, StylesheetMap } from '@angular/flex-layout/core';
 import { ServerMatchMedia } from './server-match-media';
 /**
  * Activate all of the registered breakpoints in sequence, and then
@@ -17,12 +17,12 @@ import { ServerMatchMedia } from './server-match-media';
  * @param breakpoints the registered breakpoints to activate/deactivate
  * @param layoutConfig the library config, and specifically the breakpoints to activate
  */
-export declare function generateStaticFlexLayoutStyles(serverSheet: StylesheetMap, mediaController: ServerMatchMedia, breakpoints: BreakPoint[], layoutConfig: LayoutConfigOptions): string;
+export declare function generateStaticFlexLayoutStyles(serverSheet: StylesheetMap, mediaController: ServerMatchMedia, breakpoints: BreakPoint[]): string;
 /**
  * Create a style tag populated with the dynamic stylings from Flex
  * components and attach it to the head of the DOM
  */
-export declare function FLEX_SSR_SERIALIZER_FACTORY(serverSheet: StylesheetMap, mediaController: ServerMatchMedia, _document: Document, breakpoints: BreakPoint[], layoutConfig: LayoutConfigOptions): () => void;
+export declare function FLEX_SSR_SERIALIZER_FACTORY(serverSheet: StylesheetMap, mediaController: ServerMatchMedia, _document: Document, breakpoints: BreakPoint[]): () => void;
 /**
  *  Provider to set static styles on the server
  */

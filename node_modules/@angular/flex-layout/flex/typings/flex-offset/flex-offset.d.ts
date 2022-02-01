@@ -20,11 +20,7 @@ export declare class FlexOffsetStyleBuilder extends StyleBuilder {
  * Configures the 'margin-left' of the element in a layout container
  */
 export declare class FlexOffsetDirective extends BaseDirective2 implements OnChanges {
-    protected elRef: ElementRef;
     protected directionality: Directionality;
-    protected styleBuilder: FlexOffsetStyleBuilder;
-    protected marshal: MediaMarshaller;
-    protected styler: StyleUtils;
     protected DIRECTIVE_KEY: string;
     constructor(elRef: ElementRef, directionality: Directionality, styleBuilder: FlexOffsetStyleBuilder, marshal: MediaMarshaller, styler: StyleUtils);
     /**

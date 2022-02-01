@@ -25,17 +25,14 @@ export declare class LayoutGapStyleBuilder extends StyleBuilder {
  *  Defines padding of child elements in a layout container
  */
 export declare class LayoutGapDirective extends BaseDirective2 implements AfterContentInit, OnDestroy {
-    protected elRef: ElementRef;
     protected zone: NgZone;
     protected directionality: Directionality;
     protected styleUtils: StyleUtils;
-    protected styleBuilder: LayoutGapStyleBuilder;
-    protected marshal: MediaMarshaller;
     protected layout: string;
     protected DIRECTIVE_KEY: string;
     protected observerSubject: Subject<void>;
     /** Special accessor to query for all child 'element' nodes regardless of type, class, etc */
-    protected readonly childrenNodes: HTMLElement[];
+    protected get childrenNodes(): HTMLElement[];
     constructor(elRef: ElementRef, zone: NgZone, directionality: Directionality, styleUtils: StyleUtils, styleBuilder: LayoutGapStyleBuilder, marshal: MediaMarshaller);
     ngAfterContentInit(): void;
     ngOnDestroy(): void;

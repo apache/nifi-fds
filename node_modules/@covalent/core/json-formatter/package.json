@@ -1,10 +1,8 @@
 {
   "main": "../bundles/covalent-core-json-formatter.umd.js",
-  "module": "../fesm5/covalent-core-json-formatter.js",
+  "module": "../fesm2015/covalent-core-json-formatter.js",
   "es2015": "../fesm2015/covalent-core-json-formatter.js",
-  "esm5": "../esm5/json-formatter/covalent-core-json-formatter.js",
   "esm2015": "../esm2015/json-formatter/covalent-core-json-formatter.js",
-  "fesm5": "../fesm5/covalent-core-json-formatter.js",
   "fesm2015": "../fesm2015/covalent-core-json-formatter.js",
   "typings": "covalent-core-json-formatter.d.ts",
   "metadata": "covalent-core-json-formatter.metadata.json",

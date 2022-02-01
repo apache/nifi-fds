@@ -5,22 +5,18 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import { DoCheck, ElementRef } from '@angular/core';
-import { NgStyle, ɵNgStyleImpl, ɵNgStyleR2Impl } from '@angular/common';
+import { DoCheck, ElementRef, KeyValueDiffers, Renderer2 } from '@angular/core';
+import { NgStyle } from '@angular/common';
 import { DomSanitizer } from '@angular/platform-browser';
 import { BaseDirective2, StyleUtils, MediaMarshaller } from '@angular/flex-layout/core';
 import { NgStyleType, NgStyleMap } from './style-transforms';
 export declare class StyleDirective extends BaseDirective2 implements DoCheck {
-    protected elementRef: ElementRef;
-    protected styler: StyleUtils;
-    protected marshal: MediaMarshaller;
-    protected delegate: ɵNgStyleImpl;
     protected sanitizer: DomSanitizer;
     private readonly ngStyleInstance;
     protected DIRECTIVE_KEY: string;
     protected fallbackStyles: NgStyleMap;
     protected isServer: boolean;
-    constructor(elementRef: ElementRef, styler: StyleUtils, marshal: MediaMarshaller, delegate: ɵNgStyleImpl, sanitizer: DomSanitizer, ngStyleInstance: NgStyle, serverLoaded: boolean, platformId: Object);
+    constructor(elementRef: ElementRef, styler: StyleUtils, marshal: MediaMarshaller, sanitizer: DomSanitizer, differs: KeyValueDiffers, renderer2: Renderer2, ngStyleInstance: NgStyle, serverLoaded: boolean, platformId: Object);
     /** Add generated styles */
     protected updateWithValue(value: any): void;
     /** Remove generated styles */
@@ -35,10 +31,6 @@ export declare class StyleDirective extends BaseDirective2 implements DoCheck {
     /** For ChangeDetectionStrategy.onPush and ngOnChanges() updates */
     ngDoCheck(): void;
 }
-export declare const LayoutNgStyleImplProvider: {
-    provide: typeof ɵNgStyleImpl;
-    useClass: typeof ɵNgStyleR2Impl;
-};
 /**
  * Directive to add responsive support for ngStyle.
  *

@@ -6,4 +6,5 @@
  * found in the LICENSE file at https://angular.io/license
  */
 import * as ts from 'typescript';
-export declare function parseTsconfigFile(tsconfigPath: string, basePath: string): ts.ParsedCommandLine;
+import { FileSystem, WorkspacePath } from '../file-system';
+export declare function parseTsconfigFile(tsconfigPath: WorkspacePath, fileSystem: FileSystem): ts.ParsedCommandLine;

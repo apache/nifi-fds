@@ -2,11 +2,11 @@ import { ElementRef } from '@angular/core';
 import { StepState } from '../step.component';
 export declare class TdStepBodyComponent {
     contentRef: ElementRef;
-    readonly hasContent: boolean;
+    get hasContent(): boolean;
     actionsRef: ElementRef;
-    readonly hasActions: boolean;
+    get hasActions(): boolean;
     summaryRef: ElementRef;
-    readonly hasSummary: boolean;
+    get hasSummary(): boolean;
     /**
      * active?: boolean
      * Sets for active/inactive states on body.

@@ -328,8 +328,11 @@ p7.createSignedData = function() {
 
     /**
      * Signs the content.
+     * @param options Options to apply when signing:
+     *    [detached] boolean. If signing should be done in detached mode. Defaults to false.
      */
-    sign: function() {
+    sign: function(options) {
+      options = options || {};
       // auto-generate content info
       if(typeof msg.content !== 'object' || msg.contentInfo === null) {
         // use Data ContentInfo
@@ -349,12 +352,16 @@ p7.createSignedData = function() {
             content = forge.util.encodeUtf8(msg.content);
           }
 
-          msg.contentInfo.value.push(
-            // [0] EXPLICIT content
-            asn1.create(asn1.Class.CONTEXT_SPECIFIC, 0, true, [
-              asn1.create(asn1.Class.UNIVERSAL, asn1.Type.OCTETSTRING, false,
-                content)
-            ]));
+          if (options.detached) {
+            msg.detachedContent = asn1.create(asn1.Class.UNIVERSAL, asn1.Type.OCTETSTRING, false, content);
+          } else {
+            msg.contentInfo.value.push(
+              // [0] EXPLICIT content
+              asn1.create(asn1.Class.CONTEXT_SPECIFIC, 0, true, [
+                asn1.create(asn1.Class.UNIVERSAL, asn1.Type.OCTETSTRING, false,
+                  content)
+              ]));
+          }
         }
       }
 
@@ -437,21 +444,28 @@ p7.createSignedData = function() {
   }
 
   function addSignerInfos(mds) {
-    // Note: ContentInfo is a SEQUENCE with 2 values, second value is
-    // the content field and is optional for a ContentInfo but required here
-    // since signers are present
-    if(msg.contentInfo.value.length < 2) {
+    var content;
+
+    if (msg.detachedContent) {
+      // Signature has been made in detached mode.
+      content = msg.detachedContent;
+    } else {
+      // Note: ContentInfo is a SEQUENCE with 2 values, second value is
+      // the content field and is optional for a ContentInfo but required here
+      // since signers are present
+      // get ContentInfo content
+      content = msg.contentInfo.value[1];
+      // skip [0] EXPLICIT content wrapper
+      content = content.value[0];
+    }
+
+    if(!content) {
       throw new Error(
         'Could not sign PKCS#7 message; there is no content to sign.');
     }
 
     // get ContentInfo content type
     var contentType = asn1.derToOid(msg.contentInfo.value[0].value);
-
-    // get ContentInfo content
-    var content = msg.contentInfo.value[1];
-    // skip [0] EXPLICIT content wrapper
-    content = content.value[0];
 
     // serialize content
     var bytes = asn1.toDer(content);
@@ -823,7 +837,7 @@ function _recipientFromAsn1(obj) {
     serialNumber: forge.util.createBuffer(capture.serial).toHex(),
     encryptedContent: {
       algorithm: asn1.derToOid(capture.encAlgorithm),
-      parameter: capture.encParameter.value,
+      parameter: capture.encParameter ? capture.encParameter.value : undefined,
       content: capture.encKey
     }
   };
@@ -1110,8 +1124,11 @@ function _encryptedContentToAsn1(ec) {
       asn1.create(asn1.Class.UNIVERSAL, asn1.Type.OID, false,
         asn1.oidToDer(ec.algorithm).getBytes()),
       // Parameters (IV)
-      asn1.create(asn1.Class.UNIVERSAL, asn1.Type.OCTETSTRING, false,
-        ec.parameter.getBytes())
+      !ec.parameter ?
+        undefined :
+        asn1.create(
+          asn1.Class.UNIVERSAL, asn1.Type.OCTETSTRING, false,
+          ec.parameter.getBytes())
     ]),
     // [0] EncryptedContent
     asn1.create(asn1.Class.CONTEXT_SPECIFIC, 0, true, [

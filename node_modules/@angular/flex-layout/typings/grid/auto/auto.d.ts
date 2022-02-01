@@ -12,16 +12,13 @@ export interface GridAutoParent {
 }
 export declare class GridAutoStyleBuilder extends StyleBuilder {
     buildStyles(input: string, parent: GridAutoParent): {
-        'display': string;
+        display: string;
         'grid-auto-flow': string;
     };
 }
 export declare class GridAutoDirective extends BaseDirective2 {
-    protected elementRef: ElementRef;
-    protected styleBuilder: GridAutoStyleBuilder;
-    protected styler: StyleUtils;
-    protected marshal: MediaMarshaller;
-    inline: boolean;
+    get inline(): boolean;
+    set inline(val: boolean);
     protected _inline: boolean;
     protected DIRECTIVE_KEY: string;
     constructor(elementRef: ElementRef, styleBuilder: GridAutoStyleBuilder, styler: StyleUtils, marshal: MediaMarshaller);

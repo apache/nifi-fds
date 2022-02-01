@@ -1,10 +1,9 @@
-/* @flow */
-"use strict";
+'use strict';
 
-const hasLessInterpolation = require("../utils/hasLessInterpolation");
-const hasPsvInterpolation = require("../utils/hasPsvInterpolation");
-const hasScssInterpolation = require("../utils/hasScssInterpolation");
-const hasTplInterpolation = require("../utils/hasTplInterpolation");
+const hasLessInterpolation = require('../utils/hasLessInterpolation');
+const hasPsvInterpolation = require('../utils/hasPsvInterpolation');
+const hasScssInterpolation = require('../utils/hasScssInterpolation');
+const hasTplInterpolation = require('../utils/hasTplInterpolation');
 
 /**
  * Check whether a string has interpolation
@@ -12,16 +11,16 @@ const hasTplInterpolation = require("../utils/hasTplInterpolation");
  * @param {string} string
  * @return {boolean} If `true`, a string has interpolation
  */
-module.exports = function(string /*: string*/) /*: boolean*/ {
-  // SCSS or Less interpolation
-  if (
-    hasLessInterpolation(string) ||
-    hasScssInterpolation(string) ||
-    hasTplInterpolation(string) ||
-    hasPsvInterpolation(string)
-  ) {
-    return true;
-  }
+module.exports = function (string) {
+	// SCSS or Less interpolation
+	if (
+		hasLessInterpolation(string) ||
+		hasScssInterpolation(string) ||
+		hasTplInterpolation(string) ||
+		hasPsvInterpolation(string)
+	) {
+		return true;
+	}
 
-  return false;
+	return false;
 };
