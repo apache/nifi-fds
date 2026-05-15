@@ -26,11 +26,24 @@ github:
     issues: false
     projects: false
   enabled_merge_buttons:
-    squash:  true
-    merge:   true
-    rebase:  true
+    squash: true
+    merge: true
+    rebase: true
+  rulesets:
+    - name: "Default Branch Protection"
+      type: branch
+      branches:
+        includes:
+          - "~DEFAULT_BRANCH"
+          - "release/*"
+          - "rel/*"
+        excludes: []
+      bypass_teams:
+        - root
+      restrict_deletion: true
+      restrict_force_push: true
 notifications:
-    commits:      commits@nifi.apache.org
-    issues:       issues@nifi.apache.org
-    pullrequests: issues@nifi.apache.org
-    jira_options: link label worklog
+  commits: commits@nifi.apache.org
+  issues: issues@nifi.apache.org
+  pullrequests: issues@nifi.apache.org
+  jira_options: link label worklog
